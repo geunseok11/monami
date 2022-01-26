@@ -628,7 +628,11 @@ textarea {
   }
 }
 
+
+/* ------------------main.html 시작------------------------ */
+
 /* ------------------index.html 시작------------------------ */
+
 
 #container {
   overflow: hidden;
@@ -829,7 +833,7 @@ textarea {
   display: inline-block;
   vertical-align: top;
   width: 38px;
-  height: 38px;
+  height: 39px;
   text-align: center;
   line-height: 38px;
   font-family: 'Montserrat',sans-serif;
@@ -860,7 +864,11 @@ textarea {
   z-index:2000;
   border:2px solid #c40f39;
 }
+
+/* ------------------main.html 끝------------------------ */
+
 /* ------------------index.html 끝------------------------ */
+
 /*---------------------prod1 html 시작--------------------- */
 .subcate li a.on{
   color: #c40f39;
@@ -949,10 +957,12 @@ textarea {
   width: 333px;
   height: 108px;
   margin: 0 auto;
+
 }
 .prodview .imgwrap .thumb .thum_wrap ul{
   width: 10000px;
 }
+
 .prodview .imgwrap .thumb .thum_wrap ul li{
   float: left;
   width: 71px;
@@ -970,6 +980,72 @@ textarea {
 }
 .prodview .prodinfo .p_name{
   margin: 40px 0 25px;
+
+}
+.prodview .prodinfo .p_name .pname{
+  font-size: 32px;
+  color: #333;
+}
+.prodview .prodinfo .p_name .pname:after{
+  display: block;
+  content: "";
+  width: 30px;
+  height: 3px;
+  margin: 10px 0;
+  background: #c40f39;
+}
+.prodview .prodinfo .p_name .pcate{
+  font-size: 19px;
+  color: #666;
+}
+.prodview .prodinfo .p_info_list{
+  position: relative;
+  padding-top: 25px;
+}
+.prodview .prodinfo .p_info_list:before{
+  display: block;
+  content: "";
+  width: 10000px;
+  height: 1px;
+  background: #ddd;
+  position: absolute;
+  left: -70px;
+  top: 0;
+}
+.prodview .prodinfo .p_info_list>div{
+  margin-bottom: 25px;
+}
+.prodview .prodinfo .p_info_list .tit{
+  padding-left: 13px;
+  background: url(./images/list_bg2.gif) no-repeat left 8px;
+  font-family:'Montserrat';
+  font-size: 16px;
+  color: #c40f39;
+  font-weight: 500;
+  margin-bottom: 7px;
+}
+.prodview .prodinfo .p_info_list .key_features ol li{
+  font-size: 14px;
+  color: #777;
+  line-height: 180%;
+}
+.prodview .prodinfo .p_info_list .download ul{
+  overflow: hidden;
+}
+.prodview .prodinfo .p_info_list .download ul li{
+  float: left;
+  margin-right: 5px;
+}
+.prodview .prodinfo .p_info_list .download ul li a{
+  display: block;
+  width: 146px;
+  height: 38px;
+  text-align:center;
+  line-height: 38px;
+  background: #f4f4f4;
+  color: #7c7c7c;
+  font-size: 14px;
+
 }
 .prodview .prodinfo .p_name .pname{
   font-size: 32px;
@@ -1104,12 +1180,38 @@ textarea {
   margin: 0 auto;
 }
 .faq_box{
+
   border: 1px solid #ddd;
   background: #fff;
   padding: 20px 50px 8px 43px;
   margin-bottom: 5px;
   cursor: pointer;
 }
+
+.prodview .prodinfo .p_info_list .download ul li a img{
+  display: inline-block;
+  margin-right: 5px;
+}
+.prodview .product_list:after{
+  display: block;
+  content: "";
+  clear: both;
+}
+.prodview .listbtn{
+  margin-bottom: 150px;
+  text-align: center;
+}
+.listbtn{
+  min-width: 1400px;
+  width: 100%;
+  margin: 17px auto;
+  position: relative;
+}
+.prodview .listbtn a{
+  display: inline-block;
+  width: 143px;
+  height: 40px;
+
 .faq_box .question{
   padding-left: 60px;
   background: url(./images/faq_q.png) no-repeat left top;
@@ -1376,8 +1478,17 @@ textarea {
   background: url(./images/page_visual2.jpg) no-repeat center;
   width: 100%;
   height: 342px;
+
   text-align: center;
+  line-height: 40px;
+  font-family: 'Montserrat';
+  font-size: 15px;
+  color: #fff;
+  background: #c40f39;
 }
+
+.listwrap:after{
+  }
 .toptitle h2{
   padding-top: 120px;
   font-size: 34px;
@@ -1385,8 +1496,306 @@ textarea {
   font-weight: 500;
 }
 .toptitle h2::after{
+
   display: block;
+  clear: both;
   content: "";
+
+}
+/*---------------------artdetail1 html 끝--------------------- */
+/*----------------------E_detail1 body-color buy 기능 추가----------------------*/
+.prodview .prodinfo .p_info_list .body_color{
+  position: relative;
+}
+.prodview .prodinfo .p_info_list .body_color ul{
+  overflow: hidden;
+  margin-top: 10px;
+}
+.prodview .prodinfo .p_info_list .body_color ul li{
+  float: left;
+  width: 43px;
+  height: 42px;
+  margin:0 3px 3px 0;
+}
+.prodview .prodinfo .btn_buy{
+  position: absolute;
+  right: 0;
+  bottom: 95px;
+}
+/*----------------------E_detail1 body-color buy 기능 끝----------------------*/
+/*----------------------FAQ.html 시작----------------------*/
+.pn4 {
+  background: url(./images/page_visual4.jpg) no-repeat center;
+}
+.pagetabs ul.m4 li{
+  width: 25%;
+}
+.faq {
+  width: 1400px;
+  margin: 0 auto;
+}
+.faq_box{
+  border: 1px solid #ddd;
+  background: #fff;
+  padding: 20px 50px 8px 43px;
+  margin-bottom: 5px;
+  cursor: pointer;
+}
+.faq_box .question{
+  padding-left: 60px;
+  background: url(./images/faq_q.png) no-repeat left top;
+}
+.faq_box .question a{
+  display: block;
+  position: relative;
+  font-size: 16px;
+  color: #333;
+  font-weight: 400;
+  padding-bottom: 15px;
+}
+.faq_box .question a .arr{
+  position: absolute;
+  right: 0;
+  top: 0px;
+  width: 15px;
+  height: 15px;
+  border-top: 2px solid #aaa;
+  border-right: 2px solid #aaa;
+  transform: rotateZ(130deg) skew(-9deg);
+  transition: all 0.3s;
+}
+.faq_box .answer{
+  display: none;
+  padding: 15px 0 0 60px;
+  border-top: 1px solid #dedede;
+}
+.faq_box .answer p{
+  margin-bottom: 25px;
+  font-size: 14.5px;
+  color: #666;
+  line-height: 200%;
+}
+.faq_box .answer .dot{
+  display: block;
+  padding-left: 13px;
+  background: url(./images/list_bg4.gif) no-repeat left 12px;
+}
+.faq_box .answer ul{
+  margin-bottom: 25px;
+}
+.faq_box .answer ul li{
+  font-size: 14px;
+  color: #666;
+  line-height: 200%;
+  padding-left: 14.5px;
+  background: url(./images/list_bg4.gif) no-repeat left 12px; 
+}
+.faq_box .answer .numtitle{
+  display: block;
+}
+.faq_box .answer .numtitle span{
+  display: inline-block;
+  width: 19px;
+  height: 19px;
+  padding: 0 2px;
+  text-align: center;
+  line-height: 19px;
+  font-family: 'Montserrat';
+  font-style: 14.5px;
+  color: #fff;
+  background: #c40f39;
+  margin-right: 5px;
+}
+.faq_box.on{
+  border: 1px solid #ddd;
+  background: #f8f8f8;
+  padding: 20px 50px 8px 43px;
+  margin-bottom: 5px;
+  cursor: pointer;
+
+}
+.faq_box.on .question a{
+  display: block;
+  position: relative;
+  font-size: 16px;
+  color: #c40f39;
+  font-weight: 500;
+  padding-bottom: 15px;
+}
+.faq_box.on .question a .arr{
+  position: absolute;
+  right: 0;
+  top: 10px;
+  width: 15px;
+  height: 15px;
+  border-top: 2px solid #aaa;
+  border-right: 2px solid #aaa;
+  transform: rotateZ(308deg) skew(-9deg);
+  transition: all 0.3s;
+}
+/*----------------------FAQ.html 끝----------------------*/
+/* ----------------------Inquiry.html 시작----------------------*/
+.inquiry .contactus{
+  width: 1200px;
+  height: 850px;
+  margin: 0 auto;
+  padding: 95px 100px 0;
+  background: url(./images/inquiry_bg.jpg) no-repeat;
+}
+.inquiry .contactus h4{
+  margin-bottom: 35px;
+  font-family: 'Montserrat';
+  font-size: 36px;
+  color: #fff;
+}
+.inquiry .contactus .formarea{
+  overflow: hidden;
+}
+.inquiry .contactus .formarea .fl{
+  float: left;
+  width: 572px;
+}
+.inquiry .contactus .formarea .fl div {
+  margin-bottom: 15px;
+}
+.inquiry .contactus .formarea .fl .inbox #select_box{
+  position: relative;
+  width: 100%;
+  height: 58px;
+  background: rgb(255,255,255,0.8) url(./images/select_arrow.png)
+  95% center no-repeat;
+  border: 1px solid #b7b6b5;
+}
+.inquiry .contactus .formarea .fl .inbox #select_box label{
+  position: absolute;
+  font-size: 15px;
+  top: 17px;
+  left: 4%;
+  color: #777;
+}
+.inquiry .contactus .formarea .fl select{
+  width: 100%;
+  height: 58px;
+  min-height: 58px;
+  line-height: 58px;
+  padding: 0px;
+  opacity: 0;
+}
+.inquiry .contactus .formarea .fl input[type="text"]{
+  width: 92%;
+  padding: 0 4%;
+  height: 58px;
+  line-height: 58px;
+  outline: 0;
+  background: rgba(255,255,255,0.8);
+  border: 1px solid #b7b6b5;
+  font-size: 15px;
+}
+.inputbox{
+  position: relative;
+}
+.inputbox label{
+  position: absolute;
+  left: 4.1%;
+  top: 19px;
+  font-size: 15px;
+  color: #777;
+}
+.inquiry .contactus .formarea .fl textarea{
+  width: 92%;
+  padding: 20px 4%;
+  height: 76px;
+  outline: 0;
+  background: rgba(255, 255, 255, 0.8);
+  border: 1px solid #b7b6b5;
+  font-size: 15px;
+  resize: none;
+}
+.filebox label{
+  display: inline-block;
+  width: 92%;
+  padding: 20px 4%;
+  vertical-align: middle;
+  background: rgba(255,255,255,0.8) url(./images/file_upload.gif) 
+  96% center no-repeat ;
+  cursor: pointer;
+  font-size: 15px;
+  color: #777;
+}
+/* ? */
+.filebox input[type ="file"]{
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  clip: rect(0,0,0,0);
+  border: 0;
+}
+.inquiry .contactus .formarea .fr {
+  float: right;
+  width: 592px;
+}
+.inquiry .contactus .formarea .fr .textarea{
+  overflow-y: scroll; 
+  width: 92%;
+  height: 500px;
+  padding: 20px 4%;
+  background: rgba(255,255,255,0.8);
+  font-size: 14px;
+  line-height: 180%;
+}
+.inquiry .contactus .formarea .fr .textarea .tit{
+  font-size: 16px;
+  margin-bottom: 10px;
+  color: #000;
+}
+.inquiry .contactus .formarea .fr .textarea textarea{
+  width: 100%;
+  height: 2150px;
+  border: 0;
+  outline: 0;
+  background: 0;
+  resize: none;
+  word-break: keep-all;
+  overflow-y: hidden;
+}
+.inquiry .contactus .formarea .fr .chkarea{
+  margin-top: 10px;
+  font-size: 15px;
+  color: #fff;
+  font-weight: 300;
+}
+.inquiry .contactus .formarea .fr .chkarea input{
+  width: 15px;
+  height: 15px;
+  background: none;
+}
+.btn_send{
+  margin: 50px 0 0;
+  text-align: center;
+}
+.btn_send input[type="submit"] {
+  display: inline-block;
+  width: 380px;
+  height: 60px;
+  text-align: center;
+  line-height: 60px;
+  font-family: 'Montserrat';
+  font-size: 20px;
+  background: rgba(255,255,255,0.8);
+  color: #c40f39;
+  transition: all 0.3s;
+  border-style: hidden;
+  cursor: pointer;
+  opacity: -0.1px;
+}
+.btn_send input[type="submit"]:focus, .btn_send input[type="submit"]:hover{
+  background: #c40f39;
+  color: rgba(255, 255, 255, 0.8);
+}
+/*----------------------Inquiry.html 끝----------------------*/
+
   width: 30px;
   height: 4px;
   margin: 5px auto 10px;
@@ -1866,4 +2275,5 @@ background: #c40f39;
 }
 
 /* Inquiry.html 끝 */
+
 
