@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MONAMI</title>
+    <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="./css/news_video.css" />
+</head>
+<body>
+    <div class="popup_buttons">
+    <a class="popup_button" href="">
+        <div class="popup_button-txt">예약하기</div>
+    </a>
+    <a class="popup_button-close" onclick="jQuery(this).parent().hide(); return false" href="#">예약하기 버튼 닫기</a>
+    </div>
+    <div id="header">
+        <div class="head">
+        <div class="head_top">
+            <div class="conwrap">
+            <div class="links">
+                <div class="lang">
+                <div class="this_lang">
+                    <a>KOR</a>
+                </div>
+                <ul>
+                    <li><a href="#">ENG</a></li>
+                </ul>
+                </div>
+                <div class="sns">
+                <ul>
+                    <li>
+                        <a href="https://www.facebook.com/monami1960" target="_blank">
+                            <img src="./images/sns_facebook.gif" alt="페이스북" />
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.instagram.com/monami_official/" target="_blank">
+                            <img src="./images/sns_insta.gif" alt="인스타" />
+                        </a>
+                    </li>
+                </ul>
+                </div>
+            </div>
+            <div class="topmenu">
+                <ul>
+                    <li>
+                        <a href="http://www.monami.com/index.php">HOME</a>
+                    </li>
+                    <li>
+                        <a href="http://www.monami.com/sitemap.php">SITE MAP</a>
+                    </li>
+                    <li>
+                        <a href="http://www.monami.com/customer/inquiry.php">CONTACT US</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        </div>
+        <div class="gnb">
+            <div class="conwrap">
+            <h1>
+                <a href="#"><img src="./images/logo.jpeg" alt="" /></a>
+            </h1>
+            <div class="nav">
+                <ul>
+                    <li>
+                        <a href="#">모나미소개</a>
+                    <ul>
+                        <li>
+                            <a href="#">CEO 메시지</a>
+                        </li>
+                        <li>
+                            <a href="#">회사정보</a>
+                        </li>
+                        <li>
+                            <a href="#">회사연혁</a>
+                        </li>
+                        <li>
+                            <a href="#">투자정보</a>
+                        </li>
+                        <li>
+                            <a href="#">CI</a>
+                        </li>
+                        <li>
+                            <a href="#">채용정보</a>
+                        </li>
+                        <li>
+                            <a href="#">찾아오시는 길</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">모나미제품</a>
+                    <ul>
+                        <li>
+                            <a href="#">펜</a>
+                        </li>
+                        <li>
+                            <a href="#">마카</a>
+                        </li>
+                        <li>
+                            <a href="#">형광펜</a>
+                        </li>
+                        <li>
+                            <a href="#">미술용품</a>
+                        </li>
+                        <li>
+                            <a href="#">기타</a>
+                        </li>
+                        <li>
+                            <a href="#">카탈로그</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="monami_news1.html">NEWS & VIDEO</a>
+                    <ul >
+                        <li>
+                            <a href="monami_news1.html">보도자료</a>
+                        </li>
+                        <li>
+                            <a href="monami_video1.html">동영상자료</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">모나미 미술대회</a>
+                    <ul>
+                        <li>
+                            <a href="#">미술대회 소개</a>
+                        </li>
+                        <li>
+                            <a href="#">수상작 발표</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">고객지원</a>
+                    <ul>
+                        <li>
+                            <a href="#">자주묻는질문</a>
+                        </li>
+                        <li>
+                            <a href="#">문의하기</a>
+                        </li>
+                        <li>
+                            <a href="#">이벤트</a>
+                        </li>
+                        <li>
+                            <a href="#">모나미 패밀리샵 찾기</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">기업 구매 / 개발</a>
+                    <ul class="hovermenu">
+                        <li><a href="#">기업 및 단체 구매</a></li>
+                        <li><a href="#">산업용 맞춤 제품개발</a></li>
+                    </ul>
+                </li>
+                </ul>
+            </div>
+            <div class="search">
+                <div class="btn_all">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+                <div class="nav_search">
+                <input type="text" name="" id="" />
+                <a href="#">
+                    <img src="./images/btn_search.gif" alt="" />
+                </a>
+                </div>
+            </div>
+            <div class="allmenu" style="display: none;">
+                <div class="menubox">
+                    <h2>모나미소개</h2>
+                    <ul>
+                        <li><a href="/about/ceo.php">CEO 메시지</a></li>
+                        <li><a href="/about/company.php">회사정보</a></li>
+                        <li><a href="/about/history.php">회사연혁</a></li>
+                        <li><a href="/about/investment.php">투자정보</a></li>
+                        <li><a href="/about/ci.php">CI</a></li>
+                        <li><a href="http://recruit.monami.co.kr/" target="_blank">채용정보</a></li>
+                        <li><a href="/about/location.php">찾아오시는 길</a></li>
+                    </ul>
+                </div>
+                <div class="menubox">
+                    <h2>모나미제품</h2>
+                    <ul>
+                        <li><a href="#">펜</a></li>
+                        <li><a href="#">마카</a></li>
+                        <li><a href="#">형광펜</a></li>
+                        <li><a href="#">미술용품</a></li>
+                        <li><a href="#">기타</a></li>
+                        <li><a href="#">카탈로그</a></li>
+                    </ul>
+                </div>
+                <div class="menubox">
+                    <h2>NEWS &amp; VIDEO</h2>
+                    <ul>
+                        <li><a href="#">보도자료</a></li>
+                        <li><a href="#">동영상자료</a></li>
+                    </ul>
+                </div>
+                <div class="menubox">
+                    <h2>모나미 미술대회</h2>
+                    <ul>
+                        <li><a href="#" target="_blank">미술대회 소개</a></li>
+                        <li><a href="#" target="_blank">수상작 발표</a></li>
+                    </ul>
+                </div>
+                <div class="menubox">
+                    <h2>고객지원</h2>
+                    <ul>
+                        <li><a href="#">자주묻는질문</a></li>
+                        <li><a href="#">문의하기</a></li>
+                        <li><a href="#">이벤트</a></li>
+                        <li><a class="#">모나미 패밀리샵 찾기</a></li>
+                    </ul>
+                </div>
+                <div class="menubox">
+                <h2><a href="#" target="_blank">기업 구매 / 개발</a></h2>
+                </div>
+            </div>
+        </div>
+        </div>
+    </div>
+    </div>
+    <!-- 헤더 끝 -->
+    <!-- 본문 시작  -->
+    <div id="container">
+        <div class="contents">
+            <div class="pagetitle pn5">
+                <h2>
+                    " NEWS & VIDEO "
+                </h2>
+                <p> 모나미는 늘 밝고 새로운 미래를 그려나갑니다.</p>
+            </div>
+            <div class="pagetabs">
+                <ul class="m5">
+                    <li>
+                        <a href="monami_news1.html">보도자료</a>
+                    </li>
+                    <li class="on">
+                        <a href="#">동영상자료</a>
+                    </li>
+                </ul>
+            </div>
+            <h3 class="title1">
+                MONAMI
+                <span>VIDEO</span>
+            </h3>
+            <div class="bbs_gall">
+                <ul>
+                    <li data-idx="125">
+                        <a>
+                            <div class="thumarea">
+                                <img src="./images/b_file_13.jpg" alt="" width="335" height="188">
+                                <div class="btn_play"></div>
+                            </div>
+                            <div class="txtarea">
+                                <div class="sbj">두 물이 만드는 전경 [그리고, 왔습니다] EP08 두물머리</div>
+				                <div class="date">2021.04.13</div>
+                            </div>
+                        </a>
+                    </li>
+                    <li data-idx="124">
+                        <a>
+                            <div class="thumarea">		
+                                <img src="./images/b_file_14.jpg" alt="" width="335" height="188"/>				<div class="btn_play"></div>
+                            </div>
+                            <div class="txtarea">
+                                <div class="sbj">날 쳐다보는 수많은 석물 [그리고, 왔습니다] EP07 목석원</div>
+				                <div class="date">2021.03.19</div>
+                            </div>
+                        </a>
+                    </li>
+                    <li data-idx="123">
+                        <a>
+                            <div class="thumarea">		
+                                <img src="./images/b_file_15.jpg" alt="" width="335" height="188"/>				<div class="btn_play"></div>
+                            </div>
+                            <div class="txtarea">
+                                <div class="sbj">한 폭의 동양화 같은 공간 [그리고, 왔습니다] EP06 심곡서원</div>
+				                <div class="date">2021.03.16</div>
+                            </div>
+                        </a>
+                    </li>
+                    <li data-idx="122">
+                        <a>
+                            <div class="thumarea">		
+                                <img src="./images/b_file_16.jpg" alt="" width="335" height="188"/>				<div class="btn_play"></div>
+                            </div>
+                            <div class="txtarea">
+                                <div class="sbj">도심 속 이국적 풍경 [그리고, 왔습니다] EP05 월화원</div>
+				                <div class="date">2021.03.08</div>
+                            </div>
+                        </a>
+                    </li>
+                    <li data-idx="121">
+                        <a>
+                            <div class="thumarea">		
+                                <img src="./images/b_file_17.jpg" alt="" width="335" height="188"/>				<div class="btn_play"></div>
+                            </div>
+                            <div class="txtarea">
+                                <div class="sbj">'숭고함을 기억하다.' 153 ID 안중근&이육사 리미티드 에디션</div>
+				                <div class="date">2021.02.23</div>
+                            </div>
+                        </a>
+                    </li>
+                    <li data-idx="120">
+                        <a>
+                            <div class="thumarea">		
+                                <img src="./images/b_file_18.jpg" alt="" width="335" height="188"/>				<div class="btn_play"></div>
+                            </div>
+                            <div class="txtarea">
+                                <div class="sbj">매일매일 색다른 나만의 만년필! 153 네오 만년필 DIY!</div>
+				                <div class="date">2021.02.23</div>
+                            </div>
+                        </a>
+                    </li>
+                    <li data-idx="119">
+                        <a>
+                            <div class="thumarea">		
+                                <img src="./images/b_file_19.jpg" alt="" width="335" height="188"/>				<div class="btn_play"></div>
+                            </div>
+                            <div class="txtarea">
+                                <div class="sbj">Dream, Draw, Do! 꿈을 그리다! 프러스펜 3000 60색</div>
+				                <div class="date">2021.02.23</div>
+                            </div>
+                        </a>
+                    </li>
+                    <li data-idx="118">
+                        <a>
+                            <div class="thumarea">		
+                                <img src="./images/b_file_20.jpg" alt="" width="335" height="188"/>				<div class="btn_play"></div>
+                            </div>
+                            <div class="txtarea">
+                                <div class="sbj">바람이 불어오는 곳 [그리고, 왔습니다] EP04 대부도</div>
+				                <div class="date">2021.02.08</div>
+                            </div>
+                        </a>
+                    </li>
+                    <li data-idx="117">
+                        <a>
+                            <div class="thumarea">		
+                                <img src="./images/b_file_21.jpg" alt="" width="335" height="188"/>				<div class="btn_play"></div>
+                            </div>
+                            <div class="txtarea">
+                                <div class="sbj">다채로운 색이 가득한 섬 [그리고, 왔습니다] EP03 오이도</div>
+				                <div class="date">2021.02.01</div>
+                            </div>
+                        </a>
+                    </li>
+                    <li data-idx="116">
+                        <a>
+                            <div class="thumarea">		
+                                <img src="./images/b_file_22.jpg" alt="" width="335" height="188"/>				<div class="btn_play"></div>
+                            </div>
+                            <div class="txtarea">
+                                <div class="sbj">도심 속 비밀의 화원 [그리고, 왔습니다] EP02 선유도 공원</div>
+				                <div class="date">2021.02.01</div>
+                            </div>
+                        </a>
+                    </li>
+                    <li data-idx="115">
+                        <a>
+                            <div class="thumarea">		
+                                <img src="./images/b_file_23.jpg" alt="" width="335" height="188"/>				<div class="btn_play"></div>
+                            </div>
+                            <div class="txtarea">
+                                <div class="sbj">이제는 쉼터가 되어주고 있는 간이역 [그리고, 왔습니다] EP01 화랑대역</div>
+				                <div class="date">2021.02.01</div>
+                            </div>
+                        </a>
+                    </li>
+                    <li data-idx="114">
+                        <a>
+                            <div class="thumarea">		
+                                <img src="./images/b_file_24.jpg" alt="" width="335" height="188"/>				<div class="btn_play"></div>
+                            </div>
+                            <div class="txtarea">
+                                <div class="sbj">[60주년 데스크펜] 화난 여자를 위해 남자가 꺼내든 비장의 카드!_바이..</div>
+				                <div class="date">2020.12.22</div>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="vod_pop">
+                <div class="vod_area"></div>
+            </div>
+            <div class="paging">
+                <a href="monami_video1.html" class="page_prev">
+                    <img src="./images/page_prev.gif" alt="">
+                </a>
+                <a href="monami_video1.html">1</a>
+                <strong>2</strong>
+                <a href="monami_video3.html">3</a>
+                <a href="monami_video4.html">4</a>
+                <a href="monami_video5.html">5</a>
+                <a href="monami_video3.html" class="page_next">
+                    <img src="./images/page_next.gif" alt="">
+                </a>
+            </div>
+            <div class="btn_top" style="cursor:pointer;" onclick="window.scrollTo(0,0);">
+                <a>
+                    <img src="./images/btn_top.gif" alt="페이지 상단으로">
+                </a>
+            </div>
+        </div>
+    </div>
+    <!-- 본문 끝 -->
+    <!-- 푸터 시작 -->
+    <div id="footer">
+        <div class="foot">
+        <div class="foot_top">
+            <h1><img src="./images/foot_logo.jpeg" alt="로고"></img></h1>
+            <ul class="fm">
+                <li>
+                    <a href="#">회사소개</a>
+                </li>
+                <li>
+                    <a href="#">개인정보처리방식</a>
+                </li>
+                <li>
+                    <a href="#">이메일무단수집거부</a>
+                </li>
+            </ul>
+        </div>
+        <div class="foot_btm">
+            <div class="info">
+                <div class="tit">INFO</div>
+                <address>
+                    ADDRESS : 경기도 용인시 수지구 손곡로 17 <span>l</span> TEL :
+                    031-216-0153 <span>l</span>
+                    FAX : 031-270-5154
+                </address>
+            <p class="copy">
+                COPYRIGHT(C) 2017 MONAMI.CO.,LTD. ALL RIGHTS RESERVED.
+            </p>
+            </div>
+            <div class="cc">
+                <div class="tit">CUSTOMER CENTER</div>
+                <div class="cc_tel">080-022-0153</div>
+            </div>
+            <div class="fam_site">
+            <a>FAMILY SITE</a>
+            <ul>
+                <li>
+                    <a href="#" target="_blank">모나미몰</a>
+                </li>
+                <li>
+                    <a href="#" target="_blank">모나르떼</a>
+                </li>
+                <li>
+                    <a href="#" target="_blank">모나미 컨셉스토어</a>
+                </li>
+                <li>
+                    <a href="#" target="_blank">주식회사 항소</a>
+                </li>
+                <li>
+                    <a href="#" target="_blank">모나미 스테이션</a>
+                </li>
+                <li>
+                    <a href="#" target="_blank">모나미 미술대회</a>
+                </li>
+                <li>
+                    <a href="#" target="_blank">모나미 기업서비스</a>
+                </li>
+                <li>
+                    <a href="#" target="_blank">모나미코스메틱</a>
+                </li>
+            </ul>
+            </div>
+        </div>
+    </div>
+</div>
+    <!-- 푸터 끝 -->
+</body>
+</html>
