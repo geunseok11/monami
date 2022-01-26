@@ -628,7 +628,11 @@ textarea {
   }
 }
 
+
 /* ------------------main.html 시작------------------------ */
+
+/* ------------------index.html 시작------------------------ */
+
 
 #container {
   overflow: hidden;
@@ -860,7 +864,11 @@ textarea {
   z-index:2000;
   border:2px solid #c40f39;
 }
+
 /* ------------------main.html 끝------------------------ */
+
+/* ------------------index.html 끝------------------------ */
+
 /*---------------------prod1 html 시작--------------------- */
 .subcate li a.on{
   color: #c40f39;
@@ -949,10 +957,12 @@ textarea {
   width: 333px;
   height: 108px;
   margin: 0 auto;
+
 }
 .prodview .imgwrap .thumb .thum_wrap ul{
   width: 10000px;
 }
+
 .prodview .imgwrap .thumb .thum_wrap ul li{
   float: left;
   width: 71px;
@@ -970,6 +980,72 @@ textarea {
 }
 .prodview .prodinfo .p_name{
   margin: 40px 0 25px;
+
+}
+.prodview .prodinfo .p_name .pname{
+  font-size: 32px;
+  color: #333;
+}
+.prodview .prodinfo .p_name .pname:after{
+  display: block;
+  content: "";
+  width: 30px;
+  height: 3px;
+  margin: 10px 0;
+  background: #c40f39;
+}
+.prodview .prodinfo .p_name .pcate{
+  font-size: 19px;
+  color: #666;
+}
+.prodview .prodinfo .p_info_list{
+  position: relative;
+  padding-top: 25px;
+}
+.prodview .prodinfo .p_info_list:before{
+  display: block;
+  content: "";
+  width: 10000px;
+  height: 1px;
+  background: #ddd;
+  position: absolute;
+  left: -70px;
+  top: 0;
+}
+.prodview .prodinfo .p_info_list>div{
+  margin-bottom: 25px;
+}
+.prodview .prodinfo .p_info_list .tit{
+  padding-left: 13px;
+  background: url(./images/list_bg2.gif) no-repeat left 8px;
+  font-family:'Montserrat';
+  font-size: 16px;
+  color: #c40f39;
+  font-weight: 500;
+  margin-bottom: 7px;
+}
+.prodview .prodinfo .p_info_list .key_features ol li{
+  font-size: 14px;
+  color: #777;
+  line-height: 180%;
+}
+.prodview .prodinfo .p_info_list .download ul{
+  overflow: hidden;
+}
+.prodview .prodinfo .p_info_list .download ul li{
+  float: left;
+  margin-right: 5px;
+}
+.prodview .prodinfo .p_info_list .download ul li a{
+  display: block;
+  width: 146px;
+  height: 38px;
+  text-align:center;
+  line-height: 38px;
+  background: #f4f4f4;
+  color: #7c7c7c;
+  font-size: 14px;
+
 }
 .prodview .prodinfo .p_name .pname{
   font-size: 32px;
@@ -1070,6 +1146,361 @@ textarea {
   display: block;
   clear: both;
   content: "";
+}
+/*---------------------artdetail1 html 끝--------------------- */
+/* E_detail1 body-color buy 기능 추가*/
+.prodview .prodinfo .p_info_list .body_color{
+  position: relative;
+}
+.prodview .prodinfo .p_info_list .body_color ul{
+  overflow: hidden;
+  margin-top: 10px;
+}
+.prodview .prodinfo .p_info_list .body_color ul li{
+  float: left;
+  width: 43px;
+  height: 42px;
+  margin:0 3px 3px 0;
+}
+.prodview .prodinfo .btn_buy{
+  position: absolute;
+  right: 0;
+  bottom: 95px;
+}
+/* E_detail1 body-color buy 기능 끝*/
+/* FAQ.html 시작 */
+.pn4 {
+  background: url(./images/page_visual4.jpg) no-repeat center;
+}
+.pagetabs ul.m4 li{
+  width: 25%;
+}
+.faq {
+  width: 1400px;
+  margin: 0 auto;
+}
+.faq_box{
+
+  border: 1px solid #ddd;
+  background: #fff;
+  padding: 20px 50px 8px 43px;
+  margin-bottom: 5px;
+  cursor: pointer;
+}
+
+.prodview .prodinfo .p_info_list .download ul li a img{
+  display: inline-block;
+  margin-right: 5px;
+}
+.prodview .product_list:after{
+  display: block;
+  content: "";
+  clear: both;
+}
+.prodview .listbtn{
+  margin-bottom: 150px;
+  text-align: center;
+}
+.listbtn{
+  min-width: 1400px;
+  width: 100%;
+  margin: 17px auto;
+  position: relative;
+}
+.prodview .listbtn a{
+  display: inline-block;
+  width: 143px;
+  height: 40px;
+
+.faq_box .question{
+  padding-left: 60px;
+  background: url(./images/faq_q.png) no-repeat left top;
+}
+.faq_box .question a{
+  display: block;
+  position: relative;
+  font-size: 16px;
+  color: #333;
+  font-weight: 400;
+  padding-bottom: 15px;
+}
+.faq_box .question a .arr{
+  position: absolute;
+  right: 0;
+  top: 0px;
+  width: 15px;
+  height: 15px;
+  border-top: 2px solid #aaa;
+  border-right: 2px solid #aaa;
+  transform: rotateZ(130deg) skew(-9deg);
+  transition: all 0.3s;
+}
+.faq_box .answer{
+  display: none;
+  padding: 15px 0 0 60px;
+  border-top: 1px solid #dedede;
+}
+.faq_box .answer p{
+  margin-bottom: 25px;
+  font-size: 14.5px;
+  color: #666;
+  line-height: 200%;
+}
+.faq_box .answer .dot{
+  display: block;
+  padding-left: 13px;
+  background: url(./images/list_bg4.gif) no-repeat left 12px;
+}
+.faq_box .answer ul{
+  margin-bottom: 25px;
+}
+.faq_box .answer ul li{
+  font-size: 14px;
+  color: #666;
+  line-height: 200%;
+  padding-left: 14.5px;
+  background: url(./images/list_bg4.gif) no-repeat left 12px; 
+}
+.faq_box .answer .numtitle{
+  display: block;
+}
+.faq_box .answer .numtitle span{
+  display: inline-block;
+  width: 19px;
+  height: 19px;
+  padding: 0 2px;
+  text-align: center;
+  line-height: 19px;
+  font-family: 'Montserrat';
+  font-style: 14.5px;
+  color: #fff;
+  background: #c40f39;
+  margin-right: 5px;
+}
+.faq_box.on{
+  border: 1px solid #ddd;
+  background: #f8f8f8;
+  padding: 20px 50px 8px 43px;
+  margin-bottom: 5px;
+  cursor: pointer;
+
+}
+.faq_box.on .question a{
+  display: block;
+  position: relative;
+  font-size: 16px;
+  color: #c40f39;
+  font-weight: 500;
+  padding-bottom: 15px;
+}
+.faq_box.on .question a .arr{
+  position: absolute;
+  right: 0;
+  top: 10px;
+  width: 15px;
+  height: 15px;
+  border-top: 2px solid #aaa;
+  border-right: 2px solid #aaa;
+  transform: rotateZ(308deg) skew(-9deg);
+  transition: all 0.3s;
+}
+/* FAQ.html 끝 */
+/* Inquiry.html 시작 */
+.inquiry .contactus{
+  width: 1200px;
+  height: 850px;
+  margin: 0 auto;
+  padding: 95px 100px 0;
+  background: url(./images/inquiry_bg.jpg) no-repeat;
+}
+.inquiry .contactus h4{
+  margin-bottom: 35px;
+  font-family: 'Montserrat';
+  font-size: 36px;
+  color: #fff;
+}
+.inquiry .contactus .formarea{
+  overflow: hidden;
+}
+.inquiry .contactus .formarea .fl{
+  float: left;
+  width: 572px;
+}
+.inquiry .contactus .formarea .fl div {
+  margin-bottom: 15px;
+}
+.inquiry .contactus .formarea .fl .inbox #select_box{
+  position: relative;
+  width: 100%;
+  height: 58px;
+  background: rgb(255,255,255,0.8) url(./images/select_arrow.png)
+  95% center no-repeat;
+  border: 1px solid #b7b6b5;
+}
+.inquiry .contactus .formarea .fl .inbox #select_box label{
+  position: absolute;
+  font-size: 15px;
+  top: 17px;
+  left: 4%;
+  color: #777;
+}
+.inquiry .contactus .formarea .fl select{
+  width: 100%;
+  height: 58px;
+  min-height: 58px;
+  line-height: 58px;
+  padding: 0px;
+  opacity: 0;
+}
+.inquiry .contactus .formarea .fl input[type="text"]{
+  width: 92%;
+  padding: 0 4%;
+  height: 58px;
+  line-height: 58px;
+  outline: 0;
+  background: rgba(255,255,255,0.8);
+  border: 1px solid #b7b6b5;
+  font-size: 15px;
+}
+.inputbox{
+  position: relative;
+}
+.inputbox label{
+  position: absolute;
+  left: 4.1%;
+  top: 19px;
+  font-size: 15px;
+  color: #777;
+}
+.inquiry .contactus .formarea .fl textarea{
+  width: 92%;
+  padding: 20px 4%;
+  height: 76px;
+  outline: 0;
+  background: rgba(255, 255, 255, 0.8);
+  border: 1px solid #b7b6b5;
+  font-size: 15px;
+  resize: none;
+}
+.filebox label{
+  display: inline-block;
+  width: 92%;
+  padding: 20px 4%;
+  vertical-align: middle;
+  background: rgba(255,255,255,0.8) url(./images/file_upload.gif) 
+  96% center no-repeat ;
+  cursor: pointer;
+  font-size: 15px;
+  color: #777;
+}
+/* ? */
+.filebox input[type ="file"]{
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  clip: rect(0,0,0,0);
+  border: 0;
+}
+.inquiry .contactus .formarea .fr {
+  float: right;
+  width: 592px;
+}
+.inquiry .contactus .formarea .fr .textarea{
+  overflow-y: scroll; 
+  width: 92%;
+  height: 500px;
+  padding: 20px 4%;
+  background: rgba(255,255,255,0.8);
+  font-size: 14px;
+  line-height: 180%;
+}
+.inquiry .contactus .formarea .fr .textarea .tit{
+  font-size: 16px;
+  margin-bottom: 10px;
+  color: #000;
+}
+.inquiry .contactus .formarea .fr .textarea textarea{
+  width: 100%;
+  height: 2150px;
+  border: 0;
+  outline: 0;
+  background: 0;
+  resize: none;
+  word-break: keep-all;
+  overflow-y: hidden;
+}
+.inquiry .contactus .formarea .fr .chkarea{
+  margin-top: 10px;
+  font-size: 15px;
+  color: #fff;
+  font-weight: 300;
+}
+.inquiry .contactus .formarea .fr .chkarea input{
+  width: 15px;
+  height: 15px;
+  background: none;
+}
+.btn_send{
+  margin: 50px 0 0;
+  text-align: center;
+}
+.btn_send input[type="submit"] {
+  display: inline-block;
+  width: 380px;
+  height: 60px;
+  text-align: center;
+  line-height: 60px;
+  font-family: 'Montserrat';
+  font-size: 20px;
+  background: rgba(255,255,255,0.8);
+  color: #c40f39;
+  transition: all 0.3s;
+  border-style: hidden;
+  cursor: pointer;
+  opacity: -0.1px;
+}
+.btn_send input[type="submit"]:focus, .btn_send input[type="submit"]:hover{
+  background: #c40f39;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+
+/* 펜페이지 시작 */
+#container{
+  overflow: hidden;
+  width: 100%;
+  margin-top: 100px;
+  padding-bottom: 150px;
+}
+.toptitle{
+  background: url(./images/page_visual2.jpg) no-repeat center;
+  width: 100%;
+  height: 342px;
+
+  text-align: center;
+  line-height: 40px;
+  font-family: 'Montserrat';
+  font-size: 15px;
+  color: #fff;
+  background: #c40f39;
+}
+
+.listwrap:after{
+  }
+.toptitle h2{
+  padding-top: 120px;
+  font-size: 34px;
+  color: #fff;
+  font-weight: 500;
+}
+.toptitle h2::after{
+
+  display: block;
+  clear: both;
+  content: "";
+
 }
 /*---------------------artdetail1 html 끝--------------------- */
 /*----------------------E_detail1 body-color buy 기능 추가----------------------*/
@@ -1364,3 +1795,485 @@ textarea {
   color: rgba(255, 255, 255, 0.8);
 }
 /*----------------------Inquiry.html 끝----------------------*/
+
+  width: 30px;
+  height: 4px;
+  margin: 5px auto 10px;
+  background: #c40f39;
+}
+.toptitle p{
+  font-size: 15px;
+  color:#fff;
+  font-weight: 300;
+}
+.submenu_list{
+  position: relative;
+  max-width: 1400px;
+  width: 100%;
+  margin: -29px auto 85px;
+  border:1px solid rgba(0,0,0,0.1)
+}
+#sublist{
+  overflow: hidden;
+  background: #fff;
+}
+#sublist li {
+  width: 233px;
+  float: left;
+}
+#sublist li.on a{
+  color: #fff;
+  background: #c40f39;
+}
+#sublist li a{
+  display: block;
+  height: 58px;
+  line-height: 58px;
+  text-align: center;
+  border-right: 1px solid #ddd;
+  font-size: 15px;
+}
+#sublist li:last-child a{
+border-right: 0px;
+}
+.title1{
+  font-family:'Montserrat',sans-serif ;
+  font-size: 38px;
+  font-weight: 600;
+  color: #000;
+  text-align: center;
+  letter-spacing: 2px;
+}
+.title1 span{
+  color: #c40f39;
+}
+.title1:after{
+  display: block;
+  content: "";
+  width: 30px;
+  height: 4px;
+  margin: 5px auto 95px;
+  background: #c40f39;
+}
+.categori_list{
+  text-align: center;
+}
+.categori_list li{
+  display: inline-block;
+  width: 130px;
+  margin: 0 7px;
+}
+.categori_list li a{
+  display: block;
+    height: 32px;
+  line-height: 32px;
+  font-weight: 500;
+  font-size: 15px;
+  color: #777;
+  border-bottom: 2px solid #dcdcdc;
+}
+.product_list{
+  max-width: 1400px;
+  margin:45px auto 0;
+}
+
+.product_list ul{
+  overflow: hidden;
+ 
+}
+.product_list ul li{
+  float: left;
+  width: 264px;
+  margin: 0 17px 49px 0;
+  border: 1px solid #ddd;
+}
+.product_list ul li:nth-child(5n){
+  margin-right: 0;
+}
+.product_list ul li a .thum{
+  position: relative;
+}
+.product_list ul li a .thum img{
+  width: 264px;
+  height: 390px;
+  border: 0 none;
+}
+.product_list ul li a .thum .ondiv{
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+.product_list ul li:hover a .thum .ondiv{
+  opacity: 1;
+  transition: all 0.3s ease;
+}
+.ondiv .btn_plus{
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 72px;
+  height: 72px;
+  margin: -36px 0 0 -36px;
+  background: rgba(255, 255, 255, 0.8);
+}
+.ondiv .btn_plus div:nth-child(1){
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 50%;
+  height: 1px;
+  margin-left: -25%;
+  background: rgba(196, 15, 57, 0.7);
+}
+
+.ondiv .btn_plus div:nth-child(2){
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 1px;
+  height: 50%;
+  margin-top: -25%;
+  background: rgba(196, 15, 57, 0.7);
+}
+.product_list ul li a .info{
+  height: 71px;
+  padding: 30px 30px 0;
+}
+.product_list ul li a .info .pen_name{
+  margin:  0px 0 5px;
+  font-family: 'Monteserrat',sans-serif;
+  font-size: 12px;
+  color: #b3b3b3;
+}
+.product_list ul li a .info .product_name{
+  font-family: 'Monteserrat';
+  font-size: 15px;
+  color: #000;
+  font-weight: 600;
+}
+.pagenum{
+   margin: 60px 0;
+   text-align: center;
+}
+.pagenum a.page_prev{
+  margin-right: 30px;
+  line-height: 30px;
+}
+.pagenum a{
+  display: inline-block;
+  vertical-align:top;
+  
+  width: 38px;
+  height: 38px;
+  font-family: 'Montesrrat',sans-serif;
+  line-height: 38px;
+  font-size: 15px;
+  color: #a8a8a8;
+  border: 1px solid #ddd;
+}
+.pagenum strong{
+  display: inline-block;
+  vertical-align: top;
+  width: 38px;
+  height: 38px;
+  text-align: center;
+  line-height: 38px;
+  font-family: 'Montesrrat',sans-serif;
+  font-size: 15px;
+  color: #c40f39;
+  font-weight: 500;
+  border: 1px solid #c40;
+}
+.pagenum a.page_next{
+  margin-left: 30px;
+  line-height: 30px;
+}
+.topbtn{
+  position: fixed;
+  right: 3%;
+  bottom: 30%;
+  z-index: 2000;
+  border: 2px solid #c40f39;
+}
+/* 펜페이지 끝 */
+/* sub펜페이지 시작*/
+.categori_list li.on a{
+  display: block;
+  text-align: center;
+  height: 32px;
+  line-height: 32px;
+  font-size: 15px;
+  color: #c40f39;
+  border-bottom: 2px solid #c40f39;
+}
+/* sub펜페이지 끝*/
+/* 인포페이지 시작 */
+.product_view{
+  width: 100%;
+  overflow: hidden;
+}
+.product_view .product_info{
+  position: relative;
+  border-left: 1px solid #ddd;
+  width: 1390px;
+  height: 1022px;
+  margin:  0 auto;
+  padding-left: 9px;
+}
+.product_info{
+  max-width: 1400px;
+}
+.info{
+  position: relative;
+}
+.info .barea1{
+  position: absolute;
+  left: -50px;
+  top:163px;
+  z-index:-1;
+  width: 100%;
+  height: 100%;
+  background: #f8f8f8;
+}
+.info .number{
+  font-family: 'Monteserrat';
+  font-size: 14px;
+  color: #000;
+  position: absolute;
+  left: -65px;
+  top: 20px;
+  transform: rotateZ(-90deg);
+}
+.info .number span:nth-child(1){
+  font-family: 'Montserrat';
+  font-size: 25px;
+  color: #000;
+  font-weight: 500;
+}
+.prodleft{
+  float: left;
+}
+.prodleft .imges{
+  overflow: hidden;
+  width: 447px;
+  height: 656px;
+  border: 1px solid #ddd;
+}
+.imges li:nth-child(1){
+  display:  list-item;
+}
+.imges li{
+  display: none;
+}
+.imges img{
+  width: 447px;
+  height: 656px;
+}
+.info .thumb{
+  position: relative;
+  width: 449px;
+  margin-top: 10px;
+
+}
+.info .thumb .info_prev{
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.info .thumb .info_next{
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.info .thumb .thum_list{
+  overflow: hidden;
+  width: 333px;
+  height: 108px;
+  margin: 0 auto;
+  
+}
+.info .thumb .thum_list ul{
+ 
+  width: 10000px;
+}
+.info .thumb .thum_list ul li{
+  float: left;
+  width: 71px;
+  height: 106px;
+  margin-right: 13px;
+  border: 1px solid #ddd;
+}
+.info .thumb .thum_list ul li img{
+  width: 71px;
+  height: 106px;
+}
+.prodright{
+  float: right;
+  width: 871px;
+}
+.prodright .p_name{
+  margin: 40px 0 25px;
+}
+.prodright .p_name .name{
+  font-size: 32px;
+  color: #333;
+}
+.prodright .p_name .name:after{
+  content: "";
+  display: block;
+  width: 30px;
+  height: 3px;
+  margin: 10px 0;
+  background: #c40f39;
+}
+.prodright .cate{
+  font-size: 19px;
+  color: #666;
+}
+.p_info{
+  position: relative;
+  padding-top:25px ;
+}
+.p_info:before{
+  content: "";
+  display: block;
+  width: 10000px;
+  height: 1px;
+  background: #ddd;
+  position: absolute;
+  left: -65px;
+  top: 0;
+}
+.p_info>div{
+  margin-bottom: 25px;
+}
+.p_info .tit{
+  padding-left: 13px;
+  background: url(./images/list_bg2.gif) no-repeat left 8px;
+  font-family: 'Monteserrat';
+  font-size: 16px;
+  color: #c40f39;
+  font-weight: 500;
+  margin-bottom: 7px;
+}
+.p_info .key ol li{
+  font-size: 14px;
+  color: #777;
+  line-height: 180%;
+}
+.p_info .ink{
+  position: relative;
+}
+.p_info .ink .color_list ul{
+  overflow: hidden;
+  margin-top: 10px;
+}
+.p_info .ink .color_list ul li{
+  float: left;
+  width: 43px;
+  height: 42px;
+  margin: 0 3px 3px 0;
+}
+.p_info .body_color{
+  position: relative;
+}
+.p_info .body_color ul{
+  overflow: hidden;
+  margin-top: 10px;
+}
+.p_info .body_color ul li{
+  float: left;
+  width: 43px;
+  height: 42px;
+  margin: 0 3px 3px 0;
+}
+.p_info .point p{
+  font-family: 'Montserrat';
+  font-size: 15px;
+}
+.p_info .nib_type  ul{
+  overflow: hidden;
+}
+.p_info .nib_type ul li{
+  float: left;
+  margin-right: 5px;
+}
+.p_info .download .down ul{
+  overflow: hidden;
+}
+.p_info .download .down ul li{
+  float: left;
+  margin-right: 5px;
+}
+.p_info .download .down ul li a{
+  display: block;
+  width: 146px;
+  height: 38px;
+  text-align: center;
+  line-height: 38px;
+  background: #f4f4f4;
+  font-size: 14px;
+  border: 1px solid #ddd;
+}
+.p_info .download .down ul li a img{
+  margin-right: 5px;
+}
+.prodright .buy{
+  position: absolute;
+  right: 0;
+  bottom: -707px;
+  }
+.prodright::after{
+  content: "";
+  display: block;
+  clear: both;
+}
+.product_view .view_list{
+  margin-bottom: 150px;
+  text-align: center;
+  clear: both;
+  }
+.view_list{
+  max-width: 1400px;
+  width: 100%;
+  margin: 17px 0 0 auto;
+  position: relative;
+}
+.view_list a{
+display: inline-block;
+width: 143px;
+height: 40px;
+text-align: center;
+line-height: 40px;
+font-family: 'Monteserrat';
+font-size: 15px;
+color: #fff;
+background: #c40f39;
+}
+.product_view::after{
+  display: block;
+  clear: both;
+  content: "";
+}
+/* 인포페이지 끝 */
+@media (max-width:1450px) {
+  .product_list{
+    width: 94%;
+   
+  }
+  .product_list ul{
+ 
+    width: 1115px;
+    margin: 0 auto;
+  }
+}
+
+/* Inquiry.html 끝 */
+
+
