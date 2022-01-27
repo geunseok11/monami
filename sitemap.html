@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta
+      http-equiv="Content-Type"
+      content="application/xhtml+xml; charset=UTF-8"
+    />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <title>MONAMI</title>
+    <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="/css/style.intro.css" />
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.js"></script>
+    <script type="text/javascript" src="/js/common.js"></script>
+    <script type="text/javascript">
+      $(function () {
+        $(document).on("click", ".find_f", function () {
+          dh = $(document).height();
+          poph = $(".find_layer").height();
+
+          $("#bgblack").height(dh).show();
+          $(".find_layer")
+            .show()
+            .animate({ top: $(document).scrollTop() + 50 + "px" }, 100);
+        });
+        $("#bgblack,.btnx_").click(function () {
+          $("#bgblack").height(dh).hide();
+          $(".find_layer").hide();
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <!-- wrap 시작 -->
+    <div id="wrap">
+      <div id="bgblack"></div>
+      <div class="find_layer" style="display: none; top: 50px">
+        <iframe src="./shop/shop.html" frameborder="0" id="find_f"> </iframe>
+        <div class="btnx_">
+          <img src="/images/close.png" alt="" />
+        </div>
+      </div>
+      <!-- 헤더 시작 -->
+      <div id="header">
+        <div class="head">
+          <div class="head_top">
+            <div class="conwrap">
+              <div class="links">
+                <div class="lang">
+                  <div class="this_lang"><a>KOR</a></div>
+                  <ul>
+                    <li><a href="#">ENG</a></li>
+                  </ul>
+                </div>
+                <div class="sns">
+                  <ul>
+                    <li>
+                      <a
+                        href="https://www.facebook.com/monami1960"
+                        target="_blank"
+                        ><img
+                          src="/images/sns_facebook.gif"
+                          alt="모나미 페이스북 바로가기"
+                      /></a>
+                    </li>
+                    <li>
+                      <a
+                        href="https://www.instagram.com/monami_official/"
+                        target="_blank"
+                        ><img
+                          src="/images/sns_insta.gif"
+                          alt="모나미 인스타그램 바로가기"
+                      /></a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="topmenu">
+                <ul>
+                  <li><a href="/index.html">HOME</a></li>
+                  <li><a href="/sitemap.html">SITE MAP</a></li>
+                  <li><a href="#">CONTACT US</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="gnb">
+            <div class="conwrap">
+              <h1>
+                <a href="../index.html"
+                  ><img src="/images/logo.jpeg" alt=""
+                /></a>
+              </h1>
+              <div class="nav">
+                <ul>
+                  <li>
+                    <a href="/about/ceo.html">모나미소개</a>
+                    <ul>
+                      <li><a href="/about/ceo.html">CEO 메시지</a></li>
+                      <li><a href="/about/company.html">회사정보</a></li>
+                      <li><a href="/about/history.html">회사연혁</a></li>
+                      <li><a href="#">투자정보</a></li>
+                      <li><a href="#">CI</a></li>
+                      <li>
+                        <a href="#" target="_blank">채용정보</a>
+                      </li>
+                      <li><a href="#">찾아오시는 길</a></li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="#">모나미제품</a>
+                    <ul>
+                      <li>
+                        <a href="#">펜</a>
+                      </li>
+                      <li>
+                        <a href="#">마카</a>
+                      </li>
+                      <li>
+                        <a href="#">형광펜</a>
+                      </li>
+                      <li>
+                        <a href="#">미술용품</a>
+                      </li>
+                      <li>
+                        <a href="#">기타</a>
+                      </li>
+                      <li>
+                        <a href="#">카탈로그</a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="#">NEWS &amp VIDEO</a>
+                    <ul>
+                      <li>
+                        <a href="#">보도자료</a>
+                      </li>
+                      <li>
+                        <a href="#">동영상자료</a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="#" target="_blank">모나미 미술대회</a>
+                    <ul>
+                      <li>
+                        <a href="#" target="_blank">미술대회 소개</a>
+                      </li>
+                      <li>
+                        <a href="#" target="_blank">수상작 발표</a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="#">고객지원</a>
+                    <ul>
+                      <li><a href="#">자주묻는질문</a></li>
+                      <li><a href="#">문의하기</a></li>
+                      <li>
+                        <a href="#">이벤트</a>
+                      </li>
+                      <li><a class="find_f">모나미 패밀리샵 찾기</a></li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="#" target="_blank">기업 구매 / 개발</a>
+                    <ul>
+                      <li>
+                        <a href="#" target="_blank">기업 및 단체 구매</a>
+                      </li>
+                      <li>
+                        <a href="#">산업용 맞춤 제품개발</a>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+              <div class="search">
+                <div class="btn_all">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </div>
+                <div class="nav_search">
+                  <input type="text" />
+                  <a href="/search.html"
+                    ><img src="/images/btn_search.gif" alt=""
+                  /></a>
+                </div>
+              </div>
+              <div class="allmenu">
+                <div class="menubox">
+                  <h2>모나미소개</h2>
+                  <ul>
+                    <li><a href="/about/ceo.html">CEO 메시지</a></li>
+                    <li><a href="/about/company.html">회사정보</a></li>
+                    <li><a href="/about/history.html">회사연혁</a></li>
+                    <li><a href="#">투자정보</a></li>
+                    <li><a href="#">CI</a></li>
+                    <li>
+                      <a href="#" target="_blank">채용정보</a>
+                    </li>
+                    <li><a href="#">찾아오시는 길</a></li>
+                  </ul>
+                </div>
+                <div class="menubox">
+                  <h2>모나미제품</h2>
+                  <ul>
+                    <li>
+                      <a href="#">펜</a>
+                    </li>
+                    <li>
+                      <a href="#">마카</a>
+                    </li>
+                    <li>
+                      <a href="#">형광펜</a>
+                    </li>
+                    <li>
+                      <a href="#">미술용품</a>
+                    </li>
+                    <li>
+                      <a href="#">기타</a>
+                    </li>
+                    <li>
+                      <a href="#">카탈로그</a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="menubox">
+                  <h2>NEWS &amp VIDEO</h2>
+                  <ul>
+                    <li>
+                      <a href="#">보도자료</a>
+                    </li>
+                    <li>
+                      <a href="#">동영상자료</a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="menubox">
+                  <h2>모나미 미술대회</h2>
+                  <ul>
+                    <li>
+                      <a href="#" target="_blank">미술대회 소개</a>
+                    </li>
+                    <li>
+                      <a href="#" target="_blank">수상작 발표</a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="menubox">
+                  <h2>고객지원</h2>
+                  <ul>
+                    <li><a href="#">자주묻는질문</a></li>
+                    <li><a href="#">문의하기</a></li>
+                    <li>
+                      <a href="#">이벤트</a>
+                    </li>
+                    <li><a class="find_f">모나미 패밀리샵 찾기</a></li>
+                  </ul>
+                </div>
+                <div class="menubox">
+                  <h2>
+                    <a href="#" target="_blank">기업 구매 / 개발</a>
+                  </h2>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- 헤더 끝 -->
+      <!-- 본문 시작 -->
+      <div id="container" class="conSize">
+        <div id="contents">
+          <div class="pagetabs"></div>
+          <h3 class="title1"><span>SITEMAP</span></h3>
+          <div class="sitemap">
+            <div class="sitemap_menubox">
+              <div class="menu_title">모나미소개</div>
+              <ul>
+                <li><a href="/about/ceo.html">CEO 메시지</a></li>
+                <li><a href="/about/company.html">회사정보</a></li>
+                <li><a href="/about/history.html">회사연혁</a></li>
+                <li><a href="#">투자정보</a></li>
+                <li><a href="#">CI</a></li>
+                <li>
+                  <a href="#" target="_blank">채용정보</a>
+                </li>
+                <li><a href="#">찾아오시는 길</a></li>
+              </ul>
+            </div>
+            <div class="sitemap_menubox">
+              <div class="menu_title">모나미제품</div>
+              <ul>
+                <li>
+                  <a href="#">펜</a>
+                </li>
+                <li>
+                  <a href="#">마카</a>
+                </li>
+                <li>
+                  <a href="#">형광펜</a>
+                </li>
+                <li>
+                  <a href="#">미술용품</a>
+                </li>
+                <li><a href="#">기타</a></li>
+                <li><a href="#">카탈로그</a></li>
+              </ul>
+            </div>
+            <div class="sitemap_menubox">
+              <div class="menu_title">문구박물관</div>
+              <ul>
+                <li>
+                  <a href="#">문구박물관</a>
+                </li>
+              </ul>
+            </div>
+            <div class="sitemap_menubox">
+              <div class="menu_title">NEWS &amp; VIDEO</div>
+              <ul>
+                <li><a href="#">보도자료</a></li>
+                <li><a href="#">동영상자료</a></li>
+              </ul>
+            </div>
+            <div class="sitemap_menubox">
+              <div class="menu_title">고객지원</div>
+              <ul>
+                <li><a href="#">자주묻는질문</a></li>
+                <li><a href="#">문의하기</a></li>
+                <li><a href="#">이벤트</a></li>
+                <li><a class="find_f">모나미 패밀리샵 찾기</a></li>
+              </ul>
+            </div>
+            <div class="sitemap_menubox">
+              <div class="menu_title">
+                <a href="#" target="_blank">기업 구매 및 맞춤 개발</a>
+              </div>
+              <ul>
+                <li>
+                  <a href="#" target="_blank">기업 및 단체 구매</a>
+                </li>
+                <li>
+                  <a href="#">산업용 맞춤 제품개발</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="topButton">
+            <a><img src="/images/btn_top.gif" alt="페이지 상단으로" /></a>
+          </div>
+        </div>
+        <!--/contents-->
+      </div>
+      <!-- 본문 끝 -->
+      <!-- 푸터 시작 -->
+      <div id="footer">
+        <div class="foot">
+          <div class="foot_pop">
+            <div class="privacy">
+              <div class="title">개인정보 취급방침</div>
+              <div class="textarea"></div>
+              <div class="btn_close"><a>CLOSE</a></div>
+            </div>
+            <div class="email">
+              <div class="title">이메일무단수집거부</div>
+              <div class="textarea">
+                본 웹사이트에 게시된 이메일 주소가 전자우편 수집 프로그램이나 그
+                밖의 기술적 장치를 이용하여 무단으로 수집되는 것을 거부하며,
+                이를 위반시정 보통신망법에 의해 형사 처벌됨을 유념하시기
+                바랍니다.
+                <br /><br />
+                <div class="tit">시행일</div>
+
+                본 이메일 무단 수집 거부 정책은 2017년 11월부터 시행합니다.
+              </div>
+              <div class="btn_close"><a>CLOSE</a></div>
+            </div>
+          </div>
+          <div class="foot_top">
+            <h1>
+              <img src="/images/foot_logo.jpeg" alt="푸터 모나미 로고" />
+            </h1>
+            <ul class="fm">
+              <li><a href="#">회사소개</a></li>
+              <li><a class="">개인정보처리방침</a></li>
+              <li><a class="">이메일무단수집거부</a></li>
+            </ul>
+          </div>
+          <div class="foot_btm">
+            <div class="info">
+              <div class="tit">INFO</div>
+              <address>
+                ADDRESS : 경기도 용인시 수지구 손곡로 17 <span>l</span> TEL :
+                031-216-0153 <span>l</span>
+                FAX : 031-270-5154
+              </address>
+              <p class="copy">
+                COPYRIGHT(C) 2017 MONAMI.CO.,LTD. ALL RIGHTS RESERVED.
+              </p>
+            </div>
+            <div class="cc">
+              <div class="tit">CUSTOMER CENTER</div>
+              <div class="cc_tel">080-022-0153</div>
+            </div>
+            <div class="fam_site">
+              <a>FAMILY SITE</a>
+              <ul>
+                <li>
+                  <a href="#" target="_blank">모나미몰</a>
+                </li>
+                <li>
+                  <a href="#" target="_blank">모나르떼</a>
+                </li>
+                <li>
+                  <a href="#" target="_blank">모나미 컨셉스토어</a>
+                </li>
+                <li>
+                  <a href="#" target="_blank">주식회사 항소</a>
+                </li>
+                <li>
+                  <a href="#" target="_blank">모나미 스테이션</a>
+                </li>
+                <li>
+                  <a href="#" target="_blank">모나미 미술대회</a>
+                </li>
+                <li>
+                  <a href="#" target="_blank">모나미 기업서비스</a>
+                </li>
+                <li>
+                  <a href="#" target="_blank">모나미코스메틱</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- 푸터 끝 -->
+    </div>
+    <!-- wrap 끝-->
+  </body>
+</html>
