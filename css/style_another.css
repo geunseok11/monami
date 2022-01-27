@@ -141,13 +141,13 @@ textarea {
 }
 
 .pn1 {
-  background: url(./images/page_visual1.jpeg) no-repeat center;
+  background: url(../images/page_visual1.jpeg) no-repeat center;
 }
 .pn4 {
-  background: url(./images/page_visual4.jpeg) no-repeat center;
+  background: url(../images/page_visual4.jpeg) no-repeat center;
 }
 .pn8 {
-  background: url(./images/page_visual8.jpeg) no-repeat center;
+  background: url(../images/page_visual8.jpeg) no-repeat center;
 }
 .pagetabs {
   position: relative;
@@ -264,7 +264,7 @@ textarea {
 }
 .head_top .links .lang .this_lang {
   padding-left: 15px;
-  background: url(/images/lang_kor.gif) no-repeat 10px center;
+  background: url(../images/lang_kor.gif) no-repeat 10px center;
 }
 .head_top .links .lang .this_lang a {
   display: block;
@@ -273,10 +273,10 @@ textarea {
   font-family: "Montserrat", sans-serif;
   font-size: 11px;
   color: #000;
-  background: url(/images/lang_arr.gif) no-repeat right center;
+  background: url(../images/lang_arr.gif) no-repeat right center;
 }
 .head_top .links .lang.on .this_lang a {
-  background: url(/images/lang_arr2.gif) no-repeat right center;
+  background: url(../images/lang_arr2.gif) no-repeat right center;
 }
 .head_top .links .lang ul {
   width: 86px;
@@ -289,7 +289,7 @@ textarea {
   margin-left: -2px;
   text-align: center;
   color: #000;
-  background: url(/images/lang_eng.gif) no-repeat 12px center;
+  background: url(../images/lang_eng.gif) no-repeat 12px center;
 }
 
 .head_top .links .sns {
@@ -314,7 +314,7 @@ textarea {
   float: left;
   margin-left: 10px;
   padding-left: 12px;
-  background: url(/images/tm_bar.gif) no-repeat left center;
+  background: url(../images/tm_bar.gif) no-repeat left center;
 }
 .head_top .topmenu ul li:first-child {
   background: 0;
@@ -587,7 +587,7 @@ textarea {
   float: left;
   padding-right: 11px;
   margin-right: 10px;
-  background: url(/images/fm_bar.gif) no-repeat right center;
+  background: url(../images/fm_bar.gif) no-repeat right center;
 }
 .foot_top .fm li:last-child {
   margin: 0;
@@ -656,7 +656,7 @@ textarea {
   line-height: 34px;
   font-size: 13px;
   color: rgba(255, 255, 255, 0.4);
-  background: url(/images/family_arr.png) no-repeat 95% center;
+  background: url(../images/family_arr.png) no-repeat 95% center;
 }
 .foot_btm .fam_site ul {
   display: none;
@@ -775,7 +775,7 @@ textarea {
   display: inline-block;
   margin: 0 2px;
   padding-bottom: 5px;
-  background: url(/images/bg_dot1.png) repeat;
+  background: url(../images/bg_dot1.png) repeat;
 }
 .invest_company_info ul li dl {
   width: 165px;
@@ -798,28 +798,28 @@ textarea {
 }
 
 .invest_company_info ul li:nth-child(1) dl dt {
-  background: url(./images/invest_company_info_img1.gif) no-repeat center top;
+  background: url(../images/invest_company_info_img1.gif) no-repeat center top;
 }
 .invest_company_info ul li:nth-child(2) dl dt {
-  background: url(./images/invest_company_info_img2.gif) no-repeat center top;
+  background: url(../images/invest_company_info_img2.gif) no-repeat center top;
 }
 .invest_company_info ul li:nth-child(3) dl dt {
-  background: url(./images/invest_company_info_img3.gif) no-repeat center top;
+  background: url(../images/invest_company_info_img3.gif) no-repeat center top;
 }
 .invest_company_info ul li:nth-child(4) dl dt {
-  background: url(./images/invest_company_info_img4.gif) no-repeat center top;
+  background: url(../images/invest_company_info_img4.gif) no-repeat center top;
 }
 .invest_company_info ul li:nth-child(5) dl dt {
-  background: url(./images/invest_company_info_img5.gif) no-repeat center top;
+  background: url(../images/invest_company_info_img5.gif) no-repeat center top;
 }
 .invest_company_info ul li:nth-child(6) dl dt {
-  background: url(./images/invest_company_info_img6.gif) no-repeat center top;
+  background: url(../images/invest_company_info_img6.gif) no-repeat center top;
 }
 .invest_company_info ul li:nth-child(7) dl dt {
-  background: url(./images/invest_company_info_img7.gif) no-repeat center top;
+  background: url(../images/invest_company_info_img7.gif) no-repeat center top;
 }
 .invest_company_info ul li:nth-child(8) dl dt {
-  background: url(./images/invest_company_info_img8.gif) no-repeat center top;
+  background: url(../images/invest_company_info_img8.gif) no-repeat center top;
 }
 
 @media (max-width: 1450px) {
@@ -933,13 +933,13 @@ textarea {
 }
 .invest_tabcon > table td ul li {
   padding-left: 10px;
-  background: url(/images/page/list_bg3.gif) no-repeat left 11px;
+  background: url(../images/page/list_bg3.gif) no-repeat left 11px;
 }
 
 .invest_tabcon .tit {
   display: block;
   padding-left: 13px;
-  background: url(/images/page/list_bg2.gif) no-repeat left 10px;
+  background: url(../images/page/list_bg2.gif) no-repeat left 10px;
 }
 .invest_tabcon .t1 {
 }
@@ -1013,7 +1013,7 @@ textarea {
 .ci_logo .textbox {
   clear: both;
   display: table;
-  background: url(./images/ci_logo_textbox_bg.jpg) no-repeat;
+  background: url(../images/ci_logo_textbox_bg.jpg) no-repeat;
   width: 1398px;
   height: 401px;
   margin: 0 auto;
@@ -1070,7 +1070,7 @@ textarea {
   .ci_logo .textbox {
     clear: both;
     display: table;
-    background: url(./images/ci_logo_textbox_bg.jpeg) no-repeat center;
+    background: url(../images/ci_logo_textbox_bg.jpeg) no-repeat center;
     background-size: cover;
     width: 100%;
     height: 401px;
@@ -1201,7 +1201,7 @@ textarea {
 }
 .ci_rule .rule_box .text_info ul li {
   padding-left: 12px;
-  background: url(./images/list_bg2.gif) no-repeat left 15px;
+  background: url(../images/list_bg2.gif) no-repeat left 15px;
   font-family: "Montserrat", sans-serif;
   font-size: 16px;
   line-height: 240%;
@@ -1326,7 +1326,7 @@ textarea {
   float: left;
   width: 77px;
   padding-left: 12px;
-  background: url(/images/page/list_bg2.gif) no-repeat left 10px;
+  background: url(../images/page/list_bg2.gif) no-repeat left 10px;
   font-size: 17px;
   font-weight: 400;
   color: #000;
@@ -1485,10 +1485,10 @@ textarea {
   font-weight: 500;
 }
 .location .traffic .car .tit {
-  background: url(./images/location_bg1.gif) no-repeat center top;
+  background: url(../images/location_bg1.gif) no-repeat center top;
 }
 .location .traffic .public .tit {
-  background: url(./images/location_bg2.gif) no-repeat center top;
+  background: url(../images/location_bg2.gif) no-repeat center top;
 }
 .location .traffic .info {
   float: left;
@@ -1503,7 +1503,7 @@ textarea {
 }
 .location .traffic .info .align ul li {
   padding-left: 10px;
-  background: url(./images/list_bg1.gif) no-repeat left 11px;
+  background: url(../images/list_bg1.gif) no-repeat left 11px;
   line-height: 180%;
   font-size: 14px;
   color: #777;
@@ -1827,7 +1827,7 @@ textarea {
   height: calc(691px - 212px);
   padding-top: 212px;
   margin-top: 35px;
-  background: url("./images/industry_img_1.jpeg") no-repeat;
+  background: url("../images/industry_img_1.jpeg") no-repeat;
 }
 .industry .industry01 > div ul {
   width: 536px;
@@ -1840,7 +1840,7 @@ textarea {
   display: inline-block;
   width: 153px;
   height: 147px;
-  background: url("./images/industry_icon_bar.png") no-repeat;
+  background: url("../images/industry_icon_bar.png") no-repeat;
   text-align: center;
   font-size: 16px;
   line-height: 21px;
@@ -1853,7 +1853,7 @@ textarea {
 .industry .industry01 > div li > span {
   display: block;
   height: 55px;
-  background: url("./images/industry_icon.png") no-repeat;
+  background: url("../images/industry_icon.png") no-repeat;
   margin: 17px auto 13px;
 }
 .industry .industry01 > div li .icon_01 {
@@ -1880,12 +1880,12 @@ textarea {
   min-width: 300px;
   height: 217px;
   top: 210px;
-  background: url("./images/industry_line_2.png") no-repeat;
+  background: url("../images/industry_line_2.png") no-repeat;
   background-position: left top;
 }
 .industry .industry02 li:nth-child(odd) {
   top: 0;
-  background: url("./images/industry_line_1.png") no-repeat;
+  background: url("../images/industry_line_1.png") no-repeat;
   background-position: left bottom;
 }
 .industry .industry02 li span {
@@ -2003,7 +2003,7 @@ textarea {
   top: -42px;
   right: 0;
   padding-right: 17px;
-  background: url("./images/industry_arr.gif") right 1px no-repeat;
+  background: url("../images/industry_arr.gif") right 1px no-repeat;
 }
 .industry .industry03 > ul > li {
   display: inline-block;
@@ -2043,21 +2043,21 @@ textarea {
   font-weight: 200; /*font-family:"Montserrat", sans-serif;*/
 }
 .industry .industry03 > ul.type_big > li:first-child > div {
-  background: url("./images/industry_prd_big_1.png") no-repeat;
+  background: url("../images/industry_prd_big_1.png") no-repeat;
 }
 .industry .industry03 > ul.type_big > li:nth-child(2) > div {
-  background: url("./images/industry_prd_big_2.png") no-repeat;
+  background: url("../images/industry_prd_big_2.png") no-repeat;
 }
 .industry .industry03 > ul.type_big > li:nth-child(3) > div {
-  background: url("./images/industry_prd_big_3.png") no-repeat;
+  background: url("../images/industry_prd_big_3.png") no-repeat;
 }
 .industry .industry03 > ul.type_big > li:nth-child(4) > div {
-  background: url("./images/industry_prd_big_4.png") no-repeat;
+  background: url("../images/industry_prd_big_4.png") no-repeat;
 }
 .industry .industry03 > ul.type_big > li > div > ul > li {
   padding: 0 0 0 10px;
   line-height: 26px;
-  background: url("./images/industry_blit.gif") 0 13px no-repeat;
+  background: url("../images/industry_blit.gif") 0 13px no-repeat;
 }
 .industry .industry03 > ul.type_big > li {
   margin: 0 0 110px 66px;
