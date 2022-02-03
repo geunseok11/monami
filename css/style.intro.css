@@ -246,22 +246,34 @@ a:hover {
   left: -78px;
   top: 100%;
   z-index: 100;
-  width: 180px;
+  width: 100px;
   padding: 12px 25px;
   background: rgba(255, 255, 255, 0.9);
   box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
 }
+.head .gnb .nav > ul > li:nth-child(1) > ul {
+  left: -39px;
+  width: 100px;
+}
+.head .gnb .nav > ul > li:nth-child(2) > ul {
+  left: -37px;
+  width: 100px;
+}
 .head .gnb .nav > ul > li:nth-child(3) > ul {
-  left: -62px;
+  left: -35px;
+  width: 150px;
 }
 .head .gnb .nav > ul > li:nth-child(4) > ul {
-  left: -55px;
+  left: -37px;
+  width: 130px;
 }
 .head .gnb .nav > ul > li:nth-child(5) > ul {
-  left: -83px;
+  left: -39px;
+  width: 90px;
 }
 .head .gnb .nav > ul > li:nth-child(6) > ul {
-  left: -63px;
+  left: -32px;
+  width: 125px;
 }
 .head .gnb .nav > ul > li > ul > li {
   border-bottom: 1px solid #e1e1e1;
