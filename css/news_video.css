@@ -1,7 +1,7 @@
 @import url(http://fonts.googleapis.com/earlyaccess/notosanskr.css);
 @import url("https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700,800");
 
-/*Common*/
+/*공통*/
 * {
   margin: 0;
   padding: 0;
@@ -17,6 +17,7 @@ html {
 }
 body {
   background-color: #fff;
+  width: 100%;
 }
 body,
 h1,
@@ -28,18 +29,13 @@ h6,
 th,
 td,
 input,
-textarea,
-select,
-option {
+textarea {
   color: #555;
   font-family: "Noto Sans KR", "돋움", dotum, sans-serif;
   font-size: 13.5px;
   font-weight: normal;
 }
-div{
-  display: block;
-}
-img, fieldset, iframe{
+img {
   border: 0 none;
 }
 ul,
@@ -51,9 +47,7 @@ address {
   font-style: normal;
 }
 img,
-input,
-select,
-textarea {
+input {
   vertical-align: middle;
 }
 a {
@@ -65,19 +59,14 @@ a:hover {
   color: #333;
   text-decoration: none;
 }
-button,
-label {
-  cursor: pointer;
+#wrap {
+  width: 100%;
 }
-button * {
-  position: relative;
+#container {
+  width: 100%;
 }
-button img {
-  left: -3px;
-  *left: auto;
-}
-textarea {
-  overflow: auto;
+#footer {
+  width: 100%;
 }
 .conwrap {
   max-width: 1400px;
@@ -90,6 +79,7 @@ textarea {
   clear: both;
   content: "";
 }
+
 @media (max-width: 1450px) {
   .conwrap {
     max-width: 1400px;
@@ -98,10 +88,8 @@ textarea {
     position: relative;
   }
 }
-#wrap {
-  width: 100%;
-}
-/* 헤더 */
+
+/* 헤더 시작 */
 #header {
   position: fixed;
   left: 0;
@@ -123,15 +111,6 @@ textarea {
   float: left;
   margin-top: 14px;
 }
-.head_top .links .lang ul li a {
-  display: block;
-  font-family: 'Montserrat', sans-serif;
-  font-size: 11px;
-  margin-left: -2px;
-  text-align: center;
-  color: #000;
-  background: url(../images/lang_eng.gif) no-repeat 12px center;
-}
 .head_top .links .lang {
   position: absolute;
   left: 0;
@@ -152,7 +131,7 @@ textarea {
 }
 .head_top .links .lang .this_lang {
   padding-left: 15px;
-  background: url(../images/lang_kor.gif) no-repeat 10px center;
+  background: url(/images/lang_kor.gif) no-repeat 10px center;
 }
 .head_top .links .lang .this_lang a {
   display: block;
@@ -161,10 +140,10 @@ textarea {
   font-family: "Montserrat", sans-serif;
   font-size: 11px;
   color: #000;
-  background: url(../images/lang_arr.gif) no-repeat right center;
+  background: url(/images/lang_arr.gif) no-repeat right center;
 }
 .head_top .links .lang.on .this_lang a {
-  background: url(../images/lang_arr2.gif) no-repeat right center;
+  background: url(/images/lang_arr2.gif) no-repeat right center;
 }
 .head_top .links .lang ul {
   width: 86px;
@@ -177,7 +156,7 @@ textarea {
   margin-left: -2px;
   text-align: center;
   color: #000;
-  background: url(../images/lang_eng.gif) no-repeat 12px center;
+  background: url(/images/lang_eng.gif) no-repeat 12px center;
 }
 
 .head_top .links .sns {
@@ -202,7 +181,7 @@ textarea {
   float: left;
   margin-left: 10px;
   padding-left: 12px;
-  background: url(../images/tm_bar.gif) no-repeat left center;
+  background: url(/images/tm_bar.gif) no-repeat left center;
 }
 .head_top .topmenu ul li:first-child {
   background: 0;
@@ -240,7 +219,7 @@ textarea {
   margin: 0 33px 0 0;
 }
 .head .gnb .nav > ul > li:nth-child(6) {
-  margin: 0 0 0 33px;
+  margin: 0 0 0 55px;
 }
 .head .gnb .nav > ul > li > a {
   display: block;
@@ -259,29 +238,42 @@ textarea {
   font-family: "Montserrat", sans-serif;
   font-weight: 500;
 }
-/* 네비 */
+
+/* 네비 시작 */
 .head .gnb .nav > ul > li > ul {
   display: none;
   position: absolute;
   left: -78px;
   top: 100%;
   z-index: 100;
-  width: 180px;
+  width: 100px;
   padding: 12px 25px;
   background: rgba(255, 255, 255, 0.9);
   box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
 }
+.head .gnb .nav > ul > li:nth-child(1) > ul {
+  left: -39px;
+  width: 100px;
+}
+.head .gnb .nav > ul > li:nth-child(2) > ul {
+  left: -37px;
+  width: 100px;
+}
 .head .gnb .nav > ul > li:nth-child(3) > ul {
-  left: -62px;
+  left: -35px;
+  width: 150px;
 }
 .head .gnb .nav > ul > li:nth-child(4) > ul {
-  left: -55px;
+  left: -37px;
+  width: 120px;
 }
 .head .gnb .nav > ul > li:nth-child(5) > ul {
-  left: -83px;
+  left: -50px;
+  width: 123px;
 }
 .head .gnb .nav > ul > li:nth-child(6) > ul {
-  left: -63px;
+  left: -32px;
+  width: 125px;
 }
 .head .gnb .nav > ul > li > ul > li {
   border-bottom: 1px solid #e1e1e1;
@@ -357,7 +349,7 @@ textarea {
 .head .gnb .search .btn_all.openmenu > div:nth-child(3) {
   transform: translateY(-7px) rotate(-45deg);
 }
-/* 헤더 끝 */
+/* 네비 끝 */
 /* 전체메뉴 보기 */
 .allmenu {
   display: none;
@@ -395,7 +387,6 @@ textarea {
   margin: 20px 0;
   background: #c40f39;
 }
-
 .menubox ul li {
   margin-bottom: 15px;
 }
@@ -413,7 +404,6 @@ textarea {
   color: #c40f39;
   font-weight: 400;
 }
-
 @media (max-width: 1450px) {
   .head .gnb {
     min-width: 1262px;
@@ -439,8 +429,40 @@ textarea {
     width: 162px;
   }
 }
-/* 전체메뉴 끝 */
-/* 푸터 */
+#bgblack {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 3000;
+}
+.find_layer {
+  display: none;
+  position: relative;
+  position: absolute;
+  left: 50%;
+  z-index: 4000;
+  width: 800px;
+  margin-left: -400px;
+  overflow: hidden;
+  background: #fff;
+}
+.find_layer iframe {
+  width: 820px;
+  height: 800px;
+}
+.find_layer .btnx_ {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  right: 26px;
+  top: 13px;
+  z-index: 10;
+  cursor: pointer;
+}
+/* 헤더 끝 */
+/* 푸터 시작 */
 #footer {
   position: relative;
   background: #111;
@@ -477,7 +499,7 @@ textarea {
   float: left;
   padding-right: 11px;
   margin-right: 10px;
-  background: url(../images/fm_bar.gif) no-repeat right center;
+  background: url(/images/common/fm_bar.gif) no-repeat right center;
 }
 .foot_top .fm li:last-child {
   margin: 0;
@@ -503,7 +525,6 @@ textarea {
   color: #fff;
   margin-bottom: 10px;
 }
-
 .foot_btm .info {
   float: left;
   margin-right: 55px;
@@ -566,7 +587,6 @@ textarea {
   font-size: 13px;
   color: rgba(255, 255, 255, 0.6);
 }
-
 .foot_pop {
   display: none;
   width: 1280px;
@@ -644,6 +664,7 @@ textarea {
   }
 }
 /* 푸터 끝 */
+
 /* monami_news 메인화면*/
 #container {
   overflow: hidden;
@@ -651,10 +672,10 @@ textarea {
   margin-top: 110px;
   padding-bottom: 150px;
 }
-.pn5{
+.pn5 {
   background: url(../images/page_visual5.jpg) no-repeat center;
 }
-.pagetitle{
+.pagetitle {
   width: 100%;
   height: 342px;
   text-align: center;
@@ -683,13 +704,13 @@ textarea {
   max-width: 1400px;
   width: 100%;
   margin: -29px auto 85px;
-  border: 1px solid rgba(0,0,0,0.1);
+  border: 1px solid rgba(0, 0, 0, 0.1);
 }
 .pagetabs ul {
   overflow: hidden;
   background: #fff;
 }
-@media (max-width: 1420px){
+@media (max-width: 1420px) {
   .pagetabs ul.m5 li {
     width: 50%;
   }
@@ -713,7 +734,7 @@ textarea {
   border-right: 1px solid #ddd;
 }
 .title1 {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 38px;
   font-weight: 600;
   color: #000;
@@ -731,7 +752,7 @@ textarea {
   margin: 5px auto 95px;
   background: #c40f39;
 }
-@media (max-width: 1450px){
+@media (max-width: 1450px) {
   .bbs_basic {
     width: 94%;
     margin: 0 auto;
@@ -771,7 +792,7 @@ tr {
   border-bottom: 1px solid #ddd;
 }
 .bbs_basic table td.date .day {
-  font-family: 'Montserrat';
+  font-family: "Montserrat";
   font-size: 50px;
   color: #000;
   letter-spacing: -2px;
@@ -779,7 +800,7 @@ tr {
   line-height: 100%;
 }
 .bbs_basic table td.date .ym {
-  font-family: 'Montserrat';
+  font-family: "Montserrat";
   font-size: 15px;
   color: #666;
 }
@@ -787,7 +808,7 @@ tr {
   padding: 25px 0;
   border-bottom: 1px solid #ddd;
 }
-.bbs_basic table td.sbj>div {
+.bbs_basic table td.sbj > div {
   padding: 0 55px;
   border-left: 1px solid #e5e5e5;
   word-break: keep-all;
@@ -814,7 +835,7 @@ tr {
   height: 38px;
   line-height: 38px;
   border: 1px solid #ddd;
-  transition: all .4s;
+  transition: all 0.4s;
   text-align: left;
 }
 .bbs_basic table td a.btn span {
@@ -822,7 +843,7 @@ tr {
   width: 0px;
   padding-left: 0px;
   font-size: 15px;
-  transition: all .4s;
+  transition: all 0.4s;
 }
 .bbs_basic table td a.btn div {
   display: inline-block;
@@ -867,7 +888,7 @@ tr {
   height: 38px;
   text-align: center;
   line-height: 38px;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 15px;
   color: #a8a8a8;
   border: 1px solid #ddd;
@@ -879,7 +900,7 @@ tr {
   height: 38px;
   text-align: center;
   line-height: 38px;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 15px;
   color: #c40f39;
   font-weight: 500;
@@ -898,7 +919,7 @@ tr {
 /* monami_news 메인화면 끝*/
 
 /* monami_video 메인화면 시작 */
-@media (max-width: 1450px){
+@media (max-width: 1450px) {
   .bbs_gall {
     width: 94%;
     margin: 0 auto;
@@ -914,12 +935,16 @@ tr {
     margin: 0 20px 40px 0;
     text-align: center;
   }
-  .bbs_gall ul li:nth-child(4n){margin-right:20px;}
-	.bbs_gall ul li:nth-child(3n){margin-right:0;}
+  .bbs_gall ul li:nth-child(4n) {
+    margin-right: 20px;
+  }
+  .bbs_gall ul li:nth-child(3n) {
+    margin-right: 0;
+  }
 }
 .bbs_gall {
-    width: 1400px;
-    margin: 0 auto;
+  width: 1400px;
+  margin: 0 auto;
 }
 .bbs_gall ul {
   overflow: hidden;
@@ -930,8 +955,8 @@ tr {
   margin: 0 20px 40px 0;
   text-align: center;
 }
-.bbs_gall ul li:nth-child(4n){
-  margin-right:0;
+.bbs_gall ul li:nth-child(4n) {
+  margin-right: 0;
 }
 .bbs_gall ul li .thumarea {
   position: relative;
@@ -955,7 +980,7 @@ tr {
   margin-bottom: 5px;
 }
 .bbs_gall ul li .txtarea .date {
-  font-family: 'Montserrat';
+  font-family: "Montserrat";
   font-size: 15px;
   color: #999;
 }
@@ -994,7 +1019,7 @@ body {
   height: 38px;
   text-align: center;
   line-height: 38px;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 15px;
   color: #a8a8a8;
   border: 1px solid #ddd;
@@ -1006,7 +1031,7 @@ body {
   height: 38px;
   text-align: center;
   line-height: 38px;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 15px;
   color: #c40f39;
   font-weight: 500;
@@ -1020,25 +1045,25 @@ body {
   left: 0;
   top: 0;
   width: 100%;
-  background: rgba(0,0,0,0.7);
+  background: rgba(0, 0, 0, 0.7);
   z-index: 3000;
 }
 /* monami_video 메인화면 끝 */
 
 /* monami_page 메인화면 시작 */
-@media (max-width: 1450px){
+@media (max-width: 1450px) {
   .bbs_view {
-      max-width: 1400px;
-      width: 94%;
-      margin: 0 auto;
-      border-top: 2px solid #000;
+    max-width: 1400px;
+    width: 94%;
+    margin: 0 auto;
+    border-top: 2px solid #000;
   }
 }
 .bbs_view {
-    max-width: 1400px;
-    width: 100%;
-    margin: 0 auto;
-    border-top: 2px solid #000;
+  max-width: 1400px;
+  width: 100%;
+  margin: 0 auto;
+  border-top: 2px solid #000;
 }
 .bbs_view th {
   padding: 25px 0;
@@ -1077,29 +1102,29 @@ th {
 b {
   font-weight: bold;
 }
-@media (max-width: 1450px){
+@media (max-width: 1450px) {
   .view_btns {
     max-width: 1400px;
     width: 94%;
     margin: 17px auto;
     text-align: center;
     position: relative;
-}
+  }
 }
 .view_btns {
-    max-width: 1400px;
-    width: 94%;
-    margin: 17px auto;
-    text-align: center;
-    position: relative;
+  max-width: 1400px;
+  width: 94%;
+  margin: 17px auto;
+  text-align: center;
+  position: relative;
 }
-.view_btns>a {
+.view_btns > a {
   display: inline-block;
   width: 143px;
   height: 40px;
   text-align: center;
   line-height: 40px;
-  font-family: 'Montserrat';
+  font-family: "Montserrat";
   font-size: 15px;
   color: #fff;
   background: #c40f39;
