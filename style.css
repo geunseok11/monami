@@ -219,7 +219,7 @@ a:hover {
   margin: 0 33px 0 0;
 }
 .head .gnb .nav > ul > li:nth-child(6) {
-  margin: 0 0 0 33px;
+  margin: 0 0 0 55px;
 }
 .head .gnb .nav > ul > li > a {
   display: block;
@@ -265,11 +265,11 @@ a:hover {
 }
 .head .gnb .nav > ul > li:nth-child(4) > ul {
   left: -37px;
-  width: 130px;
+  width: 120px;
 }
 .head .gnb .nav > ul > li:nth-child(5) > ul {
-  left: -39px;
-  width: 90px;
+  left: -50px;
+  width: 123px;
 }
 .head .gnb .nav > ul > li:nth-child(6) > ul {
   left: -32px;
