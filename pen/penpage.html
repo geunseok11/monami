@@ -5,9 +5,29 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MONAMI</title>
-    <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon" />
-    <link rel="stylesheet" href="../style.css" />
-    <script type="text/javascript" src="../common.js"></script>
+  
+    <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="../pen.css" />
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.js"></script>
+   
+    <script type="text/javascript" src="../js/common.js"></script>
+    <script type="text/javascript">
+      $(function () {
+        $(document).on("click", ".find_f", function () {
+          dh = $(document).height();
+          poph = $(".find_layer").height();
+
+          $("#bgblack").height(dh).show();
+          $(".find_layer")
+            .show()
+            .animate({ top: $(document).scrollTop() + 50 + "px" }, 100);
+        });
+        $("#bgblack,.btnx_").click(function () {
+          $("#bgblack").height(dh).hide();
+          $(".find_layer").hide();
+        });
+      });
+    </script>
 </head>
 <body>
     <div class="popup_buttons">
@@ -47,13 +67,13 @@
               <div class="topmenu">
                 <ul>
                   <li>
-                    <a href="#">HOME</a>
+                    <a href="../index.html">HOME</a>
                   </li>
                   <li>
-                    <a href="#">SITE MAP</a>
+                    <a href="../sitemap.html">SITE MAP</a>
                   </li>
                   <li>
-                    <a href="#">CONTACT US</a>
+                    <a href="../Inquiry.html">CONTACT US</a>
                   </li>
                 </ul>
               </div>
@@ -62,67 +82,67 @@
           <div class="gnb">
             <div class="conwrap">
               <h1>
-                <a href="#"><img src="../images/logo.jpeg" alt="" /></a>
+                <a href="../index.html"><img src="../images/logo.jpeg" alt="" /></a>
               </h1>
               <div class="nav">
                 <ul>
                   <li >
-                    <a href="#">모나미소개</a>
+                    <a href="../about/ceo.html">모나미소개</a>
                     <ul>
                       <li>
-                        <a href="#">CEO 메시지</a>
+                        <a href="../about/ceo.html">CEO 메시지</a>
                       </li>
                       <li>
-                        <a href="#">회사정보</a>
+                        <a href="../about/company.html">회사정보</a>
                       </li>
                       <li>
-                        <a href="#">회사연혁</a>
+                        <a href="../about/history.html">회사연혁</a>
                       </li>
                       <li>
-                        <a href="#">투자정보</a>
+                        <a href="../investment.html">투자정보</a>
                       </li>
                       <li>
-                        <a href="#">CI</a>
+                        <a href="../ci.html">CI</a>
                       </li>
                       <li>
                         <a href="#">채용정보</a>
                       </li>
                       <li>
-                        <a href="#">찾아오시는 길</a>
+                        <a href="../location.html">찾아오시는 길</a>
                       </li>
                     </ul>
                   </li>
                   <li >
-                    <a href="#">모나미제품</a>
+                    <a href="./penpage.html">모나미제품</a>
                     <ul>
                       <li>
                         <a href="./penpage.html">펜</a>
                       </li>
                       <li>
-                        <a href="#">마카</a>
+                        <a href="../marker/markerpage.html">마카</a>
                       </li>
                       <li>
-                        <a href="#">형광펜</a>
+                        <a href="../lightpen.html">형광펜</a>
                       </li>
                       <li>
-                        <a href="#">미술용품</a>
+                        <a href="../A_main1.html">미술용품</a>
                       </li>
                       <li>
-                        <a href="#">기타</a>
+                        <a href="../E_main1.html">기타</a>
                       </li>
                       <li>
-                        <a href="#">카탈로그</a>
+                        <a href="../cataloguepage.html">카탈로그</a>
                       </li>
                     </ul>
                   </li>
                   <li>
-                    <a href="#">NEWS & VIDEO</a>
+                    <a href="../monami_news1.html">NEWS & VIDEO</a>
                     <ul >
                       <li>
-                        <a href="#">보도자료</a>
+                        <a href="../monami_news1.html">보도자료</a>
                       </li>
                       <li>
-                        <a href="#">동영상자료</a>
+                        <a href="../monami_video1.html">동영상자료</a>
                       </li>
                     </ul>
                   </li>
@@ -141,13 +161,13 @@
                     <a href="#">고객지원</a>
                     <ul>
                       <li>
-                        <a href="#">자주묻는질문</a>
+                        <a href="../FAQ.html">자주묻는질문</a>
                       </li>
                       <li>
-                        <a href="#">문의하기</a>
+                        <a href="../Inquiry.html">문의하기</a>
                       </li>
                       <li>
-                        <a href="#">이벤트</a>
+                        <a href="../board_event.html">이벤트</a>
                       </li>
                       <li>
                         <a href="#">모나미 패밀리샵 찾기</a>
@@ -158,7 +178,7 @@
                     <a href="#">기업 구매 / 개발</a>
                     <ul class="hovermenu">
                       <li><a href="#">기업 및 단체 구매</a></li>
-                      <li><a href="#">산업용 맞춤 제품개발</a></li>
+                      <li><a href="../industry.html">산업용 맞춤 제품개발</a></li>
                     </ul>
                   </li>
                 </ul>
@@ -171,7 +191,7 @@
                 </div>
                 <div class="nav_search">
                   <input type="text" name="" id="" />
-                  <a href="#">
+                  <a href="../search.html">
                     <img src="../images/btn_search.gif" alt="" />
                   </a>
                 </div>
@@ -180,31 +200,31 @@
                 <div class="menubox">
                   <h2>모나미소개</h2>
                   <ul>
-                    <li><a href="/about/ceo.php">CEO 메시지</a></li>
-                    <li><a href="/about/company.php">회사정보</a></li>
-                    <li><a href="/about/history.php">회사연혁</a></li>
-                    <li><a href="/about/investment.php">투자정보</a></li>
-                    <li><a href="/about/ci.php">CI</a></li>
+                    <li><a href="../about/company.html">CEO 메시지</a></li>
+                    <li><a href="../about/company.html">회사정보</a></li>
+                    <li><a href="../about/history.html">회사연혁</a></li>
+                    <li><a href="../investment.html">투자정보</a></li>
+                    <li><a href="../ci.html">CI</a></li>
                     <li><a href="http://recruit.monami.co.kr/" target="_blank">채용정보</a></li>
-                    <li><a href="/about/location.php">찾아오시는 길</a></li>
+                    <li><a href="../location.html">찾아오시는 길</a></li>
                   </ul>
                 </div>
                 <div class="menubox">
                   <h2>모나미제품</h2>
                   <ul>
-                    <li><a href="#">펜</a></li>
-                    <li><a href="#">마카</a></li>
-                    <li><a href="#">형광펜</a></li>
-                    <li><a href="#">미술용품</a></li>
-                    <li><a href="#">기타</a></li>
-                    <li><a href="#">카탈로그</a></li>
+                    <li><a href="./penpage.html">펜</a></li>
+                    <li><a href="../marker/markerpage.html">마카</a></li>
+                    <li><a href="../lightpen.html">형광펜</a></li>
+                    <li><a href="../A_main1.html">미술용품</a></li>
+                    <li><a href="../E_main1.html">기타</a></li>
+                    <li><a href="../cataloguepage.html">카탈로그</a></li>
                   </ul>
                 </div>
                 <div class="menubox">
                   <h2>NEWS &amp; VIDEO</h2>
                   <ul>
-                    <li><a href="#">보도자료</a></li>
-                    <li><a href="#">동영상자료</a></li>
+                    <li><a href="../monami_news1.html">보도자료</a></li>
+                    <li><a href="../monami_video1.html">동영상자료</a></li>
                   </ul>
                 </div>
                                         <div class="menubox">
@@ -217,9 +237,9 @@
                 <div class="menubox">
                   <h2>고객지원</h2>
                   <ul>
-                    <li><a href="#">자주묻는질문</a></li>
-                    <li><a href="#">문의하기</a></li>
-                    <li><a href="#">이벤트</a></li>
+                    <li><a href="../FAQ.html">자주묻는질문</a></li>
+                    <li><a href="../Inquiry.html">문의하기</a></li>
+                    <li><a href="../board_event.html">이벤트</a></li>
                     <li><a class="#">모나미 패밀리샵 찾기</a></li>
                   </ul>
                 </div>
@@ -251,13 +271,13 @@
                          <a href="../marker/markerpage.html">마카</a>
                      </li>
                      <li>
-                         <a href="sub_1">형광펜</a>
+                         <a href="../lightpen.html">형광펜</a>
                      </li>
                      <li>
-                         <a href="sub_2">미술용품</a>
+                         <a href="../A_main1.html">미술용품</a>
                      </li>
                      <li>
-                         <a href="sub_3">기타</a>
+                         <a href="../E_main1.html">기타</a>
                      </li>
                      <li>
                          <a href="../cataloguepage.html">카탈로그</a>
@@ -277,7 +297,7 @@
  
             <div class="product_list">
                 <ul>
-                  <li><a href="pen10">
+                  <li><a href="../peninfo/peninfo.html">
                     <div class="thum">
                         <img src="../images/p0.jpg" alt="">
                         <div class="ondiv">
@@ -470,7 +490,7 @@
             <h1><img src="../images/foot_logo.jpeg" alt="로고"></img></h1>
             <ul class="fm">
               <li>
-                <a href="#">회사소개</a>
+                <a href="../about/ceo.html">회사소개</a>
               </li>
               <li>
                 <a href="#">개인정보처리방식</a>
