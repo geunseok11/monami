@@ -9,14 +9,31 @@
     <link rel="stylesheet" href="./css/prodiqr.css" />
     <script src="//code.jquery.com/jquery-3.3.1.min.js"></script>
     <script type="text/javascript" src="/js/common.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.js"></script>
     <link rel="stylesheet" href="./css/style.intro.css">
+    <script type="text/javascript">
+      $(function () {
+        $(document).on("click", ".find_f", function () {
+          dh = $(document).height();
+          poph = $(".find_layer").height();
+
+          $("#bgblack").height(dh).show();
+          $(".find_layer")
+            .show()
+            .animate({ top: $(document).scrollTop() + 50 + "px" }, 100);
+        });
+        $("#bgblack,.btnx_").click(function () {
+          $("#bgblack").height(dh).hide();
+          $(".find_layer").hide();
+        });
+      });
+    </script>
   </head>
   <body><!-- wrap 시작 -->
     <div id="wrap">
-      <div id="bgblack"></div> 
+      <div id="bgblack"></div>
       <div class="find_layer" style="display: none; top: 50px">
-        <iframe src="/shop/shop.html" frameborder="0" id="find_f">
-        </iframe>
+        <iframe src="./shop/shop.html" frameborder="0" id="find_f"> </iframe>
         <div class="btnx_">
           <img src="/images/close.png" alt="" />
         </div>
@@ -155,7 +172,7 @@
                       <a href="./board_event.html">이벤트</a>
                     </li>
                     <li>
-                      <a href="./shop/shop.html">모나미 패밀리샵 찾기</a>
+                      <a class="find_f">모나미 패밀리샵 찾기</a>
                     </li>
                   </ul>
                 </li>
@@ -176,7 +193,7 @@
               </div>
               <div class="nav_search">
                 <input type="text" name="" id="" />
-                <a href="#">
+                <a href="./search.html">
                   <img src="./images/btn_search.gif" alt="" />
                 </a>
               </div>
@@ -225,7 +242,7 @@
                   <li><a href="./FAQ.html">자주묻는질문</a></li>
                   <li><a href="./Inquiry.html">문의하기</a></li>
                   <li><a href="./board_event.html">이벤트</a></li>
-                  <li><a href="./shop/shop.html">모나미 패밀리샵 찾기</a></li>
+                  <li><a class="find_f">모나미 패밀리샵 찾기</a></li>
                 </ul>
               </div>
               <div class="menubox">
