@@ -1,7 +1,7 @@
 @import url(http://fonts.googleapis.com/earlyaccess/notosanskr.css);
 @import url("https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700,800");
 
-/*Common*/
+/*공통*/
 * {
   margin: 0;
   padding: 0;
@@ -17,6 +17,7 @@ html {
 }
 body {
   background-color: #fff;
+  width: 100%;
 }
 body,
 h1,
@@ -28,9 +29,7 @@ h6,
 th,
 td,
 input,
-textarea,
-select,
-option {
+textarea {
   color: #555;
   font-family: "Noto Sans KR", "돋움", dotum, sans-serif;
   font-size: 13.5px;
@@ -48,9 +47,7 @@ address {
   font-style: normal;
 }
 img,
-input,
-select,
-textarea {
+input {
   vertical-align: middle;
 }
 a {
@@ -62,38 +59,14 @@ a:hover {
   color: #333;
   text-decoration: none;
 }
-button,
-label {
-  cursor: pointer;
+#wrap {
+  width: 100%;
 }
-button * {
-  position: relative;
+#container {
+  width: 100%;
 }
-button img {
-  left: -3px;
-  *left: auto;
-}
-textarea {
-  overflow: auto;
-}
-.title1 {
-  font-family: "Montserrat", sans-serif;
-  font-size: 38px;
-  font-weight: 600;
-  color: #000;
-  text-align: center;
-  letter-spacing: 2px;
-}
-.title1:after {
-  display: block;
-  content: "";
-  width: 30px;
-  height: 4px;
-  margin: 5px auto 95px;
-  background: #c40f39;
-}
-.title1 span {
-  color: #c40f39;
+#footer {
+  width: 100%;
 }
 .conwrap {
   max-width: 1400px;
@@ -106,6 +79,7 @@ textarea {
   clear: both;
   content: "";
 }
+
 @media (max-width: 1450px) {
   .conwrap {
     max-width: 1400px;
@@ -114,115 +88,8 @@ textarea {
     position: relative;
   }
 }
-.pagetitle {
-  width: 100%;
-  height: 342px;
-  text-align: center;
-  background: url(./images/page_visual1.jpg) no-repeat center;
-}
-.pagetitle h2 {
-  padding-top: 120px;
-  font-size: 34px;
-  color: #fff;
-  font-weight: 500;
-}
-.pagetitle h2:after {
-  display: block;
-  content: "";
-  width: 30px;
-  height: 4px;
-  margin: 5px auto 10px;
-  background: #c40f39;
-}
-.pagetitle p {
-  font-size: 15px;
-  color: #fff;
-  font-weight: 300;
-}
 
-.pn1 {
-  background: url(../images/page_visual1.jpeg) no-repeat center;
-}
-.pn4 {
-  background: url(../images/page_visual4.jpeg) no-repeat center;
-}
-.pn8 {
-  background: url(../images/page_visual8.jpeg) no-repeat center;
-}
-.pagetabs {
-  position: relative;
-  max-width: 1400px;
-  width: 100%;
-  margin: -29px auto 85px;
-  border: 1px solid rgba(0, 0, 0, 0.1);
-}
-.pagetabs ul {
-  overflow: hidden;
-  background: #fff;
-}
-.pagetabs ul li {
-  float: left;
-}
-.pagetabs ul li a {
-  display: block;
-  height: 58px;
-  line-height: 58px;
-  text-align: center;
-  font-size: 15px;
-  color: #666;
-  background: #fff;
-  border-right: 1px solid #ddd;
-}
-.pagetabs ul li.on a {
-  color: #fff;
-  background: #c40f39;
-}
-.pagetabs ul li:last-child a {
-  border-right: 0;
-}
-
-.pagetabs ul.m1 li {
-  width: 200px;
-}
-.pagetabs ul.m2 li {
-  width: 233px;
-}
-.pagetabs ul.m2 li:last-child {
-  width: 235px;
-}
-.pagetabs ul.m4 li {
-  width: 25%;
-}
-.pagetabs ul.m5 li {
-  width: 50%;
-}
-
-@media (max-width: 1420px) {
-  .pagetabs ul.m1 li {
-    width: 14.285%;
-  }
-  .pagetabs ul.m2 li {
-    width: 16.666%;
-  }
-  .pagetabs ul.m2 li:last-child {
-    width: 16.666%;
-  }
-  .pagetabs ul.m4 li {
-    width: 25%;
-  }
-  .pagetabs ul.m5 li {
-    width: 50%;
-  }
-}
-/* top 버튼 */
-.btn_top {
-  position: fixed;
-  right: 3%;
-  bottom: 30%;
-  z-index: 2000;
-  border: 2px solid #c40f39;
-}
-/* 헤더 */
+/* 헤더 시작 */
 #header {
   position: fixed;
   left: 0;
@@ -264,7 +131,7 @@ textarea {
 }
 .head_top .links .lang .this_lang {
   padding-left: 15px;
-  background: url(../images/lang_kor.gif) no-repeat 10px center;
+  background: url(/images/lang_kor.gif) no-repeat 10px center;
 }
 .head_top .links .lang .this_lang a {
   display: block;
@@ -273,10 +140,10 @@ textarea {
   font-family: "Montserrat", sans-serif;
   font-size: 11px;
   color: #000;
-  background: url(../images/lang_arr.gif) no-repeat right center;
+  background: url(/images/lang_arr.gif) no-repeat right center;
 }
 .head_top .links .lang.on .this_lang a {
-  background: url(../images/lang_arr2.gif) no-repeat right center;
+  background: url(/images/lang_arr2.gif) no-repeat right center;
 }
 .head_top .links .lang ul {
   width: 86px;
@@ -289,7 +156,7 @@ textarea {
   margin-left: -2px;
   text-align: center;
   color: #000;
-  background: url(../images/lang_eng.gif) no-repeat 12px center;
+  background: url(/images/lang_eng.gif) no-repeat 12px center;
 }
 
 .head_top .links .sns {
@@ -314,7 +181,7 @@ textarea {
   float: left;
   margin-left: 10px;
   padding-left: 12px;
-  background: url(../images/tm_bar.gif) no-repeat left center;
+  background: url(/images/tm_bar.gif) no-repeat left center;
 }
 .head_top .topmenu ul li:first-child {
   background: 0;
@@ -371,29 +238,42 @@ textarea {
   font-family: "Montserrat", sans-serif;
   font-weight: 500;
 }
-/* 네비 */
+
+/* 네비 시작 */
 .head .gnb .nav > ul > li > ul {
   display: none;
   position: absolute;
   left: -78px;
   top: 100%;
   z-index: 100;
-  width: 180px;
+  width: 100px;
   padding: 12px 25px;
   background: rgba(255, 255, 255, 0.9);
   box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
 }
+.head .gnb .nav > ul > li:nth-child(1) > ul {
+  left: -39px;
+  width: 100px;
+}
+.head .gnb .nav > ul > li:nth-child(2) > ul {
+  left: -37px;
+  width: 100px;
+}
 .head .gnb .nav > ul > li:nth-child(3) > ul {
-  left: -62px;
+  left: -35px;
+  width: 150px;
 }
 .head .gnb .nav > ul > li:nth-child(4) > ul {
-  left: -55px;
+  left: -37px;
+  width: 130px;
 }
 .head .gnb .nav > ul > li:nth-child(5) > ul {
-  left: -83px;
+  left: -39px;
+  width: 90px;
 }
 .head .gnb .nav > ul > li:nth-child(6) > ul {
-  left: -63px;
+  left: -32px;
+  width: 125px;
 }
 .head .gnb .nav > ul > li > ul > li {
   border-bottom: 1px solid #e1e1e1;
@@ -469,6 +349,7 @@ textarea {
 .head .gnb .search .btn_all.openmenu > div:nth-child(3) {
   transform: translateY(-7px) rotate(-45deg);
 }
+/* 네비 끝 */
 /* 전체메뉴 보기 */
 .allmenu {
   display: none;
@@ -506,7 +387,6 @@ textarea {
   margin: 20px 0;
   background: #c40f39;
 }
-
 .menubox ul li {
   margin-bottom: 15px;
 }
@@ -524,7 +404,6 @@ textarea {
   color: #c40f39;
   font-weight: 400;
 }
-
 @media (max-width: 1450px) {
   .head .gnb {
     min-width: 1262px;
@@ -550,7 +429,41 @@ textarea {
     width: 162px;
   }
 }
-/* 푸터 */
+
+#bgblack {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 3000;
+}
+.find_layer {
+  display: none;
+  position: relative;
+  position: absolute;
+  left: 50%;
+  z-index: 4000;
+  width: 800px;
+  margin-left: -400px;
+  overflow: hidden;
+  background: #fff;
+}
+.find_layer iframe {
+  width: 820px;
+  height: 800px;
+}
+.find_layer .btnx_ {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  right: 26px;
+  top: 13px;
+  z-index: 10;
+  cursor: pointer;
+}
+/* 헤더 끝 */
+/* 푸터 시작 */
 #footer {
   position: relative;
   background: #111;
@@ -587,7 +500,7 @@ textarea {
   float: left;
   padding-right: 11px;
   margin-right: 10px;
-  background: url(../images/fm_bar.gif) no-repeat right center;
+  background: url(/images/common/fm_bar.gif) no-repeat right center;
 }
 .foot_top .fm li:last-child {
   margin: 0;
@@ -613,7 +526,6 @@ textarea {
   color: #fff;
   margin-bottom: 10px;
 }
-
 .foot_btm .info {
   float: left;
   margin-right: 55px;
@@ -656,7 +568,7 @@ textarea {
   line-height: 34px;
   font-size: 13px;
   color: rgba(255, 255, 255, 0.4);
-  background: url(../images/family_arr.png) no-repeat 95% center;
+  background: url(/images/family_arr.png) no-repeat 95% center;
 }
 .foot_btm .fam_site ul {
   display: none;
@@ -676,7 +588,6 @@ textarea {
   font-size: 13px;
   color: rgba(255, 255, 255, 0.6);
 }
-
 .foot_pop {
   display: none;
   width: 1280px;
@@ -753,6 +664,7 @@ textarea {
     padding: 0 3%;
   }
 }
+/* 푸터 끝 */
 
 /* 메인화면 들어갈 위치 추후 수정  */
 /* #visaul {
