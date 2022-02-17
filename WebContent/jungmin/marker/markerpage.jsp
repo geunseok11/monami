@@ -1,3 +1,5 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,10 +7,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MONAMI</title>
-    <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon" />
-    <link rel="stylesheet" href="../style.css" />
+    <link rel="shortcut icon" href="../../images/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="../../css/pen.css" />
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.js"></script>
-    <script type="text/javascript" src="/js/common.js"></script>
+    <script type="text/javascript" src="../../js/common.js"></script>
     <script type="text/javascript">
       $(function () {
         $(document).on("click", ".find_f", function () {
@@ -31,9 +33,9 @@
   <div id="wrap">
     <div id="bgblack"></div>
     <div class="find_layer" style="display: none; top: 50px">
-      <iframe src="../shop/shop.html" frameborder="0" id="find_f"> </iframe>
+      <iframe src="../../shop/shop.html" frameborder="0" id="find_f"> </iframe>
       <div class="btnx_">
-        <img src="/images/close.png" alt="" />
+        <img src="../../images/close.png" alt="" />
       </div>
     </div>
     <div class="popup_buttons">
@@ -59,12 +61,12 @@
                   <ul>
                     <li>
                       <a href="#" target="_blank">
-                        <img src="../images/sns_facebook.gif" alt="페이스북" />
+                        <img src="../../images/sns_facebook.gif" alt="페이스북" />
                       </a>
                     </li>
                     <li>
                       <a href="#" target="_blank">
-                        <img src="../images/sns_insta.gif" alt="인스타" />
+                        <img src="../../images/sns_insta.gif" alt="인스타" />
                       </a>
                     </li>
                   </ul>
@@ -76,7 +78,7 @@
                     <a href="#">HOME</a>
                   </li>
                   <li>
-                    <a href="../sitemap.html">SITE MAP</a>
+                    <a href="../../sitemap.html">SITE MAP</a>
                   </li>
                   <li>
                     <a href="#">CONTACT US</a>
@@ -88,12 +90,12 @@
           <div class="gnb">
             <div class="conwrap">
               <h1>
-                <a href="#"><img src="../images/logo.jpeg" alt="" /></a>
+                <a href="#"><img src="../../images/logo.jpeg" alt="" /></a>
               </h1>
               <div class="nav">
                 <ul>
                   <li>
-                    <a href="../about/ceo.html">모나미소개</a>
+                    <a href="../../about/ceo.html">모나미소개</a>
                     <ul>
                       <li>
                         <a href="../about/ceo.html">CEO 메시지</a>
@@ -197,8 +199,8 @@
                 </div>
                 <div class="nav_search">
                   <input type="text" name="" id="" />
-                  <a href="../search.html">
-                    <img src="../images/btn_search.gif" alt="" />
+                  <a href="../../search.html">
+                    <img src="../../images/btn_search.gif" alt="" />
                   </a>
                 </div>
               </div>
@@ -218,7 +220,7 @@
                 <div class="menubox">
                   <h2>모나미제품</h2>
                   <ul>
-                    <li><a href="../pen/penpage.html">펜</a></li>
+                    <li><a href="../../pen/penpage.html">펜</a></li>
                     <li><a href="./markerpage.html">마카</a></li>
                     <li><a href="#">형광펜</a></li>
                     <li><a href="#">미술용품</a></li>
@@ -271,7 +273,7 @@
             <div class="submenu_list">
                  <ul id="sublist">
                      <li>
-                         <a href="../pen/penpage.html">펜</a>
+                         <a href="../../pen/penpage.html">펜</a>
                      </li>
                      <li class="on">
                          <a href="./markerpage.html">마카</a>
@@ -298,15 +300,15 @@
                 <li><a href="./water_marker.html">수성마카</a></li>
                 <li><a href="./oil_marker.html">유성마카</a></li>
                 <li><a href="./board_marker.html">보드마카</a></li>
-                <li class="on"><a href="./daily_marker.html">생활마카</a></li>
+                <li><a href="./daily_marker.html">생활마카</a></li>
                 <li><a href="./industrial_maker.html">산업마카</a></li>
             </ul>
  
             <div class="product_list">
                 <ul>
-                    <li><a href="marker1">
+                    <li><a href="../markerinfo/markerinfo.html">
                         <div class="thum">
-                            <img src="../images/dm1.jpg" alt="">
+                            <img src="../../images/m1.jpg" alt="">
                             <div class="ondiv">
                                 <div class="btn_plus">
                                     <div></div>
@@ -315,15 +317,15 @@
                             </div>
                         </div>
                         <div class="info">
-                            <div class="pen_name">생활마카</div>
-                            <div class="product_name">세라믹마카 480 / 482</div>
+                            <div class="pen_name">유성마카</div>
+                            <div class="product_name">네임펜 M 화이트</div>
                         </div>                   
                     </a>
                     </li>
  
                     <li><a href="marker2">
                         <div class="thum">
-                            <img src="../images/dm2.jpg" alt="">
+                            <img src="../../images/m2.jpg" alt="">
                             <div class="ondiv">
                                 <div class="btn_plus">
                                     <div></div>
@@ -332,15 +334,15 @@
                             </div>
                         </div>
                         <div class="info">
-                            <div class="pen_name">생활마카</div>
-                            <div class="product_name">페브릭마카 470</div>
+                            <div class="pen_name">수성마카</div>
+                            <div class="product_name">프러스펜 3000 피크먼트</div>
                         </div>                   
                     </a>
                     </li>
  
                     <li><a href="marker3">
                         <div class="thum">
-                            <img src="../images/dm3.jpg" alt="">
+                            <img src="../../images/m3.jpg" alt="">
                             <div class="ondiv">
                                 <div class="btn_plus">
                                     <div></div>
@@ -349,15 +351,15 @@
                             </div>
                         </div>
                         <div class="info">
-                            <div class="pen_name">생활마카</div>
-                            <div class="product_name">데코마키 463</div>
+                            <div class="pen_name">수성마카</div>
+                            <div class="product_name">라이브 칼라(화이트 축)</div>
                         </div>                   
                     </a>
                      </li>
                      
                     <li><a href="marker4">
                         <div class="thum">
-                            <img src="../images/dm4.jpg" alt="">
+                            <img src="../../images/m4.jpg" alt="">
                             <div class="ondiv">
                                 <div class="btn_plus">
                                     <div></div>
@@ -366,15 +368,15 @@
                             </div>
                         </div>
                         <div class="info">
-                            <div class="pen_name">생활마카</div>
-                            <div class="product_name">데코마키 460</div>
+                            <div class="pen_name">수성마카</div>
+                            <div class="product_name">라이브칼라 6색 세트</div>
                         </div>                   
                     </a>
                      </li>
  
                     <li><a href="marker5">
                         <div class="thum">
-                            <img src="../images/dm5.jpg" alt="">
+                            <img src="../../images/m5.jpg" alt="">
                             <div class="ondiv">
                                 <div class="btn_plus">
                                     <div></div>
@@ -383,14 +385,14 @@
                             </div>
                         </div>
                         <div class="info">
-                            <div class="pen_name">생활마카</div>
-                            <div class="product_name">타일틈새마카 401</div>
+                            <div class="pen_name">수성마카</div>
+                            <div class="product_name">프러스펜 3000 60색 세트</div>
                         </div>                   
                     </a>
                  </li>
                     <li><a href="marker6">
                      <div class="thum">
-                         <img src="../images/dm6.jpg" alt="">
+                         <img src="../../images/m6.jpg" alt="">
                          <div class="ondiv">
                              <div class="btn_plus">
                                  <div></div>
@@ -399,13 +401,13 @@
                          </div>
                      </div>
                      <div class="info">
-                         <div class="pen_name">생활마카</div>
-                         <div class="product_name">키친마카 420</div>
+                         <div class="pen_name">워터브러쉬</div>
+                         <div class="product_name">워터 리얼 브러쉬</div>
                      </div>                   
                     </a></li>
                     <li><a href="marker7">
                      <div class="thum">
-                         <img src="../images/dm7.jpg" alt="">
+                         <img src="../../images/m7.jpg" alt="">
                          <div class="ondiv">
                              <div class="btn_plus">
                                  <div></div>
@@ -414,13 +416,13 @@
                          </div>
                      </div>
                      <div class="info">
-                         <div class="pen_name">생활마카</div>
-                         <div class="product_name">가든마카 450</div>
+                         <div class="pen_name">수성마카</div>
+                         <div class="product_name">컬러 리얼 브러쉬</div>
                      </div>                   
                     </a></li>
                     <li><a href="marker8">
                      <div class="thum">
-                         <img src="../images/dm8.jpg" alt="">
+                         <img src="../../images/m8.jpg" alt="">
                          <div class="ondiv">
                              <div class="btn_plus">
                                  <div></div>
@@ -429,14 +431,14 @@
                          </div>
                      </div>
                      <div class="info">
-                         <div class="pen_name">생활마카</div>
-                         <div class="product_name">물기에 잘 써지는 마카 570 / 571</div>
+                         <div class="pen_name">수성마카</div>
+                         <div class="product_name">60주년 기념 프러스펜 3000 60색 세트</div>
                      </div>                   
                     </a></li>
  
                     <li><a href="marker9">
                      <div class="thum">
-                         <img src="../images/dm9.jpg" alt="">
+                         <img src="../../images/m9.jpg" alt="">
                          <div class="ondiv">
                              <div class="btn_plus">
                                  <div></div>
@@ -445,26 +447,45 @@
                          </div>
                      </div>
                      <div class="info">
-                         <div class="pen_name">생활마카</div>
-                         <div class="product_name">윈도우 마카</div>
+                         <div class="pen_name">수성마카</div>
+                         <div class="product_name">붓펜 12색 세트</div>
                      </div>                   
                     </a></li>
-                   
+                    <li><a href="marker10">
+                     <div class="thum">
+                         <img src="../../images/m10.jpg" alt="">
+                         <div class="ondiv">
+                             <div class="btn_plus">
+                                 <div></div>
+                                 <div></div>
+                             </div>
+                         </div>
+                     </div>
+                     <div class="info">
+                         <div class="pen_name">수성펜</div>
+                         <div class="product_name">컬러 트윈 브러쉬</div>
+                     </div>                   
+                    </a></li>
                 </ul>
             </div>
             <div class="pagenum">
-                <a class="page_prev">
-                    <img src="../images/page_prev.gif">
+                <a class="page_prev" href="">
+                    <img src="../../images/page_prev.gif">
                 </a>
                 <strong>1</strong>
-             
-                <a  class="page_next">
-                    <img src="../images/page_next.gif">
+                <a href="./markerpage2.html">2</a>
+                <a href="./markerpage3.html">3</a>
+                <a href="./markerpage4.html">4</a>
+                <a href="./markerpage5.html">5</a>
+                <a href="./markerpage6.html">6</a>
+                <a href="./markerpage7.html">7</a>
+                <a  class="page_next" href="./markerpage2.html">
+                    <img src="../../images/page_next.gif" >
                 </a>
             </div>
             <div class="topbtn">
                 <a href="#Top">
-                    <img src="../images/btn_top.gif" alt="상단으로">
+                    <img src="../../images/btn_top.gif" alt="상단으로">
                 </a>
             </div>
         </div>
