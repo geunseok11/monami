@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MONAMI</title>
+    <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="./css/style_another.css" />
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.js"></script>
+    <script type="text/javascript" src="/js/common.js"></script>
+    <script type="text/javascript">
+      $(function () {
+        $(document).on("click", ".find_f", function () {
+          dh = $(document).height();
+          poph = $(".find_layer").height();
+
+          $("#bgblack").height(dh).show();
+          $(".find_layer")
+            .show()
+            .animate({ top: $(document).scrollTop() + 50 + "px" }, 100);
+        });
+        $("#bgblack,.btnx_").click(function () {
+          $("#bgblack").height(dh).hide();
+          $(".find_layer").hide();
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <div id="wrap">
+      <div id="bgblack"></div>
+      <div class="find_layer" style="display: none; top: 50px">
+        <iframe src="./shop/shop.html" frameborder="0" id="find_f"> </iframe>
+        <div class="btnx_">
+          <img src="/images/close.png" alt="" />
+        </div>
+      </div>
+    <div class="popup_buttons">
+      <a class="popup_button" href="">
+        <div class="popup_button-txt">ìì½íê¸°</div>
+      </a>
+      <a class="popup_button-close" onclick="jQuery(this).parent().hide(); return false" href="#">ìì½íê¸° ë²í¼ ë«ê¸°</a>
+    </div>
+    <div id="header">
+      <div class="head">
+        <div class="head_top">
+          <div class="conwrap">
+            <div class="links">
+              <div class="lang">
+                <div class="this_lang">
+                  <a>KOR</a>
+                </div>
+                <ul>
+                  <li><a href="#">ENG</a></li>
+                </ul>
+              </div>
+              <div class="sns">
+                <ul>
+                  <li>
+                    <a href="#" target="_blank">
+                      <img src="./images/sns_facebook.gif" alt="íì´ì¤ë¶" />
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" target="_blank">
+                      <img src="./images/sns_insta.gif" alt="ì¸ì¤í" />
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="topmenu">
+              <ul>
+                <li>
+                  <a href="./index.html">HOME</a>
+                </li>
+                <li>
+                  <a href="./sitemap.html">SITE MAP</a>
+                </li>
+                <li>
+                  <a href="./Inquiry.html">CONTACT US</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="gnb">
+          <div class="conwrap">
+            <h1>
+              <a href="./index.html"><img src="./images/logo.jpeg" alt="" /></a>
+            </h1>
+            <div class="nav">
+              <ul>
+                <li>
+                  <a href="./about/ceo.html">ëª¨ëë¯¸ìê°</a>
+                  <ul>
+                    <li>
+                      <a href="./about/ceo.html">CEO ë©ìì§</a>
+                    </li>
+                    <li>
+                      <a href="./about/company.html">íì¬ì ë³´</a>
+                    </li>
+                    <li>
+                      <a href="./about/history.html">íì¬ì°í</a>
+                    </li>
+                    <li>
+                      <a href="./investment.html">í¬ìì ë³´</a>
+                    </li>
+                    <li>
+                      <a href="./ci.html">CI</a>
+                    </li>
+                    <li>
+                      <a href="http://recruit.monami.co.kr/">ì±ì©ì ë³´</a>
+                    </li>
+                    <li>
+                      <a href="./location.html">ì°¾ìì¤ìë ê¸¸</a>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="./pen/penpage.html">ëª¨ëë¯¸ì í</a>
+                  <ul>
+                    <li>
+                      <a href="./pen/penpage.html">í</a>
+                    </li>
+                    <li>
+                      <a href="./marker/markerpage.html">ë§ì¹´</a>
+                    </li>
+                    <li>
+                      <a href="./lightpen.html">íê´í</a>
+                    </li>
+                    <li>
+                      <a href="./A_main1.html">ë¯¸ì ì©í</a>
+                    </li>
+                    <li>
+                      <a href="./E_main1.html">ê¸°í</a>
+                    </li>
+                    <li>
+                      <a href="./cataloguepage.html">ì¹´íë¡ê·¸</a>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="./monami_news1.html">NEWS & VIDEO</a>
+                  <ul >
+                    <li>
+                      <a href="./monami_news1.html">ë³´ëìë£</a>
+                    </li>
+                    <li>
+                      <a href="./monami_video1.html">ëìììë£</a>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#">ëª¨ëë¯¸ ë¯¸ì ëí</a>
+                  <ul>
+                    <li>
+                      <a href="#">ë¯¸ì ëí ìê°</a>
+                    </li>
+                    <li>
+                      <a href="#">ììì ë°í</a>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="./">ê³ ê°ì§ì</a>
+                  <ul>
+                    <li>
+                      <a href="./FAQ.html">ìì£¼ë¬»ëì§ë¬¸</a>
+                    </li>
+                    <li>
+                      <a href="./Inquiry.html">ë¬¸ìíê¸°</a>
+                    </li>
+                    <li>
+                      <a href="./board_event.html">ì´ë²¤í¸</a>
+                    </li>
+                    <li>
+                      <a class="find_f">ëª¨ëë¯¸ í¨ë°ë¦¬ìµ ì°¾ê¸°</a>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="./industry.html">ê¸°ì êµ¬ë§¤ / ê°ë°</a>
+                  <ul class="hovermenu">
+                    <li><a href="http://mpms.monami.com/promotion/">ê¸°ì ë° ë¨ì²´ êµ¬ë§¤</a></li>
+                    <li><a href="./industry.html">ì°ìì© ë§ì¶¤ ì íê°ë°</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+            <div class="search">
+              <div class="btn_all">
+                <div></div>
+                <div></div>
+                <div></div>
+              </div>
+              <div class="nav_search">
+                <input type="text" name="" id="" />
+                <a href="./search.html">
+                  <img src="./images/btn_search.gif" alt="" />
+                </a>
+              </div>
+            </div>
+            <div class="allmenu" style="display: none;">
+              <div class="menubox">
+                <h2>ëª¨ëë¯¸ìê°</h2>
+                <ul>
+                  <li><a href="./about/ceo.html">CEO ë©ìì§</a></li>
+                  <li><a href="./about/company.html">íì¬ì ë³´</a></li>
+                  <li><a href="./about/history.html">íì¬ì°í</a></li>
+                  <li><a href="./investment.html">í¬ìì ë³´</a></li>
+                  <li><a href="./ci.html">CI</a></li>
+                  <li><a href="http://recruit.monami.co.kr/" target="_blank">ì±ì©ì ë³´</a></li>
+                  <li><a href="./location.html">ì°¾ìì¤ìë ê¸¸</a></li>
+                </ul>
+              </div>
+              <div class="menubox">
+                <h2>ëª¨ëë¯¸ì í</h2>
+                <ul>
+                  <li><a href="./pen/penpage.html">í</a></li>
+                  <li><a href="./marker/markerpage.html">ë§ì¹´</a></li>
+                  <li><a href="./lightpen.html">íê´í</a></li>
+                  <li><a href="./A_main1.html">ë¯¸ì ì©í</a></li>
+                  <li><a href="./E_main1.html">ê¸°í</a></li>
+                  <li><a href="./cataloguepage.html">ì¹´íë¡ê·¸</a></li>
+                </ul>
+              </div>
+              <div class="menubox">
+                <h2>NEWS &amp; VIDEO</h2>
+                <ul>
+                  <li><a href="./monami_news1.html">ë³´ëìë£</a></li>
+                  <li><a href="./monami_video1.html">ëìììë£</a></li>
+                </ul>
+              </div>
+                                      <div class="menubox">
+                <h2>ëª¨ëë¯¸ ë¯¸ì ëí</h2>
+                <ul>
+                  <li><a href="#" target="_blank">ë¯¸ì ëí ìê°</a></li>
+                  <li><a href="#" target="_blank">ììì ë°í</a></li>
+                </ul>
+              </div>
+              <div class="menubox">
+                <h2>ê³ ê°ì§ì</h2>
+                <ul>
+                  <li><a href="./FAQ.html">ìì£¼ë¬»ëì§ë¬¸</a></li>
+                  <li><a href="./Inquiry.html">ë¬¸ìíê¸°</a></li>
+                  <li><a href="./board_event.html">ì´ë²¤í¸</a></li>
+                  <li><a class="find_f">ëª¨ëë¯¸ í¨ë°ë¦¬ìµ ì°¾ê¸°</a></li>
+                </ul>
+              </div>
+              <div class="menubox">
+                <h2><a href="./industry.html" target="_blank">ê¸°ì êµ¬ë§¤ / ê°ë°</a></h2>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- í¤ë ë SECTION-->
+    <!-- ë°ë ìë¨ ì´ë¯¸ì§ ìì SECTION-->
+    <div id="visaul">ë©ì¸íë©´ ìë¨ì ì´ë¯¸ì§ ë¤ì´ê° ê³³</div>
+    <!-- ë°ë ìë¨ ì´ë¯¸ì§ ë  SECTION-->
+    <!-- ë³¸ë¬¸ ìì  SECTION-->
+    <div id="container">
+      <div id="contents">
+      
+          <div class="pagetitle pn1">
+          <h2>
+            ëª¨ëë¯¸ìê°																				</h2>
+          <p>
+            ì¸ì  ì´ëìë ëª¨ëë¯¸ë ë¹ì  ê³ì ììµëë¤.																				</p>
+        </div>
+          <div class="pagetabs">
+              <ul class="m1">
+            <li><a href="/about/ceo.html">CEO ë©ìì§</a></li>
+            <li><a href="/about/company.html">íì¬ì ë³´</a></li>
+            <li><a href="/about/history.html">íì¬ì°í</a></li>
+            <li><a href="./investment.html">í¬ìì ë³´</a></li>
+            <li class="on"><a href="./ci.html">CI</a></li>
+            <li><a href="http://recruit.monami.co.kr/" target="_blank">ì±ì©ì ë³´</a></li>
+            <li><a href="./location.html">ì°¾ìì¤ìë ê¸¸</a></li>
+          </ul>
+                          
+      
+        </div>
+      
+      
+      <h3 class="title1">MONAMI <span>CI</span></h3>
+      <div class="ci conwrap">
+        
+        <div class="ci_logo">
+          
+          <div class="en">
+            <div class="num_title"><span class="num">01</span> English Logo</div>
+            <div class="logoarea"><img src="./images/ci_en_logo.jpeg" alt=""></div>
+            <div class="downs">
+              <a href="/data/down/English Logo_JPG.zip">JPGíì¼ ë¤ì´ë¡ë â</a>
+              <a href="/data/down/English Logo_AI.zip">AIíì¼ ë¤ì´ë¡ë â</a>
+            </div>
+          </div>
+          <div class="kr">
+            <div class="num_title"><span class="num">02</span> Korean Logo</div>
+            <div class="logoarea"><img src="./images/ci_kr_logo.jpeg" alt=""></div>
+            <div class="downs">
+              <a href="/data/down/Korea Logo_JPG.zip">JPGíì¼ ë¤ì´ë¡ë â</a>
+              <a href="/data/down/Korea Logo_AI.zip">AIíì¼ ë¤ì´ë¡ë â</a>
+            </div>
+          </div>
+          <div class="textbox">
+            <div class="align">
+              <p>
+                MONAMIì CIë <span>ëª¨ëë¯¸ ë¸ëëì íµì¬ì¸ Advanced Experience</span>ë¥¼ ì ë¬íë <br>
+                ììë¡ 3E(EXPERTISE, EMOTION, ENERGETIC)ë¥¼ ê¸°ì¤ì¼ë¡ ìë¡­ê² ì¬ëì½íë ì ì ëª¨ëë¯¸ì ì¬ì ë¹ì ê³¼ ì¤ë ì íµ ìì ì¶ì ë ì ë¢°ë¥¼ ë´ìë´ê³  ììµëë¤. 
+              </p>
+              <p>
+                MONAMI 'I'ë ì¬ëªì ì¹êµ¬ë¥¼ ëë³íë ìì´ì½ì¼ë¡ ìë¹ìë¥¼ ë§ì´íë <span>'ëª¨ëë¯¸ì ë§ì'</span> ê³¼ ì ë¬¸ê°ì ì¸ ìì¸ë¡ <br>
+                ì¸ì ë ìë¹ì ì¤ì¬ì ê¸°ìì¼ë¡ì¨ ê²¸ìí ìì¸ë¡ ìíê² ë¤ë ìë¯¸ë¥¼ ë´í¬íììµëë¤.  <br>
+                ì´ë <span>ê³ ê° ìì¬ ì ì¤í ì¸ì¬íë ê¸°ì ìììë¤ì ëª¨ìµì ìì§</span>íë©° ë¡ê³ íìì ë¥ê·¼ ìì¹ì ííì ë°ë³µì¼ë¡ ì¨ëê°ì ë¶ì¬í´ ë³´ë¤ <br>
+                ì ì°í´ì§ê³  ì­ëì ì¼ë¡ ë³ëª¨í ëª¨ëë¯¸ì ì¡°ì§ì ìì§íê³ ì íììµëë¤.
+              </p>
+            </div>
+          </div>
+      
+        </div>
+        <div class="ci_color">
+          <div class="num_title"><span class="num">03</span> Color Logo</div>
+                      <div class="rule_box">
+            <span class="wh">WHITE</span><span class="bk">BLACK</span>
+            <div class="rule_ex"><img src="./images/ci_color_img1.jpeg" alt="ë¡ê³  ì»¬ë¬ ìì"></div>
+      
+          </div>
+        </div>
+      
+        <div class="ci_rule">
+          <div class="num_title"><span class="num">04</span> Prohibited Rule System</div>
+          <div class="rule_box">
+            
+            <div class="rule_ex"><img src="./images/ci_rule_img1.jpeg" alt="ìëª»ë ë¡ê³  ìì"></div>
+            <div class="text_info">
+              <ul>
+                <li>A . ì½í¼ë ì´í¸ë§í¬ ìì ê·ì  ì´ì¸ì ììì ì¬ì©í  ì ììµëë¤.</li>
+                <li>B . ì½í¼ë ì´í¸ë§í¬ ìì ììì PATTERNì ì¬ì©í  ì ìì¼ë©°, ë¼ì¸ì¼ë¡ ì¬ì©í  ì ììµëë¤.</li>
+                <li>C . ì½í¼ë ì´í¸ë§í¬ì ííë¥¼ ììë¡ ë³íí  ì ììµëë¤.</li>
+                <li>D . ì½í¼ë ì´í¸ë§í¬ì LINE DROP SHADOWë¥¼ ì ì©íê±°ë ììë¡ ëìì¸ ììë¥¼ ì²¨ê°í  ì ììµëë¤.</li>
+              </ul>
+            </div>
+      
+          </div>
+        </div>
+        <div class="ci_character">
+      
+          <div class="character_tit">
+            Character Mobee
+          </div>
+      
+          <div class="mobee1">
+            <div class="num_title"><span class="num">01</span> Mobee Logo_ê¸°ë³¸í</div>
+            <div class="logoarea"><img src="./images/ci_mobee_logo1.jpeg" alt=""></div>
+            <div class="downs">
+              <a href="/data/down/Mobee Logo(ê¸°ë³¸í)_JPG.zip">JPGíì¼ ë¤ì´ë¡ë â</a>
+              <a href="/data/down/Mobee Logo(ê¸°ë³¸í)_AI.zip">AIíì¼ ë¤ì´ë¡ë â</a>
+            </div>
+          </div>
+          <div class="mobee2">
+            <div class="num_title"><span class="num">02</span> Mobee Logo_ìì©í</div>
+            <div class="logoarea"><img src="./images/ci_mobee_logo2.jpeg" alt=""></div>
+            <div class="downs">
+              <a href="/data/down/Mobee Logo(ìì©í)_AI.zip">JPGíì¼ ë¤ì´ë¡ë â</a>
+              <a href="/data/down/Mobee Logo(ìì©í)_AI.zip">AIíì¼ ë¤ì´ë¡ë â</a>
+            </div>
+          </div>
+      
+          <div class="mobee_profile">
+            <div class="num_title"><span class="num">03</span> Mobee Profile</div>
+            <div class="character_profile">
+              
+              <div class="imgarea">
+                <a class="cprev"><img src="./images/ci_character_prev.gif" alt=""></a>
+                <a class="cnext"><img src="./images/ci_character_next.gif" alt=""></a>
+                <ul>
+                  <li><img src="./images/ci_character_01.jpeg" alt=""></li>
+                </ul>
+              </div>
+              <div class="mobee_info">
+                <ul>
+                  <li>
+                    <dl>
+                      <dt>ì´ ë¦</dt>
+                      <dd>ëª¨ë¹(mobee)</dd>
+                    </dl>
+                    <dl>
+                      <dt>ì± ê²©</dt>
+                      <dd>
+                        ì²ì§ëë§í ì¼êµ´ì 4ì°¨ìì  íëì ì¦ê¹, ë¨¼ì  ëª¸ì¼ë¡ ë³´ì¬ì£¼ë íëê°ì´ê¸°ë íë<br>
+                        ì´ì¤íê³  ì¤ìí¬ì±ì´, <span>í¸ê¸°ì¬ì´ ë§ê³  ëì ì ì ì´ ê°íê³  íë¼ì¤ ëª¨ë¥´ë ìë¥ì´</span>
+                      </dd>
+                    </dl>
+                    <dl>
+                      <dt>ì·¨ ë¯¸</dt>
+                      <dd>ë¸ë¡ê·¸íê¸°, ì¬í</dd>
+                    </dl>
+                    <dl>
+                      <dt>í¹ ì§</dt>
+                      <dd>
+                        ë³´íµì ë²ì²ë¼ ê¿ì ì¢ìíì§ ìì.<br>
+                        ë¨ê²ì ë¨¹ì¼ë©´ ê²½ê¸°ë¥¼ ì¼ì¼í¤ë ëí¹í ìì±, ë¸ëì»¤í¼ë¥¼ ì¢ìí¨.<br>
+                        ì¬ë¬ ëìì¸ íëí°ë¥¼ ìì§íì¬ ë³ì¥ì ì ì¦ê¹.<br>
+                        ì¼ë¦¬ì´ëµí°, ìë¡ì´ ì ì íê³¼ ê¸°ì ì ê´ì¬ì´ ë§ì.
+                      </dd>
+                    </dl>
+                  </li>
+                </ul>
+              </div>
+      
+            </div>
+          </div>
+      
+          <div class="mobee3">
+            <div class="num_title"><span class="num">04</span> Mobee Character_ìì©ëì</div>
+            <div class="logoarea"><img src="./images/ci_mobee_img1.jpeg" alt=""></div>
+          </div>
+          <div class="mobee4">
+            <div class="num_title"><span class="num">05</span> Mobee Character_íì </div>
+            <div class="logoarea"><img src="./images/ci_mobee_img2.jpeg" alt=""></div>
+          </div>
+      
+      
+        </div>
+      
+      
+      
+      </div>
+      
+      
+        <div class="btn_top">
+          <a href="#"><img src="./images/btn_top.gif" alt="íì´ì§ ìë¨ì¼ë¡"></a>
+        </div>
+      </div><!--/contents-->
+      </div>
+    <!-- ë³¸ë¬¸ ë SECTION-->
+    <!-- í¸í° ìì SECTION-->
+    <div id="footer">
+      <div class="foot">
+        <div class="foot_pop" style="display: none;">
+          <div class="privacy" style="display: none;">
+            <div class="title">ê°ì¸ì ë³´ ì·¨ê¸ë°©ì¹¨</div>
+            <div class="textarea">
+              <textarea readonly="readonly">'ãëª¨ëë¯¸'ë (ì´í 'íì¬'ë) ì ë³´ì£¼ì²´ì ê°ì¸ì ë³´ë¥¼ ì¤ììíë©°, "ì ë³´íµì ë§ ì´ì©ì´ì§ ë° ì ë³´ë³´í¸"ì ê´í ë²ë¥ ì ì¤ìíê³  ììµëë¤. íì¬ë ê°ì¸ì ë³´ì·¨ê¸ë°©ì¹¨ì íµíì¬ ê³ ê°ëê»ì ì ê³µíìë ê°ì¸ì ë³´ê° ì´ë í ì©ëì ë°©ìì¼ë¡ ì´ì©ëê³  ìì¼ë©°, ê°ì¸ì ë³´ë³´í¸ë¥¼ ìí´ ì´ë í ì¡°ì¹ê° ì·¨í´ì§ê³  ìëì§ ìë ¤ëë¦½ëë¤. íì¬ë ê°ì¸ì ë³´ì·¨ê¸ë°©ì¹¨ì ê°ì íë ê²½ì° ì¹ì¬ì´í¸ ê³µì§ì¬í­(ëë ê°ë³ê³µì§)ì íµíì¬ ê³µì§í  ê²ìëë¤.
+      ï¼ ãëª¨ëë¯¸ì ê°ì¸ì ë³´ ì²ë¦¬ë°©ì¹¨ì ë¤ìê³¼ ê°ì ë´ì©ì ë´ê³  ììµëë¤.
+      
+      1. ìì§íë ê°ì¸ì ë³´ í­ëª© ë° ìì§ë°©ë² 
+      íì¬ë ì í ë¬¸ì, ì ìì¬í­, ë¶ë§ì¬í­ ì ì ë±ì ìí´ ìëì ê°ì ê°ì¸ì ë³´ë¥¼ ìì§íê³  ììµëë¤. 
+      - íìí­ëª© : ì´ë¦, ì´ë©ì¼
+      - ì íí­ëª© : ì°ë½ì²
+      (ë¨, ì ë³´ì£¼ì²´ì ê¸°ë³¸ì  ì¸ê¶ ì¹¨í´ì ì°ë ¤ê° ìë ë¯¼ê°í ì¸ì¢ ë° ë¯¼ì¡±, ì¬ì ë° ì ì¡°, ì¶ì ì§ ë° ë³¸ì ì§, ì ì¹ì  ì±í¥ ë° ë²ì£ê¸°ë¡,ê±´ê°ìí ë° ì±ìí ë±ì ê°ì¸ì ë³´ë ìì§íì§ ììµëë¤.) 
+      ëí, ìë¹ì¤ ì´ì© ê³¼ì ìì ìëì ê°ì ì ë³´ë¤ì´ ìì±ëì´ ìì§ë  ì ììµëë¤.
+      - ê°ì¸ì ë³´ ì¶ê° ìì§ì ëí´ ë³ë ëìë¥¼ ë°ë ê²½ì° 
+      - ìì§ë°©ë² : ííì´ì§ âë¬¸ìíê¸°(Contact Us)â ìë¹ì¤ë¥¼ íµí ìì§
+      
+      2. ê°ì¸ì ë³´ ìì§ ë° ì´ì©ëª©ì 
+      íì¬ë ìì§í ê°ì¸ì ë³´ë¥¼ ë¤ìì ëª©ì ì ìí´ íì©í©ëë¤.
+      ì´ì©ëª©ì  : ì§ììê° ë¬¸ìí ëµë³ ì ë¬, ë³¸ì¸ì ìì¬íì ì¬í­ ì²ë¦¬, ë¶ë§ì¬í­ ì²ë¦¬, ê¸°í ìíí ìì¬ìíµ ê²½ë¡ íë³´ (ì´ì© ëª©ì ì´ ë³ê²½ë  ììë ì¬ì ëìë¥¼ êµ¬í  ìì ìëë¤.)
+      
+      3. ê°ì¸ì ë³´ì ì ê³µ ë° ê³µì 
+      íì¬ë ì ë³´ì£¼ì²´ë¤ì ê°ì¸ì ë³´ë¥¼ ê°ì¸ì ë³´ì ìì§ëª©ì  ë° ì´ì©ëª©ì ìì ê³ ì§í ë²ìë´ìì ì¬ì©íë©°, ì ë³´ì£¼ì²´ì ì¬ì  ëì ìì´ë ë²ìë¥¼ ì´ê³¼íì¬ ì´ì©íê±°ë ìì¹ì ì¼ë¡ ì ë³´ì£¼ì²´ì ê°ì¸ì ë³´ë¥¼ ì¸ë¶ì ê³µê°íì§ ììµëë¤. ë¤ë§, ìëì ê²½ì°ìë ìì¸ë¡ í©ëë¤. 
+      - ì ë³´ì£¼ì²´ë¤ì´ ì¬ì ì ëìí ê²½ì°
+      - ë²ë ¹ì ê·ì ì ìê±°íê±°ë, ìì¬ ëª©ì ì¼ë¡ ë²ë ¹ì ì í´ì§ ì ì°¨ì ë°©ë²ì ë°ë¼ ìì¬ê¸°ê´ì ìêµ¬ê° ìë ê²½ì°
+      
+      4. ê°ì¸ì ë³´ì ë³´ì  ë° ì´ì©ê¸°ê°
+      ì ë³´ì£¼ì²´ ê°ì¸ì ë³´ë ìì¹ì ì¼ë¡, ê°ì¸ì ë³´ì ìì§ ë° ì´ì©ëª©ì ì´ ë¬ì±ë íìë í´ë¹ ì ë³´ë¥¼ ì§ì²´ ìì´ íê¸°í©ëë¤. ë¨, âíì¬â ë´ë¶ ë°©ì¹¨ ëë ì ë³´ì£¼ì²´ë¡ë¶í° ê°ì¸ì ë³´ ìì§ ì ëì ë°ì ê°ì¸ì ë³´ ë³´ì /ì´ì©ê¸°ê°, ê´ë ¨ë²ë ¹ì ê·ì  ë´ìì ê°ì¸ì ë³´ë¥¼ ì²ë¦¬/ë³´ì í©ëë¤. ì¼ì ê¸°ê° ëì ë³´ì¡´í´ì¼ íë ì ë³´ì ëí´ ìëì ê°ì ì¬ì ë¡ ì¸íì¬ ë³´ì¡´íê³  ììµëë¤.
+      - ë³´ì¡´í­ëª© : (íì) ì´ë¦, ì´ë©ì¼, ì ëª©, ë´ì© / (ì í) ì°ë½ì², ì²¨ë¶íì¼ 
+      - ë³´ì ê·¼ê±° : ì ë³´ì£¼ì²´ ëì
+      - ë³´ì  ë° ì´ì©ê¸°ê° : 3ë
+      
+      5. ê°ì¸ì ë³´ì íê¸°ì ì°¨ ë° ë°©ë²
+      íì¬ë ìì¹ì ì¼ë¡ ê°ì¸ì ë³´ìì§ ë° ì´ì©ëª©ì ì´ ë¬ì±ë íìë í´ë¹ì ë³´ë¥¼ ì§ì²´ìì´ íê¸°í©ëë¤. íê¸°ì ì°¨ ë° ë°©ë²ì ë¤ìê³¼ ê°ìµëë¤.
+      - íê¸°ì ì°¨ 
+       : ì ë³´ì£¼ì²´ê° ìë¹ì¤ ì ì²­, ë¬¸ììë´ ë±ì ìíì¬ ìë ¥íì  ì ë³´ë ëª©ì ì´ ë¬ì±ë í ë³ëì DBë¡ ì®ê²¨ì ¸(ì¢ì´ì ê²½ì° ë³ëì ìë¥í¨) ë´ë¶ ë°©ì¹¨ ë° ê¸°í ê´ë ¨ ë²ë ¹ì ìí ì ë³´ë³´í¸ ì¬ì ì ë°ë¼(ë³´ì  ë° ì´ì©ê¸°ê° ì°¸ì¡°) ì¼ì ê¸°ê° ì ì¥ë í íê¸°ëì´ì§ëë¤.
+       : ë ê°ì¸ì ë³´ë ë²ë¥ ì ìí ê²½ì°ê° ìëê³ ìë ë³´ì ëì´ì§ë ì´ì¸ì ë¤ë¥¸ ëª©ì ì¼ë¡ ì´ì©ëì§ ììµëë¤. 
+      - íê¸°ë°©ë² 
+       : ì ìì  íì¼ííë¡ ì ì¥ë ê°ì¸ì ë³´ë ê¸°ë¡ì ì¬ìí  ì ìë ê¸°ì ì  ë°©ë²ì ì¬ì©íì¬ ì­ì í©ëë¤.
+       : ì¢ì´ì ì¶ë ¥ë ê°ì¸ì ë³´ë ë¶ìê¸°ë¡ ë¶ìíê±°ë ìê°í©ëë¤. 
+      
+      6. ì ë³´ì£¼ì²´ ë° ë²ì ëë¦¬ì¸ì ê¶ë¦¬ì ê·¸ íì¬ë°©ë²
+      ì ë³´ì£¼ì²´ë ì¸ì ë ì§ ë±ë¡ëì´ ìë ìì ì ê°ì¸ì ë³´ë¥¼ ì¡°ííê±°ë ìì í  ì ìì¼ë©° ì­ì ë¥¼ ìì²­í  ì ììµëë¤.
+      í¹ì ê°ì¸ì ë³´ë³´í¸ì±ìììê² ìë©´, ì í ëë ì´ë©ì¼ë¡ ì ì ì ìì²­íìë©´, ë³¸ì¸ íì¸ ì ì°¨ íì ì¡°ì¹íê² ìµëë¤. 
+      ì ë³´ì£¼ì²´ê° ê°ì¸ì ë³´ì ì¤ë¥ ë±ì ëí ì ì  ëë ì­ì ë¥¼ ìêµ¬í ê²½ì°ìë íì¬ë ì ì  ëë ì­ì ë¥¼ ìë£í  ëê¹ì§ ë¹í´ ê°ì¸ì ë³´ë¥¼ ì´ì©íê±°ë ì ê³µíì§ ììµëë¤.
+      ê¶ë¦¬ íì¬ë ì ë³´ì£¼ì²´ì ë²ì ëë¦¬ì¸ì´ë ììì ë°ì ì ë± ëë¦¬ì¸ì íµíì¬ íì¤ ì ììµëë¤. ì´ ê²½ì° ê°ì¸ì ë³´ ë³´í¸ë² ìíê·ì¹ ë³ì§ ì 11í¸ ììì ë°ë¥¸ ììì¥ì ì ì¶íìì¼ í©ëë¤.
+      
+      7. ê°ì¸ì ë³´ ìë ìì§ì¥ì¹ì ì¤ì¹,ì´ì ë° ê·¸ ê±°ë¶ì ê´í ì¬í­
+      ë¹ì¬ë ì¿ í¤ë¥¼ ì¬ì©íì§ ììµëë¤. 
+      
+      8. ê°ì¸ì ë³´ ë³´í¸ì±ìì ë° ë´ë¹ë¶ì ìë´  
+      íì¬ë ê³ ê°ì ê°ì¸ì ë³´ë¥¼ ë³´í¸íê³  ê°ì¸ì ë³´ì ê´ë ¨í ë¶ë§ì ì²ë¦¬íê¸° ìíì¬ ìëì ê°ì´ ê´ë ¨ ë¶ì ë° ê°ì¸ì ë³´ê´ë¦¬ì±ììë¥¼ ì§ì íê³  ììµëë¤. 
+      - ê°ì¸ì ë³´ë´ë¹ë¶ì 
+        : ë¶ìëª : ë§ì¼íí
+        : ì íë²í¸ : 080-022-0153 / 031-216-0153 
+        : ì´ë©ì¼ : help2@monami.com 
+      - ê°ì¸ì ë³´ë³´í¸ì±ìì
+        : ì±ëª : ì ëí¸ íì¥
+        : ì íë²í¸ : 080-022-0153
+        : ì´ë©ì¼ : dhshin@monami.com 
+      
+      ê·íê»ìë íì¬ì ìë¹ì¤ë¥¼ ì´ì©íìë©° ë°ìíë ëª¨ë  ê°ì¸ì ë³´ë³´í¸ ê´ë ¨ ë¯¼ìì ê°ì¸ì ë³´ê´ë¦¬ì±ìì í¹ì ë´ë¹ë¶ìë¡ ì ê³ íì¤ ì ììµëë¤. íì¬ë ì ë³´ì£¼ì²´ë¤ì ì ê³ ì¬í­ì ëí´ ì ìíê² ì¶©ë¶í ëµë³ì ëë¦´ ê²ìëë¤. ê¸°í ê°ì¸ì ë³´ì¹¨í´ì ëí ì ê³ ë ìë´ì´ íìíì  ê²½ì°ìë ìë ê¸°ê´ì ë¬¸ìíìê¸° ë°ëëë¤. 
+      ê°ì¸ë¶ìì¡°ì ììí (http://www.1336.or.kr)
+      ì ë³´ë³´í¸ë§í¬ì¸ì¦ììí (http://www.eprivacy.or.kr)
+      ëê²ì°°ì²­ ì¸í°ë·ë²ì£ìì¬ì¼í° (http://icic.sppo.go.kr)
+      ê²½ì°°ì²­ ì¬ì´ë²íë¬ëìì¼í° (http://www.ctrc.go.kr) 
+      
+      9. ê³ ì§ì ìë¬´
+      í ê°ì¸ì ë³´ ì²ë¦¬ë°©ì¹¨ ë´ì© ì¶ê°, ì­ì  ë° ìì ì´ ìì ììë ê°ì  ìµì 7ì¼ì ë¶í° ííì´ì§ì âê³µì§ì¬í­âì íµí´ ê³ ì§í  ê²ìëë¤. 
+      ê°ì¸ì ë³´ì·¨ê¸ë°©ì¹¨ ìíì¼ì : 2018ë 08ì 02ì¼ 
+       </textarea>
+            </div>
+            <div class="btn_close"><a>CLOSE</a></div>
+          </div>
+          <div class="email" style="display: none;">
+            <div class="title">ì´ë©ì¼ë¬´ë¨ìì§ê±°ë¶</div>
+            <div class="textarea">
+              ë³¸ ì¹ì¬ì´í¸ì ê²ìë ì´ë©ì¼ ì£¼ìê° ì ìì°í¸ ìì§ íë¡ê·¸ë¨ì´ë ê·¸ ë°ì ê¸°ì ì  ì¥ì¹ë¥¼ ì´ì©íì¬ ë¬´ë¨ì¼ë¡ ìì§ëë ê²ì ê±°ë¶íë©°, ì´ë¥¼ ìë°ìì  ë³´íµì ë§ë²ì ìí´ íì¬ ì²ë²ë¨ì ì ëíìê¸° ë°ëëë¤.
+      <br><br>
+      <div class="tit">ìíì¼</div>
+      
+      ë³¸ ì´ë©ì¼ ë¬´ë¨ ìì§ ê±°ë¶ ì ì±ì 2017ë 11ìë¶í° ìíí©ëë¤.
+            </div>
+            <div class="btn_close"><a>CLOSE</a></div>
+          </div>
+        </div>
+        <div class="foot_top">
+          <h1><img src="/images/foot_logo.jpeg" alt="ë¡ê³ "></img></h1>
+          <ul class="fm">
+            <li>
+              <a href="/about/ceo.html">íì¬ìê°</a>
+            </li>
+            <li>
+              <a class="privacy_pop">ê°ì¸ì ë³´ì²ë¦¬ë°©ì</a>
+            </li>
+            <li>
+              <a class="email_pop">ì´ë©ì¼ë¬´ë¨ìì§ê±°ë¶</a>
+            </li>
+          </ul>
+        </div>
+        <div class="foot_btm">
+          <div class="info">
+            <div class="tit">INFO</div>
+            <address>
+              ADDRESS : ê²½ê¸°ë ì©ì¸ì ìì§êµ¬ ìê³¡ë¡ 17 <span>l</span> TEL :
+              031-216-0153 <span>l</span>
+              FAX : 031-270-5154
+            </address>
+            <p class="copy">
+              COPYRIGHT(C) 2017 MONAMI.CO.,LTD. ALL RIGHTS RESERVED.
+            </p>
+          </div>
+          <div class="cc">
+            <div class="tit">CUSTOMER CENTER</div>
+            <div class="cc_tel">080-022-0153</div>
+          </div>
+          <div class="fam_site">
+            <a>FAMILY SITE</a>
+            <ul>
+              <li>
+                <a href="#" target="_blank">ëª¨ëë¯¸ëª°</a>
+              </li>
+              <li>
+                <a href="#" target="_blank">ëª¨ëë¥´ë¼</a>
+              </li>
+              <li>
+                <a href="#" target="_blank">ëª¨ëë¯¸ ì»¨ìì¤í ì´</a>
+              </li>
+              <li>
+                <a href="#" target="_blank">ì£¼ìíì¬ í­ì</a>
+              </li>
+              <li>
+                <a href="#" target="_blank">ëª¨ëë¯¸ ì¤íì´ì</a>
+              </li>
+              <li>
+                <a href="#" target="_blank">ëª¨ëë¯¸ ë¯¸ì ëí</a>
+              </li>
+              <li>
+                <a href="#" target="_blank">ëª¨ëë¯¸ ê¸°ììë¹ì¤</a>
+              </li>
+              <li>
+                <a href="#" target="_blank">ëª¨ëë¯¸ì½ì¤ë©í±</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- í¸í° ë -->
+  </div>
+  </body>
+</html>
