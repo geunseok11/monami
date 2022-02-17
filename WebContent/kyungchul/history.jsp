@@ -1,3 +1,5 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -5,10 +7,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>MONAMI</title>
-    <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon" />
-    <link rel="stylesheet" href="/css/style.intro.css" />
+    <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="../css/style_intro.css" />
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.js"></script>
-    <script type="text/javascript" src="/js/common.js"></script>
+    <script type="text/javascript" src="../js/common.js"></script>
     <script type="text/javascript">
       $(function () {
         $(document).on("click", ".find_f", function () {
@@ -32,12 +34,12 @@
     <div id="wrap">
       <div id="bgblack"></div>
       <div class="find_layer" style="display: none; top: 50px">
-        <iframe src="/shop/shop.html" frameborder="0" id="find_f">
+        <iframe src="../shop/shop.jsp" frameborder="0" id="find_f">
         </iframe>
         <div class="btnx_">
-          <img src="/images/close.png" alt=""/>
+          <img src="../images/close.png" alt=""/>
         </div>
-      </div> 
+      </div>
       <!-- 헤더 시작 -->
       <div id="header">
         <div class="head">
@@ -74,10 +76,10 @@
                 </div>
               </div>
               <div class="topmenu">
-                <ul>
-                  <li><a href="/index.html">HOME</a></li>
-                  <li><a href="../sitemap.html">SITE MAP</a></li>
-                  <li><a href="../Inquiry.html">CONTACT US</a></li>
+                 <ul>
+                  <li><a href="../sanghoon/index.jsp">HOME</a></li>
+                  <li><a href="../kyungchul/sitemap.jsp">SITE MAP</a></li>
+                  <li><a href="../doyoon/Inquiry.jsp">CONTACT US</a></li>
                 </ul>
               </div>
             </div>
@@ -85,59 +87,59 @@
           <div class="gnb">
             <div class="conwrap">
               <h1>
-                <a href="../index.html"
-                  ><img src="/images/logo.jpeg" alt=""
+               <a href="../sanghoon/index.jsp"
+                  ><img src="../images/logo.jpeg" alt=""
                 /></a>
               </h1>
               <div class="nav">
                 <ul>
                   <li>
-                    <a href="../about/ceo.html">모나미소개</a>
+                    <a href="../kyungchul/ceo.jsp">모나미소개</a>
                     <ul>
-                      <li><a href="../about/ceo.html">CEO 메시지</a></li>
-                      <li><a href="../about/company.html">회사정보</a></li>
-                      <li><a href="../about/history.html">회사연혁</a></li>
-                      <li><a href="../investment.html">투자정보</a></li>
-                      <li><a href="../ci.html">CI</a></li>
+                      <li><a href="../kyungchul/ceo.jsp">CEO 메시지</a></li>
+                      <li><a href="../kyungchul/company.jsp">회사정보</a></li>
+                      <li><a href="../kyungchul/history.jsp">회사연혁</a></li>
+                      <li><a href="../geunseok/investment.jsp">투자정보</a></li>
+                      <li><a href="../geunseok/ci.jsp">CI</a></li>
                       <li>
                         <a href="http://recruit.monami.co.kr/" target="_blank"
                           >채용정보</a
                         >
                       </li>
-                      <li><a href="../location.html">찾아오시는 길</a></li>
+                      <li><a href="${cp}/geunseok/location.jsp">찾아오시는 길</a></li>
+                    </ul>
+                  </li>
+                                  <li>
+                    <a href="../jungmin/pen/penpage.jsp">모나미제품</a>
+                    <ul>
+                      <li>
+                        <a href="../jungmin/pen/penpage.jsp">펜</a>
+                      </li>
+                      <li>
+                        <a href="../jungmin/marker/markerpage.jsp">마카</a>
+                      </li>
+                      <li>
+                        <a href="../sanghoon/lightpen.jsp">형광펜</a>
+                      </li>
+                      <li>
+                        <a href="../doyoon/A_main1.jsp">미술용품</a>
+                      </li>
+                      <li>
+                        <a href="../doyoon/E_main1.jsp">기타</a>
+                      </li>
+                      <li>
+                        <a href="../jungmin/cataloguepage.jsp">카탈로그</a>
+                      </li>
                     </ul>
                   </li>
                   <li>
-                    <a href="../pen/penpage.html">모나미제품</a>
+                    <a href="../teamin/monami_news1.jsp">NEWS &amp VIDEO</a>
                     <ul>
                       <li>
-                        <a href="../pen/penpage.html">펜</a>
+                        <a href="../teamin/monami_news1.jsp">보도자료</a>
                       </li>
                       <li>
-                        <a href="../marker/markerpage.html">마카</a>
-                      </li>
-                      <li>
-                        <a href="../lightpen.html">형광펜</a>
-                      </li>
-                      <li>
-                        <a href="../A_main1.html">미술용품</a>
-                      </li>
-                      <li>
-                        <a href="../E_main1.html">기타</a>
-                      </li>
-                      <li>
-                        <a href="../cataloguepage.html">카탈로그</a>
-                      </li>
-                    </ul>
-                  </li>
-                  <li>
-                    <a href="../monami_news1.html">NEWS &amp VIDEO</a>
-                    <ul>
-                      <li>
-                        <a href="../monami_news1.html">보도자료</a>
-                      </li>
-                      <li>
-                        <a href="../monami_video1.html">동영상자료</a>
+                        <a href="../teamin/monami_video1.jsp">동영상자료</a>
                       </li>
                     </ul>
                   </li>
@@ -164,13 +166,13 @@
                       </li>
                     </ul>
                   </li>
-                  <li>
-                    <a href="../FAQ.html">고객지원</a>
+                    <li>
+                    <a href="../doyoon/FAQ.jsp">고객지원</a>
                     <ul>
-                      <li><a href="../FAQ.html">자주묻는질문</a></li>
-                      <li><a href="../Inquiry.html">문의하기</a></li>
+                      <li><a href="../doyoon/FAQ.jsp">자주묻는질문</a></li>
+                      <li><a href="../doyoon/Inquiry.jsp">문의하기</a></li>
                       <li>
-                        <a href="../board_event.html">이벤트</a>
+                        <a href="../geunseok/board_event.jsp">이벤트</a>
                       </li>
                       <li><a class="find_f">모나미 패밀리샵 찾기</a></li>
                     </ul>
@@ -188,7 +190,7 @@
                         >
                       </li>
                       <li>
-                        <a href="../industry.html">산업용 맞춤 제품개발</a>
+                         <a href="../geunseok/industry.jsp">산업용 맞춤 제품개발</a>
                       </li>
                     </ul>
                   </li>
@@ -202,7 +204,7 @@
                 </div>
                 <div class="nav_search">
                   <input type="text" />
-                  <a href="../search.html"
+                  <a href="../kyungchul/search.jsp"
                     ><img src="../images/btn_search.gif" alt=""
                   /></a>
                 </div>
@@ -211,35 +213,35 @@
                 <div class="menubox">
                   <h2>모나미소개</h2>
                   <ul>
-                    <li><a href="../about/ceo.html">CEO 메시지</a></li>
-                    <li><a href="../about/company.html">회사정보</a></li>
-                    <li><a href="../about/history.html">회사연혁</a></li>
-                    <li><a href="../investment.html">투자정보</a></li>
-                    <li><a href="../ci.html">CI</a></li>
+                    <li><a href="../kyungchul/ceo.jsp">CEO 메시지</a></li>
+                    <li><a href="../kyungchul/company.jsp">회사정보</a></li>
+                    <li><a href="../kyungchul/history.jsp">회사연혁</a></li>
+                    <li><a href="../geunseok/investment.jsp">투자정보</a></li>
+                    <li><a href="../geunseok/ci.jsp">CI</a></li>
                     <li>
                       <a href="http://recruit.monami.co.kr/" target="_blank"
                         >채용정보</a
                       >
                     </li>
-                    <li><a href="../location.html">찾아오시는 길</a></li>
+                    <li><a href="../geunseok/location.jsp">찾아오시는 길</a></li>
                   </ul>
                 </div>
                 <div class="menubox">
                   <h2>모나미제품</h2>
-                  <ul>
-                    <li><a href="../pen/penpage.html">펜</a></li>
-                    <li><a href="../marker/markerpage.html">마카</a></li>
-                    <li><a href="../lightpen.html">형광펜</a></li>
-                    <li><a href="../A_main1.html">미술용품</a></li>
-                    <li><a href="../E_main1.html">기타</a></li>
-                    <li><a href="../cataloguepage.html">카탈로그</a></li>
+                   <ul>
+                    <li><a href="../jungmin/pen/penpage.jsp">펜</a></li>
+                    <li><a href="../jungmin/marker/markerpage.jsp">마카</a></li>
+                    <li><a href="../sanghoon/lightpen.jsp">형광펜</a></li>
+                    <li><a href="../doyoon/A_main1.jsp">미술용품</a></li>
+                    <li><a href="../doyoon/E_main1.jsp">기타</a></li>
+                    <li><a href="../jungmin/cataloguepage.jsp">카탈로그</a></li>
                   </ul>
                 </div>
                 <div class="menubox">
                   <h2>NEWS &amp; VIDEO</h2>
                   <ul>
-                    <li><a href="../monami_news1.html">보도자료</a></li>
-                    <li><a href="../monami_video1.html">동영상자료</a></li>
+                    <li><a href="../teamin/monami_news1.jsp">보도자료</a></li>
+                    <li><a href="../teamin/monami_video1.jsp">동영상자료</a></li>
                   </ul>
                 </div>
                 <div class="menubox">
@@ -264,9 +266,9 @@
                 <div class="menubox">
                   <h2>고객지원</h2>
                   <ul>
-                    <li><a href="../FAQ.html">자주묻는질문</a></li>
-                    <li><a href="../Inquiry.html">문의하기</a></li>
-                    <li><a href="../board_event.html">이벤트</a></li>
+                    <li><a href="../doyoon/FAQ.jsp">자주묻는질문</a></li>
+                    <li><a href="../doyoon/Inquiry.jsp">문의하기</a></li>
+                    <li><a href="../geunseok/board_event.jsp">이벤트</a></li>
                     <li><a class="find_f">모나미 패밀리샵 찾기</a></li>
                   </ul>
                 </div>
@@ -282,6 +284,7 @@
           </div>
         </div>
       </div>
+      <!-- 헤더 끝 -->
       <!-- 본문 시작 -->
       <div id="container" class="conSize">
         <div id="contents">
@@ -290,222 +293,228 @@
             <p>언제 어디서나 모나미는 당신 곁에 있습니다.</p>
           </div>
           <div class="subMenu">
-            <ul>
-              <li><a href="/about/ceo.html">CEO 메시지</a></li>
-              <li class="on"><a href="/about/company.html">회사정보</a></li>
-              <li><a href="/about/history.html">회사연혁</a></li>
-              <li><a href="#">투자정보</a></li>
-              <li><a href="#">CI</a></li>
+             <ul>
+              <li><a href="${cp}/kyungchul/ceo.jsp">CEO 메시지</a></li>
+              <li><a href="../kyungchul/company.jsp">회사정보</a></li>
+              <li class="on"><a href="../kyungchul/history.jsp">회사연혁</a></li>
+              <li><a href="../geunseok/investment.jsp">투자정보</a></li>
+              <li><a href="../geunseok/investment.jsp">CI</a></li>
               <li>
-                <a href="#" target="_blank">채용정보</a>
+                <a href="http://recruit.monami.co.kr/" target="_blank">채용정보</a>
               </li>
-              <li><a href="#">찾아오시는 길</a></li>
-            </ul>
+              <li><a href="../geunseok/location.jsp">찾아오시는 길</a></li>
+            </ul> 
           </div>
-          <h3 class="titleText">COMPANY <span>INFO</span></h3>
-          <div class="companyBox">
-            <div class="info">
-              <h4 class="titleNum"><span class="num">01</span> 계열사 소개</h4>
-              <div class="company">
-                <div class="subLeft">
-                  <img
-                    src="/images/company_info2_img1.jpeg"
-                    alt=""
-                    class="bg"
-                  />
-                  <div class="boxTitle">
-                    <div class="sub">
-                      PARKER/WATERMAN<br />TOMBOW
-                      <span>국내 공식</span> 수입업체
-                    </div>
-                    <div class="comLogo">
-                      <a href="#" target="_blank"
-                        ><img src="/images/company_info2_logo1.jpeg" alt=""
-                      /></a>
-                    </div>
+          <h3 class="titleText">MONAMI <span>HISTORY</span></h3>
+          <div class="history">
+            <div class="bgarea1"></div>
+            <div class="bgarea2"></div>
+            <div class="bgarea3"></div>
+            <div class="center_line"></div>
+            <img src="../images/history_img1.png" class="HImg1" />
+            <img src="../images/history_img2.png" class="HImg2" />
+            <img src="../images/history_img3.png" class="HImg3" />
+            <img src="../images/history_img4.png" class="HImg4" />
+            <img src="../images/history_img5.png" class="HImg5" />
+            <img src="../images/history_img6.png" class="HImg6" />
+            <div>
+              <div class="HBox fr">
+                <div class="record">
+                  <div class="subTitle">
+                    새로운<br />50년의 <span>시작</span>
                   </div>
+                  <div class="year"><span>2010 ~ 2018</span></div>
+                  <div class="red"></div>
                 </div>
-                <div class="subRight">
-                  <img
-                    src="/images/company_info2_img2.jpeg"
-                    alt=""
-                    class="bg"
-                  />
-                  <div class="boxTitle">
-                    <div class="sub">
-                      HP전산용품 &amp; '<span>통합출력관리</span><br /><span
-                        >서비스</span
-                      >' 솔루션 공급
-                    </div>
-                    <div class="comLogo">
-                      <a
-                        ><img src="/images/company_info2_logo2.jpeg" alt=""
-                      /></a>
-                    </div>
+                <dl>
+                  <dt>2018</dt>
+                  <dd>
+                    모나미 스토어 오픈 (롯데백화점 부산점/평촌점, MCC 합정)
+                  </dd>
+                  <dd style="padding-left: 55px">
+                    153 고급필기구 런칭 (153 NEO 만년필)
+                  </dd>
+                  <dd style="padding-left: 55px">
+                    모나미 타일랜드 아마타공장 증축
+                  </dd>
+                </dl>
+                <dl>
+                  <dt>2017</dt>
+                  <dd>153 고급 필기구 런칭(153 GOLD)</dd>
+                </dl>
+                <dl>
+                  <dt>2016</dt>
+                  <dd>모나미 컨셉스토어 2호점(DDP) / 3호점(에버랜드) 오픈</dd>
+                </dl>
+                <dl>
+                  <dt>2015</dt>
+                  <dd>
+                    국내문구업계 최초 모나미 컨셉스토어 1호점 오픈 (서울 합정동)
+                  </dd>
+                </dl>
+                <dl>
+                  <dt>2014</dt>
+                  <dd>
+                    153 고급 필기구 런칭 (153 리미티드, 153 ID, 153 리스펙트)
+                  </dd>
+                </dl>
+                <dl>
+                  <dt>2013</dt>
+                  <dd>153 볼펜 출시 50년 / 프러스펜 S 출시</dd>
+                </dl>
+                <dl>
+                  <dt>2012</dt>
+                  <dd>기업용 홍보 통합 제작 서비스 MPOD 솔루션 설립</dd>
+                </dl>
+                <dl>
+                  <dt>2010</dt>
+                  <dd>모나미 창립 50주년 / 모나미 타일랜드 아마타공장 신축</dd>
+                </dl>
+              </div>
+              <div class="HBox fl">
+                <div class="record">
+                  <div class="subTitle">
+                    사무용품 유통서비스<br />기업으로의 <span>도약</span>
                   </div>
+                  <div class="year"><span>2006 ~ 2009&nbsp;&nbsp;</span></div>
+                  <div class="red"></div>
                 </div>
-                <div class="subLeft">
-                  <img
-                    src="/images/company_info2_img4.jpeg"
-                    alt=""
-                    class="bg"
-                  />
-                  <div class="boxTitle">
-                    <div class="sub">
-                      철학, 역사, 예술, 과학, 경제를<br /><span
-                        >미술로 만나다</span
-                      >
-                    </div>
-                    <div class="comLogo">
-                      <a href="#" target="_blank"
-                        ><img src="/images/company_info2_logo4.jpeg" alt=""
-                      /></a>
-                    </div>
+                <dl>
+                  <dt>2009</dt>
+                  <dd>프로유성매직 국내문구 최초 RED DOT AWARD 수상</dd>
+                </dl>
+                <dl>
+                  <dt>2007</dt>
+                  <dd>모나미스테이션 사업개시</dd>
+                </dl>
+                <dl>
+                  <dt>2007</dt>
+                  <dd>세계최초 생잉크 보드마커 시그마플로 출시</dd>
+                </dl>
+                <dl>
+                  <dt>2006</dt>
+                  <dd>MIS(모나미이미징솔루션)설립</dd>
+                </dl>
+              </div>
+              <div class="HBox fr">
+                <div class="record">
+                  <div class="subTitle">
+                    글로벌<br />기업으로서의 <span>도약</span>
                   </div>
-                </div>
-                <div class="subRight">
-                  <img
-                    src="/images/company_info2_img3.jpeg"
-                    alt=""
-                    class="bg"
-                  />
-                  <div class="boxTitle">
-                    <div class="sub">
-                      모나미 문구제품<br /><span>전문 제조 기업</span>
-                    </div>
-                    <div class="comLogo">
-                      <a href="#" target="_blank"
-                        ><img src="/images/company_info2_logo3.jpeg" alt=""
-                      /></a>
-                    </div>
+                  <div class="year">
+                    &nbsp;&nbsp;&nbsp;&nbsp;<span>2000 ~ 2001</span>
                   </div>
+                  <div class="red"></div>
                 </div>
+                <dl>
+                  <dt>2001</dt>
+                  <dd>상해 모나미 문화용품 유한공사 (중국현지법인) 설립</dd>
+                </dl>
+                <dl>
+                  <dt>2001</dt>
+                  <dd>Zenith-MonAmi 설립 (폴란드 합작법인)</dd>
+                </dl>
+                <dl>
+                  <dt>2001</dt>
+                  <dd>e-비지니스 사업부 신설</dd>
+                </dl>
+                <dl>
+                  <dt>2000</dt>
+                  <dd>(주)익스프레스라인 14와 합병</dd>
+                </dl>
+              </div>
+              <div class="HBox fl">
+                <div class="record">
+                  <div class="subTitle">사업진출<br /><span>다각화</span></div>
+                  <div class="year"><span>1990 ~ 1996</span></div>
+                  <div class="red"></div>
+                </div>
+                <dl>
+                  <dt>1996</dt>
+                  <dd>(주)모나미로 (주)모나미 애드 합병</dd>
+                </dl>
+                <dl>
+                  <dt>1992</dt>
+                  <dd>(주)모나미 애드 / 항소 인터내셔널 (미국)설립</dd>
+                </dl>
+                <dl>
+                  <dt>1990</dt>
+                  <dd>(주)항소 설립</dd>
+                </dl>
+                <dl>
+                  <dt>1990</dt>
+                  <dd>
+                    모나미 데이타 시스템 설립 (1992년 모나미컴퓨터시스템으로
+                    변경)
+                  </dd>
+                </dl>
+              </div>
+
+              <div class="HBox fr">
+                <div class="record">
+                  <div class="subTitle">모나미의<br /><span>성장기</span></div>
+                  <div class="year"><span>1989 ~ 1970</span></div>
+                  <div class="red"></div>
+                </div>
+                <dl>
+                  <dt>1989</dt>
+                  <dd>모나미 타일랜드 출범 (태국 차이아난다사와 합작)</dd>
+                </dl>
+                <dl>
+                  <dt>1988</dt>
+                  <dd>안산 공장 신축, 이전(1,2 공장 통합)</dd>
+                </dl>
+                <dl>
+                  <dt>1974</dt>
+                  <dd>주식회사 모나미로 상호변경 / 증권 거래소 주식 상장</dd>
+                </dl>
+                <dl>
+                  <dt>1970</dt>
+                  <dd>모나미 쎌라 만년필(주) 흡수합병</dd>
+                </dl>
+                <dl>
+                  <dt>1970</dt>
+                  <dd>제2공장 신축(성수동)</dd>
+                </dl>
+              </div>
+              <div class="HBox fl">
+                <div class="record">
+                  <div class="subTitle">
+                    모나미의 창업과<br /><span>도약기</span>
+                  </div>
+                  <div class="year"><span>1960 ~ 1967</span></div>
+                  <div class="red"></div>
+                </div>
+                <dl>
+                  <dt>1967</dt>
+                  <dd>모나미 화학 공업 주식회사 설립</dd>
+                </dl>
+                <dl>
+                  <dt>1963</dt>
+                  <dd>제1공장 신축(성수동)</dd>
+                </dl>
+                <dl>
+                  <dt>1963</dt>
+                  <dd>사인펜, 매직펜 생산</dd>
+                </dl>
+                <dl>
+                  <dt>1963</dt>
+                  <dd>153 볼펜 생산개시</dd>
+                </dl>
+                <dl>
+                  <dt>1960</dt>
+                  <dd>광신 화학 공업사 설립 (회화구류 생산 시작)</dd>
+                </dl>
               </div>
             </div>
-            <div class="info2">
-              <h4 class="titleNum"><span class="num">02</span> 해외법인</h4>
-              <div class="nation">
-                <div class="maparea">
-                  <img src="/images/company_info3_img1.jpeg" alt="" />
-                </div>
-                <div class="addBox">
-                  <div class="nation1">
-                    <div class="comName">
-                      <span>THAILAND</span> 모나미 타일랜드 (방콕)
-                    </div>
-                    <dl>
-                      <dt>법인명</dt>
-                      <dd>MONAMI THAILAND</dd>
-                    </dl>
-                    <dl>
-                      <dt>주소</dt>
-                      <dd>
-                        #475 Siripinyo Bldg.,12th floor, Si Ayutthaya
-                        Rd.,Khwaeng ThanonPhayathai, Khet Ratchathewi, Bangkok
-                        10400 Thailand
-                      </dd>
-                    </dl>
-                    <dl>
-                      <dt>전화</dt>
-                      <dd>+66-2-640-0980-2</dd>
-                    </dl>
-                    <dl>
-                      <dt>팩스</dt>
-                      <dd>+66-2-640-0980-2</dd>
-                    </dl>
-                    <dl>
-                      <dt>SNS</dt>
-                      <dd>
-                        <a href="#" target="_blank"
-                          >www.facebook.com/monami.thailand/</a
-                        >
-                      </dd>
-                    </dl>
-                  </div>
-                  <div class="nation2">
-                    <div class="comName">
-                      <span>THAILAND</span> 모나미 타일랜드 (아마타 공장)
-                    </div>
-                    <dl>
-                      <dt>주소</dt>
-                      <dd>
-                        Amata City Industrial Estate 7/281 Moo. 6 Mabyangporn,
-                        Plaukdang, Rayong 21140 Thailand
-                      </dd>
-                    </dl>
-                    <dl>
-                      <dt>전화</dt>
-                      <dd>+66-38-6508091-4218</dd>
-                    </dl>
-                  </div>
-                  <div class="nation3">
-                    <div class="comName">
-                      <span>CHINA</span> 상해 모나미 (상하이)
-                    </div>
-
-                    <dl>
-                      <dt>법인명</dt>
-                      <dd>上海慕那美文化用品有限公司 (SHANGHAI MONAMI)</dd>
-                    </dl>
-                    <dl>
-                      <dt>홈페이지</dt>
-                      <dd>
-                        <a href="#" target="_blank">www.monami.com.cn</a>
-                      </dd>
-                    </dl>
-                    <dl>
-                      <dt>주소(중문)</dt>
-                      <dd>嘉定区兴贤路1388号9号楼</dd>
-                    </dl>
-                    <dl>
-                      <dt>주소(영문)</dt>
-                      <dd>
-                        Building No.9,&nbsp;1388&nbsp;,XingXian Road, Jiading
-                        District,, Shanghai, China.
-                      </dd>
-                    </dl>
-                    <dl>
-                      <dt>전화</dt>
-                      <dd>+86-21-69521210-69521216</dd>
-                    </dl>
-                    <dl>
-                      <dt>팩스</dt>
-                      <dd>+86-21-69521250-59160776</dd>
-                    </dl>
-                    <dl>
-                      <dt>SNS</dt>
-                      <dd>
-                        <a href="#" target="_blank">weibo.com/shmonami</a>
-                      </dd>
-                    </dl>
-                  </div>
-
-                  <div class="nation4">
-                    <div class="comName">
-                      <span>POLAND</span> 제니스 모나미 (바르샤바)
-                    </div>
-
-                    <dl>
-                      <dt>법인명</dt>
-                      <dd>ZENITH MONAMI</dd>
-                    </dl>
-                    <dl>
-                      <dt>주소</dt>
-                      <dd>ul. Poleczki 23, 02-822, Warsaw, Poland.</dd>
-                    </dl>
-                  </div>
-                </div>
-              </div>
-            </div>
           </div>
-
           <div class="topButton">
-            <a><img src="/images/btn_top.gif" alt="페이지 상단으로" /></a>
+            <a><img src="../images/btn_top.gif" alt="페이지 상단으로" /></a>
           </div>
         </div>
         <!--/contents-->
       </div>
-      <!-- 본문 끝  -->
+      <!-- 본문 끝 -->
       <!-- 푸터 시작 -->
       <div id="footer">
         <div class="foot">
@@ -595,10 +604,10 @@
             </div>
           </div>
           <div class="foot_top">
-            <h1><img src="/images/foot_logo.jpeg" alt="로고"></img></h1>
+            <h1><img src="../images/foot_logo.jpeg" alt="로고"></img></h1>
             <ul class="fm">
               <li>
-                <a href="/about/ceo.html">회사소개</a>
+                <a href="../kyungchul/ceo.jsp">회사소개</a>
               </li>
               <li>
                 <a class="privacy_pop">개인정보처리방식</a>
