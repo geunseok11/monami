@@ -1,3 +1,6 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -7,11 +10,11 @@
     />
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <title>MONAMI</title>
-    <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon" />
-    <link rel="stylesheet" href="/css/style.intro.css" />
+    <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="../css/style_intro.css" />
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.js"></script>
-    <script type="text/javascript" src="/js/common.js"></script>
+    <script type="text/javascript" src="../js/common.js"></script>
     <script type="text/javascript">
       $(function () {
         $(document).on("click", ".find_f", function () {
@@ -30,13 +33,14 @@
     </script>
   </head>
   <body>
+  	<c:set var="cp" value="${pageContext.request.contextPath}"/>
     <!-- wrap 시작 -->
     <div id="wrap">
       <div id="bgblack"></div>
       <div class="find_layer">
-        <iframe src="/shop/shop.html" frameborder="0" id="find_f"></iframe>
+        <iframe src="../shop/shop.jsp" frameborder="0" id="find_f"></iframe>
         <div class="btnx_">
-          <img src="/images/close.png" alt="" />
+          <img src="../images/close.png" alt="" />
         </div>
       </div>
       <!-- 헤더 시작 -->
@@ -58,7 +62,7 @@
                         href="https://www.facebook.com/monami1960"
                         target="_blank"
                         ><img
-                          src="/images/sns_facebook.gif"
+                          src="../images/sns_facebook.gif"
                           alt="모나미 페이스북 바로가기"
                       /></a>
                     </li>
@@ -67,7 +71,7 @@
                         href="https://www.instagram.com/monami_official/"
                         target="_blank"
                         ><img
-                          src="/images/sns_insta.gif"
+                          src="../images/sns_insta.gif"
                           alt="모나미 인스타그램 바로가기"
                       /></a>
                     </li>
@@ -76,9 +80,9 @@
               </div>
               <div class="topmenu">
                 <ul>
-                  <li><a href="/index.html">HOME</a></li>
-                  <li><a href="/sitemap.html">SITE MAP</a></li>
-                  <li><a href="./Inquiry.html">CONTACT US</a></li>
+                  <li><a href="../sanghoon/index.jsp">HOME</a></li>
+                  <li><a href="../kyungchul/sitemap.jsp">SITE MAP</a></li>
+                  <li><a href="../doyoon/Inquiry.jsp">CONTACT US</a></li>
                 </ul>
               </div>
             </div>
@@ -86,59 +90,59 @@
           <div class="gnb">
             <div class="conwrap">
               <h1>
-                <a href="../index.html"
-                  ><img src="/images/logo.jpeg" alt=""
+                <a href="../sanghoon/index.jsp"
+                  ><img src="../images/logo.jpeg" alt=""
                 /></a>
               </h1>
               <div class="nav">
                 <ul>
                   <li>
-                    <a href="/about/ceo.html">모나미소개</a>
+                    <a href="../kyungchul/ceo.jsp">모나미소개</a>
                     <ul>
-                      <li><a href="./about/ceo.html">CEO 메시지</a></li>
-                      <li><a href="./about/company.html">회사정보</a></li>
-                      <li><a href="./about/history.html">회사연혁</a></li>
-                      <li><a href="./investment.html">투자정보</a></li>
-                      <li><a href="./ci.html">CI</a></li>
+                      <li><a href="../kyungchul/ceo.jsp">CEO 메시지</a></li>
+                      <li><a href="../kyungchul/company.jsp">회사정보</a></li>
+                      <li><a href="../kyungchul/history.jsp">회사연혁</a></li>
+                      <li><a href="../geunseok/investment.jsp">투자정보</a></li>
+                      <li><a href="../geunseok/ci.jsp">CI</a></li>
                       <li>
                         <a href="http://recruit.monami.co.kr/" target="_blank"
                           >채용정보</a
                         >
                       </li>
-                      <li><a href="./location.html">찾아오시는 길</a></li>
+                      <li><a href="../geunseok/location.jsp">찾아오시는 길</a></li>
                     </ul>
                   </li>
                   <li>
-                    <a href="./pen/penpage.html">모나미제품</a>
+                    <a href="../jungmin/pen/penpage.jsp">모나미제품</a>
                     <ul>
                       <li>
-                        <a href="./pen/penpage.html">펜</a>
+                        <a href="../jungmin/pen/penpage.jsp">펜</a>
                       </li>
                       <li>
-                        <a href="./marker/markerpage.html">마카</a>
+                        <a href="../jungmin/marker/markerpage.jsp">마카</a>
                       </li>
                       <li>
-                        <a href="./lightpen.html">형광펜</a>
+                        <a href="../sanghoon/lightpen.jsp">형광펜</a>
                       </li>
                       <li>
-                        <a href="./A_main1.html">미술용품</a>
+                        <a href="../doyoon/A_main1.jsp">미술용품</a>
                       </li>
                       <li>
-                        <a href="./E_main1.html">기타</a>
+                        <a href="../doyoon/E_main1.jsp">기타</a>
                       </li>
                       <li>
-                        <a href="./cataloguepage.html">카탈로그</a>
+                        <a href="../jungmin/cataloguepage.jsp">카탈로그</a>
                       </li>
                     </ul>
                   </li>
                   <li>
-                    <a href="./monami_news1.html">NEWS &amp VIDEO</a>
+                    <a href="../teamin/monami_news1.jsp">NEWS &amp; VIDEO</a>
                     <ul>
                       <li>
-                        <a href="./monami_news1.html">보도자료</a>
+                        <a href="../teamin/monami_news1.jsp">보도자료</a>
                       </li>
                       <li>
-                        <a href="./monami_video1.html">동영상자료</a>
+                        <a href="../teamin/monami_video1.jsp">동영상자료</a>
                       </li>
                     </ul>
                   </li>
@@ -166,12 +170,12 @@
                     </ul>
                   </li>
                   <li>
-                    <a href="./FAQ.html">고객지원</a>
+                    <a href="../doyoon/FAQ.jsp">고객지원</a>
                     <ul>
-                      <li><a href="./FAQ.html">자주묻는질문</a></li>
-                      <li><a href="./Inquiry.html">문의하기</a></li>
+                      <li><a href="../doyoon/FAQ.jsp">자주묻는질문</a></li>
+                      <li><a href="../doyoon/Inquiry.jsp">문의하기</a></li>
                       <li>
-                        <a href="./board_event.html">이벤트</a>
+                        <a href="../geunseok/board_event.jsp">이벤트</a>
                       </li>
                       <li><a class="find_f">모나미 패밀리샵 찾기</a></li>
                     </ul>
@@ -189,7 +193,7 @@
                         >
                       </li>
                       <li>
-                        <a href="./industry.html">산업용 맞춤 제품개발</a>
+                        <a href="../geunseok/industry.jsp">산업용 맞춤 제품개발</a>
                       </li>
                     </ul>
                   </li>
@@ -203,8 +207,8 @@
                 </div>
                 <div class="nav_search">
                   <input type="text" />
-                  <a href="/search.html"
-                    ><img src="/images/btn_search.gif" alt=""
+                  <a href="../kyungchul/search.jsp"
+                    ><img src="../images/btn_search.gif" alt=""
                   /></a>
                 </div>
               </div>
@@ -212,35 +216,35 @@
                 <div class="menubox">
                   <h2>모나미소개</h2>
                   <ul>
-                    <li><a href="/about/ceo.html">CEO 메시지</a></li>
-                    <li><a href="/about/company.html">회사정보</a></li>
-                    <li><a href="/about/history.html">회사연혁</a></li>
-                    <li><a href="./investment.html">투자정보</a></li>
-                    <li><a href="./ci.html">CI</a></li>
+                    <li><a href="../kyungchul/ceo.jsp">CEO 메시지</a></li>
+                    <li><a href="../kyungchul/company.jsp">회사정보</a></li>
+                    <li><a href="../kyungchul/history.jsp">회사연혁</a></li>
+                    <li><a href="../geunseok/investment.jsp">투자정보</a></li>
+                    <li><a href="../geunseok/ci.jsp">CI</a></li>
                     <li>
                       <a href="http://recruit.monami.co.kr/" target="_blank"
                         >채용정보</a
                       >
                     </li>
-                    <li><a href="./location.html">찾아오시는 길</a></li>
+                    <li><a href="../geunseok/location.jsp">찾아오시는 길</a></li>
                   </ul>
                 </div>
                 <div class="menubox">
                   <h2>모나미제품</h2>
                   <ul>
-                    <li><a href="./pen/penpage.html">펜</a></li>
-                    <li><a href="./marker/markerpage.html">마카</a></li>
-                    <li><a href="./lightpen.html">형광펜</a></li>
-                    <li><a href="./A_main1.html">미술용품</a></li>
-                    <li><a href="./E_main1.html">기타</a></li>
-                    <li><a href="./cataloguepage.html">카탈로그</a></li>
+                    <li><a href="../jungmin/pen/penpage.jsp">펜</a></li>
+                    <li><a href="../jungmin/marker/markerpage.jsp">마카</a></li>
+                    <li><a href="../sanghoon/lightpen.jsp">형광펜</a></li>
+                    <li><a href="../doyoon/A_main1.jsp">미술용품</a></li>
+                    <li><a href="../doyoon/E_main1.jsp">기타</a></li>
+                    <li><a href="../jungmin/cataloguepage.jsp">카탈로그</a></li>
                   </ul>
                 </div>
                 <div class="menubox">
                   <h2>NEWS &amp; VIDEO</h2>
                   <ul>
-                    <li><a href="./monami_news1.html">보도자료</a></li>
-                    <li><a href="./monami_video1.html">동영상자료</a></li>
+                    <li><a href="../teamin/monami_news1.jsp">보도자료</a></li>
+                    <li><a href="../teamin/monami_video1.jsp">동영상자료</a></li>
                   </ul>
                 </div>
                 <div class="menubox">
@@ -265,9 +269,9 @@
                 <div class="menubox">
                   <h2>고객지원</h2>
                   <ul>
-                    <li><a href="./FAQ.html">자주묻는질문</a></li>
-                    <li><a href="./Inquiry.html">문의하기</a></li>
-                    <li><a href="./board_event.html">이벤트</a></li>
+                    <li><a href="../doyoon/FAQ.jsp">자주묻는질문</a></li>
+                    <li><a href="../doyoon/Inquiry.jsp">문의하기</a></li>
+                    <li><a href="../geunseok/board_event.jsp">이벤트</a></li>
                     <li><a class="find_f">모나미 패밀리샵 찾기</a></li>
                   </ul>
                 </div>
@@ -322,7 +326,7 @@
                   <a href="#">
                     <div class="thum">
                       <img
-                        src="./images/1_file6_1642574225zxvl14frbt.jpg"
+                        src="../images/1_file6_1642574225zxvl14frbt.jpg"
                         alt=""
                         width="264"
                         height="390"
@@ -344,7 +348,7 @@
                   <a href="#">
                     <div class="thum">
                       <img
-                        src="./images/2070027004_file6_16414504001g57ogmure.jpg"
+                        src="../images/2070027004_file6_16414504001g57ogmure.jpg"
                         alt=""
                         width="264"
                         height="390"
@@ -366,7 +370,7 @@
                   <a href="#">
                     <div class="thum">
                       <img
-                        src="./images/2040240006_file6_16255408900kpz876plz.jpg"
+                        src="../images/2040240006_file6_16255408900kpz876plz.jpg".
                         alt=""
                         width="264"
                         height="390"
@@ -388,7 +392,7 @@
                   <a href="#">
                     <div class="thum">
                       <img
-                        src="./images/2040016351_file6_16334947342g3aqx0uh1.jpg"
+                        src="../images/2040016351_file6_16334947342g3aqx0uh1.jpg"
                         alt=""
                         width="264"
                         height="390"
@@ -410,7 +414,7 @@
                   <a href="#">
                     <div class="thum">
                       <img
-                        src="./images/2090030001_file6_1611014876sc1jm9f3cn.jpg"
+                        src="../images/2090030001_file6_1611014876sc1jm9f3cn.jpg"
                         alt=""
                         width="264"
                         height="390"
@@ -432,7 +436,7 @@
                   <a href="#">
                     <div class="thum">
                       <img
-                        src="./images/2010152034_file6_1639639980jngius8r6i.jpg"
+                        src="../images/2010152034_file6_1639639980jngius8r6i.jpg"
                         alt=""
                         width="264"
                         height="390"
@@ -454,7 +458,7 @@
                   <a href="#">
                     <div class="thum">
                       <img
-                        src="./images/2040026301_file6_160971901130gajnmetn.jpg"
+                        src="../images/2040026301_file6_160971901130gajnmetn.jpg"
                         alt=""
                         width="264"
                         height="390"
@@ -476,7 +480,7 @@
                   <a href="#">
                     <div class="thum">
                       <img
-                        src="./images/2010030001_file6_1635127393stijdjvr99.jpg"
+                        src="../images/2010030001_file6_1635127393stijdjvr99.jpg"
                         alt=""
                         width="264"
                         height="390"
@@ -498,7 +502,7 @@
                   <a href="#">
                     <div class="thum">
                       <img
-                        src="./images/2041019049_file6_16057669914ghdm7a4zs.jpg"
+                        src="../images/2041019049_file6_16057669914ghdm7a4zs.jpg"
                         alt=""
                         width="264"
                         height="390"
@@ -520,7 +524,7 @@
                   <a href="#">
                     <div class="thum">
                       <img
-                        src="./images/2040048012_file6_1583298386d4wy0fw22t.jpg"
+                        src="../images/2040048012_file6_1583298386d4wy0fw22t.jpg"
                         alt=""
                         width="264"
                         height="390"
@@ -542,7 +546,7 @@
             </div>
             <div class="paging">
               <a class="page_prev" style="padding: 1px">
-                <img src="/images/page_prev.gif" alt="" />
+                <img src="../images/page_prev.gif" alt="" />
               </a>
               <strong>1</strong>
               <a href="#">2</a>
@@ -555,12 +559,12 @@
               <a href="#">9</a>
               <a href="#">10</a>
               <a href="#" class="page_next" style="padding: 1px">
-                <img src="/images/page_next.gif" alt=""
+                <img src="../images/page_next.gif" alt=""
               /></a>
             </div>
           </div>
           <div class="topButton">
-            <a><img src="/images/btn_top.gif" alt="페이지 상단으로" /></a>
+            <a><img src="../images/btn_top.gif" alt="페이지 상단으로" /></a>
           </div>
         </div>
         <!--/contents-->
@@ -661,10 +665,10 @@
           </div>
           <div class="foot_top">
             <h1>
-              <img src="/images/foot_logo.jpeg" alt="푸터 모나미 로고" />
+              <img src="../images/foot_logo.jpeg" alt="푸터 모나미 로고" />
             </h1>
             <ul class="fm">
-              <li><a href="/about/ceo.php">회사소개</a></li>
+              <li><a href="../kyungchul/ceo.jsp">회사소개</a></li>
               <li><a class="privacy_pop">개인정보처리방침</a></li>
               <li><a class="email_pop">이메일무단수집거부</a></li>
             </ul>
