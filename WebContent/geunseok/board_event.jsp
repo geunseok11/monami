@@ -4,14 +4,15 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <c:set var="cp" value="${pageContext.request.contextPath}"/>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>MONAMI</title>
-    <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon" />
-    <link rel="stylesheet" href="./css/style_another.css" />
+    <link rel="shortcut icon" href="${cp}/images/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="${cp}/css/style_another.css" />
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.js"></script>
-    <script type="text/javascript" src="/js/common.js"></script>
+    <script type="text/javascript" src="${cp}/js/common.js"></script>
     <script type="text/javascript">
       $(function () {
         $(document).on("click", ".find_f", function () {
@@ -36,7 +37,7 @@
       <div class="find_layer" style="display: none; top: 50px">
         <iframe src="./shop/shop.html" frameborder="0" id="find_f"> </iframe>
         <div class="btnx_">
-          <img src="/images/close.png" alt="" />
+          <img src="${cp}/images/close.png" alt="" />
         </div>
       </div>
     <div class="popup_buttons">
@@ -62,12 +63,12 @@
                 <ul>
                   <li>
                     <a href="#" target="_blank">
-                      <img src="./images/sns_facebook.gif" alt="페이스북" />
+                      <img src="${cp}/images/sns_facebook.gif" alt="페이스북" />
                     </a>
                   </li>
                   <li>
                     <a href="#" target="_blank">
-                      <img src="./images/sns_insta.gif" alt="인스타" />
+                      <img src="${cp}/images/sns_insta.gif" alt="인스타" />
                     </a>
                   </li>
                 </ul>
@@ -91,7 +92,7 @@
         <div class="gnb">
           <div class="conwrap">
             <h1>
-              <a href="./index.html"><img src="./images/logo.jpeg" alt="" /></a>
+              <a href="./index.html"><img src="${cp}/images/logo.jpeg" alt="" /></a>
             </h1>
             <div class="nav">
               <ul>
@@ -201,7 +202,7 @@
               <div class="nav_search">
                 <input type="text" name="" id="" />
                 <a href="./search.html">
-                  <img src="./images/btn_search.gif" alt="" />
+                  <img src="${cp}/images/btn_search.gif" alt="" />
                 </a>
               </div>
             </div>
@@ -316,11 +317,11 @@
       </tbody></table>
       </div>
       <div class="paging">
-        <a class="page_prev"><img src="./images/page_prev.gif" alt=""></a> <strong>1</strong> <a class="page_next"><img src="./images/page_next.gif" alt=""></a></div>
+        <a class="page_prev"><img src="${cp}/images/page_prev.gif" alt=""></a> <strong>1</strong> <a class="page_next"><img src="./images/page_next.gif" alt=""></a></div>
       
       
         <div class="btn_top">
-          <a><img src="./images/btn_top.gif" alt="페이지 상단으로"></a>
+          <a><img src="${cp}/images/btn_top.gif" alt="페이지 상단으로"></a>
         </div>
       </div><!--/contents-->
       </div>
@@ -414,7 +415,7 @@
           </div>
         </div>
         <div class="foot_top">
-          <h1><img src="/images/foot_logo.jpeg" alt="로고"></img></h1>
+          <h1><img src="${cp}/images/foot_logo.jpeg" alt="로고"></img></h1>
           <ul class="fm">
             <li>
               <a href="/about/ceo.html">회사소개</a>
