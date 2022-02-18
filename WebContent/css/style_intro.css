@@ -131,7 +131,7 @@ a:hover {
 }
 .head_top .links .lang .this_lang {
   padding-left: 15px;
-  background: url(/images/lang_kor.gif) no-repeat 10px center;
+  background: url(../images/lang_kor.gif) no-repeat 10px center;
 }
 .head_top .links .lang .this_lang a {
   display: block;
@@ -140,10 +140,10 @@ a:hover {
   font-family: "Montserrat", sans-serif;
   font-size: 11px;
   color: #000;
-  background: url(/images/lang_arr.gif) no-repeat right center;
+  background: url(../images/lang_arr.gif) no-repeat right center;
 }
 .head_top .links .lang.on .this_lang a {
-  background: url(/images/lang_arr2.gif) no-repeat right center;
+  background: url(../images/lang_arr2.gif) no-repeat right center;
 }
 .head_top .links .lang ul {
   width: 86px;
@@ -156,7 +156,7 @@ a:hover {
   margin-left: -2px;
   text-align: center;
   color: #000;
-  background: url(/images/lang_eng.gif) no-repeat 12px center;
+  background: url(../images/lang_eng.gif) no-repeat 12px center;
 }
 
 .head_top .links .sns {
@@ -181,7 +181,7 @@ a:hover {
   float: left;
   margin-left: 10px;
   padding-left: 12px;
-  background: url(/images/tm_bar.gif) no-repeat left center;
+  background: url(../images/tm_bar.gif) no-repeat left center;
 }
 .head_top .topmenu ul li:first-child {
   background: 0;
@@ -500,7 +500,7 @@ a:hover {
   float: left;
   padding-right: 11px;
   margin-right: 10px;
-  background: url(/images/common/fm_bar.gif) no-repeat right center;
+  background: url(../images/common/fm_bar.gif) no-repeat right center;
 }
 .foot_top .fm li:last-child {
   margin: 0;
@@ -568,7 +568,7 @@ a:hover {
   line-height: 34px;
   font-size: 13px;
   color: rgba(255, 255, 255, 0.4);
-  background: url(/images/family_arr.png) no-repeat 95% center;
+  background: url(../images/family_arr.png) no-repeat 95% center;
 }
 .foot_btm .fam_site ul {
   display: none;
@@ -683,7 +683,7 @@ a:hover {
   width: 100%;
   height: 342px;
   text-align: center;
-  background: url(/images/page_visual1.jpeg) no-repeat center;
+  background: url(../images/page_visual1.jpeg) no-repeat center;
 }
 .titleTop1 h2 {
   padding-top: 120px;
@@ -705,10 +705,10 @@ a:hover {
   font-weight: 300;
 }
 .pageImg1 {
-  background: url(/images/page_visual1.jpeg) no-repeat center;
+  background: url(../images/page_visual1.jpeg) no-repeat center;
 }
 .pageImg7 {
-  background: url(/images/page_visual2.jpeg) no-repeat center;
+  background: url(../images/page_visual2.jpeg) no-repeat center;
 }
 .subMenu {
   position: relative;
@@ -884,7 +884,7 @@ a:hover {
   z-index: 10;
   width: 662px;
   height: 293px;
-  background: rgba(227, 227, 227, 1) url(/images/message_slg_bg.png) no-repeat;
+  background: rgba(227, 227, 227, 1) url(../images/message_slg_bg.png) no-repeat;
 }
 .pArea .ment .textarea {
   padding: 90px 0 0 162px;
@@ -1391,22 +1391,22 @@ a:hover {
   margin: 15px auto 30px;
 }
 .sitemap_menubox:nth-child(1) .menu_title {
-  background: url(/images/sitemap_bg1.gif) no-repeat 45px 5px;
+  background: url(../images/sitemap_bg1.gif) no-repeat 45px 5px;
 }
 .sitemap_menubox:nth-child(2) .menu_title {
-  background: url(/images/sitemap_bg2.gif) no-repeat 45px top;
+  background: url(../images/sitemap_bg2.gif) no-repeat 45px top;
 }
 .sitemap_menubox:nth-child(3) .menu_title {
-  background: url(/images/sitemap_bg3.gif) no-repeat 45px 7px;
+  background: url(../images/sitemap_bg3.gif) no-repeat 45px 7px;
 }
 .sitemap_menubox:nth-child(4) .menu_title {
-  background: url(/images/sitemap_bg5.gif) no-repeat 60px 5px;
+  background: url(../images/sitemap_bg5.gif) no-repeat 60px 5px;
 }
 .sitemap_menubox:nth-child(5) .menu_title {
-  background: url(/images/sitemap_bg4.gif) no-repeat 25px 7px;
+  background: url(../images/sitemap_bg4.gif) no-repeat 25px 7px;
 }
 .sitemap_menubox:nth-child(6) .menu_title {
-  background: url(/images/sitemap_bg6.gif) no-repeat 25px 7px;
+  background: url(../images/sitemap_bg6.gif) no-repeat 25px 7px;
 }
 .sitemap_menubox ul li {
   margin-bottom: 15px;
@@ -1437,22 +1437,22 @@ a:hover {
     padding-top: 75px;
   }
   .sitemap_menubox:nth-child(1) .menu_title {
-    background: url(/images/sitemap_bg1.gif) no-repeat center 30px;
+    background: url(../images/sitemap_bg1.gif) no-repeat center 30px;
   }
   .sitemap_menubox:nth-child(2) .menu_title {
-    background: url(/images/sitemap_bg2.gif) no-repeat center 30px;
+    background: url(../images/sitemap_bg2.gif) no-repeat center 30px;
   }
   .sitemap_menubox:nth-child(3) .menu_title {
-    background: url(/images/sitemap_bg3.gif) no-repeat center 30px;
+    background: url(../images/sitemap_bg3.gif) no-repeat center 30px;
   }
   .sitemap_menubox:nth-child(4) .menu_title {
-    background: url(/images/sitemap_bg4.gif) no-repeat center 30px;
+    background: url(../images/sitemap_bg4.gif) no-repeat center 30px;
   }
   .sitemap_menubox:nth-child(5) .menu_title {
-    background: url(/images/sitemap_bg5.gif) no-repeat center 30px;
+    background: url(../images/sitemap_bg5.gif) no-repeat center 30px;
   }
   .sitemap_menubox:nth-child(6) .menu_title {
-    background: url(/images/sitemap_bg6.gif) no-repeat center 30px;
+    background: url(../images/sitemap_bg6.gif) no-repeat center 30px;
   }
 }
 /* sitemap 끝 */
@@ -1494,7 +1494,7 @@ a:hover {
   background: #fff;
   outline: 0;
 }
-.search .detail .clear .formarea a {
+.search .detail .clear .formarea a{
   display: inline-block;
   vertical-align: top;
   width: 130px;
