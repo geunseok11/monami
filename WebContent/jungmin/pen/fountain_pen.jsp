@@ -5,11 +5,11 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
- <link rel="shortcut icon" href="../../images/favicon.ico" type="image/x-icon" />
-<link rel="stylesheet" href="../../css/pen.css"/>
+ <link rel="shortcut icon" href="${cp}/images/favicon.ico" type="image/x-icon" />
+<link rel="stylesheet" href="${cp}/css/pen.css"/>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.js"></script>
 
-<script type="text/javascript" src="../../js/common.js"></script>
+<script type="text/javascript" src="${cp}/js/common.js"></script>
 <script type="text/javascript">
   $(function () {
     $(document).on("click", ".find_f", function () {
@@ -29,6 +29,7 @@
 </script>
 </head>
 <body>
+<c:set var='cp' value="${pageContext.request.contextPath }"/>
 <div class="popup_buttons">
     <a class="popup_button" href="">
       <div class="popup_button-txt">예약하기</div>
@@ -52,12 +53,12 @@
               <ul>
                 <li>
                   <a href="#https://www.facebook.com/monami1960" target="_blank">
-                    <img src="../../images/sns_facebook.gif" alt="페이스북" />
+                    <img src="${cp}/images/sns_facebook.gif" alt="페이스북" />
                   </a>
                 </li>
                 <li>
                   <a href="https://www.instagram.com/monami_official/" target="_blank">
-                    <img src="../../images/sns_insta.gif" alt="인스타" />
+                    <img src="${cp}/images/sns_insta.gif" alt="인스타" />
                   </a>
                 </li>
               </ul>
@@ -66,13 +67,13 @@
           <div class="topmenu">
             <ul>
               <li>
-                <a href="../../sanghoon/index.jsp">HOME</a>
+                <a href="${cp}/sanghoon/index.jsp">HOME</a>
               </li>
               <li>
-                <a href="../../kyungchul/sitemap.jsp">SITE MAP</a>
+                <a href="${cp}/kyungchul/sitemap.jsp">SITE MAP</a>
               </li>
               <li>
-                <a href="../../doyoon/Inquiry.jsp">CONTACT US</a>
+                <a href="${cp}/doyoon/Inquiry.jsp">CONTACT US</a>
               </li>
             </ul>
           </div>
@@ -81,67 +82,67 @@
       <div class="gnb">
         <div class="conwrap">
           <h1>
-            <a href="../../sanghoon/index.jsp"><img src="../../images/logo.jpeg" alt="" /></a>
+            <a href="${cp}/sanghoon/index.jsp"><img src="${cp}/images/logo.jpeg" alt="" /></a>
           </h1>
           <div class="nav">
             <ul>
               <li >
-                <a href="../../kyungchul/ceo.jsp">모나미소개</a>
+                <a href="${cp}/kyungchul/ceo.jsp">모나미소개</a>
                 <ul>
                   <li>
-                    <a href="../../kyungchul/ceo.jsp">CEO 메시지</a>
+                    <a href="${cp}/kyungchul/ceo.jsp">CEO 메시지</a>
                   </li>
                   <li>
-                    <a href="../../kyungchul/company.jsp">회사정보</a>
+                    <a href="${cp}/kyungchul/company.jsp">회사정보</a>
                   </li>
                   <li>
-                    <a href="../../kyungchul/company.jsp">회사연혁</a>
+                    <a href="${cp}/kyungchul/company.jsp">회사연혁</a>
                   </li>
                   <li>
-                    <a href="../../geunseok/investment.jsp">투자정보</a>
+                    <a href="${cp}/geunseok/investment.jsp">투자정보</a>
                   </li>
                   <li>
-                    <a href="../../geunseok/ci.jsp">CI</a>
+                    <a href="${cp}/geunseok/ci.jsp">CI</a>
                   </li>
                   <li>
                     <a href="http://recruit.monami.co.kr/">채용정보</a>
                   </li>
                   <li>
-                    <a href="../../geunseok/location.jsp">찾아오시는 길</a>
+                    <a href="${cp}/geunseok/location.jsp">찾아오시는 길</a>
                   </li>
                 </ul>
               </li>
               <li >
-                <a href="./penpage.jsp">모나미제품</a>
+                <a href="${cp }/jungmin/pen/penpage.mo">모나미제품</a>
                 <ul>
                   <li>
-                    <a href="./penpage.jsp">펜</a>
+                    <a href="${cp }/jungmin/pen/penpage.mo">펜</a>
                   </li>
                   <li>
-                    <a href="../marker/markerpage.jsp">마카</a>
+                    <a href="${cp }/jungmin/marker/markerpage.mo">마카</a>
                   </li>
                   <li>
-                    <a href="../../sanghoon/lightpen.jsp">형광펜</a>
+                    <a href="${cp}/sanghoon/lightpen.jsp">형광펜</a>
                   </li>
                   <li>
-                    <a href="../../doyoon/A_main1.jsp">미술용품</a>
+                    <a href="${cp}/doyoon/A_main1.jsp">미술용품</a>
                   </li>
                   <li>
-                    <a href="../../doyoon/E_main1.jsp">기타</a>
+                    <a href="${cp}/doyoon/E_main1.jsp">기타</a>
                   </li>
                   <li>
-                    <a href="../cataloguepage.jsp">카탈로그</a>
+                    <a href="${cp }/jungmin/cataloguepage.mo">카탈로그</a>
                   </li>
                 </ul>
               </li>
               <li>
-                <a href="../../teamin/monami_news1.jsp">NEWS & VIDEO</a>
+                <a href="${cp}/teamin/monami_news1.jsp">NEWS & VIDEO</a>
                 <ul >
                   <li>
-                    <a href="../../teamin/monami_news1.jsp">보도자료</a>
+                    <a href="${cp}/teamin/monami_news1.jsp">보도자료</a>
                   </li>
                   <li>
-                    <a href="../../teamin/monami_video1.jsp">동영상자료</a>
+                    <a href="${cp}/teamin/monami_video1.jsp">동영상자료</a>
                   </li>
                 </ul>
               </li>
@@ -157,16 +158,16 @@
                 </ul>
               </li>
               <li>
-                <a href="../../doyoon/FAQ.jsp">고객지원</a>
+                <a href="${cp}/doyoon/FAQ.jsp">고객지원</a>
                 <ul>
                   <li>
-                    <a href="../../doyoon/FAQ.jsp">자주묻는질문</a>
+                    <a href="${cp}/doyoon/FAQ.jsp">자주묻는질문</a>
                   </li>
                   <li>
-                    <a href="../../doyoon/Inquiry.jsp">문의하기</a>
+                    <a href="${cp}/doyoon/Inquiry.jsp">문의하기</a>
                   </li>
                   <li>
-                    <a href="../../geunseok/board_event.jsp">이벤트</a>
+                    <a href="${cp}/geunseok/board_event.jsp">이벤트</a>
                   </li>
                   <li>
                     <a  class="find_f">모나미 패밀리샵 찾기</a>
@@ -177,7 +178,7 @@
                 <a href="http://mpms.monami.com/promotion/">기업 구매 / 개발</a>
                 <ul class="hovermenu">
                   <li><a href="http://mpms.monami.com/promotion/">기업 및 단체 구매</a></li>
-                  <li><a href="../../geunseok/industry.jsp">산업용 맞춤 제품개발</a></li>
+                  <li><a href="${cp}/geunseok/industry.jsp">산업용 맞춤 제품개발</a></li>
                 </ul>
               </li>
             </ul>
@@ -190,8 +191,8 @@
             </div>
             <div class="nav_search">
               <input type="text" name="" id="" />
-              <a href="../../kyungchul/search.jsp">
-                <img src="../../images/btn_search.gif" alt="" />
+              <a href="${cp}/kyungchul/search.jsp">
+                <img src="${cp}/images/btn_search.gif" alt="" />
               </a>
             </div>
           </div>
@@ -199,31 +200,31 @@
             <div class="menubox">
               <h2>모나미소개</h2>
               <ul>
-                <li><a href="../../kyungchul/ceo.jsp">CEO 메시지</a></li>
-                <li><a href="../../kyungchul/company.jsp">회사정보</a></li>
-                <li><a href="../../kyungchul/history.jsp">회사연혁</a></li>
-                <li><a href="../../geunseok/investment.jsp">투자정보</a></li>
-                <li><a href="../../geunseok/ci.jsp">CI</a></li>
+                <li><a href="${cp}/kyungchul/ceo.jsp">CEO 메시지</a></li>
+                <li><a href="${cp}/kyungchul/company.jsp">회사정보</a></li>
+                <li><a href="${cp}/kyungchul/history.jsp">회사연혁</a></li>
+                <li><a href="${cp}/geunseok/investment.jsp">투자정보</a></li>
+                <li><a href="${cp}/geunseok/ci.jsp">CI</a></li>
                 <li><a href="http://recruit.monami.co.kr/" target="_blank">채용정보</a></li>
-                <li><a href="../../geunseok/location.jsp">찾아오시는 길</a></li>
+                <li><a href="${cp}/geunseok/location.jsp">찾아오시는 길</a></li>
               </ul>
             </div>
             <div class="menubox">
               <h2>모나미제품</h2>
               <ul>
-                <li><a href="../pen/penpage.jsp">펜</a></li>
-                <li><a href="../marker/markerpage.jsp">마카</a></li>
-                <li><a href="../../sanghoon/lightpen.jsp">형광펜</a></li>
-                <li><a href="../../doyoon/A_main1.jsp">미술용품</a></li>
-                <li><a href="../../doyoon/E_main1.jsp">기타</a></li>
-                <li><a href="../cataloguepage.jsp">카탈로그</a></li>
+                <li><a href="${cp}/jungmin/pen/penpage.mo">펜</a></li>
+                <li><a href="${cp}/jungmin/marker/markerpage.mo">마카</a></li>
+                <li><a href="${cp}/sanghoon/lightpen.jsp">형광펜</a></li>
+                <li><a href="${cp}/doyoon/A_main1.jsp">미술용품</a></li>
+                <li><a href="${cp}/doyoon/E_main1.jsp">기타</a></li>
+                <li><a href="${cp}/jungmin/cataloguepage.mo">카탈로그</a></li>
               </ul>
             </div>
             <div class="menubox">
               <h2>NEWS &amp; VIDEO</h2>
               <ul>
-                <li><a href="../../teamin/monami_news1.jsp">보도자료</a></li>
-                <li><a href="../../teamin/monami_video1.jsp">동영상자료</a></li>
+                <li><a href="${cp}/teamin/monami_news1.jsp">보도자료</a></li>
+                <li><a href="${cp}/teamin/monami_video1.jsp">동영상자료</a></li>
               </ul>
             </div>
                                     <div class="menubox">
@@ -236,9 +237,9 @@
             <div class="menubox">
               <h2>고객지원</h2>
               <ul>
-                <li><a href="../../doyoon/FAQ.jsp">자주묻는질문</a></li>
-                <li><a href="../../doyoon/Inquiry.jsp">문의하기</a></li>
-                <li><a href="../../geunseok/board_event.jsp">이벤트</a></li>
+                <li><a href="${cp}/doyoon/FAQ.jsp">자주묻는질문</a></li>
+                <li><a href="${cp}/doyoon/Inquiry.jsp">문의하기</a></li>
+                <li><a href="${cp}/geunseok/board_event.jsp">이벤트</a></li>
                 <li><a class="find_f">모나미 패밀리샵 찾기</a></li>
               </ul>
             </div>
@@ -262,24 +263,24 @@
             </div>
             <div class="submenu_list">
               <ul id="sublist">
-                <li class="on">
-                  <a href="./penpage.jsp">펜</a>
-                </li>
-                <li>
-                  <a href="../marker/markerpage.jsp">마카</a>
-                </li>
-                <li>
-                  <a href="sub_1">형광펜</a>
-                </li>
-                <li>
-                  <a href="sub_2">미술용품</a>
-                </li>
-                <li>
-                  <a href="sub_3">기타</a>
-                </li>
-                <li>
-                  <a href="../cataloguepage.jsp">카탈로그</a>
-                </li>
+               <li class="on">
+                     <a href="${cp}/jungmin/pen/penpage.mo">펜</a>
+                 </li>
+                 <li>
+                     <a href="${cp}/jungmin/marker/markerpage.mo">마카</a>
+                 </li>
+                 <li>
+                     <a href="${cp}/sanghoon/lightpen.jsp">형광펜</a>
+                 </li>
+                 <li>
+                     <a href="${cp}/doyoon/A_main1.jsp">미술용품</a>
+                 </li>
+                 <li>
+                     <a href="${cp}/doyoon/E_main1.jsp">기타</a>
+                 </li>
+                 <li>
+                     <a href="${cp}/jungmin/cataloguepage.mo">카탈로그</a>
+                 </li>
               </ul>
             </div>
             <h3 class="title1">
@@ -287,17 +288,17 @@
                 <span>INFO</span>
             </h3>
             <ul class="categori_list">
-                     <li ><a href="../pen/premium_pen.jsp">프리미엄펜</a></li>
-              <li class="on"><a href="../pen/fountain_pen.jsp">만년필</a></li>
-              <li><a href="../pen/oil_pen.jsp">유성볼펜</a></li>
-              <li><a href="../pen/neutral_pen.jsp">중성펜</a></li>
+              <li><a href="${cp}/pen/premium_pen.jsp">프리미엄펜</a></li>
+            <li class="on"><a href="${cp}/pen/fountain_pen.jsp">만년필</a></li>
+            <li><a href="${cp}/pen/oil_pen.jsp">유성볼펜</a></li>
+            <li><a href="${cp}/pen/neutral_pen.jsp">중성펜</a></li>
             </ul>
  
             <div class="product_list">
                 <ul>
                     <li><a href="pen1">
                         <div class="thum">
-                            <img src="../images/fp1.jpg"" >
+                            <img src="${cp}/images/fp1.jpg"" >
                             <div class="ondiv">
                                 <div class="btn_plus">
                                     <div></div>
@@ -314,7 +315,7 @@
  
                     <li><a href="pen2">
                         <div class="thum">
-                            <img src="../images/fp2.jpg" alt="">
+                            <img src="${cp}/images/fp2.jpg" alt="">
                             <div class="ondiv">
                                 <div class="btn_plus">
                                     <div></div>
@@ -331,7 +332,7 @@
  
                     <li><a href="pen3">
                         <div class="thum">
-                            <img src="../images/fp3.jpg" alt="">
+                            <img src=".${cp}/images/fp3.jpg" alt="">
                             <div class="ondiv">
                                 <div class="btn_plus">
                                     <div></div>
@@ -348,7 +349,7 @@
                      
                     <li><a href="pen4">
                         <div class="thum">
-                            <img src="../images/fp4.jpg" alt="">
+                            <img src="${cp}/images/fp4.jpg" alt="">
                             <div class="ondiv">
                                 <div class="btn_plus">
                                     <div></div>
@@ -365,7 +366,7 @@
  
                     <li><a href="pen5">
                         <div class="thum">
-                            <img src="../images/fp5.jpg" alt="">
+                            <img src="${cp}/images/fp5.jpg" alt="">
                             <div class="ondiv">
                                 <div class="btn_plus">
                                     <div></div>
@@ -381,7 +382,7 @@
                  </li>
                     <li><a href="pen6">
                      <div class="thum">
-                         <img src="../images/fp6.jpg" alt="">
+                         <img src="${cp}/images/fp6.jpg" alt="">
                          <div class="ondiv">
                              <div class="btn_plus">
                                  <div></div>
@@ -396,7 +397,7 @@
                     </a></li>
                     <li><a href="pen7">
                      <div class="thum">
-                         <img src="../images/fp7.jpg" alt="">
+                         <img src="${cp}/images/fp7.jpg" alt="">
                          <div class="ondiv">
                              <div class="btn_plus">
                                  <div></div>
@@ -411,7 +412,7 @@
                     </a></li>
                     <li><a href="pen8">
                      <div class="thum">
-                         <img src="../images/fp8.jpg" alt="">
+                         <img src="${cp}/images/fp8.jpg" alt="">
                          <div class="ondiv">
                              <div class="btn_plus">
                                  <div></div>
@@ -427,7 +428,7 @@
  
                     <li><a href="pen9">
                      <div class="thum">
-                         <img src="../images/fp9.jpg" alt="">
+                         <img src="${cp}/images/fp9.jpg" alt="">
                          <div class="ondiv">
                              <div class="btn_plus">
                                  <div></div>
@@ -442,7 +443,7 @@
                     </a></li>
                     <li><a href="pen10">
                      <div class="thum">
-                         <img src="../images/fp10.jpg" alt="">
+                         <img src="${cp}/images/fp10.jpg" alt="">
                          <div class="ondiv">
                              <div class="btn_plus">
                                  <div></div>
@@ -459,23 +460,24 @@
             </div>
             <div class="pagenum">
              <a class="page_prev">
-                 <img src="../images/page_prev.gif">
+                 <img src="${cp}/images/page_prev.gif">
              </a>
              <strong>1</strong>
             
             
              <a  class="page_next">
-                 <img src="../images/page_next.gif">
+                 <img src="${cp}/images/page_next.gif">
              </a>
          </div>
          <div class="topbtn">
              <a href="#Top">
-                 <img src="../images/btn_top.gif" alt="상단으로">
+                 <img src="${cp}/images/btn_top.gif" alt="상단으로">
              </a>
          </div>
      </div>
         </div>
       <!-- 본문 끝 -->
+      <!-- 푸터 시작 -->
       <!-- 푸터 시작 -->
       <div id="footer">
         <div class="foot">
@@ -560,15 +562,15 @@
         <div class="tit">시행일</div>
         
         본 이메일 무단 수집 거부 정책은 2017년 11월부터 시행합니다.
-              </div>
+                    </div>
               <div class="btn_close"><a>CLOSE</a></div>
             </div>
           </div>
           <div class="foot_top">
-            <h1><img src="/images/foot_logo.jpeg" alt="로고"></img></h1>
+            <h1><img src="${cp}/images/foot_logo.jpeg" alt="로고"></img></h1>
             <ul class="fm">
               <li>
-                <a href="/about/ceo.jsp">회사소개</a>
+                <a href="${cp}/kyungchul/ceo.jsp">회사소개</a>
               </li>
               <li>
                 <a class="privacy_pop">개인정보처리방식</a>
