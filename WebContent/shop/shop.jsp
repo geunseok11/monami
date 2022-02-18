@@ -1,18 +1,22 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 <html lang="en">
   <head>
+  	<c:set var="cp" value="${pageContext.request.contextPath}"/>
     <meta http-equiv="Content-Type" content="text/html; charset=euc-kr" />
     <title>모나미 패밀리샵 찾기</title>
-    <link href="/css/shop.css" rel="stylesheet" type="text/css" />
+    <link href="${cp}/css/shop.css" rel="stylesheet" type="text/css" />
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="/js/shop.js"></script>
+    <script src="${cp}/js/shop.js"></script>
   </head>
   <body>
     <div id="wrap_popup">
       <!-- Header 시작 -->
       <div class="header">
         <a href="javascript:window.open('', '_self').close();" class="btn_close"
-          ><img src="/images/close.png" width="50" height="50" alt="닫기"
+          ><img src="${cp}/images/close.png" width="50" height="50" alt="닫기"
         /></a>
       </div>
       <!--// Header 끝 -->
@@ -20,7 +24,7 @@
       <div class="contents">
         <div class="tit_sub">
           <img
-            src="/images/tit_sub.jpg"
+            src="${cp}/images/tit_sub.jpg"
             width="783"
             height="55"
             alt="패밀리샵은 무엇인가요? 패밀리샵은 모나미와 함께 협력하는 문구 소매 매장입니다. 우리 동네 패밀리샵에서 더욱 가까워진 모나미를 만나 보세요!"
@@ -257,7 +261,7 @@
         <div class="wrap_tb">
           <div class="tb_tit">
             <img
-              src="/images/tb_tit.gif"
+              src="${cp}/images/tb_tit.gif"
               width="329"
               height="22"
               alt="검색하신 지역에서 가까운 모나미 패밀리샵"
@@ -297,7 +301,7 @@
                     style="color: rgb(54, 54, 54)"
                     onclick="window.open(this.href, '_blank', 'width=615, height=615'); return false;"
                     ><img
-                      src="/images/btn_map.gif"
+                      src="${cp}/images/btn_map.gif"
                       width="20"
                       height="19"
                       alt="지도보기"
@@ -316,7 +320,7 @@
                     style="color: rgb(54, 54, 54)"
                     onclick="window.open(this.href, '_blank', 'width=615, height=615'); return false;"
                     ><img
-                      src="/images/btn_map.gif"
+                      src="${cp}/images/btn_map.gif"
                       width="20"
                       height="19"
                       alt="지도보기"
@@ -337,7 +341,7 @@
                     style="color: rgb(54, 54, 54)"
                     onclick="window.open(this.href, '_blank', 'width=615, height=615'); return false;"
                     ><img
-                      src="/images/btn_map.gif"
+                      src="${cp}/images/btn_map.gif"
                       width="20"
                       height="19"
                       alt="지도보기"
@@ -358,7 +362,7 @@
                     style="color: rgb(54, 54, 54)"
                     onclick="window.open(this.href, '_blank', 'width=615, height=615'); return false;"
                     ><img
-                      src="/images/btn_map.gif"
+                      src="${cp}/images/btn_map.gif"
                       width="20"
                       height="19"
                       alt="지도보기"
@@ -379,7 +383,7 @@
                     style="color: rgb(54, 54, 54)"
                     onclick="window.open(this.href, '_blank', 'width=615, height=615'); return false;"
                     ><img
-                      src="/images/btn_map.gif"
+                      src="${cp}/images/btn_map.gif"
                       width="20"
                       height="19"
                       alt="지도보기"
@@ -400,7 +404,7 @@
                     style="color: rgb(54, 54, 54)"
                     onclick="window.open(this.href, '_blank', 'width=615, height=615'); return false;"
                     ><img
-                      src="/images/btn_map.gif"
+                      src="${cp}/images/btn_map.gif"
                       width="20"
                       height="19"
                       alt="지도보기"
@@ -419,7 +423,7 @@
                     style="color: rgb(54, 54, 54)"
                     onclick="window.open(this.href, '_blank', 'width=615, height=615'); return false;"
                     ><img
-                      src="/images/btn_map.gif"
+                      src="${cp}/images/btn_map.gif"
                       width="20"
                       height="19"
                       alt="지도보기"
@@ -438,7 +442,7 @@
                     style="color: rgb(54, 54, 54)"
                     onclick="window.open(this.href, '_blank', 'width=615, height=615'); return false;"
                     ><img
-                      src="/images/btn_map.gif"
+                      src="${cp}/images/btn_map.gif"
                       width="20"
                       height="19"
                       alt="지도보기"
@@ -457,7 +461,7 @@
                     style="color: rgb(54, 54, 54)"
                     onclick="window.open(this.href, '_blank', 'width=615, height=615'); return false;"
                     ><img
-                      src="/images/btn_map.gif"
+                      src="${cp}/images/btn_map.gif"
                       width="20"
                       height="19"
                       alt="지도보기"
@@ -478,7 +482,7 @@
                     style="color: rgb(54, 54, 54)"
                     onclick="window.open(this.href, '_blank', 'width=615, height=615'); return false;"
                     ><img
-                      src="/images/btn_map.gif"
+                      src="${cp}/images/btn_map.gif"
                       width="20"
                       height="19"
                       alt="지도보기"
@@ -497,7 +501,7 @@
                     style="color: rgb(54, 54, 54)"
                     onclick="window.open(this.href, '_blank', 'width=615, height=615'); return false;"
                     ><img
-                      src="/images/btn_map.gif"
+                      src="${cp}/images/btn_map.gif"
                       width="20"
                       height="19"
                       alt="지도보기"
@@ -516,7 +520,7 @@
                     style="color: rgb(54, 54, 54)"
                     onclick="window.open(this.href, '_blank', 'width=615, height=615'); return false;"
                     ><img
-                      src="/images/btn_map.gif"
+                      src="${cp}/images/btn_map.gif"
                       width="20"
                       height="19"
                       alt="지도보기"
@@ -535,7 +539,7 @@
                     style="color: rgb(54, 54, 54)"
                     onclick="window.open(this.href, '_blank', 'width=615, height=615'); return false;"
                     ><img
-                      src="/images/btn_map.gif"
+                      src="${cp}/images/btn_map.gif"
                       width="20"
                       height="19"
                       alt="지도보기"
@@ -556,7 +560,7 @@
                     style="color: rgb(54, 54, 54)"
                     onclick="window.open(this.href, '_blank', 'width=615, height=615'); return false;"
                     ><img
-                      src="/images/btn_map.gif"
+                      src="${cp}/images/btn_map.gif"
                       width="20"
                       height="19"
                       alt="지도보기"
@@ -577,7 +581,7 @@
                     style="color: rgb(54, 54, 54)"
                     onclick="window.open(this.href, '_blank', 'width=615, height=615'); return false;"
                     ><img
-                      src="/images/btn_map.gif"
+                      src="${cp}/images/btn_map.gif"
                       width="20"
                       height="19"
                       alt="지도보기"
@@ -598,7 +602,7 @@
                     style="color: rgb(54, 54, 54)"
                     onclick="window.open(this.href, '_blank', 'width=615, height=615'); return false;"
                     ><img
-                      src="/images/btn_map.gif"
+                      src="${cp}/images/btn_map.gif"
                       width="20"
                       height="19"
                       alt="지도보기"
@@ -619,7 +623,7 @@
                     style="color: rgb(54, 54, 54)"
                     onclick="window.open(this.href, '_blank', 'width=615, height=615'); return false;"
                     ><img
-                      src="/images/btn_map.gif"
+                      src="${cp}/images/btn_map.gif"
                       width="20"
                       height="19"
                       alt="지도보기"
@@ -640,7 +644,7 @@
                     style="color: rgb(54, 54, 54)"
                     onclick="window.open(this.href, '_blank', 'width=615, height=615'); return false;"
                     ><img
-                      src="/images/btn_map.gif"
+                      src="${cp}/images/btn_map.gif"
                       width="20"
                       height="19"
                       alt="지도보기"
@@ -661,7 +665,7 @@
                     style="color: rgb(54, 54, 54)"
                     onclick="window.open(this.href, '_blank', 'width=615, height=615'); return false;"
                     ><img
-                      src="/images/btn_map.gif"
+                      src="${cp}/images/btn_map.gif"
                       width="20"
                       height="19"
                       alt="지도보기"
@@ -680,7 +684,7 @@
                     style="color: rgb(54, 54, 54)"
                     onclick="window.open(this.href, '_blank', 'width=615, height=615'); return false;"
                     ><img
-                      src="/images/btn_map.gif"
+                      src="${cp}/images/btn_map.gif"
                       width="20"
                       height="19"
                       alt="지도보기"
@@ -699,7 +703,7 @@
                     style="color: rgb(54, 54, 54)"
                     onclick="window.open(this.href, '_blank', 'width=615, height=615'); return false;"
                     ><img
-                      src="/images/btn_map.gif"
+                      src="${cp}/images/btn_map.gif"
                       width="20"
                       height="19"
                       alt="지도보기"
@@ -721,7 +725,7 @@
                     style="color: rgb(54, 54, 54)"
                     onclick="window.open(this.href, '_blank', 'width=615, height=615'); return false;"
                     ><img
-                      src="/images/btn_map.gif"
+                      src="${cp}/images/btn_map.gif"
                       width="20"
                       height="19"
                       alt="지도보기"
@@ -744,7 +748,7 @@
                     style="color: rgb(54, 54, 54)"
                     onclick="window.open(this.href, '_blank', 'width=615, height=615'); return false;"
                     ><img
-                      src="/images/btn_map.gif"
+                      src="${cp}/images/btn_map.gif"
                       width="20"
                       height="19"
                       alt="지도보기"
@@ -765,7 +769,7 @@
                     style="color: rgb(54, 54, 54)"
                     onclick="window.open(this.href, '_blank', 'width=615, height=615'); return false;"
                     ><img
-                      src="/images/btn_map.gif"
+                      src="${cp}/images/btn_map.gif"
                       width="20"
                       height="19"
                       alt="지도보기"
@@ -787,7 +791,7 @@
                     style="color: rgb(54, 54, 54)"
                     onclick="window.open(this.href, '_blank', 'width=615, height=615'); return false;"
                     ><img
-                      src="/images/btn_map.gif"
+                      src="${cp}/images/btn_map.gif"
                       width="20"
                       height="19"
                       alt="지도보기"
@@ -808,7 +812,7 @@
                     style="color: rgb(54, 54, 54)"
                     onclick="window.open(this.href, '_blank', 'width=615, height=615'); return false;"
                     ><img
-                      src="/images/btn_map.gif"
+                      src="${cp}/images/btn_map.gif"
                       width="20"
                       height="19"
                       alt="지도보기"

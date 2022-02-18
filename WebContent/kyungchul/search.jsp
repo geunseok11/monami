@@ -4,17 +4,18 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+  <c:set var="cp" value="${pageContext.request.contextPath}"/>
     <meta
       http-equiv="Content-Type"
       content="application/xhtml+xml; charset=UTF-8"
     />
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <title>MONAMI</title>
-    <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon" />
-    <link rel="stylesheet" href="../css/style_intro.css" />
+    <link rel="shortcut icon" href="${cp}/images/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="${cp}/css/style_intro.css" />
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.js"></script>
-    <script type="text/javascript" src="../js/common.js"></script>
+    <script type="text/javascript" src="${cp}/js/common.js"></script>
     <script type="text/javascript">
       $(function () {
         $(document).on("click", ".find_f", function () {
@@ -33,14 +34,13 @@
     </script>
   </head>
   <body>
-  	<c:set var="cp" value="${pageContext.request.contextPath}"/>
     <!-- wrap 시작 -->
     <div id="wrap">
       <div id="bgblack"></div>
       <div class="find_layer">
-        <iframe src="../shop/shop.jsp" frameborder="0" id="find_f"></iframe>
+        <iframe src="${cp}/shop/shop.jsp" frameborder="0" id="find_f"></iframe>
         <div class="btnx_">
-          <img src="../images/close.png" alt="" />
+          <img src="${cp}/images/close.png" alt="" />
         </div>
       </div>
       <!-- 헤더 시작 -->
@@ -62,7 +62,7 @@
                         href="https://www.facebook.com/monami1960"
                         target="_blank"
                         ><img
-                          src="../images/sns_facebook.gif"
+                          src="${cp}/images/sns_facebook.gif"
                           alt="모나미 페이스북 바로가기"
                       /></a>
                     </li>
@@ -71,7 +71,7 @@
                         href="https://www.instagram.com/monami_official/"
                         target="_blank"
                         ><img
-                          src="../images/sns_insta.gif"
+                          src="${cp}/images/sns_insta.gif"
                           alt="모나미 인스타그램 바로가기"
                       /></a>
                     </li>
@@ -80,9 +80,9 @@
               </div>
               <div class="topmenu">
                 <ul>
-                  <li><a href="../sanghoon/index.jsp">HOME</a></li>
-                  <li><a href="../kyungchul/sitemap.jsp">SITE MAP</a></li>
-                  <li><a href="../doyoon/Inquiry.jsp">CONTACT US</a></li>
+                  <li><a href="${cp}/sanghoon/index.jsp">HOME</a></li>
+                  <li><a href="${cp}/kyungchul/sitemap.jsp">SITE MAP</a></li>
+                  <li><a href="${cp}/doyoon/Inquiry.jsp">CONTACT US</a></li>
                 </ul>
               </div>
             </div>
@@ -90,59 +90,59 @@
           <div class="gnb">
             <div class="conwrap">
               <h1>
-                <a href="../sanghoon/index.jsp"
-                  ><img src="../images/logo.jpeg" alt=""
+                <a href="${cp}/sanghoon/index.jsp"
+                  ><img src="${cp}/images/logo.jpeg" alt=""
                 /></a>
               </h1>
               <div class="nav">
                 <ul>
                   <li>
-                    <a href="../kyungchul/ceo.jsp">모나미소개</a>
+                    <a href="${cp}/kyungchul/ceo.jsp">모나미소개</a>
                     <ul>
-                      <li><a href="../kyungchul/ceo.jsp">CEO 메시지</a></li>
-                      <li><a href="../kyungchul/company.jsp">회사정보</a></li>
-                      <li><a href="../kyungchul/history.jsp">회사연혁</a></li>
-                      <li><a href="../geunseok/investment.jsp">투자정보</a></li>
-                      <li><a href="../geunseok/ci.jsp">CI</a></li>
+                      <li><a href="${cp}/kyungchul/ceo.jsp">CEO 메시지</a></li>
+                      <li><a href="${cp}/kyungchul/company.jsp">회사정보</a></li>
+                      <li><a href="${cp}/kyungchul/history.jsp">회사연혁</a></li>
+                      <li><a href="${cp}/geunseok/investment.jsp">투자정보</a></li>
+                      <li><a href="${cp}/geunseok/ci.jsp">CI</a></li>
                       <li>
                         <a href="http://recruit.monami.co.kr/" target="_blank"
                           >채용정보</a
                         >
                       </li>
-                      <li><a href="../geunseok/location.jsp">찾아오시는 길</a></li>
+                      <li><a href="${cp}/geunseok/location.jsp">찾아오시는 길</a></li>
                     </ul>
                   </li>
                   <li>
-                    <a href="../jungmin/pen/penpage.jsp">모나미제품</a>
+                    <a href="${cp}/jungmin/pen/penpage.jsp">모나미제품</a>
                     <ul>
                       <li>
-                        <a href="../jungmin/pen/penpage.jsp">펜</a>
+                        <a href="${cp}/jungmin/pen/penpage.jsp">펜</a>
                       </li>
                       <li>
-                        <a href="../jungmin/marker/markerpage.jsp">마카</a>
+                        <a href="${cp}/jungmin/marker/markerpage.jsp">마카</a>
                       </li>
                       <li>
-                        <a href="../sanghoon/lightpen.jsp">형광펜</a>
+                        <a href="${cp}/sanghoon/lightpen.jsp">형광펜</a>
                       </li>
                       <li>
-                        <a href="../doyoon/A_main1.jsp">미술용품</a>
+                        <a href="${cp}/doyoon/A_main1.jsp">미술용품</a>
                       </li>
                       <li>
-                        <a href="../doyoon/E_main1.jsp">기타</a>
+                        <a href="${cp}/doyoon/E_main1.jsp">기타</a>
                       </li>
                       <li>
-                        <a href="../jungmin/cataloguepage.jsp">카탈로그</a>
+                        <a href="${cp}/jungmin/cataloguepage.jsp">카탈로그</a>
                       </li>
                     </ul>
                   </li>
                   <li>
-                    <a href="../teamin/monami_news1.jsp">NEWS &amp; VIDEO</a>
+                    <a href="${cp}/teamin/monami_news1.jsp">NEWS &amp; VIDEO</a>
                     <ul>
                       <li>
-                        <a href="../teamin/monami_news1.jsp">보도자료</a>
+                        <a href="${cp}/teamin/monami_news1.jsp">보도자료</a>
                       </li>
                       <li>
-                        <a href="../teamin/monami_video1.jsp">동영상자료</a>
+                        <a href="${cp}/teamin/monami_video1.jsp">동영상자료</a>
                       </li>
                     </ul>
                   </li>
@@ -170,12 +170,12 @@
                     </ul>
                   </li>
                   <li>
-                    <a href="../doyoon/FAQ.jsp">고객지원</a>
+                    <a href="${cp}/doyoon/FAQ.jsp">고객지원</a>
                     <ul>
-                      <li><a href="../doyoon/FAQ.jsp">자주묻는질문</a></li>
-                      <li><a href="../doyoon/Inquiry.jsp">문의하기</a></li>
+                      <li><a href="${cp}/doyoon/FAQ.jsp">자주묻는질문</a></li>
+                      <li><a href="${cp}/doyoon/Inquiry.jsp">문의하기</a></li>
                       <li>
-                        <a href="../geunseok/board_event.jsp">이벤트</a>
+                        <a href="${cp}/geunseok/board_event.jsp">이벤트</a>
                       </li>
                       <li><a class="find_f">모나미 패밀리샵 찾기</a></li>
                     </ul>
@@ -193,7 +193,7 @@
                         >
                       </li>
                       <li>
-                        <a href="../geunseok/industry.jsp">산업용 맞춤 제품개발</a>
+                        <a href="${cp}/geunseok/industry.jsp">산업용 맞춤 제품개발</a>
                       </li>
                     </ul>
                   </li>
@@ -207,8 +207,8 @@
                 </div>
                 <div class="nav_search">
                   <input type="text" />
-                  <a href="../kyungchul/search.jsp"
-                    ><img src="../images/btn_search.gif" alt=""
+                  <a href="${cp}/product/ProductList.mo"
+                    ><img src="${cp}/images/btn_search.gif" alt=""
                   /></a>
                 </div>
               </div>
@@ -216,35 +216,35 @@
                 <div class="menubox">
                   <h2>모나미소개</h2>
                   <ul>
-                    <li><a href="../kyungchul/ceo.jsp">CEO 메시지</a></li>
-                    <li><a href="../kyungchul/company.jsp">회사정보</a></li>
-                    <li><a href="../kyungchul/history.jsp">회사연혁</a></li>
-                    <li><a href="../geunseok/investment.jsp">투자정보</a></li>
-                    <li><a href="../geunseok/ci.jsp">CI</a></li>
+                    <li><a href="${cp}/kyungchul/ceo.jsp">CEO 메시지</a></li>
+                    <li><a href="${cp}/kyungchul/company.jsp">회사정보</a></li>
+                    <li><a href="${cp}/kyungchul/history.jsp">회사연혁</a></li>
+                    <li><a href="${cp}/geunseok/investment.jsp">투자정보</a></li>
+                    <li><a href="${cp}/geunseok/ci.jsp">CI</a></li>
                     <li>
                       <a href="http://recruit.monami.co.kr/" target="_blank"
                         >채용정보</a
                       >
                     </li>
-                    <li><a href="../geunseok/location.jsp">찾아오시는 길</a></li>
+                    <li><a href="${cp}/geunseok/location.jsp">찾아오시는 길</a></li>
                   </ul>
                 </div>
                 <div class="menubox">
                   <h2>모나미제품</h2>
                   <ul>
-                    <li><a href="../jungmin/pen/penpage.jsp">펜</a></li>
-                    <li><a href="../jungmin/marker/markerpage.jsp">마카</a></li>
-                    <li><a href="../sanghoon/lightpen.jsp">형광펜</a></li>
-                    <li><a href="../doyoon/A_main1.jsp">미술용품</a></li>
-                    <li><a href="../doyoon/E_main1.jsp">기타</a></li>
-                    <li><a href="../jungmin/cataloguepage.jsp">카탈로그</a></li>
+                    <li><a href="${cp}/jungmin/pen/penpage.jsp">펜</a></li>
+                    <li><a href="${cp}/jungmin/marker/markerpage.jsp">마카</a></li>
+                    <li><a href="${cp}/sanghoon/lightpen.jsp">형광펜</a></li>
+                    <li><a href="${cp}/doyoon/A_main1.jsp">미술용품</a></li>
+                    <li><a href="${cp}/doyoon/E_main1.jsp">기타</a></li>
+                    <li><a href="${cp}/jungmin/cataloguepage.jsp">카탈로그</a></li>
                   </ul>
                 </div>
                 <div class="menubox">
                   <h2>NEWS &amp; VIDEO</h2>
                   <ul>
-                    <li><a href="../teamin/monami_news1.jsp">보도자료</a></li>
-                    <li><a href="../teamin/monami_video1.jsp">동영상자료</a></li>
+                    <li><a href="${cp}/teamin/monami_news1.jsp">보도자료</a></li>
+                    <li><a href="${cp}/teamin/monami_video1.jsp">동영상자료</a></li>
                   </ul>
                 </div>
                 <div class="menubox">
@@ -269,9 +269,9 @@
                 <div class="menubox">
                   <h2>고객지원</h2>
                   <ul>
-                    <li><a href="../doyoon/FAQ.jsp">자주묻는질문</a></li>
-                    <li><a href="../doyoon/Inquiry.jsp">문의하기</a></li>
-                    <li><a href="../geunseok/board_event.jsp">이벤트</a></li>
+                    <li><a href="${cp}/doyoon/FAQ.jsp">자주묻는질문</a></li>
+                    <li><a href="${cp}/doyoon/Inquiry.jsp">문의하기</a></li>
+                    <li><a href="${cp}/geunseok/board_event.jsp">이벤트</a></li>
                     <li><a class="find_f">모나미 패밀리샵 찾기</a></li>
                   </ul>
                 </div>
@@ -304,267 +304,78 @@
                   <div class="kr">상품검색</div>
                   <div class="en">Product detail search</div>
                 </div>
-                <form name="search_frm">
-                  <div class="formarea">
+                <div class="search_frm">
+                <div class="formarea">
                     <input
                       type="text"
                       placeholder="검색어를 입력해주세요."
                       name="keyWord"
+                      id="keyWord"
                       value=""
                     />
-                    <a href="#">SEARCH</a>
+                    <a href="javascript:void(0)" onclick="sendit(keyWord)">SEARCH</a> 
                   </div>
-                </form>
+                </div>
               </div>
             </div>
             <div class="total">
-              총 <span>158</span>개의 상품이 검색되었습니다.
+              총 <span>${totalCnt}</span>개의 상품이 검색되었습니다.
             </div>
             <div class="product_list">
-              <ul>
-                <li>
-                  <a href="#">
-                    <div class="thum">
-                      <img
-                        src="../images/1_file6_1642574225zxvl14frbt.jpg"
-                        alt=""
-                        width="264"
-                        height="390"
-                      />
-                      <div class="ondiv">
-                        <div class="btn_plus">
-                          <div></div>
-                          <div></div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="info">
-                      <div class="cate1">유성볼펜</div>
-                      <div class="product_name">153 어흥이</div>
-                    </div>
-                  </a>
-                </li>
-                <li>
-                  <a href="#">
-                    <div class="thum">
-                      <img
-                        src="../images/2070027004_file6_16414504001g57ogmure.jpg"
-                        alt=""
-                        width="264"
-                        height="390"
-                      />
-                      <div class="ondiv">
-                        <div class="btn_plus">
-                          <div></div>
-                          <div></div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="info">
-                      <div class="cate1">유성마카</div>
-                      <div class="product_name">네임펜 M 화이트</div>
-                    </div>
-                  </a>
-                </li>
-                <li>
-                  <a href="#">
-                    <div class="thum">
-                      <img
-                        src="../images/2040240006_file6_16255408900kpz876plz.jpg".
-                        alt=""
-                        width="264"
-                        height="390"
-                      />
-                      <div class="ondiv">
-                        <div class="btn_plus">
-                          <div></div>
-                          <div></div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="info">
-                      <div class="cate1">수성마카</div>
-                      <div class="product_name">프러스펜 3000 피그먼트</div>
-                    </div>
-                  </a>
-                </li>
-                <li>
-                  <a href="#">
-                    <div class="thum">
-                      <img
-                        src="../images/2040016351_file6_16334947342g3aqx0uh1.jpg"
-                        alt=""
-                        width="264"
-                        height="390"
-                      />
-                      <div class="ondiv">
-                        <div class="btn_plus">
-                          <div></div>
-                          <div></div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="info">
-                      <div class="cate1">수성 마카</div>
-                      <div class="product_name">라이브 칼라(화이트 축)</div>
-                    </div>
-                  </a>
-                </li>
-                <li>
-                  <a href="#">
-                    <div class="thum">
-                      <img
-                        src="../images/2090030001_file6_1611014876sc1jm9f3cn.jpg"
-                        alt=""
-                        width="264"
-                        height="390"
-                      />
-                      <div class="ondiv">
-                        <div class="btn_plus">
-                          <div></div>
-                          <div></div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="info">
-                      <div class="cate1">수정테이프</div>
-                      <div class="product_name">스윕</div>
-                    </div>
-                  </a>
-                </li>
-                <li>
-                  <a href="#">
-                    <div class="thum">
-                      <img
-                        src="../images/2010152034_file6_1639639980jngius8r6i.jpg"
-                        alt=""
-                        width="264"
-                        height="390"
-                      />
-                      <div class="ondiv">
-                        <div class="btn_plus">
-                          <div></div>
-                          <div></div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="info">
-                      <div class="cate1">유성볼펜</div>
-                      <div class="product_name">FX ZETA C3</div>
-                    </div>
-                  </a>
-                </li>
-                <li>
-                  <a href="#">
-                    <div class="thum">
-                      <img
-                        src="../images/2040026301_file6_160971901130gajnmetn.jpg"
-                        alt=""
-                        width="264"
-                        height="390"
-                      />
-                      <div class="ondiv">
-                        <div class="btn_plus">
-                          <div></div>
-                          <div></div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="info">
-                      <div class="cate1">수성마카</div>
-                      <div class="product_name">라이브칼라 6색 세트</div>
-                    </div>
-                  </a>
-                </li>
-                <li>
-                  <a href="#">
-                    <div class="thum">
-                      <img
-                        src="../images/2010030001_file6_1635127393stijdjvr99.jpg"
-                        alt=""
-                        width="264"
-                        height="390"
-                      />
-                      <div class="ondiv">
-                        <div class="btn_plus">
-                          <div></div>
-                          <div></div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="info">
-                      <div class="cate1">유성볼펜</div>
-                      <div class="product_name">제니스7</div>
-                    </div>
-                  </a>
-                </li>
-                <li>
-                  <a href="#">
-                    <div class="thum">
-                      <img
-                        src="../images/2041019049_file6_16057669914ghdm7a4zs.jpg"
-                        alt=""
-                        width="264"
-                        height="390"
-                      />
-                      <div class="ondiv">
-                        <div class="btn_plus">
-                          <div></div>
-                          <div></div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="info">
-                      <div class="cate1">수성마카</div>
-                      <div class="product_name">프러스펜 3000 60색 세트</div>
-                    </div>
-                  </a>
-                </li>
-                <li>
-                  <a href="#">
-                    <div class="thum">
-                      <img
-                        src="../images/2040048012_file6_1583298386d4wy0fw22t.jpg"
-                        alt=""
-                        width="264"
-                        height="390"
-                      />
-                      <div class="ondiv">
-                        <div class="btn_plus">
-                          <div></div>
-                          <div></div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="info">
-                      <div class="cate1">만년필</div>
-                      <div class="product_name">153 네오 만년필 EF</div>
-                    </div>
-                  </a>
-                </li>
-              </ul>
+            	<c:choose>
+            		<c:when test="${productList.size()>0 and productList != null}">
+            			<ul>
+            				<c:forEach var="product" items="${productList}">
+            					<li>
+            						<a href="#">
+            							<div class="thum">
+            								<img 
+            								  src="${cp}/images/product/${product.prod_pic}"
+                       			 		      alt="파일이 없습니다"
+                                              width="264"
+                                              height="390"
+                                              />
+                                              <div class="ondiv">
+                                              	<div class="btn_plus">
+                                              	<div></div>
+                      						    <div></div>
+                                              	</div>
+                                              </div>
+            							</div>
+            							<div class="info">
+                     					 <div class="cate1">${product.prod_category}</div>
+                     					 <div class="product_name">${product.prod_name}</div>
+                    					</div>
+            						</a>
+            					</li>
+            				</c:forEach>
+            			</ul>
+            		</c:when>
+            	</c:choose>
             </div>
             <div class="paging">
-              <a class="page_prev" style="padding: 1px">
-                <img src="../images/page_prev.gif" alt="" />
+              <a href="${cp}/product/ProductList.mo?page=${page-1}" 
+              	class="page_prev" style="padding: 1px">
+                <img src="${cp}/images/page_prev.gif" alt="" />
               </a>
-              <strong>1</strong>
-              <a href="#">2</a>
-              <a href="#">3</a>
-              <a href="#">4</a>
-              <a href="#">5</a>
-              <a href="#">6</a>
-              <a href="#">7</a>
-              <a href="#">8</a>
-              <a href="#">9</a>
-              <a href="#">10</a>
-              <a href="#" class="page_next" style="padding: 1px">
-                <img src="../images/page_next.gif" alt=""
-              /></a>
+              <c:forEach begin="${startPage}" end="${endPage}" step="1" var="i">
+              	<c:choose>
+              		<c:when test="${i == page}">
+              			<strong>${i}</strong>
+              		</c:when>
+              		<c:otherwise>
+              			<a href="${cp}/product/ProductList.mo?page=${i}">${i}</a>
+              		</c:otherwise>
+              	</c:choose>
+              </c:forEach>
+              <a href="${cp}/product/ProductList.mo?page=${page+1}" 
+              	class="page_next" style="padding: 1px">
+                <img src="${cp}/images/page_next.gif" alt=""/>
+              </a>
             </div>
           </div>
           <div class="topButton">
-            <a><img src="../images/btn_top.gif" alt="페이지 상단으로" /></a>
+            <a><img src="${cp}/images/btn_top.gif" alt="페이지 상단으로" /></a>
           </div>
         </div>
         <!--/contents-->
@@ -665,10 +476,10 @@
           </div>
           <div class="foot_top">
             <h1>
-              <img src="../images/foot_logo.jpeg" alt="푸터 모나미 로고" />
+              <img src="${cp}/images/foot_logo.jpeg" alt="푸터 모나미 로고" />
             </h1>
             <ul class="fm">
-              <li><a href="../kyungchul/ceo.jsp">회사소개</a></li>
+              <li><a href="${cp}/kyungchul/ceo.jsp">회사소개</a></li>
               <li><a class="privacy_pop">개인정보처리방침</a></li>
               <li><a class="email_pop">이메일무단수집거부</a></li>
             </ul>
@@ -744,4 +555,11 @@
     </div>
     <!-- wrap 끝 -->
   </body>
+  <script>
+  		function sendit(keyWord){
+  			let cp = "${pageContext.request.contextPath}";
+  			let q = document.getElementById("keyWord");
+  			location.href = cp+"/product/ProductList.mo?keyword="+q.value;
+  		}
+  </script>
 </html>
