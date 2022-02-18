@@ -1,10 +1,12 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>Insert title here</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MONAMI</title>
  <link rel="shortcut icon" href="${cp}/images/favicon.ico" type="image/x-icon" />
 <link rel="stylesheet" href="${cp}/css/pen.css"/>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.js"></script>
@@ -253,7 +255,7 @@
   </div>
       <!-- 헤더 끝 -->
       <!-- 바디 상단 이미지 시작-->
-     
+      
       <!-- 바디 상단 이미지 끝  -->
       <!-- 본문 시작  -->
       <div id="container">
@@ -264,13 +266,13 @@
             </div>
             <div class="submenu_list">
                  <ul id="sublist">
-                    <li >
-                     <a href="${cp}/jungmin/pen/penpage.mo">펜</a>
-                 </li>
-                 <li>
-                     <a href="${cp}/jungmin/marker/markerpage.mo">마카</a>
-                 </li>
-                 <li>
+                     <li>
+                         <a href="${cp}/jungmin/pen/penpage.mo">펜</a>
+                     </li>
+                     <li class="on">
+                         <a href="${cp}/jungmin/marker/markerpage.mo">마카</a>
+                     </li>
+                      <li>
                      <a href="${cp}/sanghoon/lightpen.jsp">형광펜</a>
                  </li>
                  <li>
@@ -279,22 +281,30 @@
                  <li>
                      <a href="${cp}/doyoon/E_main1.jsp">기타</a>
                  </li>
-                 <li class="on">
-                     <a href="${cp}/jungmin/cataloguepage.mo">카탈로그</a>
-                 </li>
+                     <li>
+                         <a href="${cp}/jungmin/cataloguepage.mo">카탈로그</a>
+                     </li>
                  </ul>
             </div>
             <h3 class="title1">
-             CATARLOGUE
+                PRODUCT
+                <span>INFO</span>
             </h3>
+            <ul class="categori_list">
+              <li><a href="${cp}/jungmin/marker/water_marker">수성마카</a></li>
+                <li><a href="${cp}/jungmin/marker/oil_marker">유성마카</a></li>
+                <li class="on"><a href="${cp}/jungmin/marker/board_marker">보드마카</a></li>
+                <li><a href="${cp}/jungmin/marker/daily_marker">생활마카</a></li>
+                <li><a href="${cp}/jungmin/marker/industrial_marker">산업마카</a></li>
+            </ul>
+ 
             
  
             <div class="product_list">
                 <ul>
-                    <li><a href="${cp}/images/2021 국내 카달로그 최종_optimize.pdf" download="">
-                      
+                    <li><a href="marker1">
                         <div class="thum">
-                            <img src="${cp}/images/b_file_1608594654rv6p14nu13.jpg" alt="">
+                            <img src="${cp }/images/bm1.jpg" alt="">
                             <div class="ondiv">
                                 <div class="btn_plus">
                                     <div></div>
@@ -303,15 +313,15 @@
                             </div>
                         </div>
                         <div class="info">
-                            <div class="pen_name">CATALOGUE</div>
-                            <div class="product_name">제품 카탈로그 2021</div>
+                            <div class="pen_name">보드마카</div>
+                            <div class="product_name">가디플러스 보드마카</div>
                         </div>                   
                     </a>
                     </li>
  
-                    <li><a href="${cp}/images/2020 국내 카달로그_optimize.pdf" download="">
+                    <li><a href="marker2">
                         <div class="thum">
-                            <img src="${cp}/images/b_file_1580789212nu2uzr9jir.jpg" alt="">
+                            <img src="${cp }/images/bm2.jpg" alt="">
                             <div class="ondiv">
                                 <div class="btn_plus">
                                     <div></div>
@@ -320,34 +330,120 @@
                             </div>
                         </div>
                         <div class="info">
-                            <div class="pen_name">CATALOGUE</div>
-                            <div class="product_name">제품 카탈로그 2020</div>
+                            <div class="pen_name">보드마카</div>
+                            <div class="product_name">시그마플로 생잉크 보드마카 220 / 221</div>
                         </div>                   
                     </a>
                     </li>
  
-            
+                    <li><a href="marker3">
+                        <div class="thum">
+                            <img src="${cp }/images/bm3.jpg" alt="">
+                            <div class="ondiv">
+                                <div class="btn_plus">
+                                    <div></div>
+                                    <div></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="info">
+                            <div class="pen_name">보드마카</div>
+                            <div class="product_name">시그마플로 생잉크 보드마카 F 222</div>
+                        </div>                   
+                    </a>
+                     </li>
+                     
+                    <li><a href="marker4">
+                        <div class="thum">
+                            <img src="${cp }/images/bm4.jpg" alt="">
+                            <div class="ondiv">
+                                <div class="btn_plus">
+                                    <div></div>
+                                    <div></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="info">
+                            <div class="pen_name">보드마카</div>
+                            <div class="product_name">보드마카</div>
+                        </div>                   
+                    </a>
+                     </li>
+ 
+                    <li><a href="marker5">
+                        <div class="thum">
+                            <img src="${cp }/images/bm5.jpg" alt="">
+                            <div class="ondiv">
+                                <div class="btn_plus">
+                                    <div></div>
+                                    <div></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="info">
+                            <div class="pen_name">보드마카</div>
+                            <div class="product_name">화이트 보드마카 파인</div>
+                        </div>                   
+                    </a>
+                 </li>
+                    <li><a href="marker6">
+                     <div class="thum">
+                         <img src="${cp }/images/bm6.jpg" alt="">
+                         <div class="ondiv">
+                             <div class="btn_plus">
+                                 <div></div>
+                                 <div></div>
+                             </div>
+                         </div>
+                     </div>
+                     <div class="info">
+                         <div class="pen_name">유성마카</div>
+                         <div class="product_name">꼬마 보드마카</div>
+                     </div>                   
+                    </a></li>
+                    <li><a href="marker7">
+                     <div class="thum">
+                         <img src="${cp }/images/bm7.jpg" alt="">
+                         <div class="ondiv">
+                             <div class="btn_plus">
+                                 <div></div>
+                                 <div></div>
+                             </div>
+                         </div>
+                     </div>
+                     <div class="info">
+                         <div class="pen_name">보드마카</div>
+                         <div class="product_name">화이트보드 크리너</div>
+                     </div>                   
+                    </a></li>
+                   
                 </ul>
             </div>
             <div class="pagenum">
-                <a class="page_prev">
-                    <img src="${cp}/images/page_prev.gif">
+                <a class="page_prev" href="">
+                    <img src="${cp }/images/page_prev.gif">
                 </a>
                 <strong>1</strong>
-               
-                <a  class="page_next">
-                    <img src="${cp}/images/page_next.gif">
+                <a href="./markerpage2.jsp">2</a>
+                <a href="./markerpage3.jsp">3</a>
+                <a href="./markerpage4.jsp">4</a>
+                <a href="./markerpage5.jsp">5</a>
+                <a href="./markerpage6.jsp">6</a>
+                <a href="./markerpage7.jsp">7</a>
+                <a  class="page_next" href="./markerpage2.jsp">
+                    <img src="${cp }/images/page_next.gif" >
                 </a>
             </div>
             <div class="topbtn">
                 <a href="#Top">
-                    <img src="${cp}/images/btn_top.gif" alt="상단으로">
+                    <img src="${cp }/images/btn_top.gif" alt="상단으로">
                 </a>
             </div>
         </div>
         </div>
       <!-- 본문 끝 -->
       <!-- 푸터 시작 -->
+       <!-- 푸터 시작 -->
       <div id="footer">
         <div class="foot">
           <div class="foot_pop" style="display: none;">
@@ -431,7 +527,7 @@
         <div class="tit">시행일</div>
         
         본 이메일 무단 수집 거부 정책은 2017년 11월부터 시행합니다.
-          </div>
+                    </div>
               <div class="btn_close"><a>CLOSE</a></div>
             </div>
           </div>
