@@ -4,14 +4,15 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <c:set var="cp" value="${pageContext.request.contextPath}"/>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>MONAMI</title>
-    <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon" />
-    <link rel="stylesheet" href="../css/style_another.css" />
+    <link rel="shortcut icon" href="${cp}/images/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="${cp}/css/style_another.css" />
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.js"></script>
-    <script type="text/javascript" src="../js/common.js"></script>
+    <script type="text/javascript" src="${cp}/js/common.js"></script>
     <script type="text/javascript">
       $(function () {
         $(document).on("click", ".find_f", function () {
@@ -36,7 +37,7 @@
       <div class="find_layer" style="display: none; top: 50px">
         <iframe src="./shop/shop.html" frameborder="0" id="find_f"> </iframe>
         <div class="btnx_">
-          <img src="../images/close.png" alt="" />
+          <img src="${cp}/images/close.png" alt="" />
         </div>
       </div>
     <div class="popup_buttons">
@@ -62,12 +63,12 @@
                 <ul>
                   <li>
                     <a href="#" target="_blank">
-                      <img src="../images/sns_facebook.gif" alt="페이스북" />
+                      <img src="${cp}/images/sns_facebook.gif" alt="페이스북" />
                     </a>
                   </li>
                   <li>
                     <a href="#" target="_blank">
-                      <img src="../images/sns_insta.gif" alt="인스타" />
+                      <img src="${cp}/images/sns_insta.gif" alt="인스타" />
                     </a>
                   </li>
                 </ul>
@@ -91,7 +92,7 @@
         <div class="gnb">
           <div class="conwrap">
             <h1>
-              <a href="./index.html"><img src="./images/logo.jpeg" alt="" /></a>
+              <a href="./index.html"><img src="${cp}/images/logo.jpeg" alt="" /></a>
             </h1>
             <div class="nav">
               <ul>
@@ -201,7 +202,7 @@
               <div class="nav_search">
                 <input type="text" name="" id="" />
                 <a href="./search.html">
-                  <img src="../images/btn_search.gif" alt="" />
+                  <img src="${cp}/images/btn_search.gif" alt="" />
                 </a>
               </div>
             </div>
@@ -372,7 +373,7 @@
           <a href="/product/product_list.php?ccode=004005" class="btn_more">더 많은 제품 보러 가기</a>
           <ul class="type_big">
             <li>
-              <a href="#"><img src="../images/industry_prd_big_1_img.png" alt="프로 페인트 마카"></a>
+              <a href="#"><img src="${cp}/images/industry_prd_big_1_img.png" alt="프로 페인트 마카"></a>
               <div>
                 <h5><a href="#">프로 페인트 마카<span>PRO PAINT MARKER</span></a></h5>
                 <ul>
@@ -386,7 +387,7 @@
               </div>
             </li>
             <li>
-              <a href="#"><img src="../images/industry_prd_big_2_img.png" alt="스킬마카 CLIP / TWIN"></a>
+              <a href="#"><img src="${cp}/images/industry_prd_big_2_img.png" alt="스킬마카 CLIP / TWIN"></a>
               <div>
                 <h5><a href="#">스킬마카 CLIP / TWIN<span>SKILL MARKER CLIP/TWIN</span></a></h5>
                 <ul>
@@ -401,7 +402,7 @@
               </div>
             </li>
             <li>
-              <a href="#"><img src="../images/industry_prd_big_3_img.png" alt="프로 유성매직"></a>
+              <a href="#"><img src="${cp}/images/industry_prd_big_3_img.png" alt="프로 유성매직"></a>
               <div>
                 <h5><a href="#">프로 유성매직<span>PROFESSIONAL PERMANENT MARKER</span></a></h5>
                 <ul>
@@ -413,7 +414,7 @@
               </div>
             </li>
             <li>
-              <img src="../images/industry_prd_big_4_img.png" alt="고순도 마카 500">
+              <img src="${cp}/images/industry_prd_big_4_img.png" alt="고순도 마카 500">
               <div>
                 <h5>고순도 마카 500<span>HIGH PURITY MARKER 500</span></h5>
                 <ul>
@@ -427,42 +428,42 @@
           </ul>
           <ul class="type_small">
             <li>
-              <a href="#"><img src="../images/industry_prd_small_1.png" alt="생잉크 유성매직 120/121"></a>
+              <a href="#"><img src="${cp}/images/industry_prd_small_1.png" alt="생잉크 유성매직 120/121"></a>
               <div>
                 <h5><a href="#">생잉크 유성매직 120/121</a></h5>
                 <span>유리 플라스틱, 금속, 나무 등 다양한 표면에 사용</span>
               </div>
             </li>
             <li>
-              <img src="../images/industry_prd_small_2.png" alt="RoHS 마카 510">
+              <img src="${cp}/images/industry_prd_small_2.png" alt="RoHS 마카 510">
               <div>
                 <h5>RoHS 마카 510</h5>
                 <span>PCB 기판 제조 등 전기전자 제조 산업현장에 적합</span>
               </div>
             </li>
             <li>
-              <a href="#"><img src="../images/industry_prd_small_3.png" alt="매직캡"></a>
+              <a href="#"><img src="${cp}/images/industry_prd_small_3.png" alt="매직캡"></a>
               <div>
                 <h5>매직캡</h5>
                 <span>클립을 추가하여 휴대성 강화, 캡을 열고 닫기 편리</span>
               </div>
             </li>
             <li>
-              <img src="../images/industry_prd_small_4.png" alt="대용량 포스터칼라">
+              <img src="${cp}/images/industry_prd_small_4.png" alt="대용량 포스터칼라">
               <div>
                 <h5>대용량 포스터칼라</h5>
                 <span>목재, 철판 가공시 편리한 먹줄용 백색 잉크</span>
               </div>
             </li>
             <li>
-              <a href="#"><img src="../images/industry_prd_small_5.png" alt="데코마카 460"></a>
+              <a href="#"><img src="${cp}/images/industry_prd_small_5.png" alt="데코마카 460"></a>
               <div>
                 <h5><a href="#">데코마카 460</a></h5>
                 <span>유리, 플라스틱, 금속 등 다양한 표면에 채색 가능한 마카</span>
               </div>
             </li>
             <li>
-              <a href="#"><img src="../images/industry_prd_small_6.png" alt="타일틈새마카 401"></a>
+              <a href="#"><img src="${cp}/images/industry_prd_small_6.png" alt="타일틈새마카 401"></a>
               <div>
                 <h5><a href="#">타일틈새마카 401</a></h5>
                 <span>욕실, 주방의 더러워진 타일틈새를 깨끗하게 백색으로 마킹</span>
@@ -479,7 +480,7 @@
       
       
         <div class="btn_top">
-          <a><img src="../images/btn_top.gif" alt="페이지 상단으로"></a>
+          <a><img src="${cp}/images/btn_top.gif" alt="페이지 상단으로"></a>
         </div>
       </div><!--/contents-->
       </div>
@@ -573,7 +574,7 @@
           </div>
         </div>
         <div class="foot_top">
-          <h1><img src="../images/foot_logo.jpeg" alt="로고"></img></h1>
+          <h1><img src="${cp}/images/foot_logo.jpeg" alt="로고"></img></h1>
           <ul class="fm">
             <li>
               <a href="/about/ceo.html">회사소개</a>

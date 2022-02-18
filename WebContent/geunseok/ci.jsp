@@ -4,14 +4,15 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <c:set var="cp" value="${pageContext.request.contextPath}"/>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>MONAMI</title>
-    <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon" />
-    <link rel="stylesheet" href="../css/style_another.css" />
+    <link rel="shortcut icon" href="${cp}/images/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="${cp}/css/style_another.css" />
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.js"></script>
-    <script type="text/javascript" src="../js/common.js"></script>
+    <script type="text/javascript" src="${cp}/js/common.js"></script>
     <script type="text/javascript">
       $(function () {
         $(document).on("click", ".find_f", function () {
@@ -36,7 +37,7 @@
       <div class="find_layer" style="display: none; top: 50px">
         <iframe src="./shop/shop.html" frameborder="0" id="find_f"> </iframe>
         <div class="btnx_">
-          <img src="/images/close.png" alt="" />
+          <img src="${cp}/images/close.png" alt="" />
         </div>
       </div>
     <div class="popup_buttons">
@@ -62,12 +63,12 @@
                 <ul>
                   <li>
                     <a href="#" target="_blank">
-                      <img src="./images/sns_facebook.gif" alt="페이스북" />
+                      <img src="${cp}/images/sns_facebook.gif" alt="페이스북" />
                     </a>
                   </li>
                   <li>
                     <a href="#" target="_blank">
-                      <img src="./images/sns_insta.gif" alt="인스타" />
+                      <img src="${cp}/images/sns_insta.gif" alt="인스타" />
                     </a>
                   </li>
                 </ul>
@@ -91,7 +92,7 @@
         <div class="gnb">
           <div class="conwrap">
             <h1>
-              <a href="./index.html"><img src="./images/logo.jpeg" alt="" /></a>
+              <a href="./index.html"><img src="${cp}/images/logo.jpeg" alt="" /></a>
             </h1>
             <div class="nav">
               <ul>
@@ -201,7 +202,7 @@
               <div class="nav_search">
                 <input type="text" name="" id="" />
                 <a href="./search.html">
-                  <img src="./images/btn_search.gif" alt="" />
+                  <img src="${cp}/images/btn_search.gif" alt="" />
                 </a>
               </div>
             </div>
@@ -296,7 +297,7 @@
           
           <div class="en">
             <div class="num_title"><span class="num">01</span> English Logo</div>
-            <div class="logoarea"><img src="./images/ci_en_logo.jpeg" alt=""></div>
+            <div class="logoarea"><img src="${cp}/images/ci_en_logo.jpeg" alt=""></div>
             <div class="downs">
               <a href="/data/down/English Logo_JPG.zip">JPG파일 다운로드 ↓</a>
               <a href="/data/down/English Logo_AI.zip">AI파일 다운로드 ↓</a>
@@ -304,7 +305,7 @@
           </div>
           <div class="kr">
             <div class="num_title"><span class="num">02</span> Korean Logo</div>
-            <div class="logoarea"><img src="./images/ci_kr_logo.jpeg" alt=""></div>
+            <div class="logoarea"><img src="${cp}/images/ci_kr_logo.jpeg" alt=""></div>
             <div class="downs">
               <a href="/data/down/Korea Logo_JPG.zip">JPG파일 다운로드 ↓</a>
               <a href="/data/down/Korea Logo_AI.zip">AI파일 다운로드 ↓</a>
@@ -330,7 +331,7 @@
           <div class="num_title"><span class="num">03</span> Color Logo</div>
                       <div class="rule_box">
             <span class="wh">WHITE</span><span class="bk">BLACK</span>
-            <div class="rule_ex"><img src="./images/ci_color_img1.jpeg" alt="로고 컬러 예시"></div>
+            <div class="rule_ex"><img src="${cp}/images/ci_color_img1.jpeg" alt="로고 컬러 예시"></div>
       
           </div>
         </div>
@@ -339,7 +340,7 @@
           <div class="num_title"><span class="num">04</span> Prohibited Rule System</div>
           <div class="rule_box">
             
-            <div class="rule_ex"><img src="./images/ci_rule_img1.jpeg" alt="잘못된 로고 예시"></div>
+            <div class="rule_ex"><img src="${cp}/images/ci_rule_img1.jpeg" alt="잘못된 로고 예시"></div>
             <div class="text_info">
               <ul>
                 <li>A . 코퍼레이트마크 색상 규정 이외의 색상은 사용할 수 없습니다.</li>
@@ -359,7 +360,7 @@
       
           <div class="mobee1">
             <div class="num_title"><span class="num">01</span> Mobee Logo_기본형</div>
-            <div class="logoarea"><img src="./images/ci_mobee_logo1.jpeg" alt=""></div>
+            <div class="logoarea"><img src="${cp}/images/ci_mobee_logo1.jpeg" alt=""></div>
             <div class="downs">
               <a href="/data/down/Mobee Logo(기본형)_JPG.zip">JPG파일 다운로드 ↓</a>
               <a href="/data/down/Mobee Logo(기본형)_AI.zip">AI파일 다운로드 ↓</a>
@@ -367,7 +368,7 @@
           </div>
           <div class="mobee2">
             <div class="num_title"><span class="num">02</span> Mobee Logo_응용형</div>
-            <div class="logoarea"><img src="./images/ci_mobee_logo2.jpeg" alt=""></div>
+            <div class="logoarea"><img src="${cp}/images/ci_mobee_logo2.jpeg" alt=""></div>
             <div class="downs">
               <a href="/data/down/Mobee Logo(응용형)_AI.zip">JPG파일 다운로드 ↓</a>
               <a href="/data/down/Mobee Logo(응용형)_AI.zip">AI파일 다운로드 ↓</a>
@@ -379,10 +380,10 @@
             <div class="character_profile">
               
               <div class="imgarea">
-                <a class="cprev"><img src="./images/ci_character_prev.gif" alt=""></a>
-                <a class="cnext"><img src="./images/ci_character_next.gif" alt=""></a>
+                <a class="cprev"><img src="${cp}/images/ci_character_prev.gif" alt=""></a>
+                <a class="cnext"><img src="${cp}/images/ci_character_next.gif" alt=""></a>
                 <ul>
-                  <li><img src="./images/ci_character_01.jpeg" alt=""></li>
+                  <li><img src="${cp}/images/ci_character_01.jpeg" alt=""></li>
                 </ul>
               </div>
               <div class="mobee_info">
@@ -421,11 +422,11 @@
       
           <div class="mobee3">
             <div class="num_title"><span class="num">04</span> Mobee Character_응용동작</div>
-            <div class="logoarea"><img src="./images/ci_mobee_img1.jpeg" alt=""></div>
+            <div class="logoarea"><img src="${cp}/images/ci_mobee_img1.jpeg" alt=""></div>
           </div>
           <div class="mobee4">
             <div class="num_title"><span class="num">05</span> Mobee Character_표정</div>
-            <div class="logoarea"><img src="./images/ci_mobee_img2.jpeg" alt=""></div>
+            <div class="logoarea"><img src="${cp}/images/ci_mobee_img2.jpeg" alt=""></div>
           </div>
       
       
@@ -437,10 +438,11 @@
       
       
         <div class="btn_top">
-          <a href="#"><img src="./images/btn_top.gif" alt="페이지 상단으로"></a>
+          <a href="#"><img src="${cp}/images/btn_top.gif" alt="페이지 상단으로"></a>
         </div>
       </div><!--/contents-->
       </div>
+    </div>
     <!-- 본문 끝 SECTION-->
     <!-- 푸터 시작 SECTION-->
     <div id="footer">
@@ -531,7 +533,7 @@
           </div>
         </div>
         <div class="foot_top">
-          <h1><img src="/images/foot_logo.jpeg" alt="로고"></img></h1>
+          <h1><img src="${cp}/images/foot_logo.jpeg" alt="로고"></img></h1>
           <ul class="fm">
             <li>
               <a href="/about/ceo.html">회사소개</a>
