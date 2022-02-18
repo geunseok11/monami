@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html>
 <html>
 
@@ -99,10 +100,10 @@
 			</div>
 			<div class="foot_top">
 				<h1>
-					<img src="../images/foot_logo.jpeg" alt="로고"></img>
+					<img src="${cp}/images/foot_logo.jpeg" alt="로고"></img>
 				</h1>
 				<ul class="fm">
-					<li><a href="./about/ceo.html">회사소개</a></li>
+					<li><a href="${cp}/kyungchul/ceo.jsp">회사소개</a></li>
 					<li><a class="privacy_pop">개인정보처리방식</a></li>
 					<li><a class="email_pop">이메일무단수집거부</a></li>
 				</ul>

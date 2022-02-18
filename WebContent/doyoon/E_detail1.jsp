@@ -1,21 +1,23 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
 <title>MONAMI</title>
-<link rel="shortcut icon" href="../images/favicon.ico"
+<c:set var="cp" value="${pageContext.request.contextPath}"/>
+<link rel="shortcut icon" href="${cp}/images/favicon.ico"
 	type="image/x-icon" />
-<link rel="stylesheet" href="../css/prodiqr.css" />
+<link rel="stylesheet" href="${cp}/css/prodiqr.css" />
 <script src="//code.jquery.com/jquery-3.3.1.min.js"></script>
-<script type="text/javascript" src="../js/common.js"></script>
-<script type="text/javascript" src="../js/prodiqr.js"></script>
+<script type="text/javascript" src="${cp}/js/common.js"></script>
+<script type="text/javascript" src="${cp}/js/prodiqr.js"></script>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.js"></script>
 </head>
 <body>
 	<div id="wrap">
-		<%@ include file="./header.jsp"%>
+		<%@ include file="/doyoon/header.jsp"%>
 		  <!-- 본문 시작  -->
     <div id="container" class="detail">
       <div class="pagetitle pn2">
@@ -24,12 +26,12 @@
       </div>
       <div class="pagetabs">
         <ul class="m2">
-		  <li><a href="../jungmin/pen/penpage.jsp">펜</a></li>
-          <li><a href="../jungmin/marker/markerpage.jsp">마카</a></li>
-          <li><a href="../sanghoon/lightpen.jsp">형광펜</a></li>
-          <li><a href="./A_main1.jsp">미술용품</a></li>
-          <li><a href="./E_main1.jsp" class="on">기타</a></li>
-          <li><a href="../jungmin/cataloguepage.jsp">카탈로그</a></li>
+		  <li><a href="${cp}/jungmin/pen/penpage.jsp">펜</a></li>
+          <li><a href="${cp}/jungmin/marker/markerpage.jsp">마카</a></li>
+          <li><a href="${cp}/sanghoon/lightpen.jsp">형광펜</a></li>
+          <li><a href="${cp}/doyoon/A_main1.jsp">미술용품</a></li>
+          <li><a href="${cp}/doyoon/E_main1.jsp" class="on">기타</a></li>
+          <li><a href="${cp}/jungmin/cataloguepage.jsp">카탈로그</a></li>
         </ul>
       </div>
       <h3 class="title1">
@@ -46,24 +48,24 @@
                     <!-- 큰이미지 박스 -->
                     <div class="p_img">
                         <ul>
-                            <li><img src="../images/e_p1.jpg"></li>
-                            <li><img src="../images/e_d1_1.jpg"></li>
+                            <li><img src="${cp}/images/e_p1.jpg"></li>
+                            <li><img src="${cp}/images/e_d1_1.jpg"></li>
                         </ul>
                     </div>
                     <!-- 하단 이미지박스  -->
                     <div class="thumb">
-                        <a class="tprev"><img src="../images/tprev.gif"></a>
-                        <a class="tnext"><img src="../images/tnext.gif"></a>
+                        <a class="tprev"><img src="${cp}/images/tprev.gif"></a>
+                        <a class="tnext"><img src="${cp}/images/tnext.gif"></a>
                         <div class="thum_wrap">
                             <ul>
                                 <li>
                                     <a>
-                                        <img src="../images/e_p1.jpg">
+                                        <img src="${cp}/images/e_p1.jpg">
                                     </a>
                                 </li>
                                 <li>
                                     <a>
-                                        <img src="../images/e_d1_1.jpg">
+                                        <img src="${cp}/images/e_d1_1.jpg">
                                     </a>
                                 </li>
                             </ul>
@@ -96,8 +98,8 @@
                             <div class="tit">BODY COLOR</div>
                             <div class="color_lists">
                                 <ul>
-                                    <li><img src="../images/e_d1_2.jpg"></li>
-                                    <li><img src="../images/e_d1_3.jpg"></li>
+                                    <li><img src="${cp}/images/e_d1_2.jpg"></li>
+                                    <li><img src="${cp}/images/e_d1_3.jpg"></li>
                                 </ul>
                             </div>
                         </div>
@@ -105,30 +107,30 @@
                             <div class="tit">DOWNLOAD</div>
                             <ul>
                                 <li class="type1">
-                                <a href="../images/e_d1_4.jpg" download="../images/e_d1_4.jpg">
-                                    <img src="../images/down_type1.gif">셀시트</a>
+                                <a href="${cp}/images/e_d1_4.jpg" download="${cp}/images/e_d1_4.jpg">
+                                    <img src="${cp}/images/down_type1.gif">셀시트</a>
                                 </li>
                                 <li class="type2">
-                                    <a href="../images/e_d1_5.jpg" download="../images/e_d1_4.jpg">
-                                        <img src="../images/down_type2.gif">제품상세</a>
+                                    <a href="${cp}/images/e_d1_5.jpg" download="${cp}/images/e_d1_4.jpg">
+                                        <img src="${cp}/images/down_type2.gif">제품상세</a>
                                     </li>
                                 <li class="type3">
-                                    <a href="../images/e_d1.zip">
-                                    <img src="../images/down_type3.gif"> 이미지</a>
+                                    <a href="${cp}/images/e_d1.zip">
+                                    <img src="${cp}/images/down_type3.gif"> 이미지</a>
                                 </li>
                             </ul>
                         </div>  
                     </div>
                     <div class="btn_buy">
                         <a href="https://www.monamimall.com/w/product/productDetail.do?goodsNo=MG000009627" target="_blank">
-                            <img src="../images/btn_buy.gif" alt="">
+                            <img src="${cp}/images/btn_buy.gif" alt="">
                         </a>
                     </div>
                 </div>
                  <!-- 2.상품 리스트로 돌아가기 -->
               </div>
               <div class="listbtn">
-                <a href="./E_main1.jsp">LIST</a>
+                <a href="${cp}/doyoon/E_main1.jsp">LIST</a>
             </div>
           </div>
       </div>
@@ -136,12 +138,12 @@
          <!-- 본문 끝 -->
     <!-- top버튼 시작 -->
     <div class="btn_top">
-      <a href="#"><img src="../images/btn_top.gif" alt="상단으로 이동"></a>
+      <a href="#"><img src="${cp}/images/btn_top.gif" alt="상단으로 이동"></a>
     </div>
     <!-- top버튼 끝 -->
     </div>
     <!-- container 끝  -->
-		<%@ include file="./footer.jsp"%>
+		<%@ include file="/doyoon/footer.jsp"%>
 	</div>
 </body>
 </html>

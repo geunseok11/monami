@@ -62,11 +62,6 @@
     })
 	//문의사항 파일 첨부
         $(function () {
-        // if($("select#sel").children("option:selected").val() == "") {
-        //     $("select#sel").siblings("label").text("문의내용");
-        // } else {
-        //     $("select#sel").siblings("label").text($("select#sel").children("option:selected").text());
-        // }
 
         if ($("#form2").val() != "") {
             $("label").hide();
