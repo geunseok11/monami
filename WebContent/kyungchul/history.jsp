@@ -206,7 +206,7 @@
                 </div>
                 <div class="nav_search">
                   <input type="text" />
-                  <a href="${cp}/kyungchul/search.jsp"
+                  <a href="${cp}/product/ProductList.mo?keyword=${keyword1}"
                     ><img src="${cp}/images/btn_search.gif" alt=""
                   /></a>
                 </div>
