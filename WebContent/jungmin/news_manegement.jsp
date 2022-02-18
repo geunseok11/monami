@@ -92,7 +92,7 @@
           <div class="gnb">
             <div class="conwrap">
               <h1>
-                <a href="/sanghoon/index.html"><img src="/images/logo.jpeg" alt="" /></a>
+                <a href="/sanghoon/index.html"><img src="../images/logo.jpeg" alt="" /></a>
               </h1>
               <div class="nav">
                 <ul>
@@ -123,13 +123,13 @@
                     </ul>
                   </li>
                   <li >
-                    <a href="./penpage.html">모나미제품</a>
+                    <a href="${cp}/jungmin/pen/penpage.mo">모나미제품</a>
                     <ul>
                       <li>
-                        <a href="./penpage.html">펜</a>
+                        <a href="${cp}/jungmin/pen/penpage.mo">펜</a>
                       </li>
                       <li>
-                        <a href="../marker/markerpage.html">마카</a>
+                        <a href="${cp}/jungmin/marker/markerpage.mo">마카</a>
                       </li>
                       <li>
                         <a href="/sanghoon/lightpen.html">형광펜</a>
@@ -141,7 +141,7 @@
                         <a href="/doyoon/E_main1.html">기타</a>
                       </li>
                       <li>
-                        <a href="../cataloguepage.html">카탈로그</a>
+                        <a href="${cp}/jungmin/cataloguepage.mo">카탈로그</a>
                       </li>
                     </ul>
                   </li>
@@ -202,7 +202,7 @@
                 <div class="nav_search">
                   <input type="text" name="" id="" />
                   <a href="/kyungchul/search.html">
-                    <img src="/images/btn_search.gif" alt="" />
+                    <img src="../images/btn_search.gif" alt="" />
                   </a>
                 </div>
               </div>
@@ -281,7 +281,7 @@
                         <a href="monami_video1.html">동영상자료</a>
                     </li>
                     <li class="on">
-                        <a href="../manegement.html">등록</a>
+                        <a href="${cp}/jungmin/news_manegement.mo">등록</a>
                     </li>
                  </ul>
             </div>
@@ -291,13 +291,13 @@
             <div class="submenu_list2" >
               <ul id="sublist2" >
                  <li class="on">
-                     <a href="#">뉴스등록</a>
+                     <a href="${cp}/jungmin/news_manegement.mo">뉴스등록</a>
                  </li>
                  <li>
-                     <a href="monami_video1.html">동영상등록</a>
+                     <a href="${cp}/jungmin/video_manegement.mo">동영상등록</a>
                  </li>
                  <li >
-                     <a href="./manegement.html">이벤트등록</a>
+                     <a href="${cp}/jungmin/event_manegement.mo">이벤트등록</a>
                  </li>
               </ul>
          </div>
@@ -345,7 +345,7 @@
           
             <div class="topbtn">
                 <a href="#Top">
-                    <img src="./images/btn_top.gif" alt="상단으로">
+                    <img src="../images/btn_top.gif" alt="상단으로">
                 </a>
             </div>
         </div>
@@ -440,7 +440,7 @@
             </div>
           </div>
           <div class="foot_top">
-            <h1><img src="/images/foot_logo.jpeg" alt="로고"></img></h1>
+            <h1><img src="../images/foot_logo.jpeg" alt="로고"></img></h1>
             <ul class="fm">
               <li>
                 <a href="/about/ceo.html">회사소개</a>

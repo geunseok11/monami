@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+ <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -29,6 +30,7 @@
 </script>
 </head>
 <body>
+<c:set var='cp' value="${pageContext.request.contextPath }"/>
 <div class="popup_buttons">
     <a class="popup_button" href="">
       <div class="popup_button-txt">예약하기</div>
@@ -112,13 +114,13 @@
                 </ul>
               </li>
               <li >
-                <a href="./penpage.jsp">모나미제품</a>
+                <a href="${cp }/jungmin/pen/penpage.mo">모나미제품</a>
                 <ul>
                   <li>
-                    <a href="./penpage.jsp">펜</a>
+                    <a href="${cp }/jungmin/pen/penpage.mo">펜</a>
                   </li>
                   <li>
-                    <a href="../marker/markerpage.jsp">마카</a>
+                    <a href="${cp }/jungmin/marker/markerpage.mo">마카</a>
                   </li>
                   <li>
                     <a href="../../sanghoon/lightpen.jsp">형광펜</a>
@@ -130,7 +132,7 @@
                     <a href="../../doyoon/E_main1.jsp">기타</a>
                   </li>
                   <li>
-                    <a href="../cataloguepage.jsp">카탈로그</a>
+                    <a href="${cp }/jungmin/cataloguepage.mo">카탈로그</a>
                   </li>
                 </ul>
               </li>
@@ -211,12 +213,12 @@
             <div class="menubox">
               <h2>모나미제품</h2>
               <ul>
-                <li><a href="../pen/penpage.jsp">펜</a></li>
-                <li><a href="../marker/markerpage.jsp">마카</a></li>
+                <li><a href="${cp}/jungmin/pen/penpage.mo">펜</a></li>
+                <li><a href="${cp}/jungmin/marker/markerpage.mo">마카</a></li>
                 <li><a href="../../sanghoon/lightpen.jsp">형광펜</a></li>
                 <li><a href="../../doyoon/A_main1.jsp">미술용품</a></li>
                 <li><a href="../../doyoon/E_main1.jsp">기타</a></li>
-                <li><a href="../cataloguepage.jsp">카탈로그</a></li>
+                <li><a href="${cp}/jungmin/cataloguepage.mo">카탈로그</a></li>
               </ul>
             </div>
             <div class="menubox">
@@ -264,10 +266,10 @@
         <div class="submenu_list">
              <ul id="sublist">
                  <li class="on">
-                     <a href="../penpage.jsp">펜</a>
+                     <a href="${cp}/jungmin/pen/penpage.mo">펜</a>
                  </li>
                  <li>
-                     <a href="../marker/markerpage.jsp">마카</a>
+                     <a href="${cp}/jungmin/marker/markerpage.mo">마카</a>
                  </li>
                  <li>
                      <a href="../../sanghoon/lightpen.jsp">형광펜</a>
@@ -279,7 +281,7 @@
                      <a href="../../doyoon/E_main1.jsp">기타</a>
                  </li>
                  <li>
-                     <a href="../cataloguepage.jsp">카탈로그</a>
+                     <a href="${cp}/jungmin/cataloguepage.mo">카탈로그</a>
                  </li>
              </ul>
         </div>
@@ -296,7 +298,7 @@
 
         <div class="product_list">
             <ul>
-              <li><a href="../peninfo/peninfo.jsp">
+              <li><a href="${cp}/jungmin/peninfo/peninfo.mo">
                 <div class="thum">
                     <img src="../../images/p0.jpg" alt="">
                     <div class="ondiv">
