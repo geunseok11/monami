@@ -1,21 +1,23 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
 <title>MONAMI</title>
-<link rel="shortcut icon" href="../images/favicon.ico"
+<c:set var="cp" value="${pageContext.request.contextPath}"/>
+<link rel="shortcut icon" href="${cp}/images/favicon.ico"
 	type="image/x-icon" />
-<link rel="stylesheet" href="../css/prodiqr.css" />
+<link rel="stylesheet" href="${cp}/css/prodiqr.css" />
 <script src="//code.jquery.com/jquery-3.3.1.min.js"></script>
-<script type="text/javascript" src="../js/common.js"></script>
-<script type="text/javascript" src="../js/prodiqr.js"></script>
+<script type="text/javascript" src="${cp}/js/common.js"></script>
+<script type="text/javascript" src="${cp}/js/prodiqr.js"></script>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.js"></script>
 </head>
 <body>
 	<div id="wrap">
-		<%@ include file="./header.jsp"%>
+		<%@ include file="/doyoon/header.jsp"%>
 		  <!-- 본문 시작  -->
     <div id="container">
         <div class="pagetitle pn4">
@@ -24,10 +26,10 @@
         </div>
         <div class="pagetabs">
             <ul class="m4">
-                <li><a href="./FAQ.jsp">자주하는질문</a></li>
-                <li><a href="./Inquiry.jsp" class="on">문의하기</a></li>
-                <li><a href="../geunseok/board_event.jsp">이벤트</a></li>
-                <li><a href="../shop/shop.jsp">모나미 패밀리샵 찾기</a></li>
+                <li><a href="${cp}/doyoon/FAQ.jsp">자주하는질문</a></li>
+                <li><a href="${cp}/doyoon/Inquiry.jsp" class="on">문의하기</a></li>
+                <li><a href="${cp}/geunseok/board_event.jsp">이벤트</a></li>
+                <li><a href="${cp}/shop/shop.jsp">모나미 패밀리샵 찾기</a></li>
             </ul>
         </div>
         <h3 class="title1">
@@ -163,12 +165,12 @@
         <!-- 본문 끝 -->
         <!-- top버튼 시작 -->
         <div class="btn_top">
-            <a href="#"><img src="../images/btn_top.gif" alt="상단으로 이동"></a>
+            <a href="#"><img src="${cp}/images/btn_top.gif" alt="상단으로 이동"></a>
         </div>
         <!-- top버튼 끝 -->
     </div>
     <!-- container 끝  -->
-		<%@ include file="./footer.jsp"%>
+		<%@ include file="/doyoon/footer.jsp"%>
 	</div>
 </body>
 </html>
