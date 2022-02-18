@@ -207,7 +207,7 @@
                 </div>
                 <div class="nav_search">
                   <input type="text" />
-                  <a href="${cp}/product/ProductList.mo"
+                  <a href="${cp}/product/ProductList.mo?keyword=${keyword1}"
                     ><img src="${cp}/images/btn_search.gif" alt=""
                   /></a>
                 </div>
@@ -312,8 +312,9 @@
                       name="keyWord"
                       id="keyWord"
                       value=""
+                      onkeyup="enterkey();"
                     />
-                    <a href="javascript:void(0)" onclick="sendit(keyWord)">SEARCH</a> 
+                    <a href="javascript:void(0)" onclick="sendit()">SEARCH</a> 
                   </div>
                 </div>
               </div>
@@ -354,24 +355,45 @@
             	</c:choose>
             </div>
             <div class="paging">
-              <a href="${cp}/product/ProductList.mo?page=${page-1}" 
+           	  <c:if test="${page == 1 }">
+           	  	<a href="#" class="page_prev" style="padding: 1px">
+                <img src="${cp}/images/page_prev.gif" alt="" />
+              </a>
+           	  </c:if>
+           	  <c:if test="${page != 1 }">
+           	  	<a href="${cp}/product/ProductList.mo?page=${page-1}" 
               	class="page_prev" style="padding: 1px">
                 <img src="${cp}/images/page_prev.gif" alt="" />
               </a>
-              <c:forEach begin="${startPage}" end="${endPage}" step="1" var="i">
-              	<c:choose>
-              		<c:when test="${i == page}">
-              			<strong>${i}</strong>
-              		</c:when>
-              		<c:otherwise>
-              			<a href="${cp}/product/ProductList.mo?page=${i}">${i}</a>
-              		</c:otherwise>
-              	</c:choose>
-              </c:forEach>
-              <a href="${cp}/product/ProductList.mo?page=${page+1}" 
-              	class="page_next" style="padding: 1px">
+           	  </c:if>
+           	  <c:if test="${keyword!=null}">
+           	  	<c:forEach begin="${startPage}" end="${endPage}" step="1" var="i">
+              		<c:choose>
+              			<c:when test="${i == page}">
+              				<strong>${i}</strong>
+              			</c:when>
+              			<c:otherwise>
+              				<a href="${cp}/product/ProductList.mo?page=${i}&keyword=${keyword}">${i}</a>
+              			</c:otherwise>
+              		</c:choose>
+              	</c:forEach>
+           	  </c:if>
+           	  <c:if test="${keyword == null }">
+           	  	<c:forEach begin="${startPage}" end="${endPage}" step="1" var="i">
+              		<c:choose>
+              			<c:when test="${i == page}">
+              				<strong>${i}</strong>
+              			</c:when>
+              			<c:otherwise>
+              				<a href="${cp}/product/ProductList.mo?page=${i}">${i}</a>
+              			</c:otherwise>
+              		</c:choose>
+              	</c:forEach>
+           	  </c:if>
+              	<a href="${cp}/product/ProductList.mo?page=${page+1}&keyword=${keyword}" 
+              		class="page_next" style="padding: 1px">
                 <img src="${cp}/images/page_next.gif" alt=""/>
-              </a>
+              	</a>
             </div>
           </div>
           <div class="topButton">
@@ -556,7 +578,12 @@
     <!-- wrap 끝 -->
   </body>
   <script>
-  		function sendit(keyWord){
+  		function enterkey(){
+  			if(window.event.keyCode == 13){
+  				sendit();
+  			}
+  		}
+  		function sendit(){
   			let cp = "${pageContext.request.contextPath}";
   			let q = document.getElementById("keyWord");
   			location.href = cp+"/product/ProductList.mo?keyword="+q.value;
