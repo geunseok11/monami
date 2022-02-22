@@ -1,3 +1,4 @@
+
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -426,7 +427,7 @@ input.btn_zip{
 														
 													</div>
 													<span class="txt_find"> <a
-														href="${cp}/jungmin/idsearch.mo" class="link_find">아이디</a> / <a
+														href="/member/find/loginId" class="link_find">아이디</a> / <a
 														href="/member/find/password" class="link_find">비밀번호 찾기</a>
 													</span>
 												</div>
@@ -684,114 +685,14 @@ input.btn_zip{
         
             </script>
             <h3 class="title1">
-                PRODUCT
-                <span>INFO</span>
-            </h3>
-               <div class="product_view">
-                 <div class="product_info">
-                  <div class="info">
-                    <div class="bgarea1"></div>
-                    <div class="number">
-                      <span>01</span>
-                      /
-                      <span>05</span>
-                    </div>
-                    <div class="prodleft">
-                      <div class="imges">
-                        <ul>
-                          <li><img src="/images/pp1-1.jpg" alt=""></li>
-                          <li><img src="/images/pp1-2.jpg" alt=""></li>
-                          <li><img src="/images/pp1-3.jpg" alt=""></li>
-                          <li><img src="/images/pp1-4.jpg" alt=""></li>
-                          <li><img src="/images/pp1-5.jpg" alt=""></li>                        
-                        </ul>
-                      </div>
-                      <div class="thumb">
-                        <a class="info_prev"><img src="/images/infotprev.gif" ></a>
-                        <a  class="info_next"><img src="/images/infotnext.gif" alt=""></a>
-                        <div class="thum_list">
-                          <ul>
-                            <li><a><img src="/images/mpp1-1.jpg" alt=""></a></li>
-                            <li><a><img src="/images/mpp1-2.jpg" alt=""></a></li>
-                            <li><a><img src="/images/mpp1-3.jpg" alt=""></a></li>
-                            <li><a><img src="/images/mpp1-4.jpg" alt=""></a></li>
-                            <li><a><img src="/images/mpp1-5.jpg" alt=""></a></li>
-                          </ul>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="prodright">
-                    <div class="p_name">
-                        <div class="name">FX ZETA C3</div>
-                        <div class="cate">유성볼펜</div>
-                    </div>
-                    <div class="p_info">
-                        <div class="key">
-                        <div class="tit">KEY FEATURES</div>
-                        <ol>
-                          <li>
-                            - 미끄러움을 방지하고 편안한 그립감을 제공하는 패턴 그립<br> - 실리콘 파트 구조를 적용하여 노크 소을음 최소화한 디자인<br> - 유격을 최소화하여 흔들림 없이 안정감 있는 필기감을 제공<br><br> 4,000원
-                          </li>
-                        </ol>                    
-                      </div>
-                      <div class="ink">
-                        <div class="tit">INK COLOR</div>
-                        <div class="color_list">
-                          <ul>
-                            <li><img src="/images/ic1.jpg" alt=""></li>
-                            <li><img src="/images/ic2.jpg" alt=""></li>
-                            <li><img src="/images/ic3.jpg" alt=""></li>
-                          </ul>
-                        </div>
-                      </div>
-                      <div class="body_color">
-                        <div class="tit">BODY COLOR</div>
-                        <div class="color_list">
-                          <ul>
-                            <li><img src="/images/bc1.jpg" alt=""></li>
-                            <li><img src="/images/bc2.jpg" alt=""></li>
-                            <li><img src="/images/bc3.jpg" alt=""></li>
-                            <li><img src="/images/bc4.jpg" alt=""></li>
-                            <li><img src="/images/bc5.jpg" alt=""></li>
-                            <li><img src="/images/bc6.jpg" alt=""></li>
-                          </ul>
-                        </div>
-                      </div>
-                      <div class="point">
-                        <div class="tit">POINT SIZE</div>
-                        <p>0.5mm / 0.7mm</p>
-                      </div>
-                      <div class="nib_type">
-                        <div class="tit">NIB/TIB TYPE</div>
-                        <ul>
-                          <li><img src="/images/nt1.jpg" alt=""></li>
-                        </ul>
-                      </div>
-                      <div class="download">
-                        <div class="tit">DOWNLOAD</div>
-                        <div class="down">
-                          <ul>
-                            <li><a href="/images/pinfo셀.pdf" download="">
-                              <img src="/images/s1.gif" alt="">셀시트
-                            </a></li>
-                            <li><a href="/images/peninfo상세.jpg" download="">
-                              <img src="/images/s2.gif" alt="">제품상세
-                            </a></li>
-                            <li><a href="/images/peninfo이미지.zip" downloda="">
-                              <img src="/images/s3.gif" alt="">이미지
-                            </a></li>
-                          </ul>
-                        </div>
-                </div>                   
-                        </div>
-                      
-                        <div class="buy">
-                          <a href="https://www.monamimall.com/w/product/productDetail.do?goodsNo=MG000020924&banner_check=main"><img src="/images/buynow.gif" alt=""></a>
-                        </div>
-                    
-                </div>
-            </div>
-            <div class="view_list"><a href="../pen/penpage.jsp">LIST</a></div>                       
+        		<div>
+        			<li><span>고객님의 ID:${idSearchUser.user_id} 입니다.</span>&nbsp;&nbsp;
+					<a href="${cp}/jungmin/pwsearch.mo">비밀번호찾기</a></li>
+        		</div>
+											
+				
+										
+                            
     
          </div>
         </div>

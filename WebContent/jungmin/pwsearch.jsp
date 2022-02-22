@@ -265,6 +265,27 @@ input.btn_zip{
 .login_append .txt_find .link_find {
 	font-size: 13px;
 }
+#container #contents div.idsh{	
+	width:1000px;
+	height:500px;
+	margin: 0 auto;
+}
+#idshForm{
+	width:500px;
+	height:300px;
+	margin: 0 auto;
+	
+}
+.box_idsh{
+	padding-top:50px;
+}
+.inp_text{
+border-bottom:1px solid black;
+height:50px;
+}
+#idshtitle{
+margin-top:30px;
+}
 </style>
 <body>
 <c:set var='cp' value="${pageContext.request.contextPath }"/>
@@ -426,7 +447,7 @@ input.btn_zip{
 														
 													</div>
 													<span class="txt_find"> <a
-														href="${cp}/jungmin/idsearch.mo" class="link_find">아이디</a> / <a
+														href= "/jungmin/idsearch.mo" class="link_find">아이디</a> / <a
 														href="/member/find/password" class="link_find">비밀번호 찾기</a>
 													</span>
 												</div>
@@ -631,28 +652,9 @@ input.btn_zip{
                 <h2>모나미제품</h2>
                 <p>모나미는 당신의 행복한 기록과 늘 함께 합니다.</p>
             </div>
-            <div class="submenu_list">
-                 <ul id="sublist">
-                    <li class="on">
-                     <a href="${cp}/jungmin/pen/penpage.mo">펜</a>
-                 </li>
-                 <li>
-                     <a href="${cp}/jungmin/marker/markerpage.mo">마카</a>
-                 </li>
-                 <li>
-                     <a href="${cp}/sanghoon/lightpen.jsp">형광펜</a>
-                 </li>
-                 <li>
-                     <a href="${cp}/doyoon/A_main1.jsp">미술용품</a>
-                 </li>
-                 <li>
-                     <a href="${cp}/doyoon/E_main1.jsp">기타</a>
-                 </li>
-                 <li>
-                     <a href="${cp}/jungmin/cataloguepage.mo">카탈로그</a>
-                 </li>
-                 </ul>
-            </div>
+         <h3 class="title1" id="idshtitle">
+            MONAMI <span>비밀번호 찾기</span>
+        </h3>
 
             <script type="text/javascript">
               $(function(){
@@ -683,118 +685,41 @@ input.btn_zip{
               })
         
             </script>
-            <h3 class="title1">
-                PRODUCT
-                <span>INFO</span>
-            </h3>
-               <div class="product_view">
-                 <div class="product_info">
-                  <div class="info">
-                    <div class="bgarea1"></div>
-                    <div class="number">
-                      <span>01</span>
-                      /
-                      <span>05</span>
-                    </div>
-                    <div class="prodleft">
-                      <div class="imges">
-                        <ul>
-                          <li><img src="/images/pp1-1.jpg" alt=""></li>
-                          <li><img src="/images/pp1-2.jpg" alt=""></li>
-                          <li><img src="/images/pp1-3.jpg" alt=""></li>
-                          <li><img src="/images/pp1-4.jpg" alt=""></li>
-                          <li><img src="/images/pp1-5.jpg" alt=""></li>                        
-                        </ul>
-                      </div>
-                      <div class="thumb">
-                        <a class="info_prev"><img src="/images/infotprev.gif" ></a>
-                        <a  class="info_next"><img src="/images/infotnext.gif" alt=""></a>
-                        <div class="thum_list">
-                          <ul>
-                            <li><a><img src="/images/mpp1-1.jpg" alt=""></a></li>
-                            <li><a><img src="/images/mpp1-2.jpg" alt=""></a></li>
-                            <li><a><img src="/images/mpp1-3.jpg" alt=""></a></li>
-                            <li><a><img src="/images/mpp1-4.jpg" alt=""></a></li>
-                            <li><a><img src="/images/mpp1-5.jpg" alt=""></a></li>
-                          </ul>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="prodright">
-                    <div class="p_name">
-                        <div class="name">FX ZETA C3</div>
-                        <div class="cate">유성볼펜</div>
-                    </div>
-                    <div class="p_info">
-                        <div class="key">
-                        <div class="tit">KEY FEATURES</div>
-                        <ol>
-                          <li>
-                            - 미끄러움을 방지하고 편안한 그립감을 제공하는 패턴 그립<br> - 실리콘 파트 구조를 적용하여 노크 소을음 최소화한 디자인<br> - 유격을 최소화하여 흔들림 없이 안정감 있는 필기감을 제공<br><br> 4,000원
-                          </li>
-                        </ol>                    
-                      </div>
-                      <div class="ink">
-                        <div class="tit">INK COLOR</div>
-                        <div class="color_list">
-                          <ul>
-                            <li><img src="/images/ic1.jpg" alt=""></li>
-                            <li><img src="/images/ic2.jpg" alt=""></li>
-                            <li><img src="/images/ic3.jpg" alt=""></li>
-                          </ul>
-                        </div>
-                      </div>
-                      <div class="body_color">
-                        <div class="tit">BODY COLOR</div>
-                        <div class="color_list">
-                          <ul>
-                            <li><img src="/images/bc1.jpg" alt=""></li>
-                            <li><img src="/images/bc2.jpg" alt=""></li>
-                            <li><img src="/images/bc3.jpg" alt=""></li>
-                            <li><img src="/images/bc4.jpg" alt=""></li>
-                            <li><img src="/images/bc5.jpg" alt=""></li>
-                            <li><img src="/images/bc6.jpg" alt=""></li>
-                          </ul>
-                        </div>
-                      </div>
-                      <div class="point">
-                        <div class="tit">POINT SIZE</div>
-                        <p>0.5mm / 0.7mm</p>
-                      </div>
-                      <div class="nib_type">
-                        <div class="tit">NIB/TIB TYPE</div>
-                        <ul>
-                          <li><img src="/images/nt1.jpg" alt=""></li>
-                        </ul>
-                      </div>
-                      <div class="download">
-                        <div class="tit">DOWNLOAD</div>
-                        <div class="down">
-                          <ul>
-                            <li><a href="/images/pinfo셀.pdf" download="">
-                              <img src="/images/s1.gif" alt="">셀시트
-                            </a></li>
-                            <li><a href="/images/peninfo상세.jpg" download="">
-                              <img src="/images/s2.gif" alt="">제품상세
-                            </a></li>
-                            <li><a href="/images/peninfo이미지.zip" downloda="">
-                              <img src="/images/s3.gif" alt="">이미지
-                            </a></li>
-                          </ul>
-                        </div>
-                </div>                   
-                        </div>
-                      
-                        <div class="buy">
-                          <a href="https://www.monamimall.com/w/product/productDetail.do?goodsNo=MG000020924&banner_check=main"><img src="/images/buynow.gif" alt=""></a>
-                        </div>
-                    
-                </div>
-            </div>
-            <div class="view_list"><a href="../pen/penpage.jsp">LIST</a></div>                       
+				<div>
+        		<form method="post" id="idshForm" action="${cp}/user/UserPwSearch.us">
+						<legend class="screen_out">비밀번호찾기</legend>
+								<div class="box_idsh">
+								<div class="inp_text">
+							 <label for="user_name" class="screen_out">이름</label> <input
+										type="text" id="user_name" name="user_name" placeholder="이름"> 
+													</div> 
+													<div class="nbsp">&nbsp;</div>
+													<div class="inp_text">
+														<label for="user_id" class="screen_out">아이디</label> <input
+															type="text" id="user_id" name="user_id"
+															placeholder="아이디">
+													</div>
+													<div class="nbsp">&nbsp;</div>
+													<div class="inp_text">
+														<label for="user_phone" class="screen_out">전화번호</label> <input
+															type="text" id="user_phone" name="user_phone"
+															placeholder="전화번호">
+													</div>
+												</div>
+												<button type="submit" class="btn_login">비밀번호찾기</button>
+												<div class="login_append">
+												
+													<span class="txt_find"> <a
+													
+														href="/jungmin/idsearch.mo" class="link_find">아이디 찾기</a>
+													</span>
+												</div>
+				</form>
+										
+                                
     
          </div>
-        </div>
+      
       
             <div class="topbtn">
                 <a href="#Top">
