@@ -207,7 +207,7 @@
                 </div>
                 <div class="nav_search">
                   <input type="text" />
-                  <a href="${cp}/product/ProductList.mo?keyword=${keyword1}"
+                  <a href="${cp}/product/ProductList.mo?keyword"
                     ><img src="${cp}/images/btn_search.gif" alt=""
                   /></a>
                 </div>
@@ -361,14 +361,14 @@
               </a>
            	  </c:if>
            	  <c:if test="${page != 1 }">
-           	  	<a href="${cp}/product/ProductList.mo?page=${page-1}" 
+           	  	<a href="${cp}/product/ProductList.mo?page=${page-1}&keyword=${keyword}" 
               	class="page_prev" style="padding: 1px">
                 <img src="${cp}/images/page_prev.gif" alt="" />
               </a>
            	  </c:if>
            	  <c:if test="${keyword!=null}">
            	  	<c:forEach begin="${startPage}" end="${endPage}" step="1" var="i">
-              		<c:choose>
+             		<c:choose>
               			<c:when test="${i == page}">
               				<strong>${i}</strong>
               			</c:when>
