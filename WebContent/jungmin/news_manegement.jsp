@@ -307,9 +307,7 @@
                   </td>
                   
                 </tr>
-                <tr class="WC3">
-                  
-                </tr>
+               
                 <tr class="WC2">
                   <th >내용</th>
                   <td><textarea name="boardcontents" placeholder="내용을 입력해주세요"></textarea></td>

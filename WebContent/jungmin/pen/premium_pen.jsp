@@ -30,6 +30,244 @@
   });
 </script>
 </head>
+<style>
+/* The Modal (background) */
+.modal , .modal1{
+	display: none; /* Hidden by default */
+	position: fixed; /* Stay in place */
+	z-index: 1; /* Sit on top */
+	left: 0;
+	top: 0;
+	width: 100%; /* Full width */
+	height: 100%; /* Full height */
+	overflow: auto; /* Enable scroll if needed */
+	background-color: rgb(0, 0, 0); /* Fallback color */
+	background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+	padding-top: 60px;
+}
+
+/* Modal Content/Box */
+.login , .join{
+	background-color: #fefefe;
+	margin: 5px auto; /* 15% from the top and centered */
+	border: 1px solid #888;
+	width: 30%; /* Could be more or less, depending on screen size */
+	height: 500px;
+	position: relative;
+	margin: 0 auto;
+	position: relative;
+}
+.join{
+	height:700px;
+	margin: -30px auto;
+	overflow:scroll;
+}
+
+a {
+	color: #333;
+	text-decoration: none;
+}
+
+input {
+	-webkit-writing-mode: horizontal-tb !important;
+	text-rendering: auto;
+	color: initial;
+	letter-spacing: normal;
+	word-spacing: normal;
+	text-transform: none;
+	text-indent: 0px;
+	text-shadow: none;
+	display: inline-block;
+	text-align: start;
+	-webkit-appearance: textfield;
+	background-color: white;
+	-webkit-rtl-ordering: logical;
+	cursor: text;
+	margin: 0em;
+	font: 400 13.3333px Arial;
+	padding: 1px 0px;
+	border-width: 2px;
+	border-style: inset;
+	border-color: initial;
+	border-image: initial;
+}
+
+.modal h2 , .modal1 h2{
+	font-size: 30px;
+	text-align: center;
+	padding: 30px;
+	padding-bottom: 10px;
+}
+
+.inner_login {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	margin: -145px 0 0 -160px;
+}
+
+.screen_out {
+	position: absolute;
+	width: 0;
+	height: 0;
+	overflow: hidden;
+	line-height: 0;
+	text-indent: -9999px;
+}
+
+body, button, input, select, td, textarea, th {
+	font-size: 13px;
+	line-height: 1.5;
+	-webkit-font-smoothing: antialiased;
+}
+
+
+fieldset{
+	padding-left: 10px;
+	padding-right: 10px;
+	border:0;
+}
+img{
+	border: 0;
+}
+.close {
+	position: absolute;
+	right: 5px;
+	top: 0;
+	color: #000;
+	font-size: 20px;
+}
+
+.close:hover, .close:focus {
+	color: red;
+	cursor: pointer;
+}
+
+.login .box_login , .join .box_join{
+	margin: 35px 0 0;
+	border-radius: 3px;
+	background-color: #fff;
+	box-sizing: border-box;
+	border-radius: 3px
+}
+
+.login .inp_text ,.join .inp_text{
+	position: relative;
+	width: 100%;
+	margin: 0;
+	padding: 18px 19px 19px;
+	box-sizing: border-box;
+	border:1px solid #ddd;
+}
+div#zipcode{
+	width:60%;
+	float:left;
+}
+.login .inp_text+.inp_text , .join .inp_text+.inp_text{
+	border-top: 1px solid #ddd;
+}
+
+#loginForm #joinForm{
+	width: 100%;
+}
+
+.inp_text input {
+	display: block;
+	width: 100%;
+	height: 100%;
+	font-size: 13px;
+	color: #000;
+	border: none;
+	outline: 0;
+	-webkit-appearance: none;
+	background-color: transparent;
+}
+.btn_ck, .btn_zip{
+	color:#fff;
+	background-color:#000;
+	padding: 10px 30px;
+    margin: 5px;
+    border: none;
+    border-radius: 3px;
+    cursor:pointer;
+}
+input.btn_zip{
+	margin-left:20px;
+	margin-top:2px;
+	padding:15px 30px;
+}
+.btn_login, .btn_join{
+	margin: 20px 0 0;
+	width: 100%;
+	height: 48px;
+	border-radius: 3px;
+	border:none;
+	font-size: 16px;
+	color: #fff;
+    background: #c40f39;
+    cursor:pointer;
+}
+
+.login_append {
+	overflow: hidden;
+	padding: 15px 0 0;
+}
+
+.inp_chk {
+	display: inline-block;
+	position: relative;
+	margin-bottom: -1px;
+}
+
+.login_append .inp_chk {
+	float: left;
+}
+
+.inp_chk .inp_radio {
+	position: absolute;
+	z-index: 1;
+	top: 0;
+	left: 0;
+	width: 18px;
+	height: 18px;
+	border: none;
+}
+
+.inp_chk .lab_g {
+	display: inline-block;
+	margin-right: 19px;
+	color: #909090;
+	font-size: 13px;
+	line-height: 19px;
+	vertical-align: top;
+	font-family: "Montserrat", sans-serif;
+}
+
+.inp_chk .ico_check {
+	display: inline-block;
+	width: 18px;
+	height: 18px;
+	margin: 1px 4px 0 0;
+	background-position: -60px 0;
+	color: #333;
+}
+
+.inp_chk .txt_lab {
+	vertical-align: top;
+	padding-left:20px;
+	font-family: "Montserrat", sans-serif;
+	color: #909090;
+	font-size: 13px;
+}
+
+.login_append .txt_find {
+	float: right;
+	color: #777;
+}
+.login_append .txt_find .link_find {
+	font-size: 13px;
+}
+</style>
 <body>
 <c:set var='cp' value="${pageContext.request.contextPath }"/>
 <div class="popup_buttons">
