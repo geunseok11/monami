@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+  <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -268,6 +269,7 @@ input.btn_zip{
 </style>
 <body>
 <c:set var='cp' value="${pageContext.request.contextPath }"/>
+
 <div class="popup_buttons">
     <a class="popup_button" href="">
       <div class="popup_button-txt">예약하기</div>
@@ -304,9 +306,13 @@ input.btn_zip{
           </div>
           <div class="topmenu">
             <ul>
-            	<ul>			
-            	<li><span>${loginUser.user_id} 님 환영합니다.</span>&nbsp;&nbsp;
-					<a href="${cp}/user/UserLogoutOk.us">로그아웃</a></li>
+            	<ul>		
+            	<c:choose>
+           			<c:when test="${loginUser.user_id!=null}" >
+            	<li><a href="${cp}/jungmin/usermodify.mo"><span>${loginUser.user_id} 님 환영합니다.</span>&nbsp;&nbsp;</a>
+					<a href="${cp}/user/UserLogoutOk.us">LOGOUT</a></li>
+					</c:when>
+							<c:otherwise>
 							<li><a class="join_click"
 								onclick="document.getElementById('id02').style.display='block'">JOIN</a>
 								<!-- The Modal -->
@@ -388,6 +394,7 @@ input.btn_zip{
 								</div></li>
 							<li><a
 								onclick="document.getElementById('id01').style.display='block'">LOGIN</a>
+							
 								<!-- The Modal -->
 								<div class="modal" id="id01">
 									<div class="login">
@@ -436,8 +443,12 @@ input.btn_zip{
 
 									</div>
 								</div></li>
+								</c:otherwise>
+								
+								</c:choose>
+								
               <li>
-                <a href="${cp}/sanghoon/index.jsp">HOME</a>
+                              <a href="${cp}/sanghoon/index.jsp">HOME</a>
               </li>
               <li>
                 <a href="${cp}/kyungchul/sitemap.jsp">SITE MAP</a>

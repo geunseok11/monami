@@ -1,14 +1,12 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-     <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+  <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MONAMI</title>
- <link rel="shortcut icon" href="${cp}/images/favicon.ico" type="image/x-icon" />
+<meta charset="UTF-8">
+<title>Insert title here</title>
+  <link rel="shortcut icon" href="${cp}/images/favicon.ico" type="image/x-icon" />
 <link rel="stylesheet" href="${cp}/css/pen.css"/>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.js"></script>
 
@@ -184,6 +182,8 @@ div#zipcode{
 	background-color: transparent;
 }
 .btn_ck, .btn_zip{
+	width:150px;
+	height:20px;
 	color:#fff;
 	background-color:#000;
 	padding: 10px 30px;
@@ -198,8 +198,10 @@ input.btn_zip{
 	padding:15px 30px;
 }
 .btn_login, .btn_join{
+ position: relative;
+ left: 450px;
 	margin: 20px 0 0;
-	width: 100%;
+	width: 30%;
 	height: 48px;
 	border-radius: 3px;
 	border:none;
@@ -207,6 +209,11 @@ input.btn_zip{
 	color: #fff;
     background: #c40f39;
     cursor:pointer;
+}
+#remove_user{
+  position: relative;
+ left:600px;
+ 
 }
 
 .login_append {
@@ -268,9 +275,51 @@ input.btn_zip{
 .login_append .txt_find .link_find {
 	font-size: 13px;
 }
+#container #contents div.idsh{	
+	width:1000px;
+	height:500px;
+	margin: 0 auto;
+}
+#idshForm{
+	width:500px;
+	height:300px;
+	margin: 0 auto;
+	
+}
+.box_idsh{
+	margin:0 auto;
+	
+	
+}
+.inp_text{
+border-bottom:1px solid black;
+height:50px;
+
+}
+#idshtitle{
+margin-top:30px;
+}
+#tablemodi{
+margin: 0 auto;
+width:700px;
+height:400px;
+}
+#userForm th{
+align:center;
+width:100px;
+font-weight:bold ;
+}
+#userForm td input{
+height:80%;
+padding-left:30px;
+font-size:13px; 
+border:0 solid black;
+}
+
 </style>
 <body>
 <c:set var='cp' value="${pageContext.request.contextPath }"/>
+
 <div class="popup_buttons">
     <a class="popup_button" href="">
       <div class="popup_button-txt">예약하기</div>
@@ -307,9 +356,10 @@ input.btn_zip{
           </div>
           <div class="topmenu">
             <ul>
+            	<ul>		
             	<c:choose>
            			<c:when test="${loginUser.user_id!=null}" >
-            	<li><span>${loginUser.user_id} 님 환영합니다.</span>&nbsp;&nbsp;
+            	<li><a href="${cp}/user/UserModify.us"><span>${loginUser.user_id} 님 환영합니다.</span>&nbsp;&nbsp;</a>
 					<a href="${cp}/user/UserLogoutOk.us">LOGOUT</a></li>
 					</c:when>
 							<c:otherwise>
@@ -446,8 +496,9 @@ input.btn_zip{
 								</c:otherwise>
 								
 								</c:choose>
+								
               <li>
-                <a href="${cp}/sanghoon/index.jsp">HOME</a>
+                              <a href="${cp}/sanghoon/index.jsp">HOME</a>
               </li>
               <li>
                 <a href="${cp}/kyungchul/sitemap.jsp">SITE MAP</a>
@@ -633,239 +684,176 @@ input.btn_zip{
   </div>
       <!-- 헤더 끝 -->
       <!-- 바디 상단 이미지 시작-->
-      
       <!-- 바디 상단 이미지 끝  -->
       <!-- 본문 시작  -->
-      <div id="container">
+          <div id="container">
         <div id="contents">
             <div class="toptitle">
                 <h2>모나미제품</h2>
                 <p>모나미는 당신의 행복한 기록과 늘 함께 합니다.</p>
             </div>
-            <div class="submenu_list">
-                 <ul id="sublist">
-                     <li>
-                         <a href="${cp}/jungmin/pen/penpage.mo">펜</a>
-                     </li>
-                     <li class="on">
-                         <a href="${cp}/jungmin/marker/markerpage.mo">마카</a>
-                     </li>
-                       <li>
-                     <a href="${cp}/sanghoon/lightpen.jsp">형광펜</a>
-                 </li>
-                 <li>
-                     <a href="${cp}/doyoon/A_main1.jsp">미술용품</a>
-                 </li>
-                 <li>
-                     <a href="${cp}/doyoon/E_main1.jsp">기타</a>
-                 </li>
-                     </li>
-                     <li>
-                         <a href="${cp}/jungmin/cataloguepage.mo">카탈로그</a>
-                     </li>
-                 </ul>
-            </div>
-            <h3 class="title1">
-                PRODUCT
-                <span>INFO</span>
-            </h3>
-            <ul class="categori_list">
-                <li><a href="${cp}/jungmin/marker/water_marker">수성마카</a></li>
-                <li><a href="${cp}/jungmin/marker/oil_marker">유성마카</a></li>
-                <li><a href="${cp}/jungmin/marker/board_marker">보드마카</a></li>
-                <li><a href="${cp}/jungmin/marker/daily_marker">생활마카</a></li>
-                <li><a href="${cp}/jungmin/marker/industrial_marker">산업마카</a></li>
-            </ul>
- 
-            <div class="product_list">
-                <ul>
-                    <li><a href="${cp}/jungmin/marker/markerpage.mo">
-                        <div class="thum">
-                            <img src="${cp}/images/m1.jpg" alt="">
-                            <div class="ondiv">
-                                <div class="btn_plus">
-                                    <div></div>
-                                    <div></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="info">
-                            <div class="pen_name">유성마카</div>
-                            <div class="product_name">네임펜 M 화이트</div>
-                        </div>                   
-                    </a>
-                    </li>
- 
-                    <li><a href="marker2">
-                        <div class="thum">
-                            <img src="${cp}/images/m2.jpg" alt="">
-                            <div class="ondiv">
-                                <div class="btn_plus">
-                                    <div></div>
-                                    <div></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="info">
-                            <div class="pen_name">수성마카</div>
-                            <div class="product_name">프러스펜 3000 피크먼트</div>
-                        </div>                   
-                    </a>
-                    </li>
- 
-                    <li><a href="marker3">
-                        <div class="thum">
-                            <img src="${cp}/images/m3.jpg" alt="">
-                            <div class="ondiv">
-                                <div class="btn_plus">
-                                    <div></div>
-                                    <div></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="info">
-                            <div class="pen_name">수성마카</div>
-                            <div class="product_name">라이브 칼라(화이트 축)</div>
-                        </div>                   
-                    </a>
-                     </li>
-                     
-                    <li><a href="marker4">
-                        <div class="thum">
-                            <img src="${cp}/images/m4.jpg" alt="">
-                            <div class="ondiv">
-                                <div class="btn_plus">
-                                    <div></div>
-                                    <div></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="info">
-                            <div class="pen_name">수성마카</div>
-                            <div class="product_name">라이브칼라 6색 세트</div>
-                        </div>                   
-                    </a>
-                     </li>
- 
-                    <li><a href="marker5">
-                        <div class="thum">
-                            <img src="${cp}/images/m5.jpg" alt="">
-                            <div class="ondiv">
-                                <div class="btn_plus">
-                                    <div></div>
-                                    <div></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="info">
-                            <div class="pen_name">수성마카</div>
-                            <div class="product_name">프러스펜 3000 60색 세트</div>
-                        </div>                   
-                    </a>
-                 </li>
-                    <li><a href="marker6">
-                     <div class="thum">
-                         <img src="${cp}/images/m6.jpg" alt="">
-                         <div class="ondiv">
-                             <div class="btn_plus">
-                                 <div></div>
-                                 <div></div>
-                             </div>
-                         </div>
-                     </div>
-                     <div class="info">
-                         <div class="pen_name">워터브러쉬</div>
-                         <div class="product_name">워터 리얼 브러쉬</div>
-                     </div>                   
-                    </a></li>
-                    <li><a href="marker7">
-                     <div class="thum">
-                         <img src="${cp}/images/m7.jpg" alt="">
-                         <div class="ondiv">
-                             <div class="btn_plus">
-                                 <div></div>
-                                 <div></div>
-                             </div>
-                         </div>
-                     </div>
-                     <div class="info">
-                         <div class="pen_name">수성마카</div>
-                         <div class="product_name">컬러 리얼 브러쉬</div>
-                     </div>                   
-                    </a></li>
-                    <li><a href="marker8">
-                     <div class="thum">
-                         <img src="${cp}/images/m8.jpg" alt="">
-                         <div class="ondiv">
-                             <div class="btn_plus">
-                                 <div></div>
-                                 <div></div>
-                             </div>
-                         </div>
-                     </div>
-                     <div class="info">
-                         <div class="pen_name">수성마카</div>
-                         <div class="product_name">60주년 기념 프러스펜 3000 60색 세트</div>
-                     </div>                   
-                    </a></li>
- 
-                    <li><a href="marker9">
-                     <div class="thum">
-                         <img src="${cp}/images/m9.jpg" alt="">
-                         <div class="ondiv">
-                             <div class="btn_plus">
-                                 <div></div>
-                                 <div></div>
-                             </div>
-                         </div>
-                     </div>
-                     <div class="info">
-                         <div class="pen_name">수성마카</div>
-                         <div class="product_name">붓펜 12색 세트</div>
-                     </div>                   
-                    </a></li>
-                    <li><a href="marker10">
-                     <div class="thum">
-                         <img src="${cp}/images/m10.jpg" alt="">
-                         <div class="ondiv">
-                             <div class="btn_plus">
-                                 <div></div>
-                                 <div></div>
-                             </div>
-                         </div>
-                     </div>
-                     <div class="info">
-                         <div class="pen_name">수성펜</div>
-                         <div class="product_name">컬러 트윈 브러쉬</div>
-                     </div>                   
-                    </a></li>
-                </ul>
-            </div>
-            <div class="pagenum">
-                <a class="page_prev" href="">
-                    <img src="${cp}/images/page_prev.gif">
-                </a>
-                <strong>1</strong>
-                <a href="./markerpage2.jsp">2</a>
-                <a href="./markerpage3.jsp">3</a>
-                <a href="./markerpage4.jsp">4</a>
-                <a href="./markerpage5.jsp">5</a>
-                <a href="./markerpage6.jsp">6</a>
-                <a href="./markerpage7.jsp">7</a>
-                <a  class="page_next" href="./markerpage2.jsp">
-                    <img src="${cp}/images/page_next.gif" >
-                </a>
-            </div>
+           <h3 class="title1" id="idshtitle">
+            MONAMI <span>회원정보수정</span>
+        </h3>
+
+            <script type="text/javascript">
+              $(function(){
+            
+                var i=0;
+                $(".info_next").click(function(){
+                  if(i<$(".thum_list ul li").length-4){
+                    i++;
+                    $(".thum_list ul").animate({marginLeft:i*-84+"px"},500)};
+                });
+            
+                $(".info_prev").click(function(){
+                  if(i>0){
+                    i--
+                    $(".thum_list ul").animate({marginLeft:i*-84+"px"},500)
+                  };
+                });
+            
+                lileng=$(".thum_list ul li").length;
+                $(".number span:eq(1)").jsp("0"+lileng)
+                $(".thum_list ul li").click(function(){
+                  tnum=$(".thum_list ul li").index($(this));
+                  $(".prodleft .imges ul li").hide();
+                  $(".prodleft .imges ul li:eq("+tnum+")").show();
+                  $(".number span:eq(0)").jsp("0"+(tnum+1))     
+                  
+                })
+              })
+        
+            </script>
+              <div id="contents1">
+              <div class="side_wrap">
+                  <ol class="lnb">
+                      <li><span class="lnb_title">마이 페이지</span>
+                          <ol>
+                              <li class="lnb_item">
+                                  <a href="#" class="active">마이페이지</a>
+                              </li>
+                          </ol>
+                      </li>
+                      <li class="shopping"><span class="lnb_title">쇼핑</span>
+                          <ol>
+                              <li class="lnb_item">
+                                  <a href="#" class="active">장바구니</a>
+                              </li>
+                              <li class="lnb_item">
+                                  <a href="#" class="active">주문확인</a>
+                              </li>
+                              <li class="lnb_item">
+                                  <a href="#" class="active">찜목록</a>
+                              </li>
+                             
+                          </ol>
+                      </li>
+                   
+                  </ol>
+              </div>
+        		<div class="box_idsh">
+        		<form method="post" id="userForm" action="${cp}/user/UserModifyOk.us">
+        				<input type="hidden" name="user_id" value="${user.user_id}">
+							<table border="1" style="border-collapse:collapse;" id="tablemodi">
+				<tr height="30px">
+					<th >
+						이름
+					</th>
+					<td>
+						<input name="user_name" size="50" maxlength="100"  readonly value="${loginUser.user_name}">
+					</td>
+				</tr>
+				<tr height="30px">
+					<th >
+						아이디
+					</th>
+					<td>
+						<input name="user_id" size="50" maxlength="100" readonly value="${loginUser.user_id}">
+					</td>
+				</tr>
+				<tr height="30px">
+					<th >
+						비밀번호
+					</th>
+					<td>
+						<input name="user_pw" size="50" maxlength="100"  value="${loginUser.user_pw}">
+					</td>
+				</tr>
+				<tr height="30px">
+					<th >
+						생년월일
+					</th>
+					<td>
+						<input name="user_dob" size="50" maxlength="100"  value="${loginUser.user_dob}">
+					</td>
+				</tr>
+				<tr height="30px">
+					<th >
+						우편번호
+					</th>
+					<td>
+						<input name="user_zipcode" size="50" maxlength="100"  value="${loginUser.user_zipcode}">
+						<input type="button" id="sample6_postcode"  class="btn_zip"onclick="sample6_execDaumPostcode()" value="우편번호 찾기">
+					</td>
+				</tr>
+				
+				<tr height="30px">
+					<th >
+						주소
+					</th>
+					<td>
+						<input name="user_addr"  id="sample6_address" size="50" maxlength="200"  value="${loginUser.user_addr}">
+					</td>
+				</tr>
+				
+				<tr height="30px">
+					<th >
+						상세주소
+					</th>
+					<td>
+						<input name="user_addrdetail" id="sample6_detailAddress" size="50" maxlength="200" value="${loginUser.user_addrdetail}">
+					</td>
+				</tr>
+				<tr height="30px">
+					<th >
+						참고항목
+					</th>
+					<td>
+						<input name="user_addretc" id="sample6_extraAddress" size="50" maxlength="200" value="${loginUser.user_addretc}">
+					</td>
+				</tr>
+				<tr height="30px">
+					<th >
+						전화번호
+					</th>
+					<td>
+						<input name="user_phone" size="50" maxlength="100" value="${loginUser.user_phone}">
+					</td>
+				</tr>
+				</table>
+				<button type="submit" class="btn_login">수정완료</button>
+				<a href="${cp }/jungmin/removeOk.jsp" class="btn_logi" id="remove_user">회원탈퇴</a>
+				</div>
+				
+				</form>
+				
+						</div>
+						</div>				
+                                
+    
+         
+      
             <div class="topbtn">
                 <a href="#Top">
-                    <img src="${cp}/images/btn_top.gif" alt="상단으로">
+                    <img src="/images/btn_top.gif" alt="상단으로">
                 </a>
             </div>
         </div>
-        </div>
+      </div>
+      </div>
       <!-- 본문 끝 -->
       <!-- 푸터 시작 -->
-       <!-- 푸터 시작 -->
       <div id="footer">
         <div class="foot">
           <div class="foot_pop" style="display: none;">
@@ -949,7 +937,7 @@ input.btn_zip{
         <div class="tit">시행일</div>
         
         본 이메일 무단 수집 거부 정책은 2017년 11월부터 시행합니다.
-                    </div>
+                   </div>
               <div class="btn_close"><a>CLOSE</a></div>
             </div>
           </div>
@@ -1017,5 +1005,9 @@ input.btn_zip{
       </div>
       <!-- 푸터 끝 -->
     </div>
+
 </body>
+<script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
+<script>const cp = "${pageContext.request.contextPath}"</script>
+<script src="${cp}/js/user.js"></script>
 </html>
