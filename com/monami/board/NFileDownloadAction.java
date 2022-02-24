@@ -1,4 +1,4 @@
-package com.monami.news;
+package com.monami.board;
 
 import java.io.File;
 import java.io.FileInputStream;

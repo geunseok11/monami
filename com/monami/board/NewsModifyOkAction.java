@@ -1,4 +1,4 @@
-package com.monami.news;
+package com.monami.board;
 
 import java.io.File;
 import java.util.List;
@@ -8,10 +8,10 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.monami.action.Action;
 import com.monami.action.ActionTo;
-import com.monami.news.dao.NewsBoardDAO;
-import com.monami.news.dao.NewsBoardDTO;
-import com.monami.news.dao.NewsFileDAO;
-import com.monami.news.dao.NewsFileDTO;
+import com.monami.board.dao.NewsBoardDAO;
+import com.monami.board.dao.NewsBoardDTO;
+import com.monami.board.dao.NewsFileDAO;
+import com.monami.board.dao.NewsFileDTO;
 import com.oreilly.servlet.MultipartRequest;
 import com.oreilly.servlet.multipart.DefaultFileRenamePolicy;
 

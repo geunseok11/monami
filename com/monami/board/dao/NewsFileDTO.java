@@ -1,4 +1,4 @@
-package com.monami.news.dao;
+package com.monami.board.dao;
 
 public class NewsFileDTO {
 	private String systemname;

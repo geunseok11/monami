@@ -1,12 +1,12 @@
-package com.monami.news;
+package com.monami.board;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.monami.action.Action;
 import com.monami.action.ActionTo;
-import com.monami.news.dao.NewsBoardDAO;
-import com.monami.news.dao.NewsFileDAO;
+import com.monami.board.dao.NewsBoardDAO;
+import com.monami.board.dao.NewsFileDAO;
 
 public class NewsModifyAction implements Action {
 	@Override

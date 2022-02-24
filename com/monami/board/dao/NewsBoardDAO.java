@@ -1,12 +1,12 @@
-package com.monami.news.dao;
+package com.monami.board.dao;
 
 import java.util.HashMap;
 import java.util.List;
 
 import org.apache.ibatis.session.SqlSession;
 
+import com.monami.board.dao.NewsBoardDTO;
 import com.monami.mybatis.SqlMapConfig;
-import com.monami.news.dao.NewsBoardDTO;
 
 public class NewsBoardDAO {
 	SqlSession sqlsession;

@@ -4,8 +4,8 @@
   "http://mybatis.org/dtd/mybatis-3-config.dtd">
 <configuration>
   <typeAliases>
-    <typeAlias type="com.monami.news.dao.NewsBoardDTO" alias="newsboarddto"/>
-    <typeAlias type="com.monami.news.dao.NewsFileDTO" alias="newsfiledto"/>
+    <typeAlias type="com.monami.board.dao.NewsBoardDTO" alias="newsboarddto"/>
+    <typeAlias type="com.monami.board.dao.NewsFileDTO" alias="newsfiledto"/>
   </typeAliases>
   <environments default="development">
     <environment id="development">

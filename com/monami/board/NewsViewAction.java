@@ -1,4 +1,4 @@
-package com.monami.news;
+package com.monami.board;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -7,10 +7,10 @@ import javax.servlet.http.HttpSession;
 
 import com.monami.action.Action;
 import com.monami.action.ActionTo;
+import com.monami.board.dao.NewsBoardDAO;
+import com.monami.board.dao.NewsBoardDTO;
+import com.monami.board.dao.NewsFileDAO;
 import com.monami.mybatis.SqlMapConfig;
-import com.monami.news.dao.NewsBoardDAO;
-import com.monami.news.dao.NewsBoardDTO;
-import com.monami.news.dao.NewsFileDAO;
 
 public class NewsViewAction implements Action {
 

@@ -1,4 +1,4 @@
-package com.monami.news;
+package com.monami.board;
 
 import java.util.List;
 
@@ -6,8 +6,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import com.monami.action.Action;
 import com.monami.action.ActionTo;
-import com.monami.news.dao.NewsBoardDAO;
-import com.monami.news.dao.NewsBoardDTO;
+import com.monami.board.dao.NewsBoardDAO;
+import com.monami.board.dao.NewsBoardDTO;
 
 public class NewsBoardListAction implements Action{
 	@Override
