@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MONAMI</title>
     <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon" />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="../css/pen.css" />
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.js"></script>
     <script type="text/javascript" src="./js/common.js"></script>
     <script type="text/javascript">
@@ -263,88 +263,128 @@
       <!-- 바디 상단 이미지 끝  -->
       <!-- 본문 시작  -->
       <div id="container">
-        <div id="contents">
+        
             <div class="toptitle">
                 <h2>모나미제품</h2>
                 <p>모나미는 당신의 행복한 기록과 늘 함께 합니다.</p>
             </div>
-            <div class="submenu_list">
-                 <ul id="sublist">
-                     <li>
-                         <a href="./pen/penpage.html">펜</a>
-                     </li>
-                     <li>
-                         <a href="./marker/markerpage.html">마카</a>
-                     </li>
-                     <li>
-                         <a href="sub_1">형광펜</a>
-                     </li>
-                     <li>
-                         <a href="sub_2">미술용품</a>
-                     </li>
-                     <li>
-                         <a href="sub_3">기타</a>
-                     </li>
-                     <li class="on">
-                         <a href="./cataloguepage.html">카탈로그</a>
-                     </li>
-                 </ul>
-            </div>
-            <h3 class="title1">
-             CATARLOGUE
-            </h3>
+            <h3 class="title1" id="idshtitle">
+              MONAMI <span>마이페이지</span>
+          </h3>
+          <div id="contents1">
+              <div class="side_wrap">
+                  <ol class="lnb">
+                      <li><span class="lnb_title">마이 페이지</span>
+                          <ol>
+                              <li class="lnb_item">
+                                  <a href="#" class="active">마이페이지</a>
+                              </li>
+                          </ol>
+                      </li>
+                      <li class="shopping"><span class="lnb_title">쇼핑</span>
+                          <ol>
+                              <li class="lnb_item">
+                                  <a href="#" class="active">장바구니</a>
+                              </li>
+                              <li class="lnb_item">
+                                  <a href="#" class="active">찜목록</a>
+                              </li>
+                             
+                          </ol>
+                      </li>
+                   
+                  </ol>
+              </div>
+              <div class="idsh1">
+              <form method="post" id="userForm" action="${cp}/user/UserModifyOk.us">
+                <div class="box_idsh">
+                    <input type="hidden" name="user_id" value="${user.user_id}">
+                  <table border="1" style="border-collapse:collapse;" id="tablemodi">
+            <tr height="30px">
+              <th >
+                이름
+              </th>
+              <td>
+                <input name="user_name" size="50" maxlength="100"  readonly value="${loginUser.user_name}">
+              </td>
+            </tr>
+            <tr height="30px">
+              <th >
+                아이디
+              </th>
+              <td>
+                <input name="user_id" size="50" maxlength="100" readonly value="${loginUser.user_id}">
+              </td>
+            </tr>
+            <tr height="30px">
+              <th >
+                비밀번호
+              </th>
+              <td>
+                <input name="user_pw" size="50" maxlength="100"  value="${loginUser.user_pw}">
+              </td>
+            </tr>
+            <tr height="30px">
+              <th >
+                생년월일
+              </th>
+              <td>
+                <input name="user_dob" size="50" maxlength="100"  value="${loginUser.user_dob}">
+              </td>
+            </tr>
+            <tr height="30px">
+              <th >
+                우편번호
+              </th>
+              <td>
+                <input name="user_zipcode" size="50" maxlength="100"  value="${loginUser.user_zipcode}">
+                <input type="button" id="sample6_postcode"  class="btn_zip"onclick="sample6_execDaumPostcode()" value="우편번호 찾기">
+              </td>
+            </tr>
             
- 
-            <div class="product_list">
-                <ul>
-                    <li><a href="./images/2021 국내 카달로그 최종_optimize.pdf" download="">
-                      
-                        <div class="thum">
-                            <img src="./images/b_file_1608594654rv6p14nu13.jpg" alt="">
-                            <div class="ondiv">
-                                <div class="btn_plus">
-                                    <div></div>
-                                    <div></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="info">
-                            <div class="pen_name">CATALOGUE</div>
-                            <div class="product_name">제품 카탈로그 2021</div>
-                        </div>                   
-                    </a>
-                    </li>
- 
-                    <li><a href="./images/2020 국내 카달로그_optimize.pdf" download="">
-                        <div class="thum">
-                            <img src="./images/b_file_1580789212nu2uzr9jir.jpg" alt="">
-                            <div class="ondiv">
-                                <div class="btn_plus">
-                                    <div></div>
-                                    <div></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="info">
-                            <div class="pen_name">CATALOGUE</div>
-                            <div class="product_name">제품 카탈로그 2020</div>
-                        </div>                   
-                    </a>
-                    </li>
- 
+            <tr height="30px">
+              <th >
+                주소
+              </th>
+              <td>
+                <input name="user_addr"  id="sample6_address" size="50" maxlength="200"  value="${loginUser.user_addr}">
+              </td>
+            </tr>
             
-                </ul>
+            <tr height="30px">
+              <th >
+                상세주소
+              </th>
+              <td>
+                <input name="user_addrdetail" id="sample6_detailAddress" size="50" maxlength="200" value="${loginUser.user_addrdetail}">
+              </td>
+            </tr>
+            <tr height="30px">
+              <th >
+                참고항목
+              </th>
+              <td>
+                <input name="user_addretc" id="sample6_extraAddress" size="50" maxlength="200" value="${loginUser.user_addretc}">
+              </td>
+            </tr>
+            <tr height="30px">
+              <th >
+                전화번호
+              </th>
+              <td>
+                <input name="user_phone" size="50" maxlength="100" value="${loginUser.user_phone}">
+              </td>
+            </tr>
+            </table>
+            <button type="submit" class="btn_login">수정완료</button>
+            <a href="${cp }/jungmin/removeOk.jsp" class="btn_logi" id="remove_user">회원탈퇴</a>
             </div>
-            <div class="pagenum">
-                <a class="page_prev">
-                    <img src="./images/page_prev.gif">
-                </a>
-                <strong>1</strong>
-               
-                <a  class="page_next">
-                    <img src="./images/page_next.gif">
-                </a>
-            </div>
+            
+            </form>
+            
+                </div>				
+                 </div>                   
+        
             <div class="topbtn">
                 <a href="#Top">
                     <img src="./images/btn_top.gif" alt="상단으로">
