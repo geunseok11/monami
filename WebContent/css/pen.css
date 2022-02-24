@@ -1333,6 +1333,48 @@ background: #c40f39;
   clear: both;
   content: "";
 }
+.container .contents .side_wrap{
+	float:lfet;
+  width: 220px;
+  padding-right: 60px;
+}
+.lnb .lnb_title{
+  font-weight: 500;
+  font-size: 20px;
+  letter-spacing: -1px;
+}
+.lnb li ol{
+  margin-top: 15px;
+}
+
+.lnb .shopping{
+  margin-top: 40px;
+}
+#contents1{
+  width: 1200px;
+  margin: 0 auto;
+}
+.side_wrap{
+  float: left;
+  margin:0;
+  width: 100px;
+  padding-right: 60px;
+}
+.lnb .lnb_title{
+  font-weight: 500;
+  font-size: 20px;
+  letter-spacing: -1px;
+}
+.lnb li ol{
+  margin-top: 15px;
+}
+
+.lnb .shopping{
+  margin-top: 40px;
+}
+.idsh1{
+  width: calc(100%-220px);
+}
 /* 인포페이지 끝 */
 @media (max-width:1450px) {
   .product_list{

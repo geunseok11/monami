@@ -271,6 +271,9 @@ input.btn_zip{
 </style>
 <body>
 <c:set var='cp' value="${pageContext.request.contextPath }"/>
+<c:if test="${not empty param.login}">
+		<script>alert("로그인 실패! 다시 시도해 주세요!");</script>
+	</c:if>
 <div class="popup_buttons">
     <a class="popup_button" href="">
       <div class="popup_button-txt">예약하기</div>
@@ -307,8 +310,13 @@ input.btn_zip{
           </div>
           <div class="topmenu">
             <ul>
-            <li><span>${loginUser.user_id} 님 환영합니다.</span>&nbsp;&nbsp;
-					<a href="${cp}/user/UserLogoutOk.us">로그아웃</a></li>
+            	<c:choose>
+           			<c:when test="${loginUser.user_id!=null}" >
+            	<li><span>${loginUser.user_id} 님 환영합니다.</span>&nbsp;&nbsp;
+					<a href="${cp}/jungmin/usermodify.mo">MYPAGE</a></li>
+					<a href="${cp}/user/UserLogoutOk.us">LOGOUT</a></li>
+					</c:when>
+							<c:otherwise>
 							<li><a class="join_click"
 								onclick="document.getElementById('id02').style.display='block'">JOIN</a>
 								<!-- The Modal -->
@@ -390,6 +398,7 @@ input.btn_zip{
 								</div></li>
 							<li><a
 								onclick="document.getElementById('id01').style.display='block'">LOGIN</a>
+							
 								<!-- The Modal -->
 								<div class="modal" id="id01">
 									<div class="login">
@@ -429,7 +438,7 @@ input.btn_zip{
 													</div>
 													<span class="txt_find"> <a
 														href="${cp}/jungmin/idsearch.mo" class="link_find">아이디</a> / <a
-														href="${cp}/jungmin/pwsearch.mo" class="link_find">비밀번호 찾기</a>
+														href="/member/find/password" class="link_find">비밀번호 찾기</a>
 													</span>
 												</div>
 
@@ -438,6 +447,9 @@ input.btn_zip{
 
 									</div>
 								</div></li>
+								</c:otherwise>
+								
+								</c:choose>
               <li>
                 <a href="${cp}/sanghoon/index.jsp">HOME</a>
               </li>
@@ -1008,5 +1020,7 @@ input.btn_zip{
       </div>
   <!-- 푸터 끝 -->
 </body>
-
+<script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
+<script>const cp = "${pageContext.request.contextPath}"</script>
+<script src="${cp}/js/user.js"></script>
 </html>

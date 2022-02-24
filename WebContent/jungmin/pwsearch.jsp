@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+     <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -326,8 +327,12 @@ margin-top:30px;
           <div class="topmenu">
             <ul>
             	<ul>			
+            		<c:choose>
+           			<c:when test="${loginUser.user_id!=null}" >
             	<li><span>${loginUser.user_id} 님 환영합니다.</span>&nbsp;&nbsp;
-					<a href="${cp}/user/UserLogoutOk.us">로그아웃</a></li>
+					<a href="${cp}/user/UserLogoutOk.us">LOGOUT</a></li>
+					</c:when>
+							<c:otherwise>
 							<li><a class="join_click"
 								onclick="document.getElementById('id02').style.display='block'">JOIN</a>
 								<!-- The Modal -->
@@ -409,6 +414,7 @@ margin-top:30px;
 								</div></li>
 							<li><a
 								onclick="document.getElementById('id01').style.display='block'">LOGIN</a>
+							
 								<!-- The Modal -->
 								<div class="modal" id="id01">
 									<div class="login">
@@ -447,7 +453,7 @@ margin-top:30px;
 														
 													</div>
 													<span class="txt_find"> <a
-														href= "/jungmin/idsearch.mo" class="link_find">아이디</a> / <a
+														href="${cp}/jungmin/idsearch.mo" class="link_find">아이디</a> / <a
 														href="/member/find/password" class="link_find">비밀번호 찾기</a>
 													</span>
 												</div>
@@ -457,6 +463,9 @@ margin-top:30px;
 
 									</div>
 								</div></li>
+								</c:otherwise>
+								
+								</c:choose>
               <li>
                 <a href="${cp}/sanghoon/index.jsp">HOME</a>
               </li>
