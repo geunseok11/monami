@@ -1,0 +1,44 @@
+package com.monami.news;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+
+
+import com.monami.action.Action;
+import com.monami.action.ActionTo;
+import com.monami.mybatis.SqlMapConfig;
+import com.monami.news.dao.NewsBoardDAO;
+import com.monami.news.dao.NewsBoardDTO;
+import com.monami.news.dao.NewsFileDAO;
+
+public class NewsViewAction implements Action {
+
+	@Override
+	public ActionTo execute(HttpServletRequest req, HttpServletResponse resp) throws Exception {
+
+			NewsBoardDAO nbdao = new NewsBoardDAO();
+			
+			String news_writer = req.getParameter("news_writer");
+			String page = req.getParameter("page");
+			int news_idx = Integer.parseInt(req.getParameter("news_idx"));
+			NewsBoardDTO board = nbdao.getDetail(news_idx);
+			String nidx = nbdao.getNextPage(news_idx);
+			String pidx = nbdao.getPrevPage(news_idx);
+			NewsFileDAO nfdao = new NewsFileDAO();
+			req.setAttribute("files", nfdao.getFiles(news_idx));		
+			req.setAttribute("board", board);
+			req.setAttribute("page", page);
+			req.setAttribute("nidx", nidx);
+			req.setAttribute("pidx", pidx);
+
+
+			
+			ActionTo transfer = new ActionTo();
+			transfer.setRedirect(false);
+			transfer.setPath("/teamin/newsview.jsp");
+			return transfer;
+			
+
+	}
+}
