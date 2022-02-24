@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn"%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -35,7 +36,6 @@
 </script>
 </head>
 <body>
-
 	<div class="popup_buttons">
 		<a class="popup_button" href="">
 			<div class="popup_button-txt">예약하기</div>
@@ -234,7 +234,7 @@
 			<h3 class="title1">MANEGEMENT</h3>
 			<div class="submenu_list2">
 				<ul id="sublist2">
-					<li class="on"><a href="#">뉴스등록</a>
+					<li class="on"><a href="${cp}/jungmin/news_manegement.mo">뉴스등록</a>
 					</li>
 					<li><a href="${cp}/jungmin/video_manegement.mo">동영상등록</a></li>
 					<li><a href="${cp}/jungmin/event_manegement.mo">이벤트등록</a></li>
@@ -242,7 +242,9 @@
 			</div>
 
 			<div class="Write">
-				<form method="post" name="newsForm" class="W_area" action="${cp}/news/NewsWriteOk.mo" enctype="multipart/form-data">
+				<form method="post" name="newsForm" class="W_area"
+					action="${cp}/news/NewsModifyOk.mo" enctype="multipart/form-data">
+				<input type="hidden" name="news_idx" value="${board.news_idx}">
 					
 					<table border="1" style="border-collapse: collapse">
 
@@ -250,29 +252,45 @@
 						<tr class="WC1">
 							<th>제목</th>
 							<td><input class="news_title" size="50" name="news_title"
-								placeholder="제목을 입력하세요"></td>
+								value="${board.news_title}"></td>
 
 						</tr>
 						<tr class="WC3">
 							<th>작성자</th>
-							<td><input class="news_writer" name="news_writer" size="50"></td>
+							<td><input class="news_writer" name="news_writer" size="50" readonly value="${board.news_writer}"></td>
 						</tr>
 						<tr class="WC2">
 							<th>내용</th>
 							<td>
 							<div class="content">
-							<div class="C1"><textarea class="news_subtit" name="news_subtit" placeholder="서브제목을 입력하세요"></textarea></div>
+							<div class="C1"><textarea class="news_subtit" name="news_subtit">${board.news_subtit}</textarea></div>
 							<div class="C2"><img src="${cp}/images/addimg.png"></div>
-							<div class="C3"><textarea class="news_imgctt" name="news_imgctt"></textarea></div>
-							<div class="C4"><textarea class="news_content" name="news_content" placeholder="내용을 입력하세요"></textarea></div>
+							 <div class="C3">
+							<textarea class="news_imgctt" name="news_imgctt">${board.news_imgctt}</textarea></div>
+							
+							
+							<div class="C4">
+							<textarea class="news_content" name="news_content">${board.news_content}</textarea></div>
 							</div>
+							
 							</td>
 						</tr>
 						<tr class="f1">
 							<th>파일첨부</th>
-
-							<td><label for="file1" class="filelabel1">첨부파일</label><input
-								type="file" id="file1" name="file1"></td>
+						<c:choose>
+								<c:when test="${0 <files.size()}">
+								<td><label for="file1" class="filelabel1">${files[0].orgname}</label>
+								<input type="file" id="file1" name="file1">
+								<input type="hidden" name="filename" value="${files[0].orgname}">
+								</td>
+								</c:when>
+								<c:otherwise>
+								<td><label for="file1" class="filelabel1">첨부파일</label>
+								<input type="hidden" name="filename">
+								<input type="file" id="file1" name="file1" class="finput">
+								</td>
+								</c:otherwise>
+							</c:choose>
 						</tr>
 						<tr class="v1">
 							<th>동영상첨부</th>
@@ -280,11 +298,10 @@
 								type="file" id="file2" name="file2"></td>
 						</tr>
 					</table>
-
 					<table class="btn">
-						<td><a href="javascript:sendit()">등록</a></td>
+						<td><a href="javascript:document.newsForm.submit()">수정완료</a></td>
 					</table>
-				</form>
+					</form>
 			</div>
 
 
@@ -488,6 +505,9 @@ fileTarget.on('change', function () {
     $(this).siblings('.filelabel2').html(filename);
 
 });
-
+ $(".finput").change(function(e){
+		$(this).prev().prev().text(e.target.files[0].name);
+		$(this).prev().val(e.target.files[0].name);
+	})
 </script>
 </html>

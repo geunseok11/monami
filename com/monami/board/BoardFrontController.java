@@ -8,50 +8,89 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import org.apache.ibatis.javassist.SerialVersionUID;
-
-import com.monami.board.VBoardWriteOkAction;
-import com.monami.action.Action;
 import com.monami.action.ActionTo;
+import com.monami.board.NFileDownloadAction;
 
-public class BoardFrontController extends HttpServlet {
+public class BoardFrontController extends HttpServlet{
 	private static final long serialVersionUID = 1L;
 	
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		super.doGet(req, resp);
+		doProcess(req, resp);
 	}
 	
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		super.doPost(req, resp);
+		req.setCharacterEncoding("UTF-8");
+		doProcess(req, resp);
 	}
 	
 	protected void doProcess(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		String requestURI = req.getRequestURI();		
-		String contextPath = req.getContextPath();		
-		String command = requestURI.substring(contextPath.length());
+		String requestURI = req.getRequestURI();		// ??????/user/UserJoin.us
+		String contextPath = req.getContextPath();		// ??????
+		String command = requestURI.substring(contextPath.length());//	/user/UserJoin.us
 		ActionTo transfer = null;
 		
 		switch(command) {
-		case "/board/inq_pwchk.mo":
-			try {transfer = new Inq_pwchk().execute(req, resp);}
-			catch (Exception e) {System.out.println("inq_pwchk : "+e);}
+		case "/news/NewsWriteOk.mo":
+			try {
+				transfer = new NewsWriteAction().execute(req,resp);
+			} catch (Exception e) {
+				System.out.println("NewsWriteOk:"+e);
+			}
 			break;
-		case "/board/event_write.mo":
+		case "/news/News_manegement.mo":
 			transfer = new ActionTo();
+			transfer.setPath("/jungmin/news_manegement.jsp");
 			transfer.setRedirect(false);
-			transfer.setPath("이벤트 글쓰는 게시판 주소");
 			break;
-		case "/board/event_writeok.mo":
-			try {transfer = new VBoardWriteOkAction().execute(req,resp);}
-			catch (Exception e) {System.out.println("event_writeok : "+e);}
+		case "/news/News_page.mo":
+			try {
+				transfer = new NewsViewAction().execute(req,resp);
+			} catch (Exception e) {
+				System.out.println("Newsview:"+e);
+			}
+			break;
+		case "/news/FileDownload.mo":
+			try {
+				new NFileDownloadAction().execute(req,resp);
+			} catch (Exception e) {
+				System.out.println("FileDownload : "+e);
+			}
+			break;
+		case "/news/NewsBoardList.mo":
+			try {
+				transfer = new NewsBoardListAction().execute(req,resp);
+			} catch (Exception e) {
+				System.out.println("NewsBoardList:"+e);
+			}
+			break;
+		case "/news/NewsRemove.mo":
+			try {
+				transfer = new NewsRemoveAction().execute(req,resp);
+			} catch (Exception e) {
+				System.out.println("NewsRemove : "+e);
+			}
+			break;
+		case "/news/NewsModify.mo":
+			try {
+				transfer = new NewsModifyAction().execute(req,resp);
+			} catch (Exception e) {
+				System.out.println("BoardModify : "+e);
+			}
+			break;
+		case "/news/NewsModifyOk.mo":
+			try {
+				transfer = new NewsModifyOkAction().execute(req,resp);
+			} catch (Exception e) {
+				System.out.println("BoardModifyOk : "+e);
+			}
 			break;
 		}
-			
-		
-		
-		
+	
+
+	
+	
 		if(transfer != null) {
 			if(transfer.isRedirect()) {
 				resp.sendRedirect(transfer.getPath());
@@ -62,5 +101,4 @@ public class BoardFrontController extends HttpServlet {
 			}
 		}
 	}
-	
 }

@@ -1,9 +1,12 @@
+
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE configuration
   PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
   "http://mybatis.org/dtd/mybatis-3-config.dtd">
 <configuration>
 	<typeAliases>
+    <typeAlias type="com.monami.board.dao.NewsBoardDTO" alias="newsboarddto"/>
+    <typeAlias type="com.monami.board.dao.NewsFileDTO" alias="newsfiledto"/>
 	<typeAlias type="com.monami.board.dao.BoardDTO" alias="boarddto"/>
     <typeAlias type="com.monami.board.dao.IqrDTO" alias="idto"/>
     <typeAlias type="com.monami.board.dao.VBoardDTO" alias="vdto"/>
@@ -24,5 +27,7 @@
   	<mapper resource="com/monami/mapper/iqr.xml"/>
     <mapper resource="com/monami/mapper/board.xml"/>
   	<mapper resource="com/monami/mapper/product.xml"/>
+     <mapper resource="com/monami/mapper/news.xml"/>
+    <mapper resource="com/monami/mapper/newsfile.xml"/>
   </mappers>
 </configuration>
