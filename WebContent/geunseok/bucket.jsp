@@ -309,7 +309,7 @@
                         <form>
                             <fieldset class="list-field">
                                 <legend class="hide">장바구니</legend>
-    
+    							
                                 <table>
                                     <caption>
                                     장바구니 목록
@@ -404,7 +404,8 @@
                                                     <a
                                                     href="/w/product/productDetail.do?goodsNo=MG000016311"
                                                     class="txt-subject"
-                                                    >조터 빅토리아 바이올렛 CT 볼펜
+                                                    >${list[0].getValue()}
+                                                    <!-- 조터 빅토리아 바이올렛 CT 볼펜 -->
                                                     </a>
                                                 </div>
                                             </td>
@@ -417,7 +418,7 @@
                                                     name="goodsCnt"
                                                     id="goodsCnt_561062"
                                                     title="수량 입력"
-                                                    value="1"
+                                                    value="${list[1].getValue()}"
                                                     onblur="exitCnt(this);"
                                                     maxlength="4"
                                                     data-stockcnt="7"
@@ -448,7 +449,7 @@
                                                 </button>
                                             </td>
                                             <td class="txt-right">
-                                                <em id="payPrice_561062">23,000</em>원
+                                                <em id="payPrice_561062">${list[2].getValue()}</em>원
                                             </td>
     
                                             <td>

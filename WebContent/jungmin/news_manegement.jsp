@@ -35,6 +35,7 @@
 </script>
 </head>
 <body>
+
 	<div class="popup_buttons">
 		<a class="popup_button" href="">
 			<div class="popup_button-txt">예약하기</div>
