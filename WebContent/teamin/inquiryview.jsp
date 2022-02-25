@@ -1,4 +1,4 @@
- <%@ page language="java" contentType="text/html; charset=UTF-8"
+<%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
     <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html>
@@ -254,8 +254,8 @@
           <div class="pagetabs">
             <ul class="m4">
                 <li><a href="${cp}/doyoon/FAQ.jsp">자주하는질문</a></li>
-                <li><a href="${cp}/doyoon/Inquiry.jsp">문의하기</a></li>
-                <li><a href="${cp}/teamin/Inquerylist.jsp" class="on">문의사항</a></li>
+                <li><a href="${cp}/doyoon/inquiry.jsp">문의하기</a></li>
+                <li><a href="${cp}/teamin/inquerylist.jsp" class="on">문의사항</a></li>
                 <li><a href="${cp}/geunseok/board_event.jsp">이벤트</a></li>
                 <li><a href="${cp}/shop/shop.jsp">모나미 패밀리샵 찾기</a></li>
             </ul>
@@ -268,68 +268,55 @@
                 <tr height="50px">
 					<th align="center" width="150px">문의내용</th>
                     <td>
-                      <input name="text" style="height: 50px; width: 400px;"
-                      value="${inquiry.iqr_catagory}">
+                      <input name="iqr_catagory" style="height: 50px; width: 400px;"
+                      value="${inquiry.iqr_catagory}" readonly>
                     </td>
 				        </tr>
                 <tr height="50px">
                     <th align="center" width="150px">이름</th>
                     <td>
-						 <input name="text" style="height: 50px; width: 400px;"
-						 value="${inquiry.iqr_writer}">
+						 <input name="iqr_writer" style="height: 50px; width: 400px;"
+						 value="${inquiry.iqr_writer}" readonly>
 					</td>
                 </tr>
                 <tr height="50px">
                     <th align="center" width="150px">이메일</th>
                     <td>
-						<input name="text" style="height: 50px; width: 400px;"
-						value="${inquiry.iqr_email}">
+						<input name="iqr_email" style="height: 50px; width: 400px;"
+						value="${inquiry.iqr_email}" readonly>
 					</td>
                 </tr>
                 <tr height="50px">
                     <th align="center" width="150px">연락처</th>
                     <td>
-						<input name="text" style="height: 50px; width: 400px;"
-						value="${inquiry.iqr_phone}">
+						<input name="iqr_phone" style="height: 50px; width: 400px;"
+						value="${inquiry.iqr_phone}" readonly>
 					</td>
                 </tr>
                 <tr height="50px">
                     <th align="center" width="150px">제목</th>
                     <td>
-                    	<input name="text" style="height: 50px; width: 400px;"
-                    	value="${inquiry.iqr_title}">
+                    	<input name="iqr_title" style="height: 50px; width: 400px;"
+                    	value="${inquiry.iqr_title}" readonly>
 					</td>
                 </tr>
                 <tr height="200px">
                     <th align="center" width="150px">내용</th>
                     <td>
-                        <textarea name="boardcontents" style="width:402px;
-                        height:200px;">${inquiry.iqr_content}</textarea>
+                        <textarea name="iqr_content" style="width:402px;
+                        height:200px;" readonly>${inquiry.iqr_content}</textarea>
                     </td>
                 </tr>
-                <c:choose>
-					<c:when test="${files != null and files.size()>0 }">
-						<c:forEach var="i" begin="0" end="${files.size()-1}">
-							<tr>
-								<th>첨부파일${i+1}</th>
-								<td>
-									<a href="${cp}/board/FileDownload.bo?systemname=${files[i].systemname}&orgname=${files[i].orgname}">
-										${files[i].orgname}
-									</a>
-								</td>
-							</tr>
-						</c:forEach>
-					</c:when>
-					<c:otherwise>
-						<tr>
-							<td colspan="2" style="text-align: center;font-size: 20px;">첨부 파일이 없습니다.</td>
-						</tr>
-					</c:otherwise>
-				</c:choose>
             </table>
+            <table class="btn_area">
+				<tr align="right" valign="middle">
+					<td>
+						<a href="${cp}/inquiry/InquiryList.mo?page=${param.page == null ? 1 : param.page}">목록</a>
+					</td>
+				</tr>
+			</table>
         </form>
-      </div>
-    <!-- 푸터 시작 -->
+        <!-- 푸터 시작 -->
    <div id="footer">
     <div class="foot">
       <div class="foot_pop" style="display: none;">
@@ -479,6 +466,8 @@
       </div>
     </div>
   </div>
+  <!-- 푸터 끝 -->
+      </div>
   <!-- 푸터 끝 -->
 </body>
 </html>
