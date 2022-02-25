@@ -306,7 +306,9 @@
                         </ul>
     
                     <div class="form-area">
-                        <form>
+                    	
+                    	
+                        <form  method="post" name="basketForm" action="${cp}/product/BasketOk.bo">
                             <fieldset class="list-field">
                                 <legend class="hide">장바구니</legend>
     							
@@ -349,7 +351,10 @@
                                     </thead>
     
                                     <tbody>
-                                        <tr>
+                                    <c:choose>
+                                    	<c:when test="${basketlist.size() >0 and basketlist != null}">
+                    						<c:forEach var="basket" items=${basketlist}>
+                    							 <tr>
                                             <td>
                                                 <label>
                                                     <input
@@ -404,12 +409,12 @@
                                                     <a
                                                     href="/w/product/productDetail.do?goodsNo=MG000016311"
                                                     class="txt-subject"
-                                                    >${list[0].getValue()}
+                                                    >${basket.prod_name}
                                                     <!-- 조터 빅토리아 바이올렛 CT 볼펜 -->
                                                     </a>
                                                 </div>
                                             </td>
-                                            <td class="txt-right"><em>23,000</em>원</td>
+                                            <td class="txt-right"><em>${basket.prod_price}</em>원</td>
     
                                             <td>
                                                 <div class="ea-area">
@@ -418,7 +423,7 @@
                                                     name="goodsCnt"
                                                     id="goodsCnt_561062"
                                                     title="수량 입력"
-                                                    value="${list[1].getValue()}"
+                                                    value="${basket.prod_count}"
                                                     onblur="exitCnt(this);"
                                                     maxlength="4"
                                                     data-stockcnt="7"
@@ -449,7 +454,7 @@
                                                 </button>
                                             </td>
                                             <td class="txt-right">
-                                                <em id="payPrice_561062">${list[2].getValue()}</em>원
+                                                <em id="payPrice_561062">${basket.price * basket.count}</em>원
                                             </td>
     
                                             <td>
@@ -505,6 +510,18 @@
                                                 </button>
                                             </td>
                                         </tr>
+                    		
+                    						</c:forEach>
+                    					</c:when>
+                    					<c:otherwise>
+                    						<tr>
+                    							<td>
+                    								<h3>장바구니에 상품이 없습니</h3>
+                    							</td>
+                    						</tr>
+                    					</c:otherwise>
+                    				</c:choose>
+                                       
                                     </tbody>
                                 </table>
     
@@ -579,155 +596,7 @@
                                     rel="stylesheet"
                                     href="https://img.pay.naver.net/static/css/button/button2.css?456964"
                                 />
-                                <script type="text/javascript">
-                                    function buy_nc() {
-                                    var cnt = $(
-                                        "input:checkbox[name='cartIdx']:not([disabled]):checked"
-                                    ).length;
-                                    if (cnt == 0) {
-                                        alert("상품을 선택하세요!");
-                                        return false;
-                                    }
-                
-                                    var isError = false;
-                                    var errorMsg = "";
-                                    var arrCart = new Array();
-                                    $(
-                                        "input:checkbox[name='cartIdx']:not([disabled]):checked"
-                                    ).each(function () {
-                                        var cartIdx = $(this).val();
-                                        var optionitemidx = $(this).data("optionitemidx");
-                                        var goodsno = $(this).data("goodsno");
-                                        var addserviceyn = $(this).data("addserviceyn");
-                                        var orderTargetSetYn = $(this).data("ordertargetsetyn");
-                                        var payLimitTypeCd = $(this).data("paylimittypecd");
-                
-                                        if (orderTargetSetYn != "N") {
-                                        errorMsg =
-                                            "회원 전용 상품은 로그인 후 구매할 수 있습니다.";
-                                        isError = true;
-                                        return false;
-                                        }
-                
-                                        if (payLimitTypeCd == "P") {
-                                        errorMsg =
-                                            "적립금 전용 상품은 모나미몰 적립금 결제만 가능합니다.";
-                                        isError = true;
-                                        return false;
-                                        }
-                
-                                        var goodsObj = new Object();
-                                        goodsObj.optionItemIdx = Number(optionitemidx);
-                                        goodsObj.goodsNo = goodsno;
-                                        goodsObj.goodsCnt = Number(
-                                        $("#goodsCnt_" + cartIdx).val()
-                                        );
-                
-                                        if (addserviceyn === "Y") {
-                                        if ($.trim($(this).data("addservicecontent")) != "") {
-                                            goodsObj.addServiceYn = "Y";
-                                            goodsObj.addServiceContent = $(this).data(
-                                            "addservicecontent"
-                                            );
-                                            goodsObj.addServicePrice = $(this).data(
-                                            "addserviceprice"
-                                            );
-                                            goodsObj.addServiceTypeface = $(this).data(
-                                            "addservicetypefacenm"
-                                            );
-                                        }
-                                        }
-                
-                                        if (goodsObj.goodsCnt > 999) {
-                                        errorMsg = "주문수량을 999이하로 입력해 주세요.";
-                                        isError = true;
-                                        return false;
-                                        }
-                
-                                        if (
-                                        goodsObj.goodsCnt == 0 ||
-                                        goodsObj.goodsCnt < 0 ||
-                                        goodsObj.goodsCnt == ""
-                                        ) {
-                                        errorMsg = "주문수량을 입력해 주세요.";
-                                        isError = true;
-                                        return false;
-                                        }
-                
-                                        if (addserviceyn === "Y") {
-                                        if ($.trim($(this).data("addservicecontent")) == "") {
-                                            errorMsg = "각인서비스 내용이 없습니다.";
-                                            isError = true;
-                                            return false;
-                                        }
-                
-                                        if (
-                                            $.trim($(this).data("addservicecontent")).length > 12
-                                        ) {
-                                            errorMsg = "각인내용은 12자 이내로 입력해주세요.";
-                                            isError = true;
-                                            return false;
-                                        }
-                
-                                        if ($.trim($(this).data("addservicetypeface")) == "") {
-                                            errorMsg = "각인서비스 서체가 없습니다.";
-                                            isError = true;
-                                            return false;
-                                        }
-                                        }
-                
-                                        arrCart.push(goodsObj);
-                                    });
-                
-                                    if (isError == true) {
-                                        alert(errorMsg);
-                                        return false;
-                                    }
-                
-                                    $.ajax({
-                                        url:
-                                        getContextPath() + "/ajax/order/nPayOrderRegister.do",
-                                        data: JSON.stringify(arrCart),
-                                        type: "post",
-                                        async: false,
-                                        cache: false,
-                                        dataType: "json",
-                                        contentType: "application/json",
-                                        error: function (request, status, error) {
-                                        alert(
-                                            "code:" +
-                                            request.status +
-                                            "\n" +
-                                            "message:" +
-                                            request.responseText +
-                                            "\n" +
-                                            "error:" +
-                                            error
-                                        );
-                                        },
-                                        success: function (data) {
-                                        if (data.result == false) {
-                                            alert(data.msg);
-                                        } else {
-                                            window.open(data.orderUrl);
-                                        }
-                                        },
-                                    });
-                                    }
-                
-                                    //<![CDATA[
-                                    naver.NaverPayButton.apply({
-                                    BUTTON_KEY: "A7D2B184-FA4F-4BF9-9EB6-F6657B908300", // 페이에서 제공받은 버튼 인증 키 입력
-                                    TYPE: "C", // 버튼 모음 종류 설정
-                                    COLOR: 1, // 버튼 모음의 색 설정
-                                    COUNT: 1, // 버튼 개수 설정. 구매하기 버튼만 있으면 1, 찜하기 버튼도 있으면 2를 입력.
-                
-                                    ENABLE: "Y", // 품절 등의 이유로 버튼 모음을 비활성화할 때에는 "N" 입력         "":""
-                
-                                    BUY_BUTTON_HANDLER: buy_nc,
-                                    });
-                                    //]]>
-                                </script>
+                                
                                 <div
                                     id="NC_ID_1645071120125808"
                                     class="npay_storebtn_bx npay_type_C_1_1"
@@ -984,4 +853,10 @@
             <!-- 푸터 끝 -->
         </div>
     </body>
+    <script>
+    	function orderTotal(){
+    		const basketForm = document.basketForm;
+    		basketForm.submit();
+    	}
+    </script>
 </html>
