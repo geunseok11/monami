@@ -7,7 +7,7 @@ import javax.servlet.http.HttpServletResponse;
 import com.monami.action.Action;
 import com.monami.action.ActionTo;
 
-public class BucketCancelOkAction implements Action {
+public class BasketCancelOkAction implements Action {
 
 	@Override
 	public ActionTo execute(HttpServletRequest req, HttpServletResponse resp) throws Exception {
@@ -16,7 +16,7 @@ public class BucketCancelOkAction implements Action {
 		String prodcnt = req.getParameter("prodcnt");
 		String keyword = prodidx + ":" + prodcnt;
 
-		String bucket = "";
+		String basket = "";
 		String value = "";
 
 		ActionTo transfer = new ActionTo();
@@ -25,8 +25,8 @@ public class BucketCancelOkAction implements Action {
 			Cookie[] cookies = req.getCookies();
 
 			for (int i = 0; i < cookies.length; i++) {
-				if (cookies[i].getName().equals("bucket")) {
-					bucket = cookies[i].getValue();
+				if (cookies[i].getName().equals("basket")) {
+					basket = cookies[i].getValue();
 					String[] prod = cookies[i].getValue().split("/");
 					for (int j = 0; j < prod.length; j++) {
 						if (!prod[i].equals(keyword)) {
@@ -35,10 +35,10 @@ public class BucketCancelOkAction implements Action {
 					}
 				}
 			}
-			Cookie changeCookie = new Cookie("bucket", value);
+			Cookie changeCookie = new Cookie("basket", value);
 			resp.addCookie(changeCookie);
 			transfer.setRedirect(false);
-			transfer.setPath("/geunseok/BucketList.pd");
+			transfer.setPath("/geunseok/BasketList.pd");
 			return transfer;
 		}
 
