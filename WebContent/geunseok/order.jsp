@@ -323,6 +323,7 @@
                         <!-- //주문자 정보 -->
             
                         <!-- 배송지 정보// -->
+                        <form name="orderForm" method="post" action="${cp}/user/OrderOk.us">
                         <fieldset class="delivery-field">
                             <legend class="tit">배송지 정보</legend>
                             
@@ -338,11 +339,11 @@
                                 <tbody>
                                     <tr>
                                         <th>이름</th>
-                                        <td><input type="text" name="receiverNm" id="receiverNm" value="" maxlength="50" placeholder="이름 입력" title="이름 입력"></td>
+                                        <td><input type="text" name="user_name" id="user_name" value="${user.user_name}" maxlength="50" placeholder="이름 입력" title="이름 입력"></td>
                                     </tr>
                                     <tr>
                                         <th>휴대폰번호</th>
-                                        <td><input type="text" name="receiverHp" id="receiverHp" value="" maxlength="11" onblur="exitInput(this);" placeholder="숫자만 입력(11자리)" title="휴대폰번호 입력"></td>
+                                        <td><input type="text" name="user_phone" id="user_phone" value="${user.user_phone}" maxlength="11" onblur="exitInput(this);" placeholder="숫자만 입력(11자리)" title="휴대폰번호 입력"></td>
                                     </tr>
                                     
                                         <tr>
@@ -351,7 +352,7 @@
                                                 <div class="form-addr">
                                                     <button type="button" class="btn-white" onclick="addrPopup();">주소찾기</button>
                                                     <input type="text" name="receiverZipcode" id="receiverZipcode" value="" maxlength="5" onblur="exitInput(this);" readonly="readonly" title="우편번호 입력"> 
-                                                    <input type="text" name="receiverAddr" id="receiverAddr" value="" maxlength="100" readonly="readonly" title="주소 입력"> 
+                                                    <input type="text" name="user_addr" id="user_addr" value="${user.user_addr}" maxlength="100" readonly="readonly" title="주소 입력"> 
                                                     <input type="text" name="receiverAddrDetail" id="receiverAddrDetail" value="" maxlength="100" placeholder="상세 주소 입력" title="상세 주소 입력">
                                                 </div>
                                             </td>
@@ -445,21 +446,63 @@
                                 </thead>
             
                                 <tbody>
-                                    
-                                        
-                                        
-                                            
-                                              
-                                            
-                                                
-                                                
-                                                    
-                                                    
-                                                        
-                                                    
-                                                
+                                           	<c:choose>
+                                           	<c:when test="${basketlist != null and basketlist.size() > 0}">
+                                           		<c:forEach var="basket" items="${basketlist}">
+                                           			 <tr class="tr_goods">
+                                                    <td>
+                                                        <figure>
+                                                            <img src="https://d1bg8rd1h4dvdb.cloudfront.net/upload/imgServer/product/goods/MG000016311/main/MG000016311_REP_THUMB_80X80_20210416143936.blob" onerror="this.src='/w/images/80x80.jpg'" alt="" class="loading" data-was-processed="true">
+                                                        </figure>
+                                                    </td>
+                                                    <td>
+                                                        <div class="info-area">
+                                                            <a href="/w/product/productDetail.do?goodsNo=MG000016311" target="_blank" class="txt-subject">${basket.prod_name}  </a>
+                                                            
+                                                            
             
-                                                <tr class="tr_goods">
+                                                        </div>
+                                                    </td>
+                                                    <td class="txt-right">
+                                                        <em>${basket.prod_price}</em>원
+                                                    </td>
+                                                    <td>
+                                                        ${basket.prod_count}
+                                                    </td>
+                                                    <td class="txt-right">
+                                                        <em id="payPrice_685885">${basket.prod_price * basket.prod_count}</em>원
+                                                    </td>
+                                                    <td>
+                                                        
+                                                            
+                                                                <small> 
+                                                                    모나미배송
+                                                                </small>
+                                                            
+                                                            
+                                                        
+                                                    </td>
+                                                    
+                                                        <td class="txt-right">
+                                                            
+                                                                
+                                                                
+                                                                    <em>0</em>원
+                                                                
+                                                            
+                                                        </td>
+                                                    
+                                                </tr>
+                                           		</c:forEach>
+                                           	</c:when>
+                                           	<c:otherwise>
+                                           		<tr class="tr_goods">
+                                           			결제할 상품이 없습니다
+                                           		</tr>
+                                           	</c:otherwise>
+                                           	</c:choose>                          
+            
+                                              <!--   <tr class="tr_goods">
                                                     <td>
                                                         <figure>
                                                             <img src="https://d1bg8rd1h4dvdb.cloudfront.net/upload/imgServer/product/goods/MG000016311/main/MG000016311_REP_THUMB_80X80_20210416143936.blob" onerror="this.src='/w/images/80x80.jpg'" alt="" class="loading" data-was-processed="true">
@@ -502,15 +545,12 @@
                                                             
                                                         </td>
                                                     
-                                                </tr>
-            
-                                                
-                                            
-                                        
-                                    
+                                                </tr> -->
+                                     
                                 </tbody>
                             </table>
                         </fieldset>
+                        </form>
                         <!-- //주문상품정보 -->
             
                         <div class="bottom-area">
@@ -790,4 +830,10 @@
             <!-- 푸터 끝 -->
         </div>
     </body>
+    <script>
+    	function payment(){
+    		const orderForm = document.orderForm;
+    		orderForm.submit();
+    	}
+    </script>
 </html>

@@ -11,7 +11,7 @@ import com.monami.action.ActionTo;
 import com.monami.app.product.dao.ProductDAO;
 import com.monami.app.product.dao.ProductDTO;
 
-public class BucketAction implements Action {
+public class BasketAction implements Action {
 
 	@Override
 	public ActionTo execute(HttpServletRequest req, HttpServletResponse resp) throws Exception {
@@ -22,14 +22,14 @@ public class BucketAction implements Action {
 
 		Cookie[] cookies = req.getCookies();
 		String commit = req.getParameter("commit");
-		String bucket = "";
+		String basket = "";
 
 		ActionTo transfer = new ActionTo();
 
 		if (cookies != null) {
 			for (Cookie c : cookies) {
-				if (c.getName().equals("bucket")) {
-					bucket = c.getValue();
+				if (c.getName().equals("basket")) {
+					basket = c.getValue();
 					break;
 				}
 			}
@@ -37,13 +37,13 @@ public class BucketAction implements Action {
 
 		if (commit != null) {
 			PrintWriter out = resp.getWriter();
-			out.println(bucket);
+			out.println(basket);
 		} else {
-			bucket += prodidx + ":" + prodcnt + "/";
-			Cookie cookie = new Cookie("bucket", bucket);
+			basket += prodidx + ":" + prodcnt + "/";
+			Cookie cookie = new Cookie("bucket", basket);
 			resp.addCookie(cookie);
 			transfer.setRedirect(false);
-			transfer.setPath("/geunseok/BucketList.pd");
+			transfer.setPath("/geunseok/BasketList.pd");
 			return transfer;
 		}
 
