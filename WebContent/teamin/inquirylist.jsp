@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="../css/style.intro.css">
 </head>
 <style>
-.list a{
+	.list a{
 		background-color: transparent;
 		color:#424242;
 		
@@ -34,23 +34,22 @@
 		height:20px;
 	}
 	.pagination a:hover{
-		background-color:rgb(198,175,245);
+		background-color:#E15F5F;
 	}
 	.nowPage{
 		padding:5px;
 		display:inline-block;
 		border-radius:3px;
-		background-color:rgb(198,175,245);
-		color:#fff;
+		background-color:#E15F5F;
 		font-weight: bold;
 		width:20px;
 		height:20px;
 	}
 	a.write{
-	padding:5px;
 		width:70px;
 		height:25px;
 		text-align: center;
+		border: 1px solid #bcbcbc;
 	}
 	table{
 		border:0px;
@@ -65,23 +64,25 @@
 		border-collapse:collapse;
 		border-spacing:0;
 		width:900px;
-		margin-top:150px;
 	}
 	.list td{
 		text-align: center;
 	}
-	.list>tbody>tr:nth-child(2n){
+	.list>tbody>tr>.list_title{
 		background-color:rgb(240,255,240);
 	}
 	.list>tbody>tr:nth-child(n+2):hover{
-		background-color:rgb(239,233,252);
+		background-color:#CECECE;
 	}
 	.list>tbody>tr>th{
 		border-top:1px solid #384d75;
 		border-bottom:1px solid #ccc;
 		padding:5px;
+		font-weight: bold;
 	}
-	
+	.list>tbody>tr{
+	text-overflow:ellipsis;
+			}
 	.list>tbody>tr>td{
 		border-bottom:1px solid #ccc;
 		padding:5px;
@@ -89,13 +90,9 @@
 	a{
 		display:inline-block;
 		border-radius:3px;
-		color:#fff;
 		font-weight: bold;
 		text-decoration: none;
 	}
-	.list .inquiry td{
-	text-overflow: ellipsis;
-}
 </style>
 <body>
     <c:set var="cp" value="${pageContext.request.contextPath}"/>
@@ -349,7 +346,7 @@
         </h3>
       <div id="wrap">
       	<table class="list">
-      		<tr align="center" valign="middle">
+      		<tr align="center" valign="middle" style="background-color: rgb(240,255,240);">
       			<th width="5%">번호</th>
       			<th width="10%">문의내용</th>
       			<th width="10%">이름</th>
@@ -368,7 +365,7 @@
       						<td>${inquiry.iqr_email}</td>
       						<td>${inquiry.iqr_phone}</td>
       						<td><a href="${cp}/inquiry/InquiryView.mo?iqr_idx=${inquiry.iqr_idx}&page=${page}">${inquiry.iqr_title}</a></td>
-      						<td>${inquiry.iqr_content}</td>
+      						<td style="overflow: hidden; text-overflow: ellipsis;">${inquiry.iqr_content}</td>
       					</tr>
       				</c:forEach>
       			</c:when>
@@ -559,13 +556,14 @@
         </div>
       </div>
     </div>
-  </body>
+    </div>
+    </div>
+</body>
   <script>
 	function sendit(){
 		let q = document.getElementById('q');
 		//유효성 검사
 		location.href = cp+"InquiryList.mo?keyword="+q.value;
 	}
-
 </script>
 </html>
