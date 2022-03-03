@@ -307,6 +307,25 @@
                         height:200px;" readonly>${inquiry.iqr_content}</textarea>
                     </td>
                 </tr>
+                <c:choose>
+					<c:when test="${files != null and files.size()>0 }">
+						<c:forEach var="i" begin="0" end="${files.size()-1}">
+							<tr>
+								<th>첨부파일${i+1}</th>
+								<td>
+									<a href="${cp}/inquiry/FileDownload.mo?system_name=${files[i].system_name}&org_name=${files[i].org_name}">
+										${files[i].org_name}
+									</a>
+								</td>
+							</tr>
+						</c:forEach>
+					</c:when>
+					<c:otherwise>
+						<tr>
+							<td colspan="2" style="text-align: center;font-size: 20px;">첨부 파일이 없습니다.</td>
+						</tr>
+					</c:otherwise>
+				</c:choose>
             </table>
             <table class="btn_area">
 				<tr align="right" valign="middle">
@@ -467,6 +486,7 @@
     </div>
   </div>
   <!-- 푸터 끝 -->
+      </div>
       </div>
   <!-- 푸터 끝 -->
 </body>
