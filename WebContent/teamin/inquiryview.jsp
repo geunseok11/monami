@@ -16,11 +16,26 @@
 </head>
 <style>
 #container{
-	padding-bottom: 150px;
 	overflow: hidden;
 }
 form{
-	padding-bottom: 100px;
+	padding-bottom: 200px;
+}
+form table tr th{
+	background-color: rgb(240,255,240);
+	font-weight: bold;
+}
+form table tr td a{
+	font-size: 15px;
+	padding: 5px;
+	font-weight: bold;
+}
+.btn_area{
+	margin-top: 10px;
+	border-radius: 10px;
+}
+.btn_area:hover{
+	background-color: #95FFC0;
 }
 </style>
 <body>
