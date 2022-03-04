@@ -15,6 +15,11 @@
 <script type="text/javascript" src="../js/prodiqr.js"></script>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.js"></script>
 </head>
+<style>
+	#container{
+		margin-bottom: 100px;
+	}
+</style>
 <body>
 	<div id="wrap">
 		<%@ include file="../doyoon/header.jsp"%>
