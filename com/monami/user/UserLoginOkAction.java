@@ -1,5 +1,6 @@
 package com.monami.app.user;
 
+import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
@@ -16,13 +17,19 @@ public class UserLoginOkAction implements Action{
 		UserDAO udao=new UserDAO();
 		String user_id=req.getParameter("user_id1");
 		String user_pw=req.getParameter("user_pw1");
+		String keepLogin=req.getParameter("keepLogin");
 		HttpSession session =req.getSession();
 		
 		UserDTO loginUser=udao.login(user_id,user_pw);
 		ActionTo transfer=new ActionTo();
 		if(loginUser !=null) {
-			
 			session.setAttribute("loginUser",loginUser);
+			if(keepLogin!=null) {
+				Cookie c =new Cookie("c",loginUser.getUser_id());
+				c.setPath("/");
+				c.setMaxAge(3600);
+				resp.addCookie(c);
+			}
 			transfer.setRedirect(false);
 			transfer.setPath("/jungmin/peninfo/peninfo.mo");
 		}
@@ -32,6 +39,5 @@ public class UserLoginOkAction implements Action{
 			transfer.setPath("/jungmin/pen/penpage.mo?login=f");
 		}
 		return transfer;
-	}
-	
-}
+	}}
+	 

@@ -2,11 +2,13 @@
     pageEncoding="UTF-8"%>
      <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>Insert title here</title>
-<link rel="shortcut icon" href="${cp}/images/favicon.ico" type="image/x-icon" />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MONAMI</title>
+    <link rel="shortcut icon" href="${cp}/images/favicon.ico" type="image/x-icon" />
 <link rel="stylesheet" href="${cp}/css/pen.css"/>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.js"></script>
 
@@ -269,9 +271,6 @@ input.btn_zip{
 </style>
 <body>
 <c:set var='cp' value="${pageContext.request.contextPath }"/>
-<c:if test="${not empty param.login}">
-		<script>alert("로그인 실패! 다시 시도해 주세요!");</script>
-	</c:if>
 <div class="popup_buttons">
     <a class="popup_button" href="">
       <div class="popup_button-txt">예약하기</div>
@@ -311,7 +310,6 @@ input.btn_zip{
             	<c:choose>
            			<c:when test="${loginUser.user_id!=null}" >
             	<li><span>${loginUser.user_id} 님 환영합니다.</span>&nbsp;&nbsp;
-            	<a href="${cp}/jungmin/usermodify.mo">MYPAGE</a>&nbsp;
 					<a href="${cp}/user/UserLogoutOk.us">LOGOUT</a></li>
 					</c:when>
 							<c:otherwise>
@@ -644,97 +642,83 @@ input.btn_zip{
                 <h2>모나미제품</h2>
                 <p>모나미는 당신의 행복한 기록과 늘 함께 합니다.</p>
             </div>
-            <div class="submenu_list">
-                 <ul id="sublist">
-                   <li class="on">
-                     <a href="${cp}/jungmin/pen/penpage.mo">펜</a>
-                 </li>
-                 <li>
-                     <a href="${cp}/jungmin/marker/markerpage.mo">마카</a>
-                 </li>
-                 <li>
-                     <a href="${cp}/sanghoon/lightpen.jsp">형광펜</a>
-                 </li>
-                 <li>
-                     <a href="${cp}/doyoon/A_main1.jsp">미술용품</a>
-                 </li>
-                 <li>
-                     <a href="${cp}/doyoon/E_main1.jsp">기타</a>
-                 </li>
-                 <li>
-                     <a href="${cp}/jungmin/cataloguepage.mo">카탈로그</a>
-                 </li>
+            <div class="submenu_list" >
+                 <ul id="sublist2" >
+                    <li>
+                        <a href="#">보도자료</a>
+                    </li>
+                    <li>
+                        <a href="monami_video1.jsp">동영상자료</a>
+                    </li>
+                    <li class="on">
+                        <a href="${cp}/jungmin/news_manegement.mo">등록</a>
+                    </li>
                  </ul>
             </div>
             <h3 class="title1">
-                PRODUCT
-                <span>INFO</span>
+            MANEGEMENT
             </h3>
-            <ul class="categori_list">
-                <li><a href="${cp}/pen/premium_pen.jsp">프리미엄펜</a></li>
-            <li><a href="${cp}/pen/fountain_pen.jsp">만년필</a></li>
-            <li><a href="${cp}/pen/oil_pen.jsp">유성볼펜</a></li>
-            <li class="on"><a href="${cp}/pen/neutral_pen.jsp">중성펜</a></li>
-          </ul>
+            <div class="submenu_list2" >
+              <ul id="sublist2" >
+                 <li class="on">
+                     <a href="${cp}/jungmin/news_manegement.mo">뉴스등록</a>
+                 </li>
+                 <li>
+                     <a href="${cp}/jungmin/video_manegement.mo">동영상등록</a>
+                 </li>
+                 <li >
+                     <a href="${cp}/jungmin/event_manegement.mo">이벤트등록</a>
+                 </li>
+              </ul>
+         </div>
  
-            <div class="product_list">
-                <ul>
-                    <li><a href="pen1">
-                        <div class="thum">
-                            <img src="${cp}/images/np1.jpg" >
-                            <div class="ondiv">
-                                <div class="btn_plus">
-                                    <div></div>
-                                    <div></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="info">
-                            <div class="pen_name">중성펜</div>
-                            <div class="product_name">젤라인</div>
-                        </div>                   
-                    </a>
-                    </li>
- 
-                    <li><a href="pen2">
-                        <div class="thum">
-                            <img src="${cp}/images/np2.jpg" alt="">
-                            <div class="ondiv">
-                                <div class="btn_plus">
-                                    <div></div>
-                                    <div></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="info">
-                            <div class="pen_name">중성펜</div>
-                            <div class="product_name">젤러펜 502</div>
-                        </div>                   
-                    </a>
-                    </li>
- 
-                    </a></li>
-                </ul>
+            <div class="Write">
+               <form class="W_area">
+                <table border="1" style="border-collapse:collapse" >
+              
+               
+                <tr class="WC1">
+                  <th >제목</th>
+                  <td>
+                    <input class="in_title" size="50"
+                    placeholder="제목을 입력하세요">
+                  </td>
+                  
+                </tr>
+               
+                <tr class="WC2">
+                  <th >내용</th>
+                  <td><textarea name="boardcontents" placeholder="내용을 입력해주세요"></textarea></td>
+                </tr>
+                <tr class="f1">
+                  <th>파일첨부</th>
+                  
+                  <td><label for="ex_filename" class="ex_filename">첨부파일</label><input type="file" id="ex_filename" ></td>
+                </tr>
+                <tr class="v1">
+                  <th>동영상첨부</th>
+                  <td><label for="ex_filename" class="ex_filename">첨부파일</label><input type="file" id="ex_filename" ></td>
+                </tr>
+              </table>
+
+              <table class="btn">
+                <td>
+                  <a href="#">등록</a>
+                </td>
+                              </table>
+                 </form>
+              </div>
+             
+            
+          
+            <div class="topbtn">
+                <a href="#Top">
+                    <img src="${cp}/images/btn_top.gif" alt="상단으로">
+                </a>
             </div>
-            <div class="pagenum">
-             <a class="page_prev">
-                 <img src="${cp}/images/page_prev.gif">
-             </a>
-             <strong>1</strong>
-           
-             <a  class="page_next">
-                 <img src="${cp}/images/page_next.gif">
-             </a>
-         </div>
-         <div class="topbtn"> 
-             <a href="#Top">
-                 <img src="${cp}/images/btn_top.gif" alt="상단으로">
-             </a>
-         </div>
-     </div>
+        </div>
         </div>
       <!-- 본문 끝 -->
-      <!-- 푸터 시작 -->
       <!-- 푸터 시작 -->
       <div id="footer">
         <div class="foot">
@@ -819,7 +803,7 @@ input.btn_zip{
         <div class="tit">시행일</div>
         
         본 이메일 무단 수집 거부 정책은 2017년 11월부터 시행합니다.
-                    </div>
+             </div>
               <div class="btn_close"><a>CLOSE</a></div>
             </div>
           </div>
@@ -887,4 +871,24 @@ input.btn_zip{
       </div>
       <!-- 푸터 끝 -->
     </div>
+</body>
+<script>
+  var fileTarget = $('.filebox .upload-hidden');
+
+fileTarget.on('change', function () {
+    // 값이 변경되면
+
+    if (window.FileReader) {
+        // modern browser 
+        var filename = $(this)[0].files[0].name;
+    } else {
+        // old IE 
+        var filename = $(this).val().split('/').pop().split('\\').pop();  // 파일명만 추출
+    }
+
+    // 추출한 파일명 삽입 
+    $(this).siblings('.ex_filename').jsp(filename);
+
+});
+</script>
 </html>

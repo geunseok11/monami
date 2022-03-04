@@ -86,6 +86,78 @@ public class BoardFrontController extends HttpServlet{
 				System.out.println("BoardModifyOk : "+e);
 			}
 			break;
+		case "/jungmin/peninfo/peninfo.mo":
+			transfer=new ActionTo();
+			transfer.setPath("/jungmin/peninfo/peninfo.jsp");
+			transfer.setRedirect(false);
+			break;
+		
+	case "/jungmin/pen/penpage.mo":
+		transfer=new ActionTo();
+		transfer.setPath("/jungmin/pen/penpage.jsp");
+		transfer.setRedirect(false);
+		break;
+	
+case "/jungmin/marker/markerpage.mo":
+	transfer=new ActionTo();
+	transfer.setPath("/jungmin/marker/markerpage.jsp");
+	transfer.setRedirect(false);
+	break;
+
+case "/jungmin/cataloguepage.mo":
+	transfer=new ActionTo();
+	transfer.setPath("/jungmin/cataloguepage.jsp");
+	transfer.setRedirect(false);
+	break;
+
+case "/jungmin/event_manegement.mo":
+	transfer=new ActionTo();
+	transfer.setPath("/jungmin/event_manegement.jsp");
+	transfer.setRedirect(false);
+	break;
+
+case "/jungmin/news_manegement.mo":
+	transfer=new ActionTo();
+	transfer.setPath("/jungmin/news_manegement.jsp");
+	transfer.setRedirect(false);
+	break;
+
+case "/jungmin/video_manegement.mo":
+	transfer=new ActionTo();
+	transfer.setPath("/jungmin/video_manegement.jsp");
+	transfer.setRedirect(false);
+	break;
+case "/jungmin/idsearch.mo":
+	transfer=new ActionTo();
+	transfer.setPath("/jungmin/idsearch.jsp");
+	transfer.setRedirect(false);
+	break;
+	
+case "/jungmin/idOk.mo":
+	transfer=new ActionTo();
+	transfer.setPath("/jungmin/idOk.jsp");
+	transfer.setRedirect(false);
+	break;
+case "/jungmin/pwsearch.mo":
+	transfer=new ActionTo();
+	transfer.setPath("/jungmin/pwsearch.jsp");
+	transfer.setRedirect(false);
+	break;
+case "/jungmin/pwOk.mo":
+	transfer=new ActionTo();
+	transfer.setPath("/jungmin/pwOk.jsp");
+	transfer.setRedirect(false);
+	break;
+case "/jungmin/usermodify.mo":
+	transfer=new ActionTo();
+	transfer.setPath("/jungmin/usermodify.jsp");
+	transfer.setRedirect(false);
+	break;
+case "/jungmin/mypage.mo":
+	transfer=new ActionTo();
+	transfer.setPath("/jungmin/mypage.jsp");
+	transfer.setRedirect(false);
+	break;
 		}
 	
 

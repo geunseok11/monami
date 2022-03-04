@@ -273,6 +273,9 @@ input.btn_zip{
 </style>
 <body>
 <c:set var='cp' value="${pageContext.request.contextPath }"/>
+<c:if test="${not empty param.login}">
+		<script>alert("로그인 실패! 다시 시도해 주세요!");</script>
+	</c:if>
 <div class="popup_buttons">
     <a class="popup_button" href="">
       <div class="popup_button-txt">예약하기</div>
@@ -312,6 +315,7 @@ input.btn_zip{
             	<c:choose>
            			<c:when test="${loginUser.user_id!=null}" >
             	<li><span>${loginUser.user_id} 님 환영합니다.</span>&nbsp;&nbsp;
+            	<a href="${cp}/jungmin/usermodify.mo">MYPAGE</a>&nbsp;
 					<a href="${cp}/user/UserLogoutOk.us">LOGOUT</a></li>
 					</c:when>
 							<c:otherwise>

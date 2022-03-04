@@ -4,9 +4,12 @@ import java.io.IOException;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
+import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+
+import org.apache.catalina.filters.ExpiresFilter;
 
 import com.monami.app.user.CheckIdOkAction;
 
@@ -33,6 +36,7 @@ public class UserFrontController extends HttpServlet {
 		ActionTo transfer=null;
 		
 		switch(command) {
+			
 		case "/user/UserJoinOk.us":
 			try {
 				transfer=new UserJoinOkAction().execute(req,resp);
@@ -42,10 +46,14 @@ public class UserFrontController extends HttpServlet {
 			}
 			break;
 		case "/user/UserLoginOk.us":
+			
 			try {
+				
+				
 				transfer=new UserLoginOkAction().execute(req,resp);
 				
 			} catch (Exception e) {
+				
 				System.out.println("UserLoginOk : "+e);
 			}
 			break;
@@ -57,11 +65,13 @@ public class UserFrontController extends HttpServlet {
 			}
 			break;
 		case "/user/UserLogoutOk.us":
-			transfer=new ActionTo();
-			transfer.setPath("/jungmin/pen/penpage.mo");
-			req.getSession().removeAttribute("loginUser");
+try {
+				
+				transfer=new LogoutAction().execute(req,resp);
+			}catch(Exception e) {
+				System.out.println("Logout:"+e);
+			}
 			break;
-			
 		case "/user/UserIdSearch.us":
 			try {
 				

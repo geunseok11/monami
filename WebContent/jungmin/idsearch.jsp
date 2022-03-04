@@ -291,6 +291,9 @@ margin-top:30px;
 </style>
 <body>
 <c:set var='cp' value="${pageContext.request.contextPath }"/>
+<c:if test="${not empty param.login}">
+		<script>alert("로그인 실패! 다시 시도해 주세요!");</script>
+	</c:if>
 <div class="popup_buttons">
     <a class="popup_button" href="">
       <div class="popup_button-txt">예약하기</div>
@@ -331,6 +334,7 @@ margin-top:30px;
             		<c:choose>
            			<c:when test="${loginUser.user_id!=null}" >
             	<li><span>${loginUser.user_id} 님 환영합니다.</span>&nbsp;&nbsp;
+            	<a href="${cp}/jungmin/usermodify.mo">MYPAGE</a>&nbsp;
 					<a href="${cp}/user/UserLogoutOk.us">LOGOUT</a></li>
 					</c:when>
 							<c:otherwise>
@@ -705,9 +709,9 @@ margin-top:30px;
 													</div> 
 													<div class="nbsp">&nbsp;</div>
 													<div class="inp_text">
-														<label for="user_phone" class="screen_out">전화번호</label> <input
-															type="text" id="user_phone" name="user_phone"
-															placeholder="전화번호">
+														<label for="user_dob" class="screen_out">생년월일</label> <input
+															type="text" id="user_dob" name="user_dob"
+															placeholder="생년월일">
 													</div>
 												</div>
 												<button type="submit" class="btn_login">아이디찾기</button>

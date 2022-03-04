@@ -8,7 +8,7 @@
 <title>MONAMI</title>
 <link rel="shortcut icon" href="${cp}/images/favicon.ico" type="image/x-icon" />
 <link rel="stylesheet" href="${cp}/css/pen.css"/>
-<link rel="stylesheet" href="${cp}/css/pen2.css"/>
+
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.js"></script>
 
 <script type="text/javascript" src="${cp}/js/common.js"></script>
@@ -313,7 +313,7 @@ input.btn_zip{
             	<c:choose>
            			<c:when test="${loginUser.user_id!=null}" >
             	<li><span>${loginUser.user_id} 님 환영합니다.</span>&nbsp;&nbsp;
-					<a href="${cp}/jungmin/usermodify.mo">MYPAGE</a></li>
+					<a href="${cp}/jungmin/usermodify.mo">MYPAGE</a>&nbsp;
 					<a href="${cp}/user/UserLogoutOk.us">LOGOUT</a></li>
 					</c:when>
 							<c:otherwise>

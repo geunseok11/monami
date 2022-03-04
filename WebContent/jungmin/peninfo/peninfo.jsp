@@ -309,7 +309,8 @@ input.btn_zip{
             	<ul>		
             	<c:choose>
            			<c:when test="${loginUser.user_id!=null}" >
-            	<li><a href="${cp}/jungmin/usermodify.mo"><span>${loginUser.user_id} 님 환영합니다.</span>&nbsp;&nbsp;</a>
+            	<li><span>${loginUser.user_id} 님 환영합니다.</span>&nbsp;&nbsp;
+            		<a href="${cp}/jungmin/usermodify.mo">MYPAGE</a>&nbsp;
 					<a href="${cp}/user/UserLogoutOk.us">LOGOUT</a></li>
 					</c:when>
 							<c:otherwise>
