@@ -13,23 +13,8 @@
         <link rel="stylesheet" href="${cp}/css/style_another.css" />
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.js"></script>
         <script type="text/javascript" src="${cp}/js/common.js"></script>
-        <script type="text/javascript">
-        $(function () {
-            $(document).on("click", ".find_f", function () {
-            dh = $(document).height();
-            poph = $(".find_layer").height();
+        <script type="text/javascript" src="${cp}/js/prodiqr.js"></script>
 
-            $("#bgblack").height(dh).show();
-            $(".find_layer")
-                .show()
-                .animate({ top: $(document).scrollTop() + 50 + "px" }, 100);
-            });
-            $("#bgblack,.btnx_").click(function () {
-            $("#bgblack").height(dh).hide();
-            $(".find_layer").hide();
-            });
-        });
-        </script>
     </head>
     <body>
         <div id="wrap">
