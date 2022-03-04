@@ -97,6 +97,9 @@
 		font-weight: bold;
 		text-decoration: none;
 	}
+	#container{
+		margin-bottom: 100px;
+	}
 </style>
 <body>
     <c:set var="cp" value="${pageContext.request.contextPath}"/>
