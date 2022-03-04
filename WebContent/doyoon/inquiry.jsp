@@ -63,7 +63,7 @@
                             </div>
                             <div class="inputbox">
                                 <input type="text" id="form4" name="iqr_phone">
-                                <label>연락처</label>
+                                <label>*연락처</label>
                             </div>
                             <div class="inputbox">
                                 <input type="text" id="form5" name="iqr_title">
