@@ -15,13 +15,13 @@ public class IdSearchAction implements Action {
 	public ActionTo execute(HttpServletRequest req, HttpServletResponse resp) throws Exception {
 		UserDAO udao=new UserDAO();
 		String user_name=req.getParameter("user_name");
-		String user_phone=req.getParameter("user_phone");
+		String user_dob=req.getParameter("user_dob");
 		HttpSession session =req.getSession();
 		
-		UserDTO idSearchUser=udao.idSearch(user_name,user_phone);
+		UserDTO idSearchUser=udao.idSearch(user_name,user_dob);
 		ActionTo transfer=new ActionTo();
 		if(idSearchUser !=null) {
-			System.out.println(1);
+		
 			session.setAttribute("idSearchUser",idSearchUser);
 			transfer.setRedirect(false);			
 			transfer.setPath("/jungmin/idOk.mo");

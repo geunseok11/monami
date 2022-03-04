@@ -292,6 +292,9 @@ margin-top:30px;
 </style>
 <body>
 <c:set var='cp' value="${pageContext.request.contextPath }"/>
+<c:if test="${not empty param.login}">
+		<script>alert("로그인 실패! 다시 시도해 주세요!");</script>
+	</c:if>
 <div class="popup_buttons">
     <a class="popup_button" href="">
       <div class="popup_button-txt">예약하기</div>
@@ -332,6 +335,7 @@ margin-top:30px;
             		<c:choose>
            			<c:when test="${loginUser.user_id!=null}" >
             	<li><span>${loginUser.user_id} 님 환영합니다.</span>&nbsp;&nbsp;
+            	<a href="${cp}/jungmin/usermodify.mo">MYPAGE</a>&nbsp;
 					<a href="${cp}/user/UserLogoutOk.us">LOGOUT</a></li>
 					</c:when>
 							<c:otherwise>
@@ -699,15 +703,23 @@ margin-top:30px;
            		<div class="idsh">
         		<form method="post" id="idshForm" action="${cp}/user/userRemove.us">
 						<legend class="screen_out">아이디찾기</legend>
+							<div class="box_idsh">
+								<div class="inp_text">
+							 <label for="user_id" class="screen_out"></label> <input
+										type="text" id="user_id" name="user_id" value="${loginUser.user_id}" readonly> 
+													</div> 
+													<div class="nbsp">&nbsp;</div>
 								<div class="box_idsh">
 								<div class="inp_text">
+								
 							 <label for="user_pw" class="screen_out">비밀번호</label> <input
 										type="text" id="user_pw" name="user_pw" placeholder="비밀번호를 입력해주세요"> 
 													</div> 
 													<div class="nbsp">&nbsp;</div>
 													
 												</div>
-												<button type="submit" class="btn_login" id="remove_user">회원탈퇴</button>
+												<button type="submit" class="btn_login" id="remove_user" onclick=:"click1()">회원탈퇴</button>
+												
 												<div class="login_append">
 												
 													<span class="txt_find"> <a

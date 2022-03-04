@@ -319,6 +319,9 @@ border:0 solid black;
 </style>
 <body>
 <c:set var='cp' value="${pageContext.request.contextPath }"/>
+<c:if test="${not empty param.login}">
+		<script>alert("로그인 실패! 다시 시도해 주세요!");</script>
+	</c:if>
 
 <div class="popup_buttons">
     <a class="popup_button" href="">

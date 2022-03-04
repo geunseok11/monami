@@ -1,91 +1,3 @@
-function sendit(){
-	const joinForm = document.joinForm;
-	let user_id = joinForm.user_id;	
-	let result = document.getElementById("result");
-	if(user_id.value == ""){
-		alert("아이디를 입력하세요!");
-		user_id.focus();
-		return false;
-	}
-
-	if(user_id.value.length<5 || user_id.value.length>12){
-		alert("아이디는 5자 이상 12자 이하로 입력하세요!");
-		user_id.focus();
-		return false;
-	}
-
-
-
-	let user_pw = joinForm.user_pw;
-	if(user_pw.value == ""){
-		alert("비밀번호를 입력하세요!")
-		user_pw.focus();
-		return false;
-	}
-	let reg = /^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[~?!@#$%^&*_-]).{8,}$/
-	if(!reg.test(user_pw.value)){
-		alert("비밀번호는 8자 이상, 숫자, 대문자, 소문자, 특수문자를 모두 하나 이상 포함해야 합니다!");
-		user_pw.focus();
-		return false;
-	}
-	if(/(\w)\1\1\1/.test(user_pw.value)){
-		alert("같은 문자를 4번 연속해서 사용할 수 없습니다!");
-		user_pw.focus();
-		return false;
-	}
-	if(user_pw.value.search(/\s/) != -1){
-		alert("비밀번호는 공백을 포함할 수 없습니다!");
-		user_pw.focus();
-		return false;
-	}
-	
-	let user_name = joinForm.user_name;
-	if(user_name.value == ""){
-		alert("이름을 입력하세요!");
-		user_name.focus();
-		return false;
-	}
-	// 생년월일 유효성 검사
-	let user_dob = joinForm.user_dob;
-	
-    let birth_pattern = /^(19[0-9][0-9]|20\d{2})(0[0-9]|1[0-2])(0[1-9]|[1-2][0-9]|3[0-1])$/
-
-    if(!birth_pattern.test(user_dob.value)){
-    	alert('생년월일 8자리를 입력해주세요'); 
-        user_dob.value=''; 
-        user_dob.focus(); 
-        return false; 
-   }
-    //주소검색 유효성검사
-    let user_zipcode = joinForm.user_zipcode;
-	if(user_zipcode.value == ""){
-		alert("주소검색을 이용하세요!");
-		sample6_execDaumPostcode();
-		return false;
-	}
-	let user_addrdetail = joinForm.user_addrdetail;
-	if(user_addrdetail.value == ""){
-		alert("주소를 마저 입력하세요!");
-		user_addrdetail.focus();
-		return false;
-	}
-	 let user_phone = joinForm.user_phone;
-
-	    // 전화번호 유효성 검사  
-	    let mobile_pattern = /^[0-9]{2,3}[0-9]{3,4}[0-9]{4}/
-	    if(!mobile_pattern.test(user_phone.value)) {
-	    	alert('핸드폰 번호를 확인해주세요.');  
-	        user_phone.value=''; 
-	        user_phone.focus(); 
-	        return false;
-	    }
-	   
-	    
-	   
-	return true;
-	
-}
-
 function sample6_execDaumPostcode() {
 	new daum.Postcode(
 		{
@@ -147,16 +59,118 @@ function checkId(){
 				console.log(txt);
 				if(txt == 'O'){
 					result.innerHTML = "사용할 수 있는 아이디입니다!";
-					userpw.focus();
+					user_pw.focus();
 				}
 				else{
 					result.innerHTML = "중복된 아이디가 있습니다!"
-					userid.value = '';
-					userid.focus();
+					user_id.value = '';
+					user_id.focus();
 				}
 			}
 		}
 	}
-	xhr.open("GET",cp+"/user/CheckIdOk.us?userid="+userid.value);//XMLHttpRequest.OPENED
+	xhr.open("GET",cp+"/user/CheckIdOk.us?user_id="+user_id.value);//XMLHttpRequest.OPENED
 	xhr.send();
 }
+function click1(){
+	const form=document.idshForm
+	const user_id=document.getElementById("user_id").value
+	if(user==null){
+		alert("감사합니다 다음에 다시만나요~~~!")
+	}else{
+		alert("회원탈퇴 실패")
+	}
+}
+	
+function sendit(){
+	const joinForm = document.joinForm;
+	let user_id = joinForm.userid;	
+	let result = document.getElementById("result");
+	if(user_id.value == ""){
+		alert("아이디를 입력하세요!");
+		user_id.focus();
+		return false;
+	}
+	if(user_id.value.length<5 || user_id.value.length>12){
+		alert("아이디는 5자 이상 12자 이하로 입력하세요!");
+		user_id.focus();
+		return false;
+	}
+	if(result.innerHTML == "&nbsp;"){
+		alert("중복체크를 진행해주세요!");
+		user_id.focus();
+		return false;
+	}
+	if(result.innerHTML == "중복된 아이디가 있습니다!"){
+		alert("중복체크 통과 후 가입이 가능합니다!");
+		user_id.focus();
+		return false;
+	}
+	
+	let user_pw = joinForm.user_pw;
+	let userpw_re = joinForm.userpw_re;
+	if(user_pw.value == ""){
+		alert("비밀번호를 입력하세요!")
+		user_pw.focus();
+		return false;
+	}
+	let reg = /^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[~?!@#$%^&*_-]).{8,}$/
+	if(!reg.test(user_pw.value)){
+		alert("비밀번호는 8자 이상, 숫자, 대문자, 소문자, 특수문자를 모두 하나 이상 포함해야 합니다!");
+		user_pw.focus();
+		return false;
+	}
+	if(/(\w)\1\1\1/.test(user_pw.value)){
+		alert("같은 문자를 4번 연속해서 사용할 수 없습니다!");
+		user_pw.focus();
+		return false;
+	}
+	if(user_pw.value.search(/\s/) != -1){
+		alert("비밀번호는 공백을 포함할 수 없습니다!");
+		user_pw.focus();
+		return false;
+	}
+//	if(userpw_re.value == ""){
+//		alert("비밀번호 확인을 해주세요!");
+//		userpw_re.focus();
+//		return false;
+//	}
+//	if(userpw.value != userpw_re.value){
+//		alert("비밀번호 확인을 다시 해주세요!");
+//		userpw.focus();
+//		return false;
+//	}
+	
+	let user_name = joinForm.user_name;
+	if(user_name.value == ""){
+		alert("이름을 입력하세요!");
+		user_name.focus();
+		return false;
+	}
+	let user_zipcode = joinForm.user_zipcode;
+	if(user_zipcode.value == ""){
+		alert("주소검색을 이용하세요!");
+		sample6_execDaumPostcode();
+		return false;
+	}
+	let user_addrdetail = joinForm.user_addrdetail;
+	if(user_addrdetail.value == ""){
+		alert("주소를 마저 입력하세요!");
+		user_addrdetail.focus();
+		return false;
+	}
+	return true;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

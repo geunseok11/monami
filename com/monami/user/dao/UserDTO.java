@@ -12,6 +12,7 @@ public class UserDTO {
 	private String user_addretc;
 	private String user_addr;
 	private String user_phone;
+	
 	public String getUser_id() {
 		return user_id;
 	}

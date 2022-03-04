@@ -1,5 +1,6 @@
 package com.monami.app.user.dao;
 
+import java.sql.Date;
 import java.util.HashMap;
 import java.util.List;
 
@@ -7,6 +8,7 @@ import org.apache.ibatis.session.SqlSession;
 
 
 import com.monami.mybatis.SqlMapConfig;
+import com.sun.javafx.collections.MappingChange.Map;
 
 public class UserDAO {
 	SqlSession sqlsession;
@@ -63,10 +65,14 @@ public class UserDAO {
 	}
 
 	
-	public boolean removeUser(String user_pw) {
-		return 1 == sqlsession.delete("User.removeUser",user_pw);
+	public boolean removeUser(String user_id,String user_pw) {
+		HashMap<String,String> datas1=new HashMap<String,String>();
+		 datas1.put("user_id",user_id);
+		 datas1.put("user_pw",user_pw);
+		return 1 == sqlsession.delete("User.removeUser",datas1);
 	}
-
+	
+	
 
 	
 	
