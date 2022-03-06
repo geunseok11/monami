@@ -20,7 +20,7 @@ public class NewsRemoveAction implements Action{
 			transfer.setPath(req.getContextPath()+"/news/NewsBoardList.mo?news_idx="+news_idx);
 			}
 		else {
-			transfer.setPath(req.getContextPath()+"/news/News_page.mo?news_idx="+news_idx);
+			transfer.setPath(req.getContextPath()+"/news/Newsview.mo?news_idx="+news_idx);
 		}
 		return transfer;
 	}

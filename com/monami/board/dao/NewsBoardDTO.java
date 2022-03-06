@@ -4,8 +4,6 @@ public class NewsBoardDTO {
 	private int news_idx;
     private String news_title;
     private String news_writer;
-    private String news_subtit;
-    private String news_imgctt;
     private String news_content;
     private String created_at;
 	public int getNews_idx() {
@@ -25,18 +23,6 @@ public class NewsBoardDTO {
 	}
 	public void setNews_writer(String news_writer) {
 		this.news_writer = news_writer;
-	}
-	public String getNews_subtit() {
-		return news_subtit;
-	}
-	public void setNews_subtit(String news_subtit) {
-		this.news_subtit = news_subtit;
-	}
-	public String getNews_imgctt() {
-		return news_imgctt;
-	}
-	public void setNews_imgctt(String news_imgctt) {
-		this.news_imgctt = news_imgctt;
 	}
 	public String getNews_content() {
 		return news_content;

@@ -18,7 +18,7 @@
 		select count(*) from user where user_id=#{user_id}
 	</select>
 <select id="idSearch" parameterType="hashmap" resultType="userdto">
-		select * from user where user_name=#{user_name} and user_dob=#{user_dob}
+		select * from user where user_name=#{user_name} and user_phone=#{user_phone}
 	</select>
 <select id="pwSearch" parameterType="hashmap" resultType="userdto">
 		select * from user where user_name=#{user_name} and user_id=#{user_id} and user_phone=#{user_phone}
@@ -31,6 +31,6 @@
 		,user_addrdetail=#{user_addrdetail},user_addretc=#{user_addretc},user_phone=#{user_phone}		
 	</update>
 	<delete id="removeUser" parameterType="string">
-		delete from user where  user_pw=#{user_pw} and user_id=#{user_id}
+		delete from user where  user_pw=#{user_pw}
 	</delete>
 </mapper>
