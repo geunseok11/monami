@@ -1,4 +1,4 @@
-package com.monami.app.user;
+package com.monami.user;
 
 import java.io.PrintWriter;
 
@@ -7,7 +7,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.monami.action.Action;
 import com.monami.action.ActionTo;
-import com.monami.app.user.dao.UserDAO;
+import com.monami.user.dao.UserDAO;
 
 public class CheckIdOkAction implements Action {
 
