@@ -24,12 +24,18 @@ public class UserLoginOkAction implements Action{
 			
 			session.setAttribute("loginUser",loginUser);
 			transfer.setRedirect(false);
-			transfer.setPath("/jungmin/news_manegement.jsp");
+
+			transfer.setPath("/index.jsp");
+
+
+
 		}
 		else {			
 			
 			transfer.setRedirect(false);
-			transfer.setPath("/jungmin/news_manegement.jsp?login=f");
+
+			transfer.setPath("/index.jsp?login=f");
+
 		}
 		return transfer;
 	}
