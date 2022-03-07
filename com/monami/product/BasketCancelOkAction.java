@@ -12,9 +12,9 @@ public class BasketCancelOkAction implements Action {
 	@Override
 	public ActionTo execute(HttpServletRequest req, HttpServletResponse resp) throws Exception {
 		String cookie = req.getHeader("Cookie");
-		String prodidx = req.getParameter("prodidx");
-		String prodcnt = req.getParameter("prodcnt");
-		String keyword = prodidx + ":" + prodcnt;
+		String prod_idx = req.getParameter("prod_idx");
+		String prod_count = req.getParameter("prod_count");
+		String keyword = prod_idx + ":" + prod_count;
 
 		String basket = "";
 		String value = "";
@@ -38,7 +38,7 @@ public class BasketCancelOkAction implements Action {
 			Cookie changeCookie = new Cookie("basket", value);
 			resp.addCookie(changeCookie);
 			transfer.setRedirect(false);
-			transfer.setPath("/geunseok/BasketList.pd");
+			transfer.setPath("/geunseok/BucketList.mo");
 			return transfer;
 		}
 

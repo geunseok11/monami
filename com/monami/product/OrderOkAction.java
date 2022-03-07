@@ -18,7 +18,6 @@ public class OrderOkAction implements Action {
 		ProductDAO pdao = new ProductDAO();
 		HttpSession session = req.getSession();
 
-		// String userid = ((UserDTO)session.getAttribute("loginUser")).getUserid();
 		int prodidx = Integer.parseInt(req.getParameter("prodindx"));
 		OrderDAO odao = new OrderDAO();
 		OrderDTO order = new OrderDTO();
@@ -27,6 +26,7 @@ public class OrderOkAction implements Action {
 		order.setUserid(req.getParameter("userid"));
 		order.setUsername(req.getParameter("username"));
 		order.setUseraddr(req.getParameter("useraddr"));
+		order.setUseraddr(req.getParameter("userphone"));
 		order.setOrderitem(req.getParameter("orderitem"));
 		order.setOrderpay(Integer.parseInt(req.getParameter("orderpay")));
 		order.setOrder_count(Integer.parseInt(req.getParameter("ordercnt")));
