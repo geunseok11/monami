@@ -37,6 +37,61 @@ form table tr td a{
 .btn_area:hover{
 	background-color: #95FFC0;
 }
+.reply_line{
+		width:900px;
+		margin-top:20px;
+		padding-top:30px;
+		margin: 0 auto;
+	}
+	.write_box{
+		padding-bottom: 20px;
+	}
+	.write_box>tbody>tr>td:first-child,.update_box>tbody>tr>td:first-child{
+		width:150px;
+		text-align: center;
+		font-weight: bold;
+		font-size: 18px;
+	}
+	.write_box>tbody>tr>td+td{
+		position: relative;
+	}
+	.write_box textarea, .update_box textarea{
+		padding:5px 10px;
+		height:70px;
+		resize:none;
+		width:600px;
+		outline:none;
+		border:1px solid #c40f39;
+		border-radius:10px;
+	}
+	.update_box textarea, .write_box textarea{
+		width:500px;
+		height:80px;
+		font-size: 15px;
+	}
+	.update_box{
+		padding-top:20px;
+		padding-bottom: 30px;
+	}
+	.update_box .btns a, .write_box .btns a{
+		display:inline-block;
+		width:90px;
+		height:40px;
+		text-align: center;
+		vertical-align: middle;
+		line-height: 40px;
+		margin-left: 10px;
+	}
+	.adbtn{
+		display:inline-block;
+		border-radius:5px;
+		background-color:#c40f39;
+		color:white;
+		font-weight: bold;
+		font-size: 17px;
+		text-decoration: none;
+	}
+
 </style>
 <body>
     <c:set var="cp" value="${pageContext.request.contextPath}"/>
@@ -105,6 +160,7 @@ form table tr td a{
                     </td>
                 </tr>
             </table>
+
             <table class="btn_area">
 				<tr align="right" valign="middle">
 					<td>
@@ -113,6 +169,64 @@ form table tr td a{
 				</tr>
 			</table>
         </form>
+        <div class="reply_line">
+        	<c:if test="${adminUser != null}">
+        	<c:if test="${reply.answer == null }">
+        	<form name="replyForm" method="post" action="${cp}/inquiry/replywrite.ir">
+        		<input type="hidden" name="iqr_idx" value="${inquiry.iqr_idx}">
+        		<table class="write_box">
+        			<tr height="50px">
+        				<td align="center" width="150px">답변</td>
+        				<td>
+        					<textarea name="answer" class="answer" style="resize:none"></textarea>	
+        				</td>
+        				<td>
+        					<div class="btns">
+        						<a class="adbtn" href="javascript:document.replyForm.submit()">등록</a>
+        					</div>
+        				</td>
+        			</tr>
+        		</table>
+        	</form>
+        	</c:if>
+        	<c:if test="${reply.answer !=null}">
+        		<form name="replyForm" method="post" action="${cp}/inquiry/replyupdate.ir">
+        		<input type="hidden" name="iqr_idx" value="${inquiry.iqr_idx}">
+        		<table class="write_box">
+        			<tr height="50px">
+        				<td align="center" width="150px">답변</td>
+        				<td>
+        					<textarea name="answer" class="answer" style="resize:none"></textarea>	
+        				</td>
+        				<td>
+        					<div class="btns">
+        						<a class="adbtn" href="javascript:document.replyForm.submit()">수정</a>
+        					</div>
+        				</td>
+        			</tr>
+        		</table>
+        	</form>
+        	</c:if>
+        	</c:if>
+        	<form name="updateForm" method="post" action="">
+        		<input type="hidden" name="iqr_idx" value="${reply.iqr_idx}">
+        		<table class="update_box">
+        				<tr height="50px">
+        					<td align="center" width="150px">관리자<br>답변</td>
+        					<td>
+        						<textarea readonly class="answer" style="resize:none">${reply.answer}</textarea>
+        					</td>
+        					<c:if test="${adminUser != null}">
+        					<td>
+								<div class="btns">
+        							<a class="adbtn" href="javascript:deleteReply(${reply.iqr_idx})">삭제</a>
+        						</div>
+        					</td>
+        					</c:if>
+        				</tr>
+        		</table>
+        	</form>
+        </div>
         <!-- 푸터 시작 -->
    <%@ include file="../doyoon/footer.jsp"%>
       </div>

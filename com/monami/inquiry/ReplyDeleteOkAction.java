@@ -8,12 +8,13 @@ import javax.servlet.http.HttpServletResponse;
 import com.monami.action.Action;
 import com.monami.action.ActionTo;
 import com.monami.iqr.dao.IqrDAO;
+import com.monami.reply.dao.ReplyDAO;
 
 public class ReplyDeleteOkAction implements Action{
 
 	@Override
 	public ActionTo execute(HttpServletRequest req, HttpServletResponse resp) throws Exception {
-		IqrDAO idao = new IqrDAO();
+		ReplyDAO rdao = new ReplyDAO();
 		resp.setCharacterEncoding("UTF-8");
 		resp.setContentType("text/html;charset=utf-8");
 		
@@ -21,7 +22,7 @@ public class ReplyDeleteOkAction implements Action{
 		
 		PrintWriter out = resp.getWriter();
 		
-		if(idao.deleteReply(iqr_idx)) {
+		if(rdao.deleteReply(iqr_idx)) {
 			out.write("<script>alert('"+iqr_idx+"번 답글 삭제 성공!');");
 		}
 		else {
