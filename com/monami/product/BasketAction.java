@@ -16,9 +16,13 @@ public class BasketAction implements Action {
 	@Override
 	public ActionTo execute(HttpServletRequest req, HttpServletResponse resp) throws Exception {
 		ProductDAO pdao = new ProductDAO();
+		String idx = req.getParameter("prod_idx");
+		String cnt = req.getParameter("prod_count");
 
-		int prodidx = Integer.parseInt(req.getParameter("prodidx"));
-		int prodcnt = Integer.parseInt(req.getParameter("prodcnt"));
+		int prodidx = Integer.parseInt(idx);
+		int prodcnt = Integer.parseInt(cnt);
+
+		System.out.println("idx" + prodidx);
 
 		Cookie[] cookies = req.getCookies();
 		String commit = req.getParameter("commit");
@@ -40,10 +44,10 @@ public class BasketAction implements Action {
 			out.println(basket);
 		} else {
 			basket += prodidx + ":" + prodcnt + "/";
-			Cookie cookie = new Cookie("bucket", basket);
+			Cookie cookie = new Cookie("basket", basket);
 			resp.addCookie(cookie);
 			transfer.setRedirect(false);
-			transfer.setPath("/geunseok/BasketList.pd");
+			transfer.setPath("/jungmin/peninfo/peninfo.jsp");
 			return transfer;
 		}
 
