@@ -29,7 +29,7 @@ public class IdSearchAction implements Action {
 		else {			
 		
 			transfer.setRedirect(false);
-			transfer.setPath("/jungmin/pen/penpage.mo");
+			transfer.setPath("/index.jsp");
 		}
 		return transfer;
 	}

@@ -27,12 +27,12 @@ public class UserJoinOkAction implements Action{
 		ActionTo transfer=new ActionTo();
 		if(udao.join(newUser)) {
 			transfer.setRedirect(true);
-			transfer.setPath(req.getContextPath()+"/jungmin/peninfo/peninfo.mo");
+			transfer.setPath(req.getContextPath()+"/index.jsp");
 		}
 		else {
 			
 			transfer.setRedirect(true);
-			transfer.setPath(req.getContextPath()+"/jungmin/pen/penpage.mo");
+			transfer.setPath(req.getContextPath()+"/index.jsp");
 		}
 		return transfer;
 	}

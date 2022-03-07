@@ -31,12 +31,12 @@ public class UserLoginOkAction implements Action{
 				resp.addCookie(c);
 			}
 			transfer.setRedirect(false);
-			transfer.setPath("/jungmin/peninfo/peninfo.mo");
+			transfer.setPath("/index.jsp");
 		}
 		else {			
 			
 			transfer.setRedirect(false);
-			transfer.setPath("/jungmin/pen/penpage.mo?login=f");
+			transfer.setPath("/index.jsp?login=f");
 		}
 		return transfer;
 	}}

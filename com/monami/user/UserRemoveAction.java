@@ -24,11 +24,11 @@ public class UserRemoveAction implements Action{
 			ActionTo transfer=new ActionTo();
 			transfer.setRedirect(true);
 			if(udao.removeUser(user_id,user_pw)) {
-				transfer.setPath(req.getContextPath()+"/jungmin/pen/penpage.mo");
+				transfer.setPath(req.getContextPath()+"/index.jsp");
 				req.getSession().removeAttribute("loginUser");
 			}
 			else {
-				transfer.setPath(req.getContextPath()+"/jungmin/peninfo/peninfo.mo");
+				transfer.setPath(req.getContextPath()+"/index.jsp");
 				PrintWriter out=resp.getWriter();
 				out.println("<script>alert('회원탈퇴실패');</script>");
 			}
