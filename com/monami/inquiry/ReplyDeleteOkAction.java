@@ -1,4 +1,4 @@
-package com.monami.iqr;
+package com.monami.inquiry;
 
 import java.io.PrintWriter;
 
@@ -7,7 +7,6 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.monami.action.Action;
 import com.monami.action.ActionTo;
-import com.monami.iqr.dao.IqrDAO;
 import com.monami.reply.dao.ReplyDAO;
 
 public class ReplyDeleteOkAction implements Action{

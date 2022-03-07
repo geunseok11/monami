@@ -1,4 +1,4 @@
-package com.monami.iqr;
+package com.monami.inquiry;
 
 import java.io.PrintWriter;
 

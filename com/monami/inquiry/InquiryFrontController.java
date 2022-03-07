@@ -64,6 +64,13 @@ public class InquiryFrontController extends HttpServlet {
 				System.out.println("ReplyWrite : "+e);
 			}
 			break;
+		case "/inquiry/replyupdate.ir":
+			try {
+				new ReplyUpdateOkAction().execute(req,resp);
+			} catch (Exception e) {
+				System.out.println("ReplyModifyOk : "+e);
+			}
+			break;
 		case "/inquiryReplyDeleteOk.ir":
 			try {
 				new ReplyDeleteOkAction().execute(req,resp);
