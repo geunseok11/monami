@@ -119,7 +119,7 @@
               </a>
            	  </c:if>
            	  <c:if test="${page != 1 }">
-           	  	<a href="${cp}/product/ProductList.mo?page=${page-1}&keyword=${keyword}" 
+           	  	<a href="${cp}/product/ProductList.po?page=${page-1}&keyword=${keyword}" 
               	class="page_prev" style="padding: 1px">
                 <img src="${cp}/images/page_prev.gif" alt="" />
               </a>
@@ -131,7 +131,7 @@
               				<strong>${i}</strong>
               			</c:when>
               			<c:otherwise>
-              				<a href="${cp}/product/ProductList.mo?page=${i}&keyword=${keyword}">${i}</a>
+              				<a href="${cp}/product/ProductList.po?page=${i}&keyword=${keyword}">${i}</a>
               			</c:otherwise>
               		</c:choose>
               	</c:forEach>
@@ -176,7 +176,7 @@
   		function sendit(){
   			let cp = "${pageContext.request.contextPath}";
   			let q = document.getElementById("keyWord");
-  			location.href = cp+"/product/ProductList.mo?keyword="+q.value;
+  			location.href = cp+"/product/ProductList.po?keyword="+q.value;
   		}
   </script>
 </html>
