@@ -1,3 +1,6 @@
 .DS_store
 .vscode
 .metadata
+/build/
+.classpath
+/bin/

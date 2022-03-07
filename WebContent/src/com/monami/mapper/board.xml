@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="Board">
+	<insert id="insertVideo" parameterType="vdto">
+		insert into video (video_title,video_content,video_img) values (#{video_title},#{video_content},#{video_img})
+	</insert>
+	<update id="updateVideo" parameterType="vdto">
+		update video set (video_title = #{video_title}, video_content = #{video_content}) 
+	</update>
+	<select id="getBoardList" parameterType="hashmap" resultType="vdto">
+		select * from video order by video_idx desc limit #{startRow},#{pageSize}
+	</select>
+	<select id="getBoardCnt" resultType="_int">
+		select count(*) from video
+	</select>
+</mapper>

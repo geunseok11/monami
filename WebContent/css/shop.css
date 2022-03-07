@@ -1,0 +1,489 @@
+/* 공통 요소 */
+html,
+body,
+table,
+tr,
+td,
+input,
+select,
+textarea {
+  font-family: Dotum;
+  font-size: 12px;
+  line-height: 16px;
+  color: #000;
+  letter-spacing: 0px;
+  margin-left: 0px;
+  margin-top: 0px;
+  margin-right: 0px;
+  margin-bottom: 0px;
+}
+p {
+  padding: 0;
+  margin: 0;
+}
+a {
+  text-decoration: none;
+  color: #000;
+}
+h1,
+h2,
+h3,
+h4,
+h5 {
+  display: none;
+}
+table {
+  border-spacing: 0 !important;
+}
+li,
+ol,
+ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+img {
+  border: 0;
+}
+a:hover {
+  text-decoration: normal;
+}
+#wrap_popup {
+  position: relative;
+  width: 800px;
+  float: left;
+}
+
+/* Header */
+#wrap_popup .header {
+  position: relative;
+  width: 100%;
+  height: 79px;
+  background: url(../images/tit.jpg) no-repeat;
+}
+#wrap_popup .header .btn_close {
+  display: inline-block;
+  position: absolute;
+  top: 13px;
+  right: 25px;
+}
+
+/* Contents */
+#wrap_popup .contents {
+  position: relative;
+  width: 100%;
+  height: 721px;
+  float: left;
+  overflow-y: scroll;
+}
+#wrap_popup .contents .tit_sub {
+  padding: 30px 0 27px 0;
+}
+#wrap_popup .contents .wrap_map {
+  width: 783px;
+  height: 439px;
+  background-color: #f2f2f2;
+}
+#wrap_popup .contents .wrap_map .map {
+  position: relative;
+  width: 343px;
+  height: 439px;
+  float: left;
+  background: url(../images/map.jpg) no-repeat;
+}
+#wrap_popup .contents .wrap_map .map .map_tit {
+  display: inline-block;
+  background: url(../images/icon_arr.png) no-repeat;
+  padding-left: 14px;
+  margin: 35px 0 0 20px;
+  line-height: 16px;
+}
+#wrap_popup .contents .wrap_map .map a {
+  font-size: 12px;
+  text-decoration: none;
+  color: #363636;
+  position: absolute;
+}
+#wrap_popup .contents .wrap_map .map a:visited {
+  color: #363636;
+}
+#wrap_popup .contents .wrap_map .map a:focus,
+#wrap_popup .contents .wrap_map .map a:hover {
+  background-color: #cd0600;
+  color: #fff !important;
+}
+#wrap_popup .contents .wrap_map .map .b_map1 {
+  top: 240px;
+  left: 142px;
+}
+#wrap_popup .contents .wrap_map .map .b_map2 {
+  top: 250px;
+  left: 220px;
+}
+#wrap_popup .contents .wrap_map .map .b_map3 {
+  top: 250px;
+  left: 75px;
+}
+
+#wrap_popup .contents .wrap_map .map_sub {
+  width: 440px;
+  height: 439px;
+  margin-left: 343px;
+  background: url(../images/map_0.jpg) no-repeat;
+}
+#wrap_popup .contents .wrap_map .map_sub div {
+  position: relative;
+  width: 440px;
+  height: 439px;
+  /* display: none; */
+  background-color: #f2f2f2;
+}
+/*  */
+#wrap_popup .contents .wrap_map .map_sub div a {
+  font-size: 11px;
+  text-decoration: none;
+  color: #363636;
+  position: absolute;
+  cursor: pointer;
+}
+#wrap_popup .contents .wrap_map .map_sub div a:visited {
+  color: #363636;
+}
+#wrap_popup .contents .wrap_map .map_sub div a:focus,
+#wrap_popup .contents .wrap_map .map_sub div a:hover {
+  background-color: #cd0600;
+  color: #fff !important;
+}
+
+/* Map */
+/* 서울시 */
+#map1 {
+  background: url(../images/map1.png) no-repeat;
+  display: none;
+}
+#map1 .b_map1_1 {
+  left: 245px;
+  top: 96px;
+}
+#map1 .b_map1_2 {
+  left: 228px;
+  top: 144px;
+}
+#map1 .b_map1_3 {
+  left: 286px;
+  top: 142px;
+}
+#map1 .b_map1_4 {
+  left: 156px;
+  top: 164px;
+}
+#map1 .b_map1_5 {
+  left: 230px;
+  top: 181px;
+}
+#map1 .b_map1_6 {
+  left: 157px;
+  top: 212px;
+}
+#map1 .b_map1_7 {
+  left: 203px;
+  top: 202px;
+}
+#map1 .b_map1_8 {
+  left: 260px;
+  top: 207px;
+}
+#map1 .b_map1_9 {
+  left: 298px;
+  top: 184px;
+}
+#map1 .b_map1_10 {
+  left: 69px;
+  top: 215px;
+}
+#map1 .b_map1_11 {
+  left: 164px;
+  top: 239px;
+}
+#map1 .b_map1_12 {
+  left: 224px;
+  top: 226px;
+}
+#map1 .b_map1_13 {
+  left: 254px;
+  top: 237px;
+}
+#map1 .b_map1_14 {
+  left: 296px;
+  top: 243px;
+}
+#map1 .b_map1_15 {
+  left: 348px;
+  top: 225px;
+}
+#map1 .b_map1_16 {
+  left: 97px;
+  top: 260px;
+}
+#map1 .b_map1_17 {
+  left: 133px;
+  top: 262px;
+}
+#map1 .b_map1_18 {
+  left: 180px;
+  top: 280px;
+}
+#map1 .b_map1_19 {
+  left: 206px;
+  top: 254px;
+}
+#map1 .b_map1_20 {
+  left: 90px;
+  top: 286px;
+}
+#map1 .b_map1_21 {
+  left: 129px;
+  top: 323px;
+}
+#map1 .b_map1_22 {
+  left: 177px;
+  top: 317px;
+}
+#map1 .b_map1_23 {
+  left: 232px;
+  top: 302px;
+}
+#map1 .b_map1_24 {
+  left: 277px;
+  top: 291px;
+}
+#map1 .b_map1_25 {
+  left: 320px;
+  top: 275px;
+}
+
+/* 경기도 */
+#map2 {
+  background: url(../images/map2.png) no-repeat;
+  display: none;
+}
+#map2 .b_map2_1 {
+  left: 181px;
+  top: 94px;
+}
+#map2 .b_map2_2 {
+  left: 232px;
+  top: 113px;
+}
+#map2 .b_map2_3 {
+  left: 190px;
+  top: 135px;
+}
+#map2 .b_map2_4 {
+  left: 136px;
+  top: 152px;
+}
+#map2 .b_map2_5 {
+  left: 180px;
+  top: 159px;
+}
+#map2 .b_map2_6 {
+  left: 185px;
+  top: 184px;
+}
+#map2 .b_map2_7 {
+  left: 262px;
+  top: 164px;
+}
+#map2 .b_map2_8 {
+  left: 223px;
+  top: 200px;
+}
+#map2 .b_map2_9 {
+  left: 88px;
+  top: 194px;
+}
+#map2 .b_map2_10 {
+  left: 141px;
+  top: 201px;
+}
+#map2 .b_map2_11 {
+  left: 191px;
+  top: 219px;
+}
+#map2 .b_map2_12 {
+  left: 209px;
+  top: 236px;
+}
+#map2 .b_map2_13 {
+  left: 296px;
+  top: 243px;
+}
+#map2 .b_map2_14 {
+  left: 118px;
+  top: 240px;
+}
+#map2 .b_map2_15 {
+  left: 150px;
+  top: 254px;
+}
+#map2 .b_map2_16 {
+  left: 182px;
+  top: 247px;
+}
+#map2 .b_map2_17 {
+  left: 201px;
+  top: 262px;
+}
+#map2 .b_map2_18 {
+  left: 151px;
+  top: 270px;
+}
+#map2 .b_map2_19 {
+  left: 113px;
+  top: 270px;
+}
+#map2 .b_map2_20 {
+  left: 187px;
+  top: 276px;
+}
+#map2 .b_map2_21 {
+  left: 240px;
+  top: 268px;
+}
+#map2 .b_map2_22 {
+  left: 313px;
+  top: 300px;
+}
+#map2 .b_map2_23 {
+  left: 154px;
+  top: 288px;
+}
+#map2 .b_map2_24 {
+  left: 121px;
+  top: 299px;
+}
+#map2 .b_map2_25 {
+  left: 185px;
+  top: 300px;
+}
+#map2 .b_map2_26 {
+  left: 227px;
+  top: 316px;
+}
+#map2 .b_map2_27 {
+  left: 268px;
+  top: 311px;
+}
+#map2 .b_map2_28 {
+  left: 190px;
+  top: 324px;
+}
+#map2 .b_map2_29 {
+  left: 156px;
+  top: 335px;
+}
+#map2 .b_map2_30 {
+  left: 174px;
+  top: 371px;
+}
+#map2 .b_map2_31 {
+  left: 238px;
+  top: 366px;
+}
+
+/* 인천광역시 */
+#map3 {
+  background: url(../images/map3.png) no-repeat;
+  display: none;
+}
+#map3 .b_map3_1 {
+  left: 215px;
+  top: 185px;
+}
+#map3 .b_map3_2 {
+  left: 214px;
+  top: 303px;
+}
+#map3 .b_map3_3 {
+  left: 305px;
+  top: 249px;
+}
+#map3 .b_map3_4 {
+  left: 290px;
+  top: 301px;
+}
+#map3 .b_map3_5 {
+  left: 317px;
+  top: 323px;
+}
+#map3 .b_map3_6 {
+  left: 302px;
+  top: 350px;
+}
+#map3 .b_map3_7 {
+  left: 351px;
+  top: 262px;
+}
+#map3 .b_map3_8 {
+  left: 352px;
+  top: 297px;
+}
+#map3 .b_map3_9 {
+  left: 354px;
+  top: 342px;
+}
+#map3 .b_map3_10 {
+  left: 204px;
+  top: 372px;
+}
+
+/* Table */
+.wrap_tb {
+  width: 95%;
+  float: left;
+  margin-left: 20px;
+  padding-bottom: 30px;
+}
+.wrap_tb .tb_tit {
+  padding: 32px 0 18px 0;
+}
+.wrap_tb .tb_result {
+  width: 100%;
+}
+.wrap_tb .tb_result th {
+  height: 38px;
+  line-height: 38px;
+  border-top: 1px solid #000;
+  border-bottom: 1px solid #adadad;
+  font-size: 12px;
+  font-weight: normal;
+  background: url(../images/tb_bar.gif) no-repeat;
+}
+.wrap_tb .tb_result th:first-child,
+.wrap_tb .tb_result th.first {
+  background: none;
+}
+.wrap_tb .tb_result td {
+  height: 116px;
+  line-height: 18px;
+  border-bottom: 1px solid #adadad;
+  font-size: 12px;
+  text-align: center;
+  word-break: break-all;
+}
+.wrap_tb .tb_result td.first {
+  text-align: left;
+}
+.wrap_tb .tb_result td .msg {
+  text-align: center;
+}
+.wrap_tb .tb_result td .shop_tit {
+  display: block;
+  padding-left: 10px;
+  font-weight: bold;
+}
+.wrap_tb .tb_result td .shop_adr {
+  display: inline-block;
+  padding-left: 10px;
+}
