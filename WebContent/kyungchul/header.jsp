@@ -487,7 +487,7 @@ input.btn_zip{
 						</div>
 						<div class="nav_search">
 							<input type="text" name="" id="" /> <a
-								href="${cp}/product/ProductList.po?keyword"> <img
+								href="${cp}/product/ProductList.pd?keyword"> <img
 								src="${cp}/images/btn_search.gif" alt="" />
 							</a>
 						</div>
