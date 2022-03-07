@@ -374,7 +374,7 @@ input.btn_zip{
 										</h2>
 
 										<form method="post" id="loginForm"
-											action="${cp}/user/UserLoginOk.us"">
+											action="${cp}/user/UserLoginOk.ad">
 											<fieldset>
 												<legend class="screen_out">로그인 정보 입력폼</legend>
 												<div class="box_login">
@@ -465,8 +465,9 @@ input.btn_zip{
 								<ul>
 									<li><a href="${cp}/doyoon/FAQ.jsp">자주묻는질문</a></li>
 									<li><a href="${cp}/doyoon/Inquiry.jsp">문의하기</a></li>
+									<li><a href="${cp}/inquiry/InquiryList.ir">문의사항</a></li>
 									<li><a href="${cp}/geunseok/board_event.jsp">이벤트</a></li>
-									<li><a class="find_f" href="${cp}/shop/shop.html"
+									<li><a class="find_f"
 										style="padding-left: -10px;">모나미 패밀리샵 찾기</a></li>
 								</ul></li>
 							<li><a href="http://mpms.monami.com/promotion/">기업 구매 /
@@ -486,7 +487,7 @@ input.btn_zip{
 						</div>
 						<div class="nav_search">
 							<input type="text" name="" id="" /> <a
-								href="${cp}/product/ProductList.mo?keyword"> <img
+								href="${cp}/product/ProductList.po?keyword"> <img
 								src="${cp}/images/btn_search.gif" alt="" />
 							</a>
 						</div>
@@ -539,7 +540,7 @@ input.btn_zip{
 								<li><a href="${cp}/doyoon/FAQ.jsp">자주묻는질문</a></li>
 								<li><a href="${cp}/doyoon/Inquiry.jsp">문의하기</a></li>
 								<li><a href="${cp}/geunseok/board_event.jsp">이벤트</a></li>
-								<li><a class="find_f" href="${cp}/shop/shop.html">모나미 패밀리샵
+								<li><a class="find_f">모나미 패밀리샵
 										찾기</a></li>
 							</ul>
 						</div>
