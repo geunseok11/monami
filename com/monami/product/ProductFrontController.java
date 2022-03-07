@@ -10,7 +10,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.monami.action.ActionTo;
 
-public class ProductFrontController extends HttpServlet{
+public class ProductFrontController extends HttpServlet {
 
 	private static final long serialVersionUID = 1L;
 
@@ -30,24 +30,70 @@ public class ProductFrontController extends HttpServlet{
 		String requestURI = req.getRequestURI();
 		String contextPath = req.getContextPath();
 		String command = requestURI.substring(contextPath.length());
-		
+
 		ActionTo transfer = new ActionTo();
-		
-		switch(command) {
-		case "/product/ProductList.mo":
-			try {
-				transfer = new ProductListAction().execute(req, resp);
-			} catch (Exception e) {
-				System.out.println("ProductList : "+e);
-			}
-			break;
+
+		switch (command) {
+			case "/product/ProductList.mo":
+				try {
+					transfer = new ProductListAction().execute(req, resp);
+				} catch (Exception e) {
+					System.out.println("ProductList : " + e);
+				}
+				break;
+			case "/product/ProductDetailView.mo":
+				try {
+					transfer = new ProductDetailViewtAction().execute(req, resp);
+				} catch (Exception e) {
+					System.out.println("ProductDetailViewtOk : " + e);
+				}
+				break;
+			case "/product/Basket.mo":
+				try {
+					transfer = new BasketAction().execute(req, resp);
+				} catch (Exception e) {
+					System.out.println("BasketOk : " + e);
+				}
+				break;
+			case "/product/BasketList.mo":
+				try {
+					transfer = new BasketListAction().execute(req, resp);
+				} catch (Exception e) {
+					System.out.println("BasketOk : " + e);
+				}
+				break;
+			case "/product/BasketOK.mo":
+				try {
+					transfer = new BasketOkAction().execute(req, resp);
+				} catch (Exception e) {
+					System.out.println("BasketOk : " + e);
+				}
+				break;
+			case "/product/BasketCancelOk.mo":
+				try {
+					transfer = new BasketCancelOkAction().execute(req, resp);
+				} catch (Exception e) {
+					System.out.println("BasketCancelOk : " + e);
+				}
+				break;
+			case "/product/Order.mo":
+				transfer = new ActionTo();
+				transfer.setPath("/app/geunseok/order.jsp");
+				transfer.setRedirect(false);
+				break;
+			case "/user/OrderOk.mo":
+				try {
+					transfer = new OrderOkAction().execute(req, resp);
+				} catch (Exception e) {
+					System.out.println("OrderOk : " + e);
+				}
+				break;
 		}
-		
-		if(transfer != null) {
-			if(transfer.isRedirect()) {
+
+		if (transfer != null) {
+			if (transfer.isRedirect()) {
 				resp.sendRedirect(transfer.getPath());
-			}
-			else {
+			} else {
 				RequestDispatcher disp = req.getRequestDispatcher(transfer.getPath());
 				disp.forward(req, resp);
 			}
