@@ -27,7 +27,7 @@ public class ReplyDeleteOkAction implements Action{
 		else {
 			out.write("<script>alert('"+iqr_idx+"번 답글 삭제 실패!');");
 		}
-		out.write("location.href='"+req.getContextPath()+"/inquiry/InquiryView.kc?iqr_idx="+iqr_idx+"'");
+		out.write("location.href='"+req.getContextPath()+"/inquiry/InquiryView.ir?iqr_idx="+iqr_idx+"'");
 		out.write("</script>");
 		return null;
 	}
