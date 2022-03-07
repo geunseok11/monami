@@ -34,13 +34,13 @@
 		height:20px;
 	}
 	.pagination a:hover{
-		background-color:#E15F5F;
+		background-color: #55FF9A;
 	}
 	.nowPage{
 		padding:5px;
 		display:inline-block;
 		border-radius:3px;
-		background-color:#E15F5F;
+		background-color: #55FF9A;
 		font-weight: bold;
 		width:20px;
 		height:20px;
@@ -49,7 +49,10 @@
 		width:70px;
 		height:25px;
 		text-align: center;
-		border: 1px solid #bcbcbc;
+		border-radius: 10px;
+	}
+	a.write:hover{
+		background-color: #55FF9A;
 	}
 	table{
 		border:0px;
@@ -79,6 +82,7 @@
 		border-bottom:1px solid #ccc;
 		padding:5px;
 		font-weight: bold;
+		font-size: 15px;
 	}
 	.list>tbody>tr{
 	text-overflow:ellipsis;
@@ -92,6 +96,9 @@
 		border-radius:3px;
 		font-weight: bold;
 		text-decoration: none;
+	}
+	#container{
+		margin-bottom: 100px;
 	}
 </style>
 <body>
@@ -365,7 +372,7 @@
       						<td>${inquiry.iqr_email}</td>
       						<td>${inquiry.iqr_phone}</td>
       						<td><a href="${cp}/inquiry/InquiryView.mo?iqr_idx=${inquiry.iqr_idx}&page=${page}">${inquiry.iqr_title}</a></td>
-      						<td style="overflow: hidden; text-overflow: ellipsis;">${inquiry.iqr_content}</td>
+      						<td class="contents" style="text-overflow: ellipsis; height: 5px">${inquiry.iqr_content}</td>
       					</tr>
       				</c:forEach>
       			</c:when>

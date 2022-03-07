@@ -1,12 +1,12 @@
-package com.monami.app.user;
+package com.monami.user;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.monami.action.Action;
 import com.monami.action.ActionTo;
-import com.monami.app.user.dao.UserDAO;
-import com.monami.app.user.dao.UserDTO;
+import com.monami.user.dao.UserDAO;
+import com.monami.user.dao.UserDTO;
 
 public class UserJoinOkAction implements Action{
 
@@ -27,12 +27,20 @@ public class UserJoinOkAction implements Action{
 		ActionTo transfer=new ActionTo();
 		if(udao.join(newUser)) {
 			transfer.setRedirect(true);
+
 			transfer.setPath(req.getContextPath()+"/index.jsp");
+
+			
+
 		}
 		else {
 			
 			transfer.setRedirect(true);
+
 			transfer.setPath(req.getContextPath()+"/index.jsp");
+
+
+
 		}
 		return transfer;
 	}

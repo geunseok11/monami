@@ -15,6 +15,11 @@
 <script type="text/javascript" src="../js/prodiqr.js"></script>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.js"></script>
 </head>
+<style>
+	#container{
+		margin-bottom: 100px;
+	}
+</style>
 <body>
 	<div id="wrap">
 		<%@ include file="../doyoon/header.jsp"%>
@@ -63,7 +68,7 @@
                             </div>
                             <div class="inputbox">
                                 <input type="text" id="form4" name="iqr_phone">
-                                <label>연락처</label>
+                                <label>*연락처</label>
                             </div>
                             <div class="inputbox">
                                 <input type="text" id="form5" name="iqr_title">

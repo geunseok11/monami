@@ -9,18 +9,18 @@ import com.monami.mybatis.SqlMapConfig;
 
 public class ProductDAO {
 	SqlSession sqlsession;
-	
+
 	public ProductDAO() {
 		sqlsession = SqlMapConfig.getFactory().openSession(true);
 	}
+
 	public int getProductCnt(String keyword) {
 		int result = 0;
-		if(keyword != null || keyword != "") {
-			result  =sqlsession.selectOne("Product.getSearchCnt", keyword);
+		if (keyword != null || keyword != "") {
+			result = sqlsession.selectOne("Product.getSearchCnt", keyword);
+		} else {
+			result = sqlsession.selectOne("Product.getProductCnt");
 		}
-		else {
-			result =  sqlsession.selectOne("Product.getProductCnt");
-		}	
 		return result;
 	}
 
@@ -29,14 +29,28 @@ public class ProductDAO {
 		List<ProductDTO> result;
 		datas.put("startRow", startRow);
 		datas.put("pageSize", pageSize);
-		if(keyword == null) {
-			result = sqlsession.selectList("Product.getProductList",datas);
-		}
-		else {
+		if (keyword == null) {
+			result = sqlsession.selectList("Product.getProductList", datas);
+		} else {
 			datas.put("keyword", keyword);
-			result = sqlsession.selectList("Product.getProductListWithKey",datas);
+			result = sqlsession.selectList("Product.getProductListWithKey", datas);
 		}
 		return result;
 	}
 
+	public ProductDTO getBasket(int prod_idx) {
+		return sqlsession.selectOne("Product.getDetail", prod_idx);
+	}
+
+	public boolean updateCount(int prod_cnt, int prod_idx) {
+		HashMap<String, Integer> datas = new HashMap<String, Integer>();
+		datas.put("prod_count", prod_cnt);
+		datas.put("prod_idx", prod_idx);
+
+		return 1 == sqlsession.update("Product.updateCount", datas);
+	}
+
+	public ProductDTO getDetail(int prod_idx) {
+		return sqlsession.selectOne("Product.getDetail", prod_idx);
+	}
 }

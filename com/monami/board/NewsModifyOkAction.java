@@ -27,16 +27,12 @@ public class NewsModifyOkAction implements Action{
 				size,"UTF-8",new DefaultFileRenamePolicy());
 		
 		String news_title = multi.getParameter("news_title");
-		String news_subtit = multi.getParameter("news_subtit");
-		String news_imgctt = multi.getParameter("news_imgctt");
 		String news_content = multi.getParameter("news_content");
 		int news_idx = Integer.parseInt(multi.getParameter("news_idx"));
 
 		
 		NewsBoardDTO board = new NewsBoardDTO();
 		board.setNews_title(news_title);
-		board.setNews_subtit(news_subtit);
-		board.setNews_imgctt(news_imgctt);
 		board.setNews_content(news_content);
 		board.setNews_idx(news_idx);
 		
@@ -44,12 +40,10 @@ public class NewsModifyOkAction implements Action{
 		transfer.setRedirect(true);
 		if(nbdao.updateBoard(board)) {
 			String[] systemname = {
-				multi.getFilesystemName("file1"),
-				multi.getFilesystemName("file2")
+				multi.getFilesystemName("file1")
 			};
 			String[] orgname = {
-				multi.getOriginalFileName("file1"),	
-				multi.getOriginalFileName("file2")	
+				multi.getOriginalFileName("file1")
 			};
 			//원래 이 글에 등록되어 있던 파일의 정보들
 			List<NewsFileDTO> files = nfdao.getFiles(news_idx);
@@ -93,10 +87,10 @@ public class NewsModifyOkAction implements Action{
 				}
 			}
 			
-			transfer.setPath(req.getContextPath()+"/news/News_page.mo?news_idx="+news_idx);
+			transfer.setPath(req.getContextPath()+"/news/Newsview.mo?news_idx="+news_idx);
 		}
 		else {
-			transfer.setPath(req.getContextPath()+"/news/News_page.mo?u=f&news_idx="+news_idx);
+			transfer.setPath(req.getContextPath()+"/news/Newsview.mo?u=f&news_idx="+news_idx);
 		}
 		return transfer;
 	}
