@@ -15,6 +15,41 @@
   </servlet>
   <servlet-mapping>
   	<servlet-name>ProductFrontController</servlet-name>
+  	<url-pattern>*.pd</url-pattern>
+  </servlet-mapping>
+
+   <servlet>
+  	<servlet-name>BoardFrontController</servlet-name>
+  	<servlet-class>com.monami.board.BoardFrontController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>BoardFrontController</servlet-name>
   	<url-pattern>*.mo</url-pattern>
   </servlet-mapping>
+  <servlet>
+  	<servlet-name>UserFrontController</servlet-name>
+  	<servlet-class>com.monami.user.UserFrontController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>UserFrontController</servlet-name>
+  	<url-pattern>*.us</url-pattern>
+  </servlet-mapping>
+  <servlet>
+  <servlet-name>ConnectorServlet</servlet-name>
+  <servlet-class>com.ckfinder.connector.ConnectorServlet</servlet-class>
+  <init-param>
+      <param-name>XMLConfig</param-name>
+      <param-value>/WEB-INF/config.xml</param-value>
+  </init-param>
+  <init-param>
+      <param-name>debug</param-name>
+      <param-value>false</param-value>
+  </init-param>
+  <load-on-startup>1</load-on-startup>
+</servlet>
+  
+<servlet-mapping>
+  <servlet-name>ConnectorServlet</servlet-name>
+  <url-pattern>/ckfinder/core/connector/java/connector.java</url-pattern>
+</servlet-mapping> 
 </web-app>

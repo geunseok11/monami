@@ -222,7 +222,7 @@
 								<ul>
 									<li><a href="${cp}/news/NewsBoardList.mo">보도자료</a></li>
 									<li><a href="${cp}/taemin/monami_video1.jsp">동영상자료</a></li>
-									<c:if test="${loginUser.user_id == 'monami'}">
+									<c:if test="${loginUser.user_id == 'admin'}">
 									<li><a href="${cp}/jungmin/news_manegement.jsp">등록</a></li>
 								</c:if>	
 								</ul></li>
@@ -296,7 +296,7 @@
 							<ul>
 								<li><a href="${cp}/news/NewsBoardList.mo">보도자료</a></li>
 									<li><a href="${cp}/taemin/monami_video1.jsp">동영상자료</a></li>
-									<c:if test="${loginUser.user_id == 'monami'}">
+									<c:if test="${loginUser.user_id == 'admin'}">
 									<li><a href="${cp}/jungmin/news_manegement.jsp">등록</a></li>
 								</c:if>	
 								
