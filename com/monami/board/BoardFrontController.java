@@ -34,7 +34,7 @@ public class BoardFrontController extends HttpServlet{
 		switch(command) {
 		case "/news/NewsWriteOk.mo":
 			try {
-				transfer = new NewsWriteAction().execute(req,resp);
+				transfer = new NewsWriteOkAction().execute(req,resp);
 			} catch (Exception e) {
 				System.out.println("NewsWriteOk:"+e);
 			}
@@ -44,7 +44,7 @@ public class BoardFrontController extends HttpServlet{
 			transfer.setPath("/jungmin/news_manegement.jsp");
 			transfer.setRedirect(false);
 			break;
-		case "/news/News_page.mo":
+		case "/news/Newsview.mo":
 			try {
 				transfer = new NewsViewAction().execute(req,resp);
 			} catch (Exception e) {
@@ -76,19 +76,69 @@ public class BoardFrontController extends HttpServlet{
 			try {
 				transfer = new NewsModifyAction().execute(req,resp);
 			} catch (Exception e) {
-				System.out.println("BoardModify : "+e);
+				System.out.println("NewsModify : "+e);
 			}
 			break;
 		case "/news/NewsModifyOk.mo":
 			try {
 				transfer = new NewsModifyOkAction().execute(req,resp);
 			} catch (Exception e) {
-				System.out.println("BoardModifyOk : "+e);
+				System.out.println("NewsModifyOk : "+e);
 			}
 			break;
+		case "/event/EventWriteOk.mo":
+			try {
+				transfer = new EventWriteOkAction().execute(req,resp);
+			} catch (Exception e) {
+				System.out.println("EventWriteOk:"+e);
+			}
+			break;
+		case "/event/EventView.mo":
+			try {
+				transfer = new EventViewAction().execute(req,resp);
+			} catch (Exception e) {
+				System.out.println("Eventview:"+e);
+			}
+			break;
+		case "/event/EventList.mo":
+			try {
+				transfer = new EventBoardListAction().execute(req,resp);
+			} catch (Exception e) {
+				System.out.println("EventList:"+e);
+			}
+			break;
+		case "/event/FileDownload.mo":
+			try {
+				new EFileDownloadAction().execute(req,resp);
+			} catch (Exception e) {
+				System.out.println("EFileDownload : "+e);
+			}
+			break;
+		case "/event/EventRemove.mo":
+			try {
+				transfer = new EventRemoveAction().execute(req,resp);
+			} catch (Exception e) {
+				System.out.println("EventRemove : "+e);
+			}
+			break;
+		case "/event/EventModify.mo":
+			try {
+				transfer = new EventModifyAction().execute(req,resp);
+			} catch (Exception e) {
+				System.out.println("EventModify : "+e);
+			}
+			break;
+		case "/event/EventModifyOk.mo":
+			try {
+				transfer = new EventModifyOkAction().execute(req,resp);
+			} catch (Exception e) {
+				System.out.println("EventModifyOk : "+e);
+			}
+			break;
+			
+			
 		}
 	
-
 	
 	
 		if(transfer != null) {

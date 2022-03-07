@@ -1,6 +1,6 @@
-package com.monami.app.user.dao;
+package com.monami.user.dao;
 
-import com.monami.app.user.dao.UserDTO;
+import com.monami.user.dao.UserDTO;
 
 public class UserDTO {
 	private String user_id;

@@ -1,4 +1,4 @@
-package com.monami.app.user.dao;
+package com.monami.user.dao;
 
 import java.util.HashMap;
 import java.util.List;

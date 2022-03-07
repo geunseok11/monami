@@ -741,7 +741,7 @@ border-right: 0px;
   width: 1200px;
   height: 850px;
   margin: 0 auto;
- padding:95px 125px 95px 190px;
+  padding: 95px 50px 95px 200px;
   align:center;
 }
 .W_area{
@@ -757,7 +757,6 @@ border-right: 0px;
   width: 300px;
   font-weight: bold;
   font-size: 20px;
-  border-right:1px solid #555;
 }
 .W_area tr td ::placeholder{
   font-size: 20px;
@@ -774,78 +773,22 @@ border-right: 0px;
   height: 99%;
   text-align: center;
    font-size: 20px;
-  border:none;
   
 }
 
-tr.WC2 {
-    height: 710px;
-}
 .WC2 td{
-  width:918px;
-  height:766px;
+  height: 500px;
 }
-.content {
-   width: 918px;
-   height:720px;
+.WC2 td textarea{
+  padding:30px ;
+  width: 850px;
+  height: 650px;;
+  resize: none;
+  font-size: 30px;
 }
-.WC2 .content .C1 {
-    magin: 0 auto;
-    margin-left: 150px;
-}
-.WC2 td .news_subtit {
-    width: 600px;
-    height: 50px;
-    line-height: 50px;
-    text-align: center;
-    resize: none;
-    font-weight: bold;
-    font-size: 15px;
-    border: 1px solid #ddd;
-}
-
-.WC2 img {
-    width: 100px;
-    height: 100px;
-    padding-top: 30px;
-    padding-bottom: 20px;
-    margin-left: 400px;
-}
-.C3 {
-    margin-left: 150px;
-}
-textarea.news_imgctt {
-    margin-bottom: 30px;
-    width: 560px;
-    height: 60px;
-    padding-top: 10px;
-    padding-left: 50px;
-    text-align: left;
-    line-height: 20px;
-    resize: none;
-    font-size: 15px;
-    border: 1px solid #ddd;
-}
-.C4 {
-    margin-left: 30px;
-}
-textarea.news_content {
-    width: 797px;
-    height: 380px;
-    line-height: 25px;
-    text-align: left;
-    resize: none;
-    padding: 20px 30px;
-    font-size: 15px;
-    border: 1px solid #ddd;
-}
-input.news_writer{
-	height:99%;
-	width:908px;
-	padding:5px 0px 5px 5px;
-	border:none;
-	font-size:20px;
-	padding-left:10px;
+.WC2 td textarea::placeholder{
+ 
+  margin-left: 600px;
 }
 .f1 {
   height: 50px;

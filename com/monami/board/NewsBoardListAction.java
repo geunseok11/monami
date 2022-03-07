@@ -50,7 +50,7 @@ public class NewsBoardListAction implements Action{
 		
 		
 		ActionTo transfer = new ActionTo();
-		transfer.setPath("/teamin/monami_news.jsp");
+		transfer.setPath("/teamin/newslist.jsp");
 		transfer.setRedirect(false);
 		return transfer;
 	}

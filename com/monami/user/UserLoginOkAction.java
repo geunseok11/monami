@@ -1,4 +1,4 @@
-package com.monami.app.user;
+package com.monami.user;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -6,8 +6,8 @@ import javax.servlet.http.HttpSession;
 
 import com.monami.action.Action;
 import com.monami.action.ActionTo;
-import com.monami.app.user.dao.UserDAO;
-import com.monami.app.user.dao.UserDTO;
+import com.monami.user.dao.UserDAO;
+import com.monami.user.dao.UserDTO;
 
 public class UserLoginOkAction implements Action{
 
@@ -24,12 +24,12 @@ public class UserLoginOkAction implements Action{
 			
 			session.setAttribute("loginUser",loginUser);
 			transfer.setRedirect(false);
-			transfer.setPath("/jungmin/peninfo/peninfo.mo");
+			transfer.setPath("/jungmin/news_manegement.jsp");
 		}
 		else {			
 			
 			transfer.setRedirect(false);
-			transfer.setPath("/jungmin/pen/penpage.mo?login=f");
+			transfer.setPath("/jungmin/news_manegement.jsp?login=f");
 		}
 		return transfer;
 	}

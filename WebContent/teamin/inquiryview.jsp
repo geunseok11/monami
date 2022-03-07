@@ -14,6 +14,30 @@
     <script type="text/javascript" src="../js/common.js"></script>
     <link rel="stylesheet" href="../css/style.intro.css">
 </head>
+<style>
+#container{
+	overflow: hidden;
+}
+form{
+	padding-bottom: 200px;
+}
+form table tr th{
+	background-color: rgb(240,255,240);
+	font-weight: bold;
+}
+form table tr td a{
+	font-size: 15px;
+	padding: 5px;
+	font-weight: bold;
+}
+.btn_area{
+	margin-top: 10px;
+	border-radius: 10px;
+}
+.btn_area:hover{
+	background-color: #95FFC0;
+}
+</style>
 <body>
     <c:set var="cp" value="${pageContext.request.contextPath}"/>
     <!-- wrap 시작 -->
@@ -307,25 +331,6 @@
                         height:200px;" readonly>${inquiry.iqr_content}</textarea>
                     </td>
                 </tr>
-                <c:choose>
-					<c:when test="${files != null and files.size()>0 }">
-						<c:forEach var="i" begin="0" end="${files.size()-1}">
-							<tr>
-								<th>첨부파일${i+1}</th>
-								<td>
-									<a href="${cp}/inquiry/FileDownload.mo?system_name=${files[i].system_name}&org_name=${files[i].org_name}">
-										${files[i].org_name}
-									</a>
-								</td>
-							</tr>
-						</c:forEach>
-					</c:when>
-					<c:otherwise>
-						<tr>
-							<td colspan="2" style="text-align: center;font-size: 20px;">첨부 파일이 없습니다.</td>
-						</tr>
-					</c:otherwise>
-				</c:choose>
             </table>
             <table class="btn_area">
 				<tr align="right" valign="middle">

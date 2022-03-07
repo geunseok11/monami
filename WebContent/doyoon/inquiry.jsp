@@ -15,6 +15,11 @@
 <script type="text/javascript" src="../js/prodiqr.js"></script>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.js"></script>
 </head>
+<style>
+	#container{
+		margin-bottom: 100px;
+	}
+</style>
 <body>
 	<div id="wrap">
 		<%@ include file="../doyoon/header.jsp"%>
@@ -63,7 +68,7 @@
                             </div>
                             <div class="inputbox">
                                 <input type="text" id="form4" name="iqr_phone">
-                                <label>연락처</label>
+                                <label>*연락처</label>
                             </div>
                             <div class="inputbox">
                                 <input type="text" id="form5" name="iqr_title">
@@ -72,10 +77,6 @@
                             <div class="inputbox">
                                 <textarea name="iqr_content" id="form6"></textarea>
                                 <label>*내용</label>
-                            </div>
-                            <div class="filebox">
-                                <label for="ex_filename" class="ex_filename" id="attach_file">첨부파일</label>
-                                <input type="file" name="file" id="ex_filename" class="upload-hidden">
                             </div>
                         </div>
 						<div class="fr">
@@ -210,12 +211,6 @@
 		if(iqr_content.value == ""){
 			alert("내용을 입력하세요!");
 			iqr_content.focus();
-			return false;
-		}
-		const file = inquiryForm.file;
-		if(file.value == ""){
-			alert("파일을 입력하세요!");
-			file.focus();
 			return false;
 		}
 		inquiryForm.submit();

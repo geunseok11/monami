@@ -4,7 +4,6 @@ public class NewsFileDTO {
 	private String systemname;
 	private String orgname;
 	private int news_idx;
-	
 	public String getSystemname() {
 		return systemname;
 	}
@@ -23,6 +22,7 @@ public class NewsFileDTO {
 	public void setNews_idx(int news_idx) {
 		this.news_idx = news_idx;
 	}
+	
 	
 	
 }
