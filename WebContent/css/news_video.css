@@ -131,7 +131,7 @@ a:hover {
 }
 .head_top .links .lang .this_lang {
   padding-left: 15px;
-  background: url(/images/lang_kor.gif) no-repeat 10px center;
+  background: url(../images/lang_kor.gif) no-repeat 10px center;
 }
 .head_top .links .lang .this_lang a {
   display: block;
@@ -140,10 +140,10 @@ a:hover {
   font-family: "Montserrat", sans-serif;
   font-size: 11px;
   color: #000;
-  background: url(/images/lang_arr.gif) no-repeat right center;
+  background: url(../images/lang_arr.gif) no-repeat right center;
 }
 .head_top .links .lang.on .this_lang a {
-  background: url(/images/lang_arr2.gif) no-repeat right center;
+  background: url(../images/lang_arr2.gif) no-repeat right center;
 }
 .head_top .links .lang ul {
   width: 86px;
@@ -156,7 +156,7 @@ a:hover {
   margin-left: -2px;
   text-align: center;
   color: #000;
-  background: url(/images/lang_eng.gif) no-repeat 12px center;
+  background: url(../images/lang_eng.gif) no-repeat 12px center;
 }
 
 .head_top .links .sns {
@@ -181,7 +181,7 @@ a:hover {
   float: left;
   margin-left: 10px;
   padding-left: 12px;
-  background: url(/images/tm_bar.gif) no-repeat left center;
+  background: url(../images/tm_bar.gif) no-repeat left center;
 }
 .head_top .topmenu ul li:first-child {
   background: 0;
@@ -499,7 +499,7 @@ a:hover {
   float: left;
   padding-right: 11px;
   margin-right: 10px;
-  background: url(/images/common/fm_bar.gif) no-repeat right center;
+  background: url(../images/common/fm_bar.gif) no-repeat right center;
 }
 .foot_top .fm li:last-child {
   margin: 0;
@@ -567,7 +567,7 @@ a:hover {
   line-height: 34px;
   font-size: 13px;
   color: rgba(255, 255, 255, 0.4);
-  background: url(/images/family_arr.png) no-repeat 95% center;
+  background: url(../images/family_arr.png) no-repeat 95% center;
 }
 .foot_btm .fam_site ul {
   display: none;
@@ -821,6 +821,11 @@ tr {
 .bbs_basic table td.sbj p {
   font-size: 14px;
   color: #999;
+  width:918px;
+  height:25px;
+  white-space:nowrap;
+  overflow:hidden;
+  text-overflow:ellipsis;
   line-height: 180%;
 }
 .bbs_basic table td.more {
@@ -1011,6 +1016,7 @@ body {
 }
 .paging a.page_prev {
   margin-right: 30px;
+  height:40px;
 }
 .paging a {
   display: inline-block;
@@ -1039,6 +1045,7 @@ body {
 }
 .paging a.page_next {
   margin-left: 30px;
+  height:40px;
 }
 #bgblack {
   position: absolute;
