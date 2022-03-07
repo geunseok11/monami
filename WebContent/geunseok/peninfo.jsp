@@ -701,7 +701,7 @@ input.btn_zip{
             </h3>
                <div class="product_view">
                  <div class="product_info">
-                  <form class="info" name="toBasketForm" method="post" action="${cp}/product/Basket.pd">
+                  <form class="info" name="toBasketForm" method="post" action="${cp}/product/Basket.mo">
                   	<input type="hidden" name="prod_idx" value=${product.prod_idx }>
                   	<input type="hidden" name="prod_name" value=${product.prod_name }>
                     <input type="hidden" name="prod_price" value=${product.prod_price }>
