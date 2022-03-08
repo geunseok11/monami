@@ -699,7 +699,7 @@ input.btn_zip{
             </script>
             <h3 class="title1">
         		<div>
-        			<li><span>고객님의 ID:${idSearchUser.user_id} 입니다.</span>&nbsp;&nbsp;
+        			<li><span>고객님의 ID:${idSearchUser.user_id} 입니다.</span>&nbsp;&nbsp;<br/>
 					<a href="${cp}/jungmin/pwsearch.mo">비밀번호찾기</a></li>
         		</div>
 											
