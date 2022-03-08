@@ -719,23 +719,23 @@ input.btn_zip{
                     <div class="prodleft">
                       <div class="imges">
                         <ul>
-                          <li><img src="/images/pp1-1.jpg" alt=""></li>
-                          <li><img src="/images/pp1-2.jpg" alt=""></li>
-                          <li><img src="/images/pp1-3.jpg" alt=""></li>
-                          <li><img src="/images/pp1-4.jpg" alt=""></li>
-                          <li><img src="/images/pp1-5.jpg" alt=""></li>                        
+                          <li><img src="${cp}/images/pp1-1.jpg" alt=""></li>
+                          <li><img src="${cp}/images/pp1-2.jpg" alt=""></li>
+                          <li><img src="${cp}/images/pp1-3.jpg" alt=""></li>
+                          <li><img src="${cp}/images/pp1-4.jpg" alt=""></li>
+                          <li><img src="${cp}/images/pp1-5.jpg" alt=""></li>                        
                         </ul>
                       </div>
                       <div class="thumb">
-                        <a class="info_prev"><img src="/images/infotprev.gif" ></a>
-                        <a  class="info_next"><img src="/images/infotnext.gif" alt=""></a>
+                        <a class="info_prev"><img src="${cp}/images/infotprev.gif" ></a>
+                        <a  class="info_next"><img src="${cp}/images/infotnext.gif" alt=""></a>
                         <div class="thum_list">
                           <ul>
-                            <li><a><img src="/images/mpp1-1.jpg" alt=""></a></li>
-                            <li><a><img src="/images/mpp1-2.jpg" alt=""></a></li>
-                            <li><a><img src="/images/mpp1-3.jpg" alt=""></a></li>
-                            <li><a><img src="/images/mpp1-4.jpg" alt=""></a></li>
-                            <li><a><img src="/images/mpp1-5.jpg" alt=""></a></li>
+                            <li><a><img src="${cp}/images/mpp1-1.jpg" alt=""></a></li>
+                            <li><a><img src="${cp}/images/mpp1-2.jpg" alt=""></a></li>
+                            <li><a><img src="${cp}/images/mpp1-3.jpg" alt=""></a></li>
+                            <li><a><img src="${cp}/images/mpp1-4.jpg" alt=""></a></li>
+                            <li><a><img src="${cp}/images/mpp1-5.jpg" alt=""></a></li>
                           </ul>
                         </div>
                       </div>
