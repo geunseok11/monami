@@ -87,10 +87,10 @@ public class NewsModifyOkAction implements Action{
 				}
 			}
 			
-			transfer.setPath(req.getContextPath()+"/news/Newsview.mo?news_idx="+news_idx);
+			transfer.setPath(req.getContextPath()+"/news/Newsview.bo?news_idx="+news_idx);
 		}
 		else {
-			transfer.setPath(req.getContextPath()+"/news/Newsview.mo?u=f&news_idx="+news_idx);
+			transfer.setPath(req.getContextPath()+"/news/Newsview.bo?u=f&news_idx="+news_idx);
 		}
 		return transfer;
 	}

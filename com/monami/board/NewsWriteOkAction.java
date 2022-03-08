@@ -65,11 +65,11 @@ public class NewsWriteOkAction implements Action{
 			//2. 파일이 존재했고, 위의 DB처리까지 완벽하게 성공했음
 			if(fcheck1 ) {
 				transfer.setRedirect(true);
-				transfer.setPath(req.getContextPath()+"/news/Newsview.mo?news_idx="+news_idx);
+				transfer.setPath(req.getContextPath()+"/news/Newsview.bo?news_idx="+news_idx);
 				return transfer;
 			}
 		}
-		transfer.setPath(req.getContextPath()+"/news/Newsview.mo?w=f");	
+		transfer.setPath(req.getContextPath()+"/news/Newsview.bo?w=f");	
 		return transfer;
 	}
 	}

@@ -17,10 +17,10 @@ public class NewsRemoveAction implements Action{
 		ActionTo transfer = new ActionTo();
 		transfer.setRedirect(true);
 		if(nbdao.removeBoard(news_idx)){
-			transfer.setPath(req.getContextPath()+"/news/NewsBoardList.mo?news_idx="+news_idx);
+			transfer.setPath(req.getContextPath()+"/news/NewsBoardList.bo?news_idx="+news_idx);
 			}
 		else {
-			transfer.setPath(req.getContextPath()+"/news/Newsview.mo?news_idx="+news_idx);
+			transfer.setPath(req.getContextPath()+"/news/Newsview.bo?news_idx="+news_idx);
 		}
 		return transfer;
 	}
