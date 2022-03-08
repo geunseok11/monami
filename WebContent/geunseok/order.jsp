@@ -81,7 +81,7 @@
                         <!-- //주문자 정보 -->
             
                         <!-- 배송지 정보// -->
-                        <form name="orderForm" method="post" action="${cp}/user/OrderOk.us">
+                        <form name="orderForm" method="post" action="${cp}/product/OrderOk.pd">
                         <fieldset class="delivery-field">
                             <legend class="tit">배송지 정보</legend>
                             
