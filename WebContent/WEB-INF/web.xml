@@ -1,4 +1,3 @@
-
 <?xml version="1.0" encoding="UTF-8"?>
 <web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd" id="WebApp_ID" version="4.0">
 	<display-name>team</display-name>
@@ -25,14 +24,6 @@
   <servlet-mapping>
   	<servlet-name>ProductFrontController</servlet-name>
   	<url-pattern>*.pd</url-pattern>
-  </servlet-mapping>
-  <servlet>
-  	<servlet-name>InquiryFrontController</servlet-name>
-  	<servlet-class>com.monami.inquiry.InquiryFrontController</servlet-class>
-  </servlet>
-  <servlet-mapping>
-  	<servlet-name>InquiryFrontController</servlet-name>
-  	<url-pattern>*.ir</url-pattern>
   </servlet-mapping>
   <servlet>
   	<servlet-name>AdminFrontController</servlet-name>
@@ -76,5 +67,4 @@
   <servlet-name>ConnectorServlet</servlet-name>
   <url-pattern>/ckfinder/core/connector/java/connector.java</url-pattern>
 </servlet-mapping> 
-
 </web-app>
