@@ -70,7 +70,7 @@ prefix="c"%>
               <form
                 method="post"
                 name="basketForm"
-                action="${cp}/product/BasketOk.bo"
+                action="${cp}/product/BasketOk.pd"
               >
                 <fieldset class="list-field">
                   <legend class="hide">장바구니</legend>
