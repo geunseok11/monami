@@ -61,12 +61,9 @@
             </div>
             <div class="pagetabs">
                 <ul class="m5">
-                    <li class="on">
-                        <a href="${cp}/teamin/monami_news1.jsp">보도자료</a>
-                    </li>
-                    <li>
-                        <a href="${cp}/teamin/monami_video1.jsp">동영상자료</a>
-                    </li>
+                    <li class="on"><a href="${cp}/news/NewsBoardList.bo">보도자료</a>
+						</li>
+						<li><a href="${cp}/board/Videolist.bo">동영상자료</a></li>
                 </ul>
             </div>
             <h3 class="title1">
@@ -88,7 +85,7 @@
 											</td>
 											<td class="sbj">
 												<div>
-													<a href="${cp}/news/Newsview.mo?news_idx=${board.news_idx}&page=${page}">
+													<a href="${cp}/news/Newsview.bo?news_idx=${board.news_idx}&page=${page}">
 														<div class="tit">${board.news_title}</div>
 														<div class="evt_type">${board.news_content}</div>
 													
@@ -96,7 +93,7 @@
 												</div>
 											</td>
 											<td class="more">
-											<a href="${cp}/news/Newsview.mo?news_idx=${board.news_idx}&page=${page}" class="btn">
+											<a href="${cp}/news/Newsview.bo?news_idx=${board.news_idx}&page=${page}" class="btn">
 												 <span>자세히보기</span>
 												<div>
 												</div>
@@ -129,7 +126,7 @@
             <div class="paging">
 					<c:choose>
 					<c:when test="${page>1}">
-					<a href="${cp}/news/NewsBoardList.mo?page=${page-1}" class="page_prev">
+					<a href="${cp}/news/NewsBoardList.bo?page=${page-1}" class="page_prev">
 						
 							<img src="${cp}/images/page_prev.gif" alt="">
 						
@@ -152,13 +149,13 @@
 								<strong class="nowPage">${i}</strong>
 							</c:when>
 							<c:otherwise>
-								<a href="${cp}/news/NewsBoardList.mo?page=${i}">${i}</a>
+								<a href="${cp}/news/NewsBoardList.bo?page=${i}">${i}</a>
 							</c:otherwise>
 						</c:choose>
 					</c:forEach>
 					<c:choose>
 					<c:when test="${page<endPage}">
-						<a href="${cp}/news/NewsBoardList.mo?page=${page+1}"
+						<a href="${cp}/news/NewsBoardList.bo?page=${page+1}"
 							class="page_next"> <img src="${cp}/images/page_next.gif" alt="">
 						</a>
 					</c:when>
