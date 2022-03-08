@@ -38,7 +38,7 @@ public class BasketCancelOkAction implements Action {
 			Cookie changeCookie = new Cookie("basket", value);
 			resp.addCookie(changeCookie);
 			transfer.setRedirect(false);
-			transfer.setPath("/geunseok/BucketList.mo");
+			transfer.setPath("/product/BucketList.pd");
 			return transfer;
 		}
 
