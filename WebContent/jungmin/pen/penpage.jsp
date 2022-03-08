@@ -438,7 +438,7 @@ input.btn_zip{
 													</div>
 													<span class="txt_find"> <a
 														href="${cp}/jungmin/idsearch.mo" class="link_find">아이디</a> / <a
-														href="/member/find/password" class="link_find">비밀번호 찾기</a>
+														href="${cp}/jungmin/pwsearch.mo" class="link_find">비밀번호 찾기</a>
 													</span>
 												</div>
 
@@ -466,7 +466,7 @@ input.btn_zip{
       <div class="gnb">
         <div class="conwrap">
           <h1>
-            <a href="${cp}/sanghoon/index.jsp"><img src="${cp}/images/logo.jpeg" alt="" /></a>
+            <a href="${cp}/index.jsp"><img src="${cp}/images/logo.jpeg" alt="" /></a>
           </h1>
           <div class="nav">
             <ul>

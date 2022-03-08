@@ -358,10 +358,9 @@ border:0 solid black;
           </div>
           <div class="topmenu">
             <ul>
-            	<ul>		
-            	<c:choose>
+            		<c:choose>
            			<c:when test="${loginUser.user_id!=null}" >
-            	li><span>${loginUser.user_id} 님 환영합니다.</span>&nbsp;&nbsp;
+            	<li><span>${loginUser.user_id} 님 환영합니다.</span>&nbsp;&nbsp;
             	<a href="${cp}/jungmin/usermodify.mo">MYPAGE</a>&nbsp;
 					<a href="${cp}/user/UserLogoutOk.us">LOGOUT</a></li>
 					</c:when>
@@ -730,6 +729,50 @@ border:0 solid black;
             </script>
               <div id="contents1">
               <div class="side_wrap">
+              <c:choose>
+                	<c:when test="${loginUser.user_id=='admin' }">
+                	<ol class="lnb">
+                      <li><span class="lnb_title">마이 페이지</span>
+                          <ol>
+                              <li class="lnb_item">
+                                  <a href="${cp }/jungmin/usermodyfy.jsp" class="active">마이페이지</a>
+                              </li>
+                          </ol>
+                      </li>
+                      <li class="shopping"><span class="lnb_title">쇼핑</span>
+                          <ol>
+                              <li class="lnb_item">
+                                  <a href="${cp }/geunseok/basket.jsp" class="active">장바구니</a>
+                              </li>
+                              <li class="lnb_item">
+                                  <a href="${cp }/geunseok/order.jsp" class="active">주문확인</a>
+                              </li>
+                              <li class="lnb_item">
+                                  <a href="#" class="active">찜목록</a>
+                              </li>
+                             
+                          </ol>
+                      </li>
+                    
+                   
+               
+              		 <li class="shopping"><span class="lnb_title">관리자</span>
+                          <ol>
+                              <li class="lnb_item">
+                                  <a href="#" class="active">이벤트등록</a>
+                              </li>
+                              <li class="lnb_item">
+                                  <a href="#" class="active">상품등록</a>
+                              </li>
+                              <li class="lnb_item">
+                                  <a href="#" class="active">찜목록</a>
+                              </li>
+                             
+                          </ol>
+                      </li>
+                         </ol>
+              	</c:when>
+              	<c:otherwise>
                   <ol class="lnb">
                       <li><span class="lnb_title">마이 페이지</span>
                           <ol>
@@ -752,8 +795,11 @@ border:0 solid black;
                              
                           </ol>
                       </li>
+                    
                    
                   </ol>
+                  </c:otherwise>
+                  </c:choose>
               </div>
         		<div class="box_idsh">
         		<form method="post" id="userForm" action="${cp}/user/UserModifyOk.us">
