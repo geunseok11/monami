@@ -20,7 +20,8 @@ public class ReplyWriteOkAction implements Action{
 		resp.setContentType("text/html;charset=utf-8");
 		
 		int iqr_idx = Integer.parseInt(req.getParameter("iqr_idx"));
-		String admin_id = ((UserDTO)req.getSession().getAttribute("loginUser")).getUser_id();
+//		String admin_id = ((UserDTO)req.getSession().getAttribute("loginUser")).getUser_id();
+		String admin_id = req.getParameter("admin_id");
 		String answer = req.getParameter("answer");
 		ReplyDTO newReply = new ReplyDTO();
 		newReply.setIqr_idx(iqr_idx);
