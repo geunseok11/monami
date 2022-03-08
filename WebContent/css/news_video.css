@@ -673,7 +673,7 @@ a:hover {
   padding-bottom: 150px;
 }
 .pn5 {
-  background: url(../images/page_visual5.jpg) no-repeat center;
+  background: url(../monami_images/page_visual5.jpg) no-repeat center;
 }
 .pagetitle {
   width: 100%;
@@ -810,6 +810,7 @@ tr {
 }
 .bbs_basic table td.sbj > div {
   padding: 0 55px;
+  padding-right:25px;
   border-left: 1px solid #e5e5e5;
   word-break: keep-all;
 }
@@ -817,6 +818,17 @@ tr {
   font-size: 17px;
   color: #333;
   margin-bottom: 5px;
+}
+.evt_type {
+    font-size: 14.5px;
+    color: #666;
+    font-weight: 400;
+    margin-bottom: 5px;
+    width: 918px;
+    height: 25px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 .bbs_basic table td.sbj p {
   font-size: 14px;
@@ -843,6 +855,18 @@ tr {
   transition: all 0.4s;
   text-align: left;
 }
+.bbs_basic table td a.btn:hover{
+	border:1px solid #c40f39;
+	width:145px;
+	transition:all .4s;
+}
+.bbs_basic table td a.btn:hover span{
+	display:inline-block;
+	width:82px;
+	padding-left:20px;
+	color:#c40f39;
+	transition:all .4s;
+}
 .bbs_basic table td a.btn span {
   display: none;
   width: 0px;
@@ -850,6 +874,7 @@ tr {
   font-size: 15px;
   transition: all 0.4s;
 }
+
 .bbs_basic table td a.btn div {
   display: inline-block;
   position: relative;
@@ -879,6 +904,8 @@ tr {
   margin-top: -1px;
   background: #999;
 }
+.bbs_basic table td a.btn:hover div:before{	background:#c40f39;}
+.bbs_basic table td a.btn:hover div:after{background:#c40f39;}
 .paging {
   margin: 60px 0;
   text-align: center;

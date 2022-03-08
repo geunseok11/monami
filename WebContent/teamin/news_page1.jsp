@@ -1,100 +1,37 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-    <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+    <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>MONAMI</title>
-    <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon" />
-    <link rel="stylesheet" href="../css/prodiqr.css" />
-    <script src="//code.jquery.com/jquery-3.3.1.min.js"></script>
-    <script type="text/javascript" src="../js/common.js"></script>
-    <link rel="stylesheet" href="../css/style.intro.css">
+    <link rel="shortcut icon" href="${cp}/images/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="${cp}/css/news_video.css" />
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.js"></script>
+    <script type="text/javascript" src="${cp}/js/common.js"></script>
+    <script type="text/javascript">
+      $(function () {
+        $(document).on("click", ".find_f", function () {
+          dh = $(document).height();
+          poph = $(".find_layer").height();
+
+          $("#bgblack").height(dh).show();
+          $(".find_layer")
+            .show()
+            .animate({ top: $(document).scrollTop() + 50 + "px" }, 100);
+        });
+        $("#bgblack,.btnx_").click(function () {
+          $("#bgblack").height(dh).hide();
+          $(".find_layer").hide();
+        });
+      });
+    </script>
 </head>
-<style>
-#container{
-	overflow: hidden;
-}
-form{
-	padding-bottom: 200px;
-}
-form table tr th{
-	background-color: rgb(240,255,240);
-	font-weight: bold;
-}
-form table tr td a{
-	font-size: 15px;
-	padding: 5px;
-	font-weight: bold;
-}
-.btn_area{
-	margin-top: 10px;
-	border-radius: 10px;
-}
-.btn_area:hover{
-	background-color: #95FFC0;
-}
-.reply_line{
-		width:900px;
-		margin-top:20px;
-		padding-top:30px;
-		margin: 0 auto;
-	}
-	.write_box{
-		padding-bottom: 20px;
-	}
-	.write_box>tbody>tr>td:first-child,.update_box>tbody>tr>td:first-child{
-		width:150px;
-		text-align: center;
-		font-weight: bold;
-		font-size: 18px;
-	}
-	.write_box>tbody>tr>td+td{
-		position: relative;
-	}
-	.write_box textarea, .update_box textarea{
-		padding:5px 10px;
-		height:70px;
-		resize:none;
-		width:600px;
-		outline:none;
-		border:1px solid #c40f39;
-		border-radius:10px;
-	}
-	.update_box textarea, .write_box textarea{
-		width:500px;
-		height:80px;
-		font-size: 15px;
-	}
-	.update_box{
-		padding-top:20px;
-		padding-bottom: 30px;
-	}
-	.update_box .btns a, .write_box .btns a{
-		display:inline-block;
-		width:90px;
-		height:40px;
-		text-align: center;
-		vertical-align: middle;
-		line-height: 40px;
-		margin-left: 10px;
-	}
-	.adbtn{
-		display:inline-block;
-		border-radius:5px;
-		background-color:#c40f39;
-		color:white;
-		font-weight: bold;
-		font-size: 17px;
-		text-decoration: none;
-	}
-</style>
 <body>
     <c:set var="cp" value="${pageContext.request.contextPath}"/>
-    <!-- wrap 시작 -->
     <div id="wrap">
         <div id="bgblack"></div>
         <div class="find_layer" style="display: none; top: 50px">
@@ -209,13 +146,13 @@ form table tr td a{
                         </ul>
                       </li>
                       <li>
-                        <a href="${cp}/taemin/monami_news1.jsp">NEWS & VIDEO</a>
+                        <a href="${cp}/teamin/monami_news1.jsp">NEWS & VIDEO</a>
                         <ul >
                           <li>
-                            <a href="${cp}/taemin/monami_news1.jsp">보도자료</a>
+                            <a href="${cp}/teamin/monami_news1.jsp">보도자료</a>
                           </li>
                           <li>
-                            <a href="${cp}/taemin/monami_video1.jsp">동영상자료</a>
+                            <a href="${cp}/teamin/monami_video1.jsp">동영상자료</a>
                           </li>
                         </ul>
                       </li>
@@ -238,6 +175,9 @@ form table tr td a{
                           </li>
                           <li>
                             <a href="${cp}/doyoon/Inquiry.jsp">문의하기</a>
+                          </li>
+                          <li>
+                            <a href="${cp}/teamin/Inquerylist.jsp">문의사항</a>
                           </li>
                           <li>
                             <a href="${cp}/geunseok/board_event.jsp">이벤트</a>
@@ -296,8 +236,8 @@ form table tr td a{
                 <div class="menubox">
                     <h2>NEWS &amp; VIDEO</h2>
                     <ul>
-                        <li><a href="${cp}/taemin/monami_news1.jsp">보도자료</a></li>
-                              <li><a href="${cp}/taemin/monami_video1.jsp">동영상자료</a></li>
+                        <li><a href="${cp}/teamin/monami_news1.jsp">보도자료</a></li>
+                              <li><a href="${cp}/teamin/monami_video1.jsp">동영상자료</a></li>
                     </ul>
                 </div>
                 <div class="menubox">
@@ -312,6 +252,7 @@ form table tr td a{
                     <ul>
                         <li><a href="${cp}/doyoon/FAQ.jsp">자주묻는질문</a></li>
                               <li><a href="${cp}/doyoon/Inquiry.jsp">문의하기</a></li>
+                              <li><a href="${cp}/teamin/Inquerylist.jsp">문의사항</a></li>
                               <li><a href="${cp}/geunseok/board_event.jsp">이벤트</a></li>
                               <li><a class="find_f">모나미 패밀리샵 찾기</a></li>
                     </ul>
@@ -325,138 +266,126 @@ form table tr td a{
     </div>
     </div>
     <!-- 헤더 끝 -->
-      <div id="container">
-          <div class="pagetitle pn4">
-            <h2>고객지원</h2>
-            <p>모나미는 언제나 소중한 의견에 귀 기울이겠습니다.</p>
-          </div>
-          <div class="pagetabs">
-            <ul class="m4">
-                <li><a href="${cp}/doyoon/FAQ.jsp">자주하는질문</a></li>
-                <li><a href="${cp}/inquiry/InquiryList.mo" class="on">문의하기</a></li>
-                <li><a href="${cp}/inquiry/InquiryWrite.mo">문의등록</a></li>
-                <li><a href="${cp}/geunseok/board_event.jsp">이벤트</a></li>
-                <li><a href="${cp}/shop/shop.jsp">모나미 패밀리샵 찾기</a></li>
-            </ul>
-        </div>
-        <h3 class="title1">
-            MONAMI <span>INQUERYVIEW</span>
-        </h3>
-        <form>
-            <table border="1" style="border-collapse: collapse; margin: 0 auto;">
-                <tr height="50px">
-					<th align="center" width="150px">문의내용</th>
-                    <td>
-                      <input name="iqr_catagory" style="height: 50px; width: 400px;"
-                      value="${inquiry.iqr_catagory}" readonly>
-                    </td>
-				        </tr>
-                <tr height="50px">
-                    <th align="center" width="150px">이름</th>
-                    <td>
-						 <input name="iqr_writer" style="height: 50px; width: 400px;"
-						 value="${inquiry.iqr_writer}" readonly>
-					</td>
-                </tr>
-                <tr height="50px">
-                    <th align="center" width="150px">이메일</th>
-                    <td>
-						<input name="iqr_email" style="height: 50px; width: 400px;"
-						value="${inquiry.iqr_email}" readonly>
-					</td>
-                </tr>
-                <tr height="50px">
-                    <th align="center" width="150px">연락처</th>
-                    <td>
-						<input name="iqr_phone" style="height: 50px; width: 400px;"
-						value="${inquiry.iqr_phone}" readonly>
-					</td>
-                </tr>
-                <tr height="50px">
-                    <th align="center" width="150px">제목</th>
-                    <td>
-                    	<input name="iqr_title" style="height: 50px; width: 400px;"
-                    	value="${inquiry.iqr_title}" readonly>
-					</td>
-                </tr>
-                <tr height="200px">
-                    <th align="center" width="150px">내용</th>
-                    <td>
-                        <textarea name="iqr_content" style="width:402px;
-                        height:200px;" readonly>${inquiry.iqr_content}</textarea>
-                    </td>
-                </tr>
+    <!-- 본문 시작  -->
+    <div id="container">
+        <div class="contents">
+            <div class="pagetitle pn5">
+                <h2>
+                    " NEWS & VIDEO "
+                </h2>
+                <p> 모나미는 늘 밝고 새로운 미래를 그려나갑니다.</p>
+            </div>
+            <div class="pagetabs">
+                <ul class="m5">
+                    <li class="on">
+                        <a href="${cp}/teamin/monami_news1.jsp">보도자료</a>
+                    </li>
+                    <li>
+                        <a href="${cp}/teamin/monami_video1.jsp">동영상자료</a>
+                    </li>
+                </ul>
+            </div>
+            <h3 class="title1">
+                MONAMI
+                <span>NEWS</span>
+            </h3>
+            <form action="">
+            <table class="bbs_view" cellpadding="0" cellspacing="0">
+                <tbody>
+                    <tr>
+                        <th>
+                            <div class="sbj">모나미, 호랑이의 해 임인년(壬寅年)맞아 ‘153 어흥이’ 에디션 출시</div>
+                            <div class="date">
+                                <span class="tit">작성자</span>
+                                모나미
+                                <span class="line">I</span>
+                                <span class="tit">날짜</span>
+                                2022-01-19
+                            </div>
+                        </th>
+                    </tr>
+                    <tr>
+                        <td class="viewcon">
+                            <p style="text-align: center; " align="center">
+                                <span style="font-size: 18pt;">
+                                    <b>모나미, 호랑이의 해 임인년(壬寅年)맞아 ‘153 어흥이’ 에디션 출시</b>
+                                </span>
+                            </p>
+                            <p style="text-align: center; " align="center">
+                                <br style="clear:both;">
+                                <img src="${cp}/monami_images/page_1.jpg" title="page_1.jpg">
+                                <br style="clear:both;">
+                                &nbsp;
+                            </p>
+                            <p style="text-align: center; " align="center">
+                                <span style="font-size: 10pt;">- 다양한 패턴의 호랑이를 은증착 효과와 비비드한 컬러로 화려하게 표현&nbsp;
+                                </span>
+                            </p>
+                            <p style="text-align: center; " align="center">
+                                <span style="font-size: 10pt;">- 피콕 블루, 골든 옐로 등 5가지 컬러로 다양하고 깔끔한 필기 가능
+                                </span>
+                            </p>
+                            <p style="text-align: center; " align="center">
+                                <span style="font-size: 10pt;">- 한국의 상징성을 담은 호랑이 틴케이스로 구성돼 소장가치 높여
+                                </span>
+                            </p>
+                            <p style="text-align: center; " align="center">
+                                <span style="font-size: 10pt;">&nbsp;</span>
+                            </p>
+                            <p>&nbsp;</p>
+                            <p>
+                                <span style="font-size: 10pt;">문구기업 모나미가 호랑이의 해 임인년(壬寅年)을 맞이해 ‘153 어흥이’ 에디션 패키지를 오늘 출시한다.&nbsp;</span>
+                            </p>
+                            <p>&nbsp;</p>
+                            <p>
+                                <span style="font-size: 10pt;">이번 에디션은 지난해 6월 출시한 한국적인 아름다움을 담은 '153 한국의 그림' 다음 시리즈로 기획됐으며, 다양한 ‘호랑이’ 패턴을 은증착 효과와 비비드한 컬러로 표현해 화려하고 귀여운 디자인으로 풀어낸 것이 특징이다.</span>
+                            </p>
+                            <p>&nbsp;</p>
+                            <p>
+                                <span style="font-size: 10pt;">153 어흥이는 브라운, 피콕 블루, 골든 옐로, 레드, 블랙 총 5가지 잉크 컬러로 구성됐으며, 0.5mm의 필기선을 갖춰 부드럽고 깔끔한 필기감을 느낄 수 있다. 펜이 담긴 케이스에는 두 마리의 호랑이가 대적하는 듯한 강인하고 용맹한 모습이 화려한 색감과 패턴으로 디자인되어 소장 가치를 더욱 높였다.</span>
+                            </p>
+                            <p>&nbsp;</p>
+                            <p>
+                                <span style="font-size: 10pt;">또한 153 어흥이 출시를 기념해 한정 수량으로 153 어흥이 마그넷도 함께 증정한다. 마그넷은 인테리어 소품으로 활용할 뿐만 아니라 153 어흥이 틴케이스도 자유롭게 커스터마이징 해 나만의 개성 있는 필통을 만들 수 있다.</span>
+                            </p>
+                            <p>&nbsp;</p>
+                            <p>
+                                <span style="font-size: 10pt;">153 어흥이 에디션은 19일부터 공식 온라인 쇼핑몰 모나미몰에서 예약 구매가 가능하며, 이후 오프라인 모나미 스토어 등 주요 온프라인 판매 채널에서도 구매할 수 있다. 소비자 가격은 1만원이며, 마그넷은 프로모션 기간 종료 후 소비자 가격 4천원으로 별도 판매 진행한다.&nbsp;</span>
+                            </p>
+                            <p>&nbsp;</p>
+                            <p>
+                                <span style="font-size: 10pt;">모나미 관계자는 “예로부터 호랑이는 대한민국을 상징하는 동물로 우리 민족의 삶과 밀접한 관련을 맺으며 꾸준히 사랑받아 왔다”며 “앞으로도 차별화된 디자인과 모나미만의 우수한 제품력으로 다양한 고객의 니즈에 부합하는 상품 개발에 앞장서겠다”고 밝혔다.</span>
+                            </p>
+                            <p>&nbsp;</p>
+                            <p>
+                                <span style="font-size: 10pt;">1963년 5월 1일 대중에 선보인 ‘모나미 153’은 국내 최초의 볼펜이자 모나미의 스테디셀러다. 반세기가 지난 현재까지도 모나미 153은 고급화와 컬래버레이션 등 새로운 변화를 끊임없이 시도하고 있다.</span>
+                            </p>
+                            <div>
+                                <br>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
             </table>
-
-            <table class="btn_area" style="margin: 0 auto;">
-				<tr align="right" valign="middle">
-					<td>
-						<a href="${cp}/inquiry/InquiryList.mo?page=${param.page == null ? 1 : param.page}">목록</a>
-					</td>
-				</tr>
-			</table>
-        </form>
-        <div class="reply_line">
-        	<c:if test="${adminUser != null}">
-        	<c:if test="${reply.answer == null }">
-        	<form name="replyForm" method="post" action="${cp}/inquiry/replywrite.ir">
-        		<input type="hidden" name="iqr_idx" value="${inquiry.iqr_idx}">
-        		<table class="write_box">
-        			<tr height="50px">
-        				<td align="center" width="150px">답변</td>
-        				<td>
-        					<textarea name="answer" class="answer" style="resize:none"></textarea>	
-        				</td>
-        				<td>
-        					<div class="btns">
-        						<a class="adbtn" href="javascript:document.replyForm.submit()">등록</a>
-        					</div>
-        				</td>
-        			</tr>
-        		</table>
-        	</form>
-        	</c:if>
-        	<c:if test="${reply.answer !=null}">
-        		<form name="replyForm" method="post" action="${cp}/inquiry/replyupdate.ir">
-        		<input type="hidden" name="iqr_idx" value="${inquiry.iqr_idx}">
-        		<table class="write_box">
-        			<tr height="50px">
-        				<td align="center" width="150px">답변</td>
-        				<td>
-        					<textarea name="answer" class="answer" style="resize:none"></textarea>	
-        				</td>
-        				<td>
-        					<div class="btns">
-        						<a class="adbtn" href="javascript:document.replyForm.submit()">수정</a>
-        					</div>
-        				</td>
-        			</tr>
-        		</table>
-        	</form>
-        	</c:if>
-        	</c:if>
-        	<form name="updateForm" method="post" action="">
-        		<input type="hidden" name="iqr_idx" value="${reply.iqr_idx}">
-        		<table class="update_box">
-        				<tr height="50px">
-        					<td align="center" width="150px">관리자<br>답변</td>
-        					<td>
-        						<textarea readonly class="answer" style="resize:none">${reply.answer}</textarea>
-        					</td>
-        					<c:if test="${adminUser != null}">
-        					<td>
-								<div class="btns">
-        							<a class="adbtn" href="javascript:deleteReply(${reply.iqr_idx})">삭제</a>
-        						</div>
-        					</td>
-        					</c:if>
-        				</tr>
-        		</table>
-        	</form>
+            </form>
+            <div class="view_btns">
+                <a href="${cp}/teamin/monami_news1.jsp">LIST</a>
+                <div class="view_page">
+                    <a href="${cp}/teamin/news_page2.jsp">
+                        <img src="${cp}/monami_images/view_page_next.gif" alt="">
+                    </a>
+                </div>
+            </div>
+            <div class="btn_top" style="cursor:pointer;" onclick="window.scrollTo(0,0);">
+                <a>
+                    <img src="${cp}/images/btn_top.gif" alt="페이지 상단으로">
+                </a>
+            </div>
         </div>
-        </div>
-        <!-- 푸터 시작 -->
-   <div id="footer">
+    </div>
+    <!-- 본문 끝 -->
+    <!-- 푸터 시작 -->
+    <div id="footer">
         <div class="foot">
           <div class="foot_pop" style="display: none;">
             <div class="privacy" style="display: none;">
@@ -577,34 +506,35 @@ form table tr td a{
               <a>FAMILY SITE</a>
               <ul>
                 <li>
-                  <a href="https://www.monamimall.com/w/main.do" target="_blank">모나미몰</a>
-                </li>
-                <li>
-                  <a href="https://www.mon-arte.com/" target="_blank">모나르떼</a>
-                </li>
-                <li>
-                  <a href="https://www.monamimall.com/w/cscenter/store/storeInfo.do" target="_blank">모나미 컨셉스토어</a>
-                </li>
-                <li>
-                  <a href="http://www.hangso.co.kr/" target="_blank">주식회사 항소</a>
-                </li>
-                <li>
-                  <a href="http://www.monamistation.com/main.do" target="_blank">모나미 스테이션</a>
-                </li>
-                <li>
-                  <a href="https://www.monamimall.com/w/artcontest/info/artContestInfo.do" target="_blank">모나미 미술대회</a>
-                </li>
-                <li>
-                  <a href="http://mpms.monami.com/promotion/" target="_blank">모나미 기업서비스</a>
-                </li>
-                <li>
-                  <a href="http://www.monamicosmetics.com/" target="_blank">모나미코스메틱</a>
-                </li>
+                    <a href="https://www.monamimall.com/w/main.do" target="_blank">모나미몰</a>
+                  </li>
+                  <li>
+                    <a href="https://www.mon-arte.com/" target="_blank">모나르떼</a>
+                  </li>
+                  <li>
+                    <a href="https://www.monamimall.com/w/cscenter/store/storeInfo.do" target="_blank">모나미 컨셉스토어</a>
+                  </li>
+                  <li>
+                    <a href="http://www.hangso.co.kr/" target="_blank">주식회사 항소</a>
+                  </li>
+                  <li>
+                    <a href="http://www.monamistation.com/main.do" target="_blank">모나미 스테이션</a>
+                  </li>
+                  <li>
+                    <a href="https://www.monamimall.com/w/artcontest/info/artContestInfo.do" target="_blank">모나미 미술대회</a>
+                  </li>
+                  <li>
+                    <a href="http://mpms.monami.com/promotion/" target="_blank">모나미 기업서비스</a>
+                  </li>
+                  <li>
+                    <a href="http://www.monamicosmetics.com/" target="_blank">모나미코스메틱</a>
+                  </li>
               </ul>
             </div>
           </div>
         </div>
       </div>
-  <!-- 푸터 끝 -->
+    <!-- 푸터 끝 -->
+</div>
 </body>
 </html>

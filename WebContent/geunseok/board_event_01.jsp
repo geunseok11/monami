@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>MONAMI</title>
     <link rel="shortcut icon" href="${cp}/images/favicon.ico" type="image/x-icon" />
-    <link rel="stylesheet" href="${cp}/css/style_another.css" />
+    <link rel="stylesheet" href="${cp}/css/stylebasket.css" />
     <script type="text/javascript" src="${cp}/js/prodiqr.js"></script>
 
   </head>

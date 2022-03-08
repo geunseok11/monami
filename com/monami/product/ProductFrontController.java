@@ -34,54 +34,54 @@ public class ProductFrontController extends HttpServlet {
 		ActionTo transfer = new ActionTo();
 
 		switch (command) {
-			case "/product/ProductList.mo":
+			case "/product/ProductList.pd":
 				try {
 					transfer = new ProductListAction().execute(req, resp);
 				} catch (Exception e) {
 					System.out.println("ProductList : " + e);
 				}
 				break;
-			case "/product/ProductDetailView.mo":
+			case "/product/ProductDetailView.pd":
 				try {
 					transfer = new ProductDetailViewtAction().execute(req, resp);
 				} catch (Exception e) {
 					System.out.println("ProductDetailViewtOk : " + e);
 				}
 				break;
-			case "/product/Basket.mo":
+			case "/product/Basket.pd":
 				try {
 					transfer = new BasketAction().execute(req, resp);
 				} catch (Exception e) {
 					System.out.println("BasketOk : " + e);
 				}
 				break;
-			case "/product/BasketList.mo":
+			case "/product/BasketList.pd":
 				try {
 					transfer = new BasketListAction().execute(req, resp);
 				} catch (Exception e) {
 					System.out.println("BasketOk : " + e);
 				}
 				break;
-			case "/product/BasketOK.mo":
+			case "/product/BasketOK.pd":
 				try {
 					transfer = new BasketOkAction().execute(req, resp);
 				} catch (Exception e) {
 					System.out.println("BasketOk : " + e);
 				}
 				break;
-			case "/product/BasketCancelOk.mo":
+			case "/product/BasketCancelOk.pd":
 				try {
 					transfer = new BasketCancelOkAction().execute(req, resp);
 				} catch (Exception e) {
 					System.out.println("BasketCancelOk : " + e);
 				}
 				break;
-			case "/product/Order.mo":
+			case "/product/Order.pd":
 				transfer = new ActionTo();
 				transfer.setPath("/app/geunseok/order.jsp");
 				transfer.setRedirect(false);
 				break;
-			case "/user/OrderOk.mo":
+			case "/user/OrderOk.pd":
 				try {
 					transfer = new OrderOkAction().execute(req, resp);
 				} catch (Exception e) {

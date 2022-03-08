@@ -7,340 +7,13 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>MONAMI</title>
-    <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon" />
-    <link rel="stylesheet" href="../css/prodiqr.css" />
+    <title>문의사항 게시판</title>
+    <link rel="shortcut icon" href="${cp}/images/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="${cp}/css/prodiqr.css" />
     <script src="//code.jquery.com/jquery-3.3.1.min.js"></script>
-    <script type="text/javascript" src="../js/common.js"></script>
-    <link rel="stylesheet" href="../css/style.intro.css">
+    <script type="text/javascript" src="${cp}/js/common.js"></script>
+    <link rel="stylesheet" href="${cp}/css/style.intro.css">
 </head>
-
-<style>
-	.list a{
-		background-color: transparent;
-		color:#424242;
-		
-	}
-	.header_area a{
-		width:100px;
-		padding:10px;
-		text-align:center;
-	}
-	.header_area span{
-		font-weight:bold;
-	}
-	.pagination a{
-		padding:5px;
-		width:20px;
-		height:20px;
-	}
-	.pagination a:hover{
-		background-color: #55FF9A;
-	}
-	.nowPage{
-		padding:5px;
-		display:inline-block;
-		border-radius:3px;
-		background-color: #55FF9A;
-		font-weight: bold;
-		width:20px;
-		height:20px;
-	}
-	a.write{
-		width:70px;
-		height:25px;
-		text-align: center;
-		border-radius: 10px;
-	}
-	a.write:hover{
-		background-color: #55FF9A;
-	}
-	table{
-		border:0px;
-		width:900px;
-		margin: 0 auto;
-	}
-	.title h3{
-		font-size:1.5em;
-		color:rgb(0,200,80);
-		text-shadow:0 0 4px deepskyblue;
-	}
-	.list{
-		border-collapse:collapse;
-		border-spacing:0;
-		width:900px;
-		margin: 0 auto;
-	}
-	.list td{
-		text-align: center;
-	}
-	.list>tbody>tr>.list_title{
-		background-color:rgb(240,255,240);
-	}
-	.list>tbody>tr:nth-child(n+2):hover{
-		background-color:#CECECE;
-	}
-	.list>tbody>tr>th{
-		border-top:1px solid #384d75;
-		border-bottom:1px solid #ccc;
-		padding:5px;
-		font-weight: bold;
-		font-size: 15px;
-	}
-	.list>tbody>tr{
-	text-overflow:ellipsis;
-			}
-	.list>tbody>tr>td{
-		border-bottom:1px solid #ccc;
-		padding:5px;
-	}
-	a{
-		display:inline-block;
-		border-radius:3px;
-		font-weight: bold;
-		text-decoration: none;
-	}
-	#container{
-		margin-bottom: 100px;
-	}
-	/* The Modal (background) */
-.modal , .modal1{
-	display: none; /* Hidden by default */
-	position: fixed; /* Stay in place */
-	z-index: 1; /* Sit on top */
-	left: 0;
-	top: 0;
-	width: 100%; /* Full width */
-	height: 100%; /* Full height */
-	overflow: auto; /* Enable scroll if needed */
-	background-color: rgb(0, 0, 0); /* Fallback color */
-	background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
-	padding-top: 60px;
-}
-
-/* Modal Content/Box */
-.login , .join{
-	background-color: #fefefe;
-	margin: 5px auto; /* 15% from the top and centered */
-	border: 1px solid #888;
-	width: 30%; /* Could be more or less, depending on screen size */
-	height: 500px;
-	position: relative;
-	margin: 0 auto;
-	position: relative;
-}
-.join{
-	height:700px;
-	margin: -30px auto;
-	overflow:scroll;
-}
-
-a {
-	color: #333;
-	text-decoration: none;
-}
-
-input {
-	-webkit-writing-mode: horizontal-tb !important;
-	text-rendering: auto;
-	color: initial;
-	letter-spacing: normal;
-	word-spacing: normal;
-	text-transform: none;
-	text-indent: 0px;
-	text-shadow: none;
-	display: inline-block;
-	text-align: start;
-	-webkit-appearance: textfield;
-	background-color: white;
-	-webkit-rtl-ordering: logical;
-	cursor: text;
-	margin: 0em;
-	font: 400 13.3333px Arial;
-	padding: 1px 0px;
-	border-width: 2px;
-	border-style: inset;
-	border-color: initial;
-	border-image: initial;
-}
-
-.modal h2 , .modal1 h2{
-	font-size: 30px;
-	text-align: center;
-	padding: 30px;
-	padding-bottom: 10px;
-}
-
-.inner_login {
-	position: absolute;
-	left: 50%;
-	top: 50%;
-	margin: -145px 0 0 -160px;
-}
-
-.screen_out {
-	position: absolute;
-	width: 0;
-	height: 0;
-	overflow: hidden;
-	line-height: 0;
-	text-indent: -9999px;
-}
-
-body, button, input, select, td, textarea, th {
-	font-size: 13px;
-	line-height: 1.5;
-	-webkit-font-smoothing: antialiased;
-}
-
-
-fieldset{
-	padding-left: 10px;
-	padding-right: 10px;
-	border:0;
-}
-img{
-	border: 0;
-}
-.close {
-	position: absolute;
-	right: 5px;
-	top: 0;
-	color: #000;
-	font-size: 20px;
-}
-
-.close:hover, .close:focus {
-	color: red;
-	cursor: pointer;
-}
-
-.login .box_login , .join .box_join{
-	margin: 35px 0 0;
-	border-radius: 3px;
-	background-color: #fff;
-	box-sizing: border-box;
-	border-radius: 3px
-}
-
-.login .inp_text ,.join .inp_text{
-	position: relative;
-	width: 100%;
-	margin: 0;
-	padding: 18px 19px 19px;
-	box-sizing: border-box;
-	border:1px solid #ddd;
-}
-div#zipcode{
-	width:60%;
-	float:left;
-}
-.login .inp_text+.inp_text , .join .inp_text+.inp_text{
-	border-top: 1px solid #ddd;
-}
-
-#loginForm #joinForm{
-	width: 100%;
-}
-
-.inp_text input {
-	display: block;
-	width: 100%;
-	height: 100%;
-	font-size: 13px;
-	color: #000;
-	border: none;
-	outline: 0;
-	-webkit-appearance: none;
-	background-color: transparent;
-}
-.btn_ck, .btn_zip{
-	color:#fff;
-	background-color:#000;
-	padding: 10px 30px;
-    margin: 5px;
-    border: none;
-    border-radius: 3px;
-    cursor:pointer;
-}
-input.btn_zip{
-	margin-left:20px;
-	margin-top:2px;
-	padding:15px 30px;
-}
-.btn_login, .btn_join{
-	margin: 20px 0 0;
-	width: 100%;
-	height: 48px;
-	border-radius: 3px;
-	border:none;
-	font-size: 16px;
-	color: #fff;
-    background: #c40f39;
-    cursor:pointer;
-}
-
-.login_append {
-	overflow: hidden;
-	padding: 15px 0 0;
-}
-
-.inp_chk {
-	display: inline-block;
-	position: relative;
-	margin-bottom: -1px;
-}
-
-.login_append .inp_chk {
-	float: left;
-}
-
-.inp_chk .inp_radio {
-	position: absolute;
-	z-index: 1;
-	top: 0;
-	left: 0;
-	width: 18px;
-	height: 18px;
-	border: none;
-}
-
-.inp_chk .lab_g {
-	display: inline-block;
-	margin-right: 19px;
-	color: #909090;
-	font-size: 13px;
-	line-height: 19px;
-	vertical-align: top;
-	font-family: "Montserrat", sans-serif;
-}
-
-.inp_chk .ico_check {
-	display: inline-block;
-	width: 18px;
-	height: 18px;
-	margin: 1px 4px 0 0;
-	background-position: -60px 0;
-	color: #333;
-}
-
-.inp_chk .txt_lab {
-	vertical-align: top;
-	padding-left:20px;
-	font-family: "Montserrat", sans-serif;
-	color: #909090;
-	font-size: 13px;
-}
-
-.login_append .txt_find {
-	float: right;
-	color: #777;
-}
-.login_append .txt_find .link_find {
-	font-size: 13px;
-}
-</style>
-
 <body>
     <c:set var="cp" value="${pageContext.request.contextPath}"/>
     <!-- wrap 시작 -->
@@ -383,134 +56,6 @@ input.btn_zip{
                       </div>
                       <div class="topmenu">
                           <ul>
-                          <li><a class="join_click"
-								onclick="document.getElementById('id02').style.display='block'">JOIN</a>
-								<!-- The Modal -->
-								<div class="modal1" id="id02">
-									<div class="join">
-										<span
-											onclick="document.getElementById('id02').style.display='none'"
-											class="close">&times;</span>
-										<h2>
-											<img src="${cp}/images/logo.jpeg">
-										</h2>
-										<div id="result">&nbsp;</div>
-										
-										<form method="post" id="joinForm" name="joinForm"
-											action="${cp}/user/UserJoinOk.us" onsubmit="return sendit()">
-											<fieldset>
-												<legend class="screen_out">회원가입 정보 입력폼</legend>
-												<div class="box_join">
-													<div class="inp_text">
-														<input
-															type="text" id="user_id" name="user_id" placeholder="ID">
-													</div>
-													<input type="button" value="중복검사" class="btn_ck">
-													<div class="inp_text">
-														<label for="user_pw" class="screen_out">비밀번호</label> <input
-															type="password" id="user_pw" name="user_pw"
-															placeholder="Password">
-													</div>
-													<div class="nbsp">&nbsp;</div>
-													<div class="inp_text">
-														<label for="user_name" class="screen_out">이름</label> <input
-															type="text" id="user_name" name="user_name"
-															placeholder="이름">
-													</div>
-													<div class="nbsp">&nbsp;</div>
-													<div class="inp_text">
-														<label for="user_dob" class="screen_out">생년월일</label> <input
-															type="txt" id="user_dob" name="user_dob"
-															placeholder="생년월일 (예:19950427)">
-													</div>
-													<div class="nbsp">&nbsp;</div>
-													<div class="inp_text" id="zipcode">
-														<label for="user_zipcode" class="screen_out">우편번호</label> <input
-															type="txt" id="sample6_postcode" name="user_zipcode"
-															placeholder="우편번호">
-													</div>
-													<input type="button"  class="btn_zip"onclick="sample6_execDaumPostcode()" value="우편번호 찾기">
-													<div class="nbsp">&nbsp;</div>
-													<div class="inp_text">
-														<label for="user_addr" class="screen_out">주소</label> <input
-															type="txt" id="sample6_address" name="user_addr"
-															placeholder="주소">
-													</div>
-													<div class="nbsp">&nbsp;</div>
-													<div class="inp_text">
-														<label for="user_addrdetail" class="screen_out">상세주소</label> <input
-															type="txt" id="sample6_detailAddress" name="user_addrdetail"
-															placeholder="상세주소">
-													</div>
-													<div class="nbsp">&nbsp;</div>
-													<div class="inp_text">
-														<label for="user_addretc" class="screen_out">참고항목</label> <input
-															type="txt" id="sample6_extraAddress" name="user_addretc"
-															placeholder="참고항목">
-													</div>
-													<div class="nbsp">&nbsp;</div>
-													<div class="inp_text">
-														<label for="user_phone" class="screen_out">핸드폰 번호</label>
-														<input type="tel" id="user_phone" name="user_phone"
-															placeholder="핸드폰 번호">
-													</div>
-												</div>
-												<button type="submit" class="btn_join">회원가입</button>
-												
-											</fieldset>
-										</form>
-
-									</div>
-								</div></li>
-							<li><a
-								onclick="document.getElementById('id01').style.display='block'">LOGIN</a>
-								<!-- The Modal -->
-								<div class="modal" id="id01">
-									<div class="login">
-										<span
-											onclick="document.getElementById('id01').style.display='none'"
-											class="close">&times;</span>
-										<h2>
-											<img src="${cp}/images/logo.jpeg">
-										</h2>
-
-										<form method="post" id="loginForm"
-											action="${cp}/user/UserLoginOk.us"">
-											<fieldset>
-												<legend class="screen_out">로그인 정보 입력폼</legend>
-												<div class="box_login">
-													<div class="inp_text">
-														<label for="user_id" class="screen_out">아이디</label> <input
-															type="text" id="user_id" name="user_id" placeholder="ID">
-													</div>
-													<div class="nbsp">&nbsp;</div>
-													<div class="inp_text">
-														<label for="user_pw" class="screen_out">비밀번호</label> <input
-															type="password" id="user_pw" name="user_pw"
-															placeholder="Password">
-													</div>
-												</div>
-												<button type="submit" class="btn_login">로그인</button>
-												<div class="login_append">
-													<div class="inp_chk">
-														<!-- 체크시 checked 추가 -->
-														<input type="checkbox" id="keepLogin" class="inp_radio"
-															name="keepLogin">
-															<span class="txt_lab"
-															style="display: inline-block">로그인 상태 유지</span>
-														
-													</div>
-													<span class="txt_find"> <a
-														href="/member/find/loginId" class="link_find">아이디</a> / <a
-														href="/member/find/password" class="link_find">비밀번호 찾기</a>
-													</span>
-												</div>
-
-											</fieldset>
-										</form>
-
-									</div>
-								</div></li>
                             <li>
                               <a href="${cp}/sanghoon/index.jsp">HOME</a>
                             </li>
@@ -609,17 +154,10 @@ input.btn_zip{
                             <a href="${cp}/doyoon/FAQ.jsp">자주묻는질문</a>
                           </li>
                           <li>
-
-                            <a href="${cp}/inquiry/InquiryWrite.mo">문의하기</a>
-                          </li>
-                          <li>
-                            <a href="${cp}/inquiry/InquiryList.mo">문의사항</a>
-
                             <a href="${cp}/doyoon/Inquiry.jsp">문의하기</a>
                           </li>
                           <li>
                             <a href="${cp}/teamin/Inquerylist.jsp">문의사항</a>
-
                           </li>
                           <li>
                             <a href="${cp}/geunseok/board_event.jsp">이벤트</a>
@@ -693,7 +231,8 @@ input.btn_zip{
                     <h2>고객지원</h2>
                     <ul>
                         <li><a href="${cp}/doyoon/FAQ.jsp">자주묻는질문</a></li>
-                              <li><a href="${cp}/inquiry/InquiryWrite.mo">문의하기</a></li>
+                              <li><a href="${cp}/doyoon/Inquiry.jsp">문의하기</a></li>
+                              <li><a href="${cp}/teamin/Inquerylist.jsp">문의사항</a></li>
                               <li><a href="${cp}/geunseok/board_event.jsp">이벤트</a></li>
                               <li><a class="find_f">모나미 패밀리샵 찾기</a></li>
                     </ul>
@@ -716,8 +255,8 @@ input.btn_zip{
         <div class="pagetabs">
             <ul class="m4">
                 <li><a href="${cp}/doyoon/FAQ.jsp">자주하는질문</a></li>
-                <li><a href="${cp}/inquiry/InquiryList.mo" class="on">문의하기</a></li>
-                <li><a href="${cp}/inquiry/InquiryWrite.mo">문의등록</a></li>
+                <li><a href="${cp}/doyoon/Inquiry.jsp">문의하기</a></li>
+                <li><a href="${cp}/teamin/Inquerylist.jsp" class="on">문의사항</a></li>
                 <li><a href="${cp}/geunseok/board_event.jsp">이벤트</a></li>
                 <li><a href="${cp}/shop/shop.jsp">모나미 패밀리샵 찾기</a></li>
             </ul>
@@ -725,71 +264,23 @@ input.btn_zip{
         <h3 class="title1">
             MONAMI <span>INQUERYLIST</span>
         </h3>
-      <div id="wrap">
-      	<table class="list">
-      		<tr align="center" valign="middle" style="background-color: #AFFFC5">
-      			<th width="5%">번호</th>
-      			<th width="10%">문의내용</th>
-      			<th width="10%">이름</th>
-      			<th width="15%">이메일</th>
-      			<th width="15%">연락처</th>
-      			<th width="10%">제목</th>
-      			<th width="30%">내용</th>
-      		</tr>
-      		<c:choose>
-      			<c:when test="${inquiryList.size()>0 and inquiryList != null}">
-      				<c:forEach var="inquiry" items="${inquiryList}">
-      					<tr class="inquiry">
-      						<td>${inquiry.iqr_idx}</td>
-      						<td>${inquiry.iqr_catagory}</td>
-      						<td>${inquiry.iqr_writer}</td>
-      						<td>${inquiry.iqr_email}</td>
-      						<td>${inquiry.iqr_phone}</td>
-      						<td><a href="${cp}/inquiry/InquiryView.mo?iqr_idx=${inquiry.iqr_idx}&page=${page}">${inquiry.iqr_title}</a></td>
-      						<td class="contents" style="text-overflow: ellipsis; height: 5px">${inquiry.iqr_content}</td>
-      					</tr>
-      				</c:forEach>
-      			</c:when>
-      			<c:otherwise>
-      				<tr>
-      					<td colspan="6" style="text-align: center; font-size: 20px">
-      					등록된 게시글이 없습니다.
-      					</td>
-      				</tr>
-      			</c:otherwise>
-      		</c:choose>
-      	</table>
-      	<table class="pagination">
-			<tr align="center" valign="middle">
-				<td>
-					<c:if test="${page>1}">
-						<a href="${cp}/inquiry/InquiryList.mo?page=${page-1}">&lt;</a>
-					</c:if>
-					<c:forEach begin="${startPage}" end="${endPage}" step="1" var="i">
-						<c:choose>
-							<c:when test="${i == page}">
-								<span class="nowPage">${i}</span>
-							</c:when>
-							<c:otherwise>
-								<a href="${cp}/inquiry/InquiryList.mo?page=${i}&keyword=${keyword}">${i}</a>
-							</c:otherwise>
-						</c:choose>
-					</c:forEach>
-					<c:if test="${page<totalPage}">
-						<a href="${cp}/inquiry/InquiryList.mo?page=${page+1}">&gt;</a>
-					</c:if>
-				</td>
-			</tr>
-		</table>
-		<table style="border:0px; width:900px;">
-			<tr align="right" valign="middle">
-				<td><a class="write" href="${cp}/inquiry/InquiryWrite.mo?page=${page}">글쓰기</a></td>
-			</tr>
-		</table>
+        <div class="faq">
+            <div class="faq_box">
+                <div class="question">
+                    <a href="${cp}/teamin/Inqueryview.jsp">등록된 문의글이 없습니다.</a>
+                </div>
+            </div>
+        </div>
+        <div class="paging">
+          <strong>1</strong>
+      </div>
+      <div class="btn_top" style="cursor:pointer;" onclick="window.scrollTo(0,0);">
+          <a>
+              <img src="${cp}/images/btn_top.gif" alt="페이지 상단으로">
+          </a>
       </div>
       </div>
       <!-- 푸터 시작 -->
-
    <div id="footer">
     <div class="foot">
       <div class="foot_pop" style="display: none;">
@@ -938,23 +429,7 @@ input.btn_zip{
         </div>
       </div>
     </div>
-
-    </div>
-    </div>
+  </div>
   <!-- 푸터 끝 -->
   </body>
-
-  <script>
-	function sendit(){
-		let q = document.getElementById('q');
-		//유효성 검사
-
-		location.href = cp+"InquiryList.mo?keyword="+q.value;
-	}
-
-		location.href = cp+"/board/BoardList.bo?keyword="+q.value;
-	}
-
-
-</script>
 </html>

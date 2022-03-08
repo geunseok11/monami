@@ -22,7 +22,7 @@
 </style>
 <body>
 	<div id="wrap">
-		<%@ include file="../doyoon/header.jsp"%>
+		<%@ include file="../jungmin/header.jsp"%>
 		  <!-- 본문 시작  -->
         <div id="container">
         <div class="pagetitle pn4">
@@ -32,7 +32,8 @@
         <div class="pagetabs">
             <ul class="m4">
                 <li><a href="${cp}/doyoon/FAQ.jsp">자주하는질문</a></li>
-                <li><a href="${cp}/doyoon/Inquiry.jsp" class="on">문의하기</a></li>
+                <li><a href="${cp}/inquiry/InquiryList.mo">문의하기</a></li>
+                <li><a href="${cp}/inquiry/InquiryWrite.mo" class="on">문의등록</a></li>
                 <li><a href="${cp}/geunseok/board_event.jsp">이벤트</a></li>
                 <li><a href="${cp}/shop/shop.jsp">모나미 패밀리샵 찾기</a></li>
             </ul>
@@ -215,6 +216,5 @@
 		}
 		inquiryForm.submit();
 	}
-
 </script>
 </html>

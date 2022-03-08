@@ -1,100 +1,36 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-    <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>MONAMI</title>
-    <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon" />
-    <link rel="stylesheet" href="../css/prodiqr.css" />
-    <script src="//code.jquery.com/jquery-3.3.1.min.js"></script>
-    <script type="text/javascript" src="../js/common.js"></script>
-    <link rel="stylesheet" href="../css/style.intro.css">
+    <link rel="shortcut icon" href="${cp}/images/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="${cp}/css/news_video.css" />
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.js"></script>
+    <script type="text/javascript" src="${cp}/js/common.js"></script>
+    <script type="text/javascript">
+      $(function () {
+        $(document).on("click", ".find_f", function () {
+          dh = $(document).height();
+          poph = $(".find_layer").height();
+
+          $("#bgblack").height(dh).show();
+          $(".find_layer")
+            .show()
+            .animate({ top: $(document).scrollTop() + 50 + "px" }, 100);
+        });
+        $("#bgblack,.btnx_").click(function () {
+          $("#bgblack").height(dh).hide();
+          $(".find_layer").hide();
+        });
+      });
+    </script>
 </head>
-<style>
-#container{
-	overflow: hidden;
-}
-form{
-	padding-bottom: 200px;
-}
-form table tr th{
-	background-color: rgb(240,255,240);
-	font-weight: bold;
-}
-form table tr td a{
-	font-size: 15px;
-	padding: 5px;
-	font-weight: bold;
-}
-.btn_area{
-	margin-top: 10px;
-	border-radius: 10px;
-}
-.btn_area:hover{
-	background-color: #95FFC0;
-}
-.reply_line{
-		width:900px;
-		margin-top:20px;
-		padding-top:30px;
-		margin: 0 auto;
-	}
-	.write_box{
-		padding-bottom: 20px;
-	}
-	.write_box>tbody>tr>td:first-child,.update_box>tbody>tr>td:first-child{
-		width:150px;
-		text-align: center;
-		font-weight: bold;
-		font-size: 18px;
-	}
-	.write_box>tbody>tr>td+td{
-		position: relative;
-	}
-	.write_box textarea, .update_box textarea{
-		padding:5px 10px;
-		height:70px;
-		resize:none;
-		width:600px;
-		outline:none;
-		border:1px solid #c40f39;
-		border-radius:10px;
-	}
-	.update_box textarea, .write_box textarea{
-		width:500px;
-		height:80px;
-		font-size: 15px;
-	}
-	.update_box{
-		padding-top:20px;
-		padding-bottom: 30px;
-	}
-	.update_box .btns a, .write_box .btns a{
-		display:inline-block;
-		width:90px;
-		height:40px;
-		text-align: center;
-		vertical-align: middle;
-		line-height: 40px;
-		margin-left: 10px;
-	}
-	.adbtn{
-		display:inline-block;
-		border-radius:5px;
-		background-color:#c40f39;
-		color:white;
-		font-weight: bold;
-		font-size: 17px;
-		text-decoration: none;
-	}
-</style>
 <body>
-    <c:set var="cp" value="${pageContext.request.contextPath}"/>
-    <!-- wrap 시작 -->
+<c:set var="cp" value="${pageContext.request.contextPath}"/>
     <div id="wrap">
         <div id="bgblack"></div>
         <div class="find_layer" style="display: none; top: 50px">
@@ -209,13 +145,13 @@ form table tr td a{
                         </ul>
                       </li>
                       <li>
-                        <a href="${cp}/taemin/monami_news1.jsp">NEWS & VIDEO</a>
+                        <a href="${cp}/teamin/monami_news1.jsp">NEWS & VIDEO</a>
                         <ul >
                           <li>
-                            <a href="${cp}/taemin/monami_news1.jsp">보도자료</a>
+                            <a href="${cp}/teamin/monami_news1.jsp">보도자료</a>
                           </li>
                           <li>
-                            <a href="${cp}/taemin/monami_video1.jsp">동영상자료</a>
+                            <a href="${cp}/teamin/monami_video1.jsp">동영상자료</a>
                           </li>
                         </ul>
                       </li>
@@ -238,6 +174,9 @@ form table tr td a{
                           </li>
                           <li>
                             <a href="${cp}/doyoon/Inquiry.jsp">문의하기</a>
+                          </li>
+                          <li>
+                            <a href="${cp}/teamin/Inquerylist.jsp">문의사항</a>
                           </li>
                           <li>
                             <a href="${cp}/geunseok/board_event.jsp">이벤트</a>
@@ -296,8 +235,8 @@ form table tr td a{
                 <div class="menubox">
                     <h2>NEWS &amp; VIDEO</h2>
                     <ul>
-                        <li><a href="${cp}/taemin/monami_news1.jsp">보도자료</a></li>
-                              <li><a href="${cp}/taemin/monami_video1.jsp">동영상자료</a></li>
+                        <li><a href="${cp}/teamin/monami_news1.jsp">보도자료</a></li>
+                              <li><a href="${cp}/teamin/monami_video1.jsp">동영상자료</a></li>
                     </ul>
                 </div>
                 <div class="menubox">
@@ -312,6 +251,7 @@ form table tr td a{
                     <ul>
                         <li><a href="${cp}/doyoon/FAQ.jsp">자주묻는질문</a></li>
                               <li><a href="${cp}/doyoon/Inquiry.jsp">문의하기</a></li>
+                              <li><a href="${cp}/teamin/Inquerylist.jsp">문의사항</a></li>
                               <li><a href="${cp}/geunseok/board_event.jsp">이벤트</a></li>
                               <li><a class="find_f">모나미 패밀리샵 찾기</a></li>
                     </ul>
@@ -325,138 +265,249 @@ form table tr td a{
     </div>
     </div>
     <!-- 헤더 끝 -->
-      <div id="container">
-          <div class="pagetitle pn4">
-            <h2>고객지원</h2>
-            <p>모나미는 언제나 소중한 의견에 귀 기울이겠습니다.</p>
-          </div>
-          <div class="pagetabs">
-            <ul class="m4">
-                <li><a href="${cp}/doyoon/FAQ.jsp">자주하는질문</a></li>
-                <li><a href="${cp}/inquiry/InquiryList.mo" class="on">문의하기</a></li>
-                <li><a href="${cp}/inquiry/InquiryWrite.mo">문의등록</a></li>
-                <li><a href="${cp}/geunseok/board_event.jsp">이벤트</a></li>
-                <li><a href="${cp}/shop/shop.jsp">모나미 패밀리샵 찾기</a></li>
-            </ul>
+    <!-- 본문 시작  -->
+    <div id="container">
+        <div id="contents">
+            <div class="pagetitle pn5">
+                <h2>
+                    " NEWS & VIDEO "
+                </h2>
+                <p> 모나미는 늘 밝고 새로운 미래를 그려나갑니다.</p>
+            </div>
+            <div class="pagetabs">
+                <ul class="m5">
+                    <li class="on">
+                        <a href="${cp}/teamin/monami_news1.jsp">보도자료</a>
+                    </li>
+                    <li>
+                        <a href="${cp}/teamin/monami_video1.jsp">동영상자료</a>
+                    </li>
+                </ul>
+            </div>
+            <h3 class="title1">
+                MONAMI
+                <span>NEWS</span>
+            </h3>
+            <form action="">
+            <div class="bbs_basic">
+                <table cellpadding="0" cellspacing="0">
+                    <tbody>
+                        <tr>
+                            <td class="date">
+                                <div class="day">19</div>
+                                <div class="ym">2021.10</div>
+                            </td>
+                            <td class="sbj">
+                                <div>
+                                    <a href="#">
+                                        <div class="tit">모나미, 아더에러 협업 ‘블루 펜’ 프리미엄 에디션 출시</div>
+                                        <p>
+                                            모나미, 아더에러 협업 ‘블루 펜’ 프리미엄 에디션 출시- 무광 메탈 소재 153 고급 볼펜 바디에 아더에러의 시그니처 컬러 ‘제트 블루’ 구현- 아더..					</p>
+                                    </a>
+                                </div>
+                            </td>
+                            <td class="more">
+                                <a href="#" class="btn"><span>자세히보기</span><div></div></a>
+                            </td>
+                        </tr>
+                            
+                        <tr>
+                            <td class="date">
+                                <div class="day">15</div>
+                                <div class="ym">2021.10</div>
+                            </td>
+                            <td class="sbj">
+                                <div>
+                                    <a href="#">
+                                        <div class="tit">모나미, 기록을 위한 디자인 문구 브랜드 ‘제니스’, ‘지퀀스’ 론칭</div>
+                                        <p>
+                                            모나미, 기록을 위한 디자인 문구 브랜드 ‘제니스’, ‘지퀀스’ 론칭- 유럽 감성 필기구 ‘제니스’와 고급 노트 브랜드 ‘지퀀스’ 등 새로운 디자..					</p>
+                                    </a>
+                                </div>
+                            </td>
+                            <td class="more">
+                                <a href="#" class="btn"><span>자세히보기</span><div></div></a>
+                            </td>
+                        </tr>
+                            
+                        <tr>
+                            <td class="date">
+                                <div class="day">27</div>
+                                <div class="ym">2021.09</div>
+                            </td>
+                            <td class="sbj">
+                                <div>
+                                    <a href="#">
+                                        <div class="tit">모나미, 한글날 기념 기획세트 ‘153 예다움’ 출시</div>
+                                        <p>
+                                            모나미, 한글날 기념 기획세트 ‘153 예다움’ 출시- 볼펜 바디에 새겨진 총 10가지의 따뜻한 순우리말… 한글날 의미 살려- 총 10가지의 파스텔톤 볼펜 ..					</p>
+                                    </a>
+                                </div>
+                            </td>
+                            <td class="more">
+                                <a href="#" class="btn"><span>자세히보기</span><div></div></a>
+                            </td>
+                        </tr>
+                            
+                        <tr>
+                            <td class="date">
+                                <div class="day">23</div>
+                                <div class="ym">2021.09</div>
+                            </td>
+                            <td class="sbj">
+                                <div>
+                                    <a href="#">
+                                        <div class="tit">모나미, 신제품 ’153 어텀’ 라이브커머스에서 단독 선출시</div>
+                                        <p>
+                                            모나미, 신제품 ’153 어텀’ 라이브커머스에서 단독 선출시- 오는 25일 네이버 브랜드데이 쇼핑 라이브에서 신제품 ‘153 어텀(Autumn)’ 최초 공개-153 ID ..					</p>
+                                    </a>
+                                </div>
+                            </td>
+                            <td class="more">
+                                <a href="#" class="btn"><span>자세히보기</span><div></div></a>
+                            </td>
+                        </tr>
+                            
+                        <tr>
+                            <td class="date">
+                                <div class="day">17</div>
+                                <div class="ym">2021.08</div>
+                            </td>
+                            <td class="sbj">
+                                <div>
+                                    <a href="#">
+                                        <div class="tit">모나미, 사이드 노크 타입 샤프 ‘클리키(CLICKY)’ 출시</div>
+                                        <p>
+                                            모나미, 사이드 노크 타입 샤프 ‘클리키(CLICKY)’ 출시- 사이드 노크 방식과 함께 편안한 그립감으로 필기 시 편리- 캔디 맛을 연상시키는 5가지 컬러로..					</p>
+                                    </a>
+                                </div>
+                            </td>
+                            <td class="more">
+                                <a href="#" class="btn"><span>자세히보기</span><div></div></a>
+                            </td>
+                        </tr>
+                            
+                        <tr>
+                            <td class="date">
+                                <div class="day">19</div>
+                                <div class="ym">2021.07</div>
+                            </td>
+                            <td class="sbj">
+                                <div>
+                                    <a href="#">
+                                        <div class="tit">모나미, ‘제44회 모나미 모나르떼 어린이 미술대회’ 개최</div>
+                                        <p>
+                                            모나미, ‘제44회 모나미 모나르떼 어린이 미술대회’ 개최- 매년 약 6만 명 이상 참가하는 전통 있는 어린이 미술대회이자 사회 공헌 캠페인- 어린이들..					</p>
+                                    </a>
+                                </div>
+                            </td>
+                            <td class="more">
+                                <a href="#" class="btn"><span>자세히보기</span><div></div></a>
+                            </td>
+                        </tr>
+                            
+                        <tr>
+                            <td class="date">
+                                <div class="day">15</div>
+                                <div class="ym">2021.07</div>
+                            </td>
+                            <td class="sbj">
+                                <div>
+                                    <a href="#">
+                                        <div class="tit">모나미, 광복절 스페셜 에디션 ‘153 ID 8.15’ 라이브커머스 진행</div>
+                                        <p>
+                                            모나미, 광복절 스페셜 에디션 ‘153 ID 8.15’ 라이브커머스 진행- 1940년 창설된 한국광복군을 알리고 독립운동가 정신 되새기고자 기획- 오는 21일 오전 ..					</p>
+                                    </a>
+                                </div>
+                            </td>
+                            <td class="more">
+                                <a href="#" class="btn"><span>자세히보기</span><div></div></a>
+                            </td>
+                        </tr>
+                            
+                        <tr>
+                            <td class="date">
+                                <div class="day">05</div>
+                                <div class="ym">2021.07</div>
+                            </td>
+                            <td class="sbj">
+                                <div>
+                                    <a href="#">
+                                        <div class="tit">모나미, 물에 번지지 않는 ‘프러스펜 3000 피그먼트’ 출시</div>
+                                        <p>
+                                            모나미, 물에 번지지 않는 ‘프러스펜 3000 피그먼트’ 출시- 물에 번지지 않는 ‘안료’ 잉크를 사용해 라인 드로잉 아트워크 등 활용폭 넓혀- 그레이 ..					</p>
+                                    </a>
+                                </div>
+                            </td>
+                            <td class="more">
+                                <a href="#" class="btn"><span>자세히보기</span><div></div></a>
+                            </td>
+                        </tr>
+                            
+                        <tr>
+                            <td class="date">
+                                <div class="day">28</div>
+                                <div class="ym">2021.06</div>
+                            </td>
+                            <td class="sbj">
+                                <div>
+                                    <a href="#">
+                                        <div class="tit">모나미X하비풀, 캘리그라피 온라인 클래스 오픈</div>
+                                        <p>
+                                            모나미X하비풀, 캘리그라피 온라인 클래스 오픈- 모나미 펜과 함께 일상에서 즐길 수 있는 온라인 캘리그라피 클래스 오픈- 수강생 대상 ‘선착순 구매..					</p>
+                                    </a>
+                                </div>
+                            </td>
+                            <td class="more">
+                                <a href="#" class="btn"><span>자세히보기</span><div></div></a>
+                            </td>
+                        </tr>
+                            
+                        <tr>
+                            <td class="date">
+                                <div class="day">07</div>
+                                <div class="ym">2021.06</div>
+                            </td>
+                            <td class="sbj">
+                                <div>
+                                    <a href="#">
+                                        <div class="tit">모나미, 신제품 ‘MIX 시리즈’ 라이브커머스에서 단독 선공개</div>
+                                        <p>
+                                            모나미, 신제품 ‘MIX 시리즈’ 라이브커머스에서 단독 선공개- ‘라이브 방송’ 통해 첫 선 보이는 MIX 시리즈- 153 MIX 볼펜 2종과 MIX 수첩 5종 등 총 7종..					</p>
+                                    </a>
+                                </div>
+                            </td>
+                            <td class="more">
+                                <a href="#" class="btn"><span>자세히보기</span><div></div></a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            </form>
+            <div class="paging">
+                <a href="${cp}/teamin/monami_news1.jsp" class="page_prev">
+                    <img src="${cp}/images/page_prev.gif" alt="">
+                </a>
+                <a href="${cp}/teamin/monami_news1.jsp">1</a>
+                <strong>2</strong>
+                <a href="${cp}/teamin/monami_news3.jsp">3</a>
+                <a href="${cp}/teamin/monami_news4.jsp">4</a>
+                <a href="${cp}/teamin/monami_news5.jsp">5</a>
+                <a href="${cp}/teamin/monami_news3.jsp" class="page_next">
+                    <img src="${cp}/images/page_next.gif" alt="">
+                </a>
+            </div>
+            <div class="btn_top" style="cursor:pointer;" onclick="window.scrollTo(0,0);">
+                <a>
+                    <img src="${cp}/images/btn_top.gif" alt="페이지 상단으로">
+                </a>
+            </div>
         </div>
-        <h3 class="title1">
-            MONAMI <span>INQUERYVIEW</span>
-        </h3>
-        <form>
-            <table border="1" style="border-collapse: collapse; margin: 0 auto;">
-                <tr height="50px">
-					<th align="center" width="150px">문의내용</th>
-                    <td>
-                      <input name="iqr_catagory" style="height: 50px; width: 400px;"
-                      value="${inquiry.iqr_catagory}" readonly>
-                    </td>
-				        </tr>
-                <tr height="50px">
-                    <th align="center" width="150px">이름</th>
-                    <td>
-						 <input name="iqr_writer" style="height: 50px; width: 400px;"
-						 value="${inquiry.iqr_writer}" readonly>
-					</td>
-                </tr>
-                <tr height="50px">
-                    <th align="center" width="150px">이메일</th>
-                    <td>
-						<input name="iqr_email" style="height: 50px; width: 400px;"
-						value="${inquiry.iqr_email}" readonly>
-					</td>
-                </tr>
-                <tr height="50px">
-                    <th align="center" width="150px">연락처</th>
-                    <td>
-						<input name="iqr_phone" style="height: 50px; width: 400px;"
-						value="${inquiry.iqr_phone}" readonly>
-					</td>
-                </tr>
-                <tr height="50px">
-                    <th align="center" width="150px">제목</th>
-                    <td>
-                    	<input name="iqr_title" style="height: 50px; width: 400px;"
-                    	value="${inquiry.iqr_title}" readonly>
-					</td>
-                </tr>
-                <tr height="200px">
-                    <th align="center" width="150px">내용</th>
-                    <td>
-                        <textarea name="iqr_content" style="width:402px;
-                        height:200px;" readonly>${inquiry.iqr_content}</textarea>
-                    </td>
-                </tr>
-            </table>
-
-            <table class="btn_area" style="margin: 0 auto;">
-				<tr align="right" valign="middle">
-					<td>
-						<a href="${cp}/inquiry/InquiryList.mo?page=${param.page == null ? 1 : param.page}">목록</a>
-					</td>
-				</tr>
-			</table>
-        </form>
-        <div class="reply_line">
-        	<c:if test="${adminUser != null}">
-        	<c:if test="${reply.answer == null }">
-        	<form name="replyForm" method="post" action="${cp}/inquiry/replywrite.ir">
-        		<input type="hidden" name="iqr_idx" value="${inquiry.iqr_idx}">
-        		<table class="write_box">
-        			<tr height="50px">
-        				<td align="center" width="150px">답변</td>
-        				<td>
-        					<textarea name="answer" class="answer" style="resize:none"></textarea>	
-        				</td>
-        				<td>
-        					<div class="btns">
-        						<a class="adbtn" href="javascript:document.replyForm.submit()">등록</a>
-        					</div>
-        				</td>
-        			</tr>
-        		</table>
-        	</form>
-        	</c:if>
-        	<c:if test="${reply.answer !=null}">
-        		<form name="replyForm" method="post" action="${cp}/inquiry/replyupdate.ir">
-        		<input type="hidden" name="iqr_idx" value="${inquiry.iqr_idx}">
-        		<table class="write_box">
-        			<tr height="50px">
-        				<td align="center" width="150px">답변</td>
-        				<td>
-        					<textarea name="answer" class="answer" style="resize:none"></textarea>	
-        				</td>
-        				<td>
-        					<div class="btns">
-        						<a class="adbtn" href="javascript:document.replyForm.submit()">수정</a>
-        					</div>
-        				</td>
-        			</tr>
-        		</table>
-        	</form>
-        	</c:if>
-        	</c:if>
-        	<form name="updateForm" method="post" action="">
-        		<input type="hidden" name="iqr_idx" value="${reply.iqr_idx}">
-        		<table class="update_box">
-        				<tr height="50px">
-        					<td align="center" width="150px">관리자<br>답변</td>
-        					<td>
-        						<textarea readonly class="answer" style="resize:none">${reply.answer}</textarea>
-        					</td>
-        					<c:if test="${adminUser != null}">
-        					<td>
-								<div class="btns">
-        							<a class="adbtn" href="javascript:deleteReply(${reply.iqr_idx})">삭제</a>
-        						</div>
-        					</td>
-        					</c:if>
-        				</tr>
-        		</table>
-        	</form>
-        </div>
-        </div>
-        <!-- 푸터 시작 -->
-   <div id="footer">
+    </div>
+    <!-- 본문 끝 -->
+    <!-- 푸터 시작 -->
+    <div id="footer">
         <div class="foot">
           <div class="foot_pop" style="display: none;">
             <div class="privacy" style="display: none;">
@@ -605,6 +656,7 @@ form table tr td a{
           </div>
         </div>
       </div>
-  <!-- 푸터 끝 -->
+    <!-- 푸터 끝 -->
+</div>
 </body>
 </html>

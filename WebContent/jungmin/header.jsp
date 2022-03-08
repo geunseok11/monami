@@ -39,12 +39,13 @@
 					</div>
 					<div class="topmenu">
 						<ul>
-							<c:choose>
+								<c:choose>
            			<c:when test="${loginUser.user_id!=null}" >
-            	<li><a href="${cp}/jungmin/usermodify.mo"><span>${loginUser.user_id} 님 환영합니다.</span>&nbsp;&nbsp;</a>
+            	<li><span>${loginUser.user_id} 님 환영합니다.</span>&nbsp;&nbsp;
+            		<a href="${cp}/jungmin/usermodify.mo">MYPAGE</a>&nbsp;
 					<a href="${cp}/user/UserLogoutOk.us">LOGOUT</a></li>
 					</c:when>
-								<c:otherwise>
+							<c:otherwise>
 									<li><a class="join_click"
 										onclick="document.getElementById('id02').style.display='block'">JOIN</a>
 										<!-- The Modal -->
@@ -221,10 +222,10 @@
 							<li><a href="${cp}/news/NewsBoardList.mo">NEWS & VIDEO</a>
 								<ul>
 									<li><a href="${cp}/news/NewsBoardList.mo">보도자료</a></li>
-									<li><a href="${cp}/taemin/monami_video1.jsp">동영상자료</a></li>
-									<c:if test="${loginUser.user_id == 'monami'}">
+									<li><a href="${cp}/board/Videolist.mo">동영상자료</a></li>
+									<c:if test="${loginUser.user_id == 'admin'}">
 									<li><a href="${cp}/jungmin/news_manegement.jsp">등록</a></li>
-								</c:if>	
+									</c:if>
 								</ul></li>
 							<li><a
 								href="https://www.monamimall.com/w/artcontest/info/artContestInfo.do?trackingCd=monami">모나미
@@ -295,10 +296,10 @@
 							<h2>NEWS &amp; VIDEO</h2>
 							<ul>
 								<li><a href="${cp}/news/NewsBoardList.mo">보도자료</a></li>
-									<li><a href="${cp}/taemin/monami_video1.jsp">동영상자료</a></li>
-									<c:if test="${loginUser.user_id == 'monami'}">
+									<li><a href="${cp}/board/Videolist.mo">동영상자료</a></li>
+									<c:if test="${loginUser.user_id == 'admin'}">
 									<li><a href="${cp}/jungmin/news_manegement.jsp">등록</a></li>
-								</c:if>	
+									</c:if>
 								
 							</ul>
 						</div>

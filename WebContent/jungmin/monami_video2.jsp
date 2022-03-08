@@ -1,100 +1,36 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-    <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>MONAMI</title>
-    <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon" />
-    <link rel="stylesheet" href="../css/prodiqr.css" />
-    <script src="//code.jquery.com/jquery-3.3.1.min.js"></script>
-    <script type="text/javascript" src="../js/common.js"></script>
-    <link rel="stylesheet" href="../css/style.intro.css">
+    <link rel="shortcut icon" href="${cp}/images/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="${cp}/css/news_video.css" />
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.js"></script>
+    <script type="text/javascript" src="${cp}/js/common.js"></script>
+    <script type="text/javascript">
+      $(function () {
+        $(document).on("click", ".find_f", function () {
+          dh = $(document).height();
+          poph = $(".find_layer").height();
+
+          $("#bgblack").height(dh).show();
+          $(".find_layer")
+            .show()
+            .animate({ top: $(document).scrollTop() + 50 + "px" }, 100);
+        });
+        $("#bgblack,.btnx_").click(function () {
+          $("#bgblack").height(dh).hide();
+          $(".find_layer").hide();
+        });
+      });
+    </script>
 </head>
-<style>
-#container{
-	overflow: hidden;
-}
-form{
-	padding-bottom: 200px;
-}
-form table tr th{
-	background-color: rgb(240,255,240);
-	font-weight: bold;
-}
-form table tr td a{
-	font-size: 15px;
-	padding: 5px;
-	font-weight: bold;
-}
-.btn_area{
-	margin-top: 10px;
-	border-radius: 10px;
-}
-.btn_area:hover{
-	background-color: #95FFC0;
-}
-.reply_line{
-		width:900px;
-		margin-top:20px;
-		padding-top:30px;
-		margin: 0 auto;
-	}
-	.write_box{
-		padding-bottom: 20px;
-	}
-	.write_box>tbody>tr>td:first-child,.update_box>tbody>tr>td:first-child{
-		width:150px;
-		text-align: center;
-		font-weight: bold;
-		font-size: 18px;
-	}
-	.write_box>tbody>tr>td+td{
-		position: relative;
-	}
-	.write_box textarea, .update_box textarea{
-		padding:5px 10px;
-		height:70px;
-		resize:none;
-		width:600px;
-		outline:none;
-		border:1px solid #c40f39;
-		border-radius:10px;
-	}
-	.update_box textarea, .write_box textarea{
-		width:500px;
-		height:80px;
-		font-size: 15px;
-	}
-	.update_box{
-		padding-top:20px;
-		padding-bottom: 30px;
-	}
-	.update_box .btns a, .write_box .btns a{
-		display:inline-block;
-		width:90px;
-		height:40px;
-		text-align: center;
-		vertical-align: middle;
-		line-height: 40px;
-		margin-left: 10px;
-	}
-	.adbtn{
-		display:inline-block;
-		border-radius:5px;
-		background-color:#c40f39;
-		color:white;
-		font-weight: bold;
-		font-size: 17px;
-		text-decoration: none;
-	}
-</style>
 <body>
-    <c:set var="cp" value="${pageContext.request.contextPath}"/>
-    <!-- wrap 시작 -->
+<c:set var="cp" value="${pageContext.request.contextPath}"/>
     <div id="wrap">
         <div id="bgblack"></div>
         <div class="find_layer" style="display: none; top: 50px">
@@ -155,7 +91,7 @@ form table tr td a{
         <div class="gnb">
             <div class="conwrap">
             <h1>
-                <a href="${cp}/sanghoon/index.jsp"><img src="${cp}/images/logo.jpeg" alt="" /></a>
+                <a href="../sanghoon/index.jsp"><img src="../images/logo.jpeg" alt="" /></a>
             </h1>
             <div class="nav">
                 <ul>
@@ -209,13 +145,13 @@ form table tr td a{
                         </ul>
                       </li>
                       <li>
-                        <a href="${cp}/taemin/monami_news1.jsp">NEWS & VIDEO</a>
+                        <a href="${cp}/teamin/monami_news1.jsp">NEWS & VIDEO</a>
                         <ul >
                           <li>
-                            <a href="${cp}/taemin/monami_news1.jsp">보도자료</a>
+                            <a href="${cp}/teamin/monami_news1.jsp">보도자료</a>
                           </li>
                           <li>
-                            <a href="${cp}/taemin/monami_video1.jsp">동영상자료</a>
+                            <a href="${cp}/teamin/monami_video1.jsp">동영상자료</a>
                           </li>
                         </ul>
                       </li>
@@ -238,6 +174,9 @@ form table tr td a{
                           </li>
                           <li>
                             <a href="${cp}/doyoon/Inquiry.jsp">문의하기</a>
+                          </li>
+                          <li>
+                            <a href="${cp}/teamin/Inquerylist.jsp">문의사항</a>
                           </li>
                           <li>
                             <a href="${cp}/geunseok/board_event.jsp">이벤트</a>
@@ -296,8 +235,8 @@ form table tr td a{
                 <div class="menubox">
                     <h2>NEWS &amp; VIDEO</h2>
                     <ul>
-                        <li><a href="${cp}/taemin/monami_news1.jsp">보도자료</a></li>
-                              <li><a href="${cp}/taemin/monami_video1.jsp">동영상자료</a></li>
+                        <li><a href="${cp}/teamin/monami_news1.jsp">보도자료</a></li>
+                              <li><a href="${cp}/teamin/monami_video1.jsp">동영상자료</a></li>
                     </ul>
                 </div>
                 <div class="menubox">
@@ -312,6 +251,7 @@ form table tr td a{
                     <ul>
                         <li><a href="${cp}/doyoon/FAQ.jsp">자주묻는질문</a></li>
                               <li><a href="${cp}/doyoon/Inquiry.jsp">문의하기</a></li>
+                              <li><a href="${cp}/teamin/Inquerylist.jsp">문의사항</a></li>
                               <li><a href="${cp}/geunseok/board_event.jsp">이벤트</a></li>
                               <li><a class="find_f">모나미 패밀리샵 찾기</a></li>
                     </ul>
@@ -325,138 +265,194 @@ form table tr td a{
     </div>
     </div>
     <!-- 헤더 끝 -->
-      <div id="container">
-          <div class="pagetitle pn4">
-            <h2>고객지원</h2>
-            <p>모나미는 언제나 소중한 의견에 귀 기울이겠습니다.</p>
-          </div>
-          <div class="pagetabs">
-            <ul class="m4">
-                <li><a href="${cp}/doyoon/FAQ.jsp">자주하는질문</a></li>
-                <li><a href="${cp}/inquiry/InquiryList.mo" class="on">문의하기</a></li>
-                <li><a href="${cp}/inquiry/InquiryWrite.mo">문의등록</a></li>
-                <li><a href="${cp}/geunseok/board_event.jsp">이벤트</a></li>
-                <li><a href="${cp}/shop/shop.jsp">모나미 패밀리샵 찾기</a></li>
-            </ul>
+    <!-- 본문 시작  -->
+    <div id="container">
+        <div class="contents">
+            <div class="pagetitle pn5">
+                <h2>
+                    " NEWS & VIDEO "
+                </h2>
+                <p> 모나미는 늘 밝고 새로운 미래를 그려나갑니다.</p>
+            </div>
+            <div class="pagetabs">
+                <ul class="m5">
+                  <li>
+                    <a href="${cp}/teamin/monami_news1.jsp">보도자료</a>
+                </li>
+                <li class="on">
+                    <a href="${cp}/teamin/monami_video1.jsp">동영상자료</a>
+                </li>
+                </ul>
+            </div>
+            <h3 class="title1">
+                MONAMI
+                <span>VIDEO</span>
+            </h3>
+            <form action="">
+            <div class="bbs_gall">
+                <ul>
+                    <li data-idx="125">
+                        <a>
+                            <div class="thumarea">
+                                <img src="${cp}/monami_images/b_file_13.jpg" alt="" width="335" height="188">
+                                <div class="btn_play"></div>
+                            </div>
+                            <div class="txtarea">
+                                <div class="sbj">두 물이 만드는 전경 [그리고, 왔습니다] EP08 두물머리</div>
+				                <div class="date">2021.04.13</div>
+                            </div>
+                        </a>
+                    </li>
+                    <li data-idx="124">
+                        <a>
+                            <div class="thumarea">		
+                                <img src="${cp}/monami_images/b_file_14.jpg" alt="" width="335" height="188"/>				<div class="btn_play"></div>
+                            </div>
+                            <div class="txtarea">
+                                <div class="sbj">날 쳐다보는 수많은 석물 [그리고, 왔습니다] EP07 목석원</div>
+				                <div class="date">2021.03.19</div>
+                            </div>
+                        </a>
+                    </li>
+                    <li data-idx="123">
+                        <a>
+                            <div class="thumarea">		
+                                <img src="${cp}/monami_images/b_file_15.jpg" alt="" width="335" height="188"/>				<div class="btn_play"></div>
+                            </div>
+                            <div class="txtarea">
+                                <div class="sbj">한 폭의 동양화 같은 공간 [그리고, 왔습니다] EP06 심곡서원</div>
+				                <div class="date">2021.03.16</div>
+                            </div>
+                        </a>
+                    </li>
+                    <li data-idx="122">
+                        <a>
+                            <div class="thumarea">		
+                                <img src="${cp}/monami_images/b_file_16.jpg" alt="" width="335" height="188"/>				<div class="btn_play"></div>
+                            </div>
+                            <div class="txtarea">
+                                <div class="sbj">도심 속 이국적 풍경 [그리고, 왔습니다] EP05 월화원</div>
+				                <div class="date">2021.03.08</div>
+                            </div>
+                        </a>
+                    </li>
+                    <li data-idx="121">
+                        <a>
+                            <div class="thumarea">		
+                                <img src="${cp}/monami_images/b_file_17.jpg" alt="" width="335" height="188"/>				<div class="btn_play"></div>
+                            </div>
+                            <div class="txtarea">
+                                <div class="sbj">'숭고함을 기억하다.' 153 ID 안중근&이육사 리미티드 에디션</div>
+				                <div class="date">2021.02.23</div>
+                            </div>
+                        </a>
+                    </li>
+                    <li data-idx="120">
+                        <a>
+                            <div class="thumarea">		
+                                <img src="${cp}/monami_images/b_file_18.jpg" alt="" width="335" height="188"/>				<div class="btn_play"></div>
+                            </div>
+                            <div class="txtarea">
+                                <div class="sbj">매일매일 색다른 나만의 만년필! 153 네오 만년필 DIY!</div>
+				                <div class="date">2021.02.23</div>
+                            </div>
+                        </a>
+                    </li>
+                    <li data-idx="119">
+                        <a>
+                            <div class="thumarea">		
+                                <img src="${cp}/monami_images/b_file_19.jpg" alt="" width="335" height="188"/>				<div class="btn_play"></div>
+                            </div>
+                            <div class="txtarea">
+                                <div class="sbj">Dream, Draw, Do! 꿈을 그리다! 프러스펜 3000 60색</div>
+				                <div class="date">2021.02.23</div>
+                            </div>
+                        </a>
+                    </li>
+                    <li data-idx="118">
+                        <a>
+                            <div class="thumarea">		
+                                <img src="${cp}/monami_images/b_file_20.jpg" alt="" width="335" height="188"/>				<div class="btn_play"></div>
+                            </div>
+                            <div class="txtarea">
+                                <div class="sbj">바람이 불어오는 곳 [그리고, 왔습니다] EP04 대부도</div>
+				                <div class="date">2021.02.08</div>
+                            </div>
+                        </a>
+                    </li>
+                    <li data-idx="117">
+                        <a>
+                            <div class="thumarea">		
+                                <img src="${cp}/monami_images/b_file_21.jpg" alt="" width="335" height="188"/>				<div class="btn_play"></div>
+                            </div>
+                            <div class="txtarea">
+                                <div class="sbj">다채로운 색이 가득한 섬 [그리고, 왔습니다] EP03 오이도</div>
+				                <div class="date">2021.02.01</div>
+                            </div>
+                        </a>
+                    </li>
+                    <li data-idx="116">
+                        <a>
+                            <div class="thumarea">		
+                                <img src="${cp}/monami_images/b_file_22.jpg" alt="" width="335" height="188"/>				<div class="btn_play"></div>
+                            </div>
+                            <div class="txtarea">
+                                <div class="sbj">도심 속 비밀의 화원 [그리고, 왔습니다] EP02 선유도 공원</div>
+				                <div class="date">2021.02.01</div>
+                            </div>
+                        </a>
+                    </li>
+                    <li data-idx="115">
+                        <a>
+                            <div class="thumarea">		
+                                <img src="${cp}/monami_images/b_file_23.jpg" alt="" width="335" height="188"/>				<div class="btn_play"></div>
+                            </div>
+                            <div class="txtarea">
+                                <div class="sbj">이제는 쉼터가 되어주고 있는 간이역 [그리고, 왔습니다] EP01 화랑대역</div>
+				                <div class="date">2021.02.01</div>
+                            </div>
+                        </a>
+                    </li>
+                    <li data-idx="114">
+                        <a>
+                            <div class="thumarea">		
+                                <img src="${cp}/monami_images/b_file_24.jpg" alt="" width="335" height="188"/>				<div class="btn_play"></div>
+                            </div>
+                            <div class="txtarea">
+                                <div class="sbj">[60주년 데스크펜] 화난 여자를 위해 남자가 꺼내든 비장의 카드!_바이..</div>
+				                <div class="date">2020.12.22</div>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            </form>
+            <div class="vod_pop">
+                <div class="vod_area"></div>
+            </div>
+            <div class="paging">
+                <a href="${cp}/teamin/monami_video1.jsp" class="page_prev">
+                    <img src="${cp}/images/page_prev.gif" alt="">
+                </a>
+                <a href="${cp}/teamin/monami_video1.jsp">1</a>
+                <strong>2</strong>
+                <a href="${cp}/teamin/monami_video3.jsp">3</a>
+                <a href="${cp}/teamin/monami_video4.jsp">4</a>
+                <a href="${cp}/teamin/monami_video5.jsp">5</a>
+                <a href="${cp}/teamin/monami_video3.jsp" class="page_next">
+                    <img src="${cp}/images/page_next.gif" alt="">
+                </a>
+            </div>
+            <div class="btn_top" style="cursor:pointer;" onclick="window.scrollTo(0,0);">
+                <a>
+                    <img src="${cp}/images/btn_top.gif" alt="페이지 상단으로">
+                </a>
+            </div>
         </div>
-        <h3 class="title1">
-            MONAMI <span>INQUERYVIEW</span>
-        </h3>
-        <form>
-            <table border="1" style="border-collapse: collapse; margin: 0 auto;">
-                <tr height="50px">
-					<th align="center" width="150px">문의내용</th>
-                    <td>
-                      <input name="iqr_catagory" style="height: 50px; width: 400px;"
-                      value="${inquiry.iqr_catagory}" readonly>
-                    </td>
-				        </tr>
-                <tr height="50px">
-                    <th align="center" width="150px">이름</th>
-                    <td>
-						 <input name="iqr_writer" style="height: 50px; width: 400px;"
-						 value="${inquiry.iqr_writer}" readonly>
-					</td>
-                </tr>
-                <tr height="50px">
-                    <th align="center" width="150px">이메일</th>
-                    <td>
-						<input name="iqr_email" style="height: 50px; width: 400px;"
-						value="${inquiry.iqr_email}" readonly>
-					</td>
-                </tr>
-                <tr height="50px">
-                    <th align="center" width="150px">연락처</th>
-                    <td>
-						<input name="iqr_phone" style="height: 50px; width: 400px;"
-						value="${inquiry.iqr_phone}" readonly>
-					</td>
-                </tr>
-                <tr height="50px">
-                    <th align="center" width="150px">제목</th>
-                    <td>
-                    	<input name="iqr_title" style="height: 50px; width: 400px;"
-                    	value="${inquiry.iqr_title}" readonly>
-					</td>
-                </tr>
-                <tr height="200px">
-                    <th align="center" width="150px">내용</th>
-                    <td>
-                        <textarea name="iqr_content" style="width:402px;
-                        height:200px;" readonly>${inquiry.iqr_content}</textarea>
-                    </td>
-                </tr>
-            </table>
-
-            <table class="btn_area" style="margin: 0 auto;">
-				<tr align="right" valign="middle">
-					<td>
-						<a href="${cp}/inquiry/InquiryList.mo?page=${param.page == null ? 1 : param.page}">목록</a>
-					</td>
-				</tr>
-			</table>
-        </form>
-        <div class="reply_line">
-        	<c:if test="${adminUser != null}">
-        	<c:if test="${reply.answer == null }">
-        	<form name="replyForm" method="post" action="${cp}/inquiry/replywrite.ir">
-        		<input type="hidden" name="iqr_idx" value="${inquiry.iqr_idx}">
-        		<table class="write_box">
-        			<tr height="50px">
-        				<td align="center" width="150px">답변</td>
-        				<td>
-        					<textarea name="answer" class="answer" style="resize:none"></textarea>	
-        				</td>
-        				<td>
-        					<div class="btns">
-        						<a class="adbtn" href="javascript:document.replyForm.submit()">등록</a>
-        					</div>
-        				</td>
-        			</tr>
-        		</table>
-        	</form>
-        	</c:if>
-        	<c:if test="${reply.answer !=null}">
-        		<form name="replyForm" method="post" action="${cp}/inquiry/replyupdate.ir">
-        		<input type="hidden" name="iqr_idx" value="${inquiry.iqr_idx}">
-        		<table class="write_box">
-        			<tr height="50px">
-        				<td align="center" width="150px">답변</td>
-        				<td>
-        					<textarea name="answer" class="answer" style="resize:none"></textarea>	
-        				</td>
-        				<td>
-        					<div class="btns">
-        						<a class="adbtn" href="javascript:document.replyForm.submit()">수정</a>
-        					</div>
-        				</td>
-        			</tr>
-        		</table>
-        	</form>
-        	</c:if>
-        	</c:if>
-        	<form name="updateForm" method="post" action="">
-        		<input type="hidden" name="iqr_idx" value="${reply.iqr_idx}">
-        		<table class="update_box">
-        				<tr height="50px">
-        					<td align="center" width="150px">관리자<br>답변</td>
-        					<td>
-        						<textarea readonly class="answer" style="resize:none">${reply.answer}</textarea>
-        					</td>
-        					<c:if test="${adminUser != null}">
-        					<td>
-								<div class="btns">
-        							<a class="adbtn" href="javascript:deleteReply(${reply.iqr_idx})">삭제</a>
-        						</div>
-        					</td>
-        					</c:if>
-        				</tr>
-        		</table>
-        	</form>
-        </div>
-        </div>
-        <!-- 푸터 시작 -->
-   <div id="footer">
+    </div>
+    <!-- 본문 끝 -->
+    <!-- 푸터 시작 -->
+    <div id="footer">
         <div class="foot">
           <div class="foot_pop" style="display: none;">
             <div class="privacy" style="display: none;">
@@ -577,34 +573,35 @@ form table tr td a{
               <a>FAMILY SITE</a>
               <ul>
                 <li>
-                  <a href="https://www.monamimall.com/w/main.do" target="_blank">모나미몰</a>
-                </li>
-                <li>
-                  <a href="https://www.mon-arte.com/" target="_blank">모나르떼</a>
-                </li>
-                <li>
-                  <a href="https://www.monamimall.com/w/cscenter/store/storeInfo.do" target="_blank">모나미 컨셉스토어</a>
-                </li>
-                <li>
-                  <a href="http://www.hangso.co.kr/" target="_blank">주식회사 항소</a>
-                </li>
-                <li>
-                  <a href="http://www.monamistation.com/main.do" target="_blank">모나미 스테이션</a>
-                </li>
-                <li>
-                  <a href="https://www.monamimall.com/w/artcontest/info/artContestInfo.do" target="_blank">모나미 미술대회</a>
-                </li>
-                <li>
-                  <a href="http://mpms.monami.com/promotion/" target="_blank">모나미 기업서비스</a>
-                </li>
-                <li>
-                  <a href="http://www.monamicosmetics.com/" target="_blank">모나미코스메틱</a>
-                </li>
+                    <a href="https://www.monamimall.com/w/main.do" target="_blank">모나미몰</a>
+                  </li>
+                  <li>
+                    <a href="https://www.mon-arte.com/" target="_blank">모나르떼</a>
+                  </li>
+                  <li>
+                    <a href="https://www.monamimall.com/w/cscenter/store/storeInfo.do" target="_blank">모나미 컨셉스토어</a>
+                  </li>
+                  <li>
+                    <a href="http://www.hangso.co.kr/" target="_blank">주식회사 항소</a>
+                  </li>
+                  <li>
+                    <a href="http://www.monamistation.com/main.do" target="_blank">모나미 스테이션</a>
+                  </li>
+                  <li>
+                    <a href="https://www.monamimall.com/w/artcontest/info/artContestInfo.do" target="_blank">모나미 미술대회</a>
+                  </li>
+                  <li>
+                    <a href="http://mpms.monami.com/promotion/" target="_blank">모나미 기업서비스</a>
+                  </li>
+                  <li>
+                    <a href="http://www.monamicosmetics.com/" target="_blank">모나미코스메틱</a>
+                  </li>
               </ul>
             </div>
           </div>
         </div>
-      </div>
-  <!-- 푸터 끝 -->
+    </div>
+    <!-- 푸터 끝 -->
+</div>
 </body>
-</html>
+</html>>

@@ -741,7 +741,7 @@ border-right: 0px;
   width: 1200px;
   height: 850px;
   margin: 0 auto;
-  padding: 95px 50px 95px 200px;
+ padding:95px 125px 95px 190px;
   align:center;
 }
 .W_area{
@@ -753,10 +753,12 @@ border-right: 0px;
   width: 1050px;
   height: 850px;
 }
+
 .W_area table th{
   width: 300px;
   font-weight: bold;
   font-size: 20px;
+  border-right:1px solid #555;
 }
 .W_area tr td ::placeholder{
   font-size: 20px;
@@ -770,25 +772,31 @@ border-right: 0px;
 }
 .WC1 td input{
   width: 908px;
-  height: 99%;
+  height: 54px;
   text-align: center;
    font-size: 20px;
+  border:none;
   
 }
 
+tr.WC2 {
+    height: 710px;
+}
 .WC2 td{
-  height: 500px;
+  width:918px;
+  height:766px;
 }
-.WC2 td textarea{
-  padding:30px ;
-  width: 850px;
-  height: 650px;;
-  resize: none;
-  font-size: 30px;
+.content {
+   width: 918px;
+   height:720px;
 }
-.WC2 td textarea::placeholder{
- 
-  margin-left: 600px;
+input.news_writer , input.event_writer{
+	height:99%;
+	width:908px;
+	padding:5px 0px 5px 5px;
+	border:none;
+	font-size:20px;
+	padding-left:10px;
 }
 .f1 {
   height: 50px;
