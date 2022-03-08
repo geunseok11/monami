@@ -8,7 +8,7 @@
 <title>Insert title here</title>
 <c:set var="cp" value="${pageContext.request.contextPath}"/>
   <link rel="shortcut icon" href="${cp}/images/favicon.ico" type="image/x-icon" />
-<link rel="stylesheet" href="${cp}/css/pen.css"/>
+<link rel="stylesheet" href="${cp}/css/pen2.css"/>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.js"></script>
 
 <script type="text/javascript" src="${cp}/js/common.js"></script>
@@ -702,11 +702,13 @@ input.btn_zip{
                <div class="product_view">
                  <div class="product_info">
                   <form class="info" name="toBasketForm" method="post" action="${cp}/product/Basket.pd">
-                  	<input type="hidden" name="prod_idx" value=${product.prod_idx }>
+                  	<%-- <input type="hidden" name="prod_idx" value=${product.prod_idx }>
                   	<input type="hidden" name="prod_name" value=${product.prod_name }>
                     <input type="hidden" name="prod_price" value=${product.prod_price }>
-                  	<input type="hidden" name="boardnum" value=${board.boardnum }>
-
+                  	 --%>
+					
+					<input type="hidden" name="prod_idx" value="1">
+                    <input type="hidden" name="prod_count" value="1">
                   							
                     <div class="bgarea1"></div>
                     <div class="number">
@@ -806,7 +808,8 @@ input.btn_zip{
                         <!-- <div class="buy">
                           <a href="https://www.monamimall.com/w/product/productDetail.do?goodsNo=MG000020924&banner_check=main"><img src="/images/buynow.gif" alt=""></a>
                         </div> -->
-                    	 <div class="view_basket"><a href="javascript:document.toBasketForm.submit()">장바구니</a></div>
+                    	 <div class="view_basket"><a href="javascript:document.toBasketForm.submit()">장바구니 담기</a></div>
+                    	 <div class="view_basket"><a href="${cp}/product/BasketList.pd">장바구니 보기</a></div>
                 </div>
             </form>
             <div class="view_list"><a href="../pen/penpage.jsp">LIST</a></div>                       

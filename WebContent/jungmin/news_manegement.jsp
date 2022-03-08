@@ -1,38 +1,34 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+    pageEncoding="UTF-8"%>
+     <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<c:set var='cp' value="${pageContext.request.contextPath }" />
-<meta charset="UTF-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>MONAMI</title>
-<link rel="shortcut icon" href="${cp}/images/favicon.ico"
-	type="image/x-icon" />
-<script src="//code.jquery.com/jquery-3.3.1.min.js"></script>
-<link rel="stylesheet" href="${cp}/css/pen.css" />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MONAMI</title>
+    <link rel="shortcut icon" href="${cp}/images/favicon.ico" type="image/x-icon" />
+<link rel="stylesheet" href="${cp}/css/pen.css"/>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.js"></script>
-<script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
-<script type="text/javascript" src="${cp}/js/common.js"></script>
-<script type="text/javascript" src="${cp}/ckeditor/ckeditor.js"></script>
-<script type="text/javascript">
-	$(function() {
-		$(document).on("click", ".find_f", function() {
-			dh = $(document).height();
-			poph = $(".find_layer").height();
 
-			$("#bgblack").height(dh).show();
-			$(".find_layer").show().animate({
-				top : $(document).scrollTop() + 50 + "px"
-			}, 100);
-		});
-		$("#bgblack,.btnx_").click(function() {
-			$("#bgblack").height(dh).hide();
-			$(".find_layer").hide();
-		});
-	});
+<script type="text/javascript" src="${cp}/js/common.js"></script>
+<script type="text/javascript">
+  $(function () {
+    $(document).on("click", ".find_f", function () {
+      dh = $(document).height();
+      poph = $(".find_layer").height();
+
+      $("#bgblack").height(dh).show();
+      $(".find_layer")
+        .show()
+        .animate({ top: $(document).scrollTop() + 50 + "px" }, 100);
+    });
+    $("#bgblack,.btnx_").click(function () {
+      $("#bgblack").height(dh).hide();
+      $(".find_layer").hide();
+    });
+  });
 </script>
 </head>
 <body>
@@ -61,7 +57,7 @@
 				<ul id="sublist2">
 					<li><a href="${cp}/news/NewsBoardList.bo">보도자료</a></li>
 					<li><a href="${cp}/board/Videolist.bo">동영상자료</a></li>
-					<li class="on"><a href="${cp}/jungmin/news_manegement.mo">등록</a>
+					<li class="on"><a href="${cp}/jungmin/news_manegement.jsp">등록</a>
 					</li>
 
 				</ul>
@@ -135,30 +131,7 @@
 	</div>
 </body>
 <script>
-
-function sendnews() {
-	const newsForm = document.newsForm;
-	const news_title = newsForm.news_title;
-	if (news_title.value == "") {
-		alert("제목을 입력하세요!");
-		news_title.focus();
-		return false;
-	}
-	const news_writer = newsForm.news_writer;
-	if(news_writer.value==""){
-		alert("작성자를 입력하세요!");
-		news_writer.focus();
-		return false;
-	}
-	if(CKEDITOR.instances.p_content.getData().length < 1){
-		alert("내용을 입력해 주세요.");
-		CKEDITOR.instances.p_content.focus();
-		return false;
-	}
-	newsForm.submit();
-}
-
-var fileTarget = $('.f1 #file1');
+  var fileTarget = $('.filebox .upload-hidden');
 
 fileTarget.on('change', function () {
     // 값이 변경되면
@@ -168,16 +141,12 @@ fileTarget.on('change', function () {
         var filename = $(this)[0].files[0].name;
     } else {
         // old IE 
-        var filename = $(this).val().split('/').pop().split('\\').pop(); // 파일명만 추출
+        var filename = $(this).val().split('/').pop().split('\\').pop();  // 파일명만 추출
     }
 
     // 추출한 파일명 삽입 
-    $(this).siblings('.filelabel1').html(filename);
-});   
+    $(this).siblings('.ex_filename').jsp(filename);
 
-
-
-
-
+});
 </script>
 </html>

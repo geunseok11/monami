@@ -36,6 +36,7 @@
 </script>
 </head>
 <body>
+
 	<div class="popup_buttons">
 		<a class="popup_button" href="">
 			<div class="popup_button-txt">예약하기</div>
@@ -190,4 +191,7 @@ fileTarget.on('change', function () {
 		$(this).prev().val(e.target.files[0].name);
 	})
 </script>
+<script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
+<script>const cp = "${pageContext.request.contextPath}"</script>
+<script src="${cp}/js/user.js"></script>
 </html>

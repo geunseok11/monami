@@ -1,40 +1,39 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+    pageEncoding="UTF-8"%>
+     <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>MONAMI</title>
-<c:set var='cp' value="${pageContext.request.contextPath }" />
-<link rel="shortcut icon" href="${cp}/images/favicon.ico"
-	type="image/x-icon" />
-<link rel="stylesheet" href="${cp}/css/pen.css" />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MONAMI</title>
+ <link rel="shortcut icon" href="${cp}/images/favicon.ico" type="image/x-icon" />
+<link rel="stylesheet" href="${cp}/css/pen.css"/>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.js"></script>
+
 <script type="text/javascript" src="${cp}/js/common.js"></script>
-<script type="text/javascript" src="${cp}/ckeditor/ckeditor.js"></script>
-
 <script type="text/javascript">
-	$(function() {
-		$(document).on("click", ".find_f", function() {
-			dh = $(document).height();
-			poph = $(".find_layer").height();
+  $(function () {
+    $(document).on("click", ".find_f", function () {
+      dh = $(document).height();
+      poph = $(".find_layer").height();
 
-			$("#bgblack").height(dh).show();
-			$(".find_layer").show().animate({
-				top : $(document).scrollTop() + 50 + "px"
-			}, 100);
-		});
-		$("#bgblack,.btnx_").click(function() {
-			$("#bgblack").height(dh).hide();
-			$(".find_layer").hide();
-		});
-	});
+      $("#bgblack").height(dh).show();
+      $(".find_layer")
+        .show()
+        .animate({ top: $(document).scrollTop() + 50 + "px" }, 100);
+    });
+    $("#bgblack,.btnx_").click(function () {
+      $("#bgblack").height(dh).hide();
+      $(".find_layer").hide();
+    });
+  });
 </script>
 </head>
+
 <body>
+
 	<div class="popup_buttons">
 		<a class="popup_button" href="">
 			<div class="popup_button-txt">예약하기</div>
@@ -138,76 +137,22 @@
 	</div>
 </body>
 <script>
-	function sendevent() {
-		const eventForm = document.eventForm;
-		const event_title = eventForm.event_title;
-		if (event_title.value == "") {
-			alert("제목을 입력하세요!");
-			event_title.focus();
-			return false;
-		}
-		const event_writer = eventForm.event_writer;
-		if(event_writer.value == ""){
-			alert("작성자를 입력하세요!");
-			event_writer.focus();
-			return false;
-		}
-		const event_startdate = eventForm.event_startdate;
-		const event_enddate = eventForm.event_enddate;
-		if(event_startdate.value ==""){
-			alert("시작날짜를 입력하세요!");
-			event_startdate.focus();
-			return false;
-		}
-		if(event_enddate.value ==""){
-			alert("종료날짜를 입력하세요!");
-			event_enddate.focus();
-			return false;
-		}
-		if(event_startdate.value > event_enddate.value){
-			alert("시작날짜는 종료날짜 이전이어야 합니다!");
-			event_startdate.focus();
-			return false;
-		}
-		if(CKEDITOR.instances.p_content.getData().length < 1){
-			alert("내용을 입력해 주세요.");
-			CKEDITOR.instances.p_content.focus();
-			return false;
-		}
-		
-		eventForm.submit();
-	}
+  var fileTarget = $('.filebox .upload-hidden');
 
-	var fileTarget = $('.f1 #file1');
-	var fileTarget1 = $('.v1 #file2');
+fileTarget.on('change', function () {
+    // 값이 변경되면
 
-	fileTarget.on('change', function() {
-		// 값이 변경되면
+    if (window.FileReader) {
+        // modern browser 
+        var filename = $(this)[0].files[0].name;
+    } else {
+        // old IE 
+        var filename = $(this).val().split('/').pop().split('\\').pop();  // 파일명만 추출
+    }
 
-		if (window.FileReader) {
-			// modern browser 
-			var filename = $(this)[0].files[0].name;
-		} else {
-			// old IE 
-			var filename = $(this).val().split('/').pop().split('\\').pop(); // 파일명만 추출
-		}
+    // 추출한 파일명 삽입 
+    $(this).siblings('.ex_filename').jsp(filename);
 
-		// 추출한 파일명 삽입 
-		$(this).siblings('.filelabel1').html(filename);
-	});
-	fileTarget1.on('change', function() {
-		// 값이 변경되면
-
-		if (window.FileReader) {
-			// modern browser 
-			var filename = $(this)[0].files[0].name;
-		} else {
-			// old IE 
-			var filename = $(this).val().split('/').pop().split('\\').pop(); // 파일명만 추출
-		}
-
-		$(this).siblings('.filelabel2').html(filename);
-
-	});
+});
 </script>
 </html>

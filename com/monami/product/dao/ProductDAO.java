@@ -39,7 +39,7 @@ public class ProductDAO {
 	}
 
 	public ProductDTO getBasket(int prod_idx) {
-		return sqlsession.selectOne("Product.getDetail", prod_idx);
+		return sqlsession.selectOne("Product.getBasket", prod_idx);
 	}
 
 	public boolean updateCount(int prod_cnt, int prod_idx) {
