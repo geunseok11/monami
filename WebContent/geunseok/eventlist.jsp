@@ -65,10 +65,10 @@
         </div>
           <div class="pagetabs">
                       <ul class="m4">
-            <li><a href="#">자주하는질문</a></li>
-            <li><a href="#">문의하기</a></li>
-            <li class="on"><a href="./board_event.html">이벤트</a></li>
-            <li><a class="find_f">모나미 패밀리샵 찾기</a></li>
+            <li><a href="${cp}/doyoon/FAQ.jsp">자주하는질문</a></li>
+            <li><a href="${cp}/doyoon/Inquiry.jsp">문의하기</a></li>
+            <li class="on"><a href="${cp}/event/EventList.bo">이벤트</a></li>
+            <li><a class="find_f" href="${cp}/shop/shop.jsp">모나미 패밀리샵 찾기</a></li>
             <!--<li ><a href="http://mpms.monami.com" target="_blank">기업 및 단체 구매 문의</a></li>-->
       
           </ul>
@@ -88,10 +88,10 @@
 									
         <tr>
           <td class="thum">
-          <a href="${cp}/event/EventView.mo?event_idx=${board.event_idx}">
+          <a href="${cp}/event/EventView.bo?event_idx=${board.event_idx}">
           <c:choose>
           <c:when test="${filelist[status.index] != null}">
-          <img src="${cp}/event/FileDownload.mo?systemname=${filelist[status.index].systemname}&orgname=${filelist[status.index].orgname}" title="page_1.jpg" alt="" width="640" height="325">
+          <img src="${cp}/event/FileDownload.bo?systemname=${filelist[status.index].systemname}&orgname=${filelist[status.index].orgname}" title="page_1.jpg" alt="" width="640" height="325">
           </c:when>
           <c:otherwise><img src="${cp}/images/no-img.gif"></c:otherwise>
           </c:choose>
@@ -116,7 +116,7 @@
             <p>${board.event_content}</p>
             </div>
             <p class="date">${board.event_startdate}~${board.event_enddate}</p>
-            <a href="${cp}/event/EventView.mo?event_idx=${board.event_idx}" class="btn"><span>자세히보기</span><div></div></a>
+            <a href="${cp}/event/EventView.bo?event_idx=${board.event_idx}" class="btn"><span>자세히보기</span><div></div></a>
           </td>
         </tr>
         </c:forEach>
@@ -143,7 +143,7 @@
       <div class="paging">
        <c:choose>
 					<c:when test="${page>1}">
-					<a href="${cp}/event/EventList.mo?page=${page-1}" class="page_prev">
+					<a href="${cp}/event/EventList.bo?page=${page-1}" class="page_prev">
 						
 							<img src="${cp}/images/page_prev.gif" alt="">
 						
@@ -166,13 +166,13 @@
 								<strong class="nowPage">${i}</strong>
 							</c:when>
 							<c:otherwise>
-								<a href="${cp}/event/EventList.mo?page=${i}">${i}</a>
+								<a href="${cp}/event/EventList.bo?page=${i}">${i}</a>
 							</c:otherwise>
 						</c:choose>
 					</c:forEach>
 					<c:choose>
 					<c:when test="${page<endPage}">
-						<a href="${cp}/event/EventList.mo?page=${page+1}"
+						<a href="${cp}/event/EventList.bo?page=${page+1}"
 							class="page_next"> <img src="${cp}/images/page_next.gif" alt="">
 						</a>
 					</c:when>

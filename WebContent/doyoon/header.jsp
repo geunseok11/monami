@@ -221,11 +221,12 @@
 								</ul></li>
 							<li><a href="${cp}/news/NewsBoardList.mo">NEWS & VIDEO</a>
 								<ul>
-									<li><a href="${cp}/news/NewsBoardList.mo">보도자료</a></li>
-									<li><a href="${cp}/taemin/monami_video1.jsp">동영상자료</a></li>
+									<li><a href="${cp}/news/NewsBoardList.bo">보도자료</a></li>
+									<li><a href="${cp}/board/Videolist.bo">동영상자료</a></li>
 									<c:if test="${loginUser.user_id == 'admin'}">
 									<li><a href="${cp}/jungmin/news_manegement.jsp">등록</a></li>
 								</c:if>	
+								
 								</ul></li>
 							<li><a
 								href="https://www.monamimall.com/w/artcontest/info/artContestInfo.do?trackingCd=monami">모나미
@@ -242,8 +243,8 @@
 								<ul>
 									<li><a href="${cp}/doyoon/FAQ.jsp">자주묻는질문</a></li>
 									<li><a href="${cp}/doyoon/Inquiry.jsp">문의하기</a></li>
-									<li><a href="${cp}/event/EventList.mo">이벤트</a></li>
-									<li><a class="find_f" href="${cp}/shop/shop.html"
+									<li><a href="${cp}/event/EventList.bo">이벤트</a></li>
+									<li><a class="find_f" href="${cp}/shop/shop.jsp"
 										style="padding-left: -10px;">모나미 패밀리샵 찾기</a></li>
 								</ul></li>
 							<li><a href="http://mpms.monami.com/promotion/">기업 구매 /
@@ -295,12 +296,11 @@
 						<div class="menubox">
 							<h2>NEWS &amp; VIDEO</h2>
 							<ul>
-								<li><a href="${cp}/news/NewsBoardList.mo">보도자료</a></li>
-									<li><a href="${cp}/taemin/monami_video1.jsp">동영상자료</a></li>
+								<li><a href="${cp}/news/NewsBoardList.bo">보도자료</a></li>
+									<li><a href="${cp}/board/Videolist.bo">동영상자료</a></li>
 									<c:if test="${loginUser.user_id == 'admin'}">
 									<li><a href="${cp}/jungmin/news_manegement.jsp">등록</a></li>
-								</c:if>	
-								
+									</c:if>
 							</ul>
 						</div>
 						<div class="menubox">
@@ -320,7 +320,7 @@
 								<li><a href="${cp}/doyoon/FAQ.jsp">자주묻는질문</a></li>
 								<li><a href="${cp}/doyoon/Inquiry.jsp">문의하기</a></li>
 								<li><a href="${cp}/event/EventList.mo">이벤트</a></li>
-								<li><a class="find_f" href="${cp}/shop/shop.html">모나미 패밀리샵
+								<li><a class="find_f" href="${cp}/shop/shop.jsp">모나미 패밀리샵
 										찾기</a></li>
 							</ul>
 						</div>

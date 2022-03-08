@@ -36,7 +36,7 @@
     <div id="wrap">
       <div id="bgblack"></div>
       <div class="find_layer" style="display: none; top: 50px">
-        <iframe src="./shop/shop.html" frameborder="0" id="find_f"> </iframe>
+        <iframe src="${cp}/shop/shop.jsp" frameborder="0" id="find_f"> </iframe>
         <div class="btnx_">
           <img src="${cp}/images/close.png" alt="" />
         </div>
@@ -65,10 +65,10 @@
         </div>
           <div class="pagetabs">
                       <ul class="m4">
-            <li><a href="/customer/faq.php">자주하는질문</a></li>
-            <li><a href="/customer/inquiry.php">문의하기</a></li>
-            <li class="on"><a href="./board_event.html">이벤트</a></li>
-            <li><a class="find_f">모나미 패밀리샵 찾기</a></li>
+             <li><a href="${cp}/doyoon/FAQ.jsp">자주하는질문</a></li>
+            <li><a href="${cp}/doyoon/Inquiry.jsp">문의하기</a></li>
+            <li class="on"><a href="${cp}/event/EventList.bo">이벤트</a></li>
+            <li><a class="find_f" href="${cp}/shop/shop.jsp">모나미 패밀리샵 찾기</a></li>
             <!--<li ><a href="http://mpms.monami.com" target="_blank">기업 및 단체 구매 문의</a></li>-->
       
           </ul>
@@ -113,32 +113,32 @@
         </tr>
       
       </tbody></table>
-      <form name="removeForm" action="${cp}/event/EventRemove.mo" method="get">
+      <form name="removeForm" action="${cp}/event/EventRemove.bo" method="get">
 						<input type="hidden" name="event_idx" value="${board.event_idx}">
 					</form>
       <div class="view_btns">
       	<c:if test="${loginUser.user_id == 'monami'}">
-     	 <a href="${cp}/event/EventModify.mo?event_idx=${board.event_idx}">수정</a>&nbsp;&nbsp;
+     	 <a href="${cp}/event/EventModify.bo?event_idx=${board.event_idx}">수정</a>&nbsp;&nbsp;
 			<a href="javascript:document.removeForm.submit()">삭제</a>&nbsp;&nbsp;
 		</c:if>
-        <a href="${cp}/event/EventList.mo?page=${param.page == null ? 1 : param.page}">LIST</a>
+        <a href="${cp}/event/EventList.bo?page=${param.page == null ? 1 : param.page}">LIST</a>
             <div class="view_page">
 						<c:choose>
 							<c:when test="${nidx != null && pidx == null }">
-								<a href="${cp}/event/EventView.mo?event_idx=${nidx}"> <img
+								<a href="${cp}/event/EventView.bo?event_idx=${nidx}"> <img
 									src="${cp}/monami_images/view_page_next.gif" alt="">
 								</a>
 							</c:when>
 							<c:when test="${nidx != null && pidx != null }">
-								<a href="${cp}/event/EventView.mo?event_idx=${pidx}"> <img
+								<a href="${cp}/event/EventView.bo?event_idx=${pidx}"> <img
 									src="${cp}/monami_images/view_page_prev.gif" alt="">
 								</a>
-								<a href="${cp}/event/EventView.mo?event_idx=${nidx}"> <img
+								<a href="${cp}/event/EventView.bo?event_idx=${nidx}"> <img
 									src="${cp}/monami_images/view_page_next.gif" alt="">
 								</a>
 							</c:when>
 							<c:when test="${nidx == null && pidx != null}">
-								<a href="${cp}/event/EventView.mo?event_idx=${pidx}"> <img
+								<a href="${cp}/event/EventView.bo?event_idx=${pidx}"> <img
 									src="${cp}/monami_images/view_page_prev.gif" alt="">
 								</a>
 							</c:when>
