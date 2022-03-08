@@ -94,10 +94,10 @@ public class EventModifyOkAction implements Action{
 				}
 			}
 			
-			transfer.setPath(req.getContextPath()+"/event/EventView.mo?event_idx="+event_idx);
+			transfer.setPath(req.getContextPath()+"/event/EventView.bo?event_idx="+event_idx);
 		}
 		else {
-			transfer.setPath(req.getContextPath()+"/event/EventView.mo?u=f&event_idx="+event_idx);
+			transfer.setPath(req.getContextPath()+"/event/EventView.bo?u=f&event_idx="+event_idx);
 		}
 		return transfer;
 	}

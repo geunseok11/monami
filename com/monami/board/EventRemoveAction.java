@@ -20,11 +20,11 @@ public class EventRemoveAction implements Action {
 		if (ebdao.removeBoard(event_idx)) {
 			if (efdao.getFiles(event_idx) != null) {
 				efdao.removeFile(event_idx);
-				transfer.setPath(req.getContextPath() + "/event/EventList.mo");
+				transfer.setPath(req.getContextPath() + "/event/EventList.bo");
 			}
-			transfer.setPath(req.getContextPath() + "/event/EventList.mo");
+			transfer.setPath(req.getContextPath() + "/event/EventList.bo");
 		} else {
-			transfer.setPath(req.getContextPath() + "/event/EventView.mo?event_idx=" + event_idx);
+			transfer.setPath(req.getContextPath() + "/event/EventView.bo?event_idx=" + event_idx);
 		}
 		return transfer;
 	}

@@ -80,11 +80,11 @@ public class EventWriteOkAction implements Action{
 			//2. 파일이 존재했고, 위의 DB처리까지 완벽하게 성공했음
 			if(fcheck1 && fcheck2) {
 				transfer.setRedirect(true);
-				transfer.setPath(req.getContextPath()+"/event/EventView.mo?event_idx="+event_idx);
+				transfer.setPath(req.getContextPath()+"/event/EventView.bo?event_idx="+event_idx);
 				return transfer;
 			}
 		}
-		transfer.setPath(req.getContextPath()+"/event/EventList.mo?w=f");	
+		transfer.setPath(req.getContextPath()+"/event/EventList.bo?w=f");	
 		return transfer;
 	}
 }
