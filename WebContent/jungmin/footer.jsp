@@ -149,4 +149,7 @@
 		</div>
 	</div>
 </body>
+<script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
+<script>const cp = "${pageContext.request.contextPath}"</script>
+<script src="${cp}/js/user.js"></script>
 </html>

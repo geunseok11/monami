@@ -14,7 +14,7 @@ prefix="c"%>
       href="${cp}/images/favicon.ico"
       type="image/x-icon"
     />
-    <link rel="stylesheet" href="${cp}/css/pen.css" />
+    <link rel="stylesheet" href="${cp}/css/stylebasket.css" />
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.js"></script>
     <script type="text/javascript" src="${cp}/js/common.js"></script>
     <script type="text/javascript" src="${cp}/js/prodiqr.js"></script>

@@ -1,15 +1,16 @@
-package com.monami.iqr;
+package com.monami.inquiry;
 
 import java.io.PrintWriter;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import com.monami.action.Action;
 import com.monami.action.ActionTo;
-import com.monami.iqr.dao.AnswerDTO;
-import com.monami.iqr.dao.IqrDAO;
-import com.monami.iqr.dao.IqrDTO;
+import com.monami.reply.dao.ReplyDAO;
+import com.monami.reply.dao.ReplyDTO;
+import com.monami.user.dao.UserDTO;
 
 public class ReplyWriteOkAction implements Action{
 
@@ -19,22 +20,25 @@ public class ReplyWriteOkAction implements Action{
 		resp.setContentType("text/html;charset=utf-8");
 		
 		int iqr_idx = Integer.parseInt(req.getParameter("iqr_idx"));
-		String iqr_answer = req.getParameter("iqr_answer");
-		
-		IqrDTO newReply = new IqrDTO();
+//		String admin_id = ((UserDTO)req.getSession().getAttribute("loginUser")).getUser_id();
+		String admin_id = req.getParameter("admin_id");
+		String answer = req.getParameter("answer");
+		ReplyDTO newReply = new ReplyDTO();
 		newReply.setIqr_idx(iqr_idx);
-		newReply.setIqr_answer(iqr_answer);
+		newReply.setAnswer(answer);
+		newReply.setAdmin_id(admin_id);
 		
-		IqrDAO idao = new IqrDAO();
+		
+		ReplyDAO rdao = new ReplyDAO();
 		PrintWriter out = resp.getWriter();
-		if(idao.insertReply(newReply)) {
+		if(rdao.insertReply(newReply)) {
 			out.write("<script>alert('답변 등록 성공!');");
-			out.write("location.href='"+req.getContextPath()+"/inquiry/InquiryView.ir?iqr_idx="+iqr_idx+"'");
+			out.write("location.href='"+req.getContextPath()+"/inquiry/InquiryView.mo?iqr_idx="+iqr_idx+"'");
 			out.write("</script>");
 		}
 		else {
 			out.write("<script>alert('답변 등록 실패!');");
-			out.write("location.href='"+req.getContextPath()+"/inquiry/inquiryview.ir?iqr_idx="+iqr_idx+"'");
+			out.write("location.href='"+req.getContextPath()+"/inquiry/inquiryview.mo?iqr_idx="+iqr_idx+"'");
 			out.write("</script>");
 		}
 		return null;
