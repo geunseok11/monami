@@ -371,6 +371,7 @@
         	<c:if test="${reply.answer == null }">
         	<form name="replyForm" method="post" action="${cp}/inquiry/replywrite.mo">
         		<input type="hidden" name="iqr_idx" value="${inquiry.iqr_idx}">
+        		<input type="hidden" name="admin_id" value="${'monami'}">
         		<table class="write_box">
         			<tr height="50px">
         				<td align="center" width="150px">답변</td>
@@ -389,6 +390,7 @@
         	<c:if test="${reply.answer !=null}">
         		<form name="replyForm" method="post" action="${cp}/inquiry/replyupdate.mo">
         		<input type="hidden" name="iqr_idx" value="${inquiry.iqr_idx}">
+        		<input type="hidden" name="admin_id" value="${'monami'}">
         		<table class="write_box">
         			<tr height="50px">
         				<td align="center" width="150px">답변</td>
