@@ -59,8 +59,8 @@
 			</div>
 			<div class="submenu_list">
 				<ul id="sublist2">
-					<li><a href="${cp}/news/NewsBoardList.mo">보도자료</a></li>
-					<li><a href="monami_video1.jsp">동영상자료</a></li>
+					<li><a href="${cp}/news/NewsBoardList.bo">보도자료</a></li>
+					<li><a href="${cp}/board/Videolist.bo">동영상자료</a></li>
 					<li class="on"><a href="${cp}/jungmin/news_manegement.mo">등록</a>
 					</li>
 
@@ -77,7 +77,7 @@
 			</div>
 
 			<div class="Write">
-				<form method="post" name="newsForm" class="W_area" action="${cp}/news/NewsWriteOk.mo" enctype="multipart/form-data">
+				<form method="post" name="newsForm" class="W_area" action="${cp}/news/NewsWriteOk.bo" enctype="multipart/form-data">
 					
 					<table border="1" style="border-collapse: collapse">
 
