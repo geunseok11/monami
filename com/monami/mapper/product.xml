@@ -18,4 +18,10 @@
 		or prod_category like(concat('%',#{keyword},'%'))
 		order by prod_idx desc limit #{startRow},#{pageSize}
 	</select>
+	<select id="getBasket" parameterType="_int" resultType="productdto">
+		select * from product where prod_idx=#{prod_idx}
+	</select>
+	<update id="updateCount" parameterType="hashmap">
+		update product set prod_count = prod_count - #{prod_count} where prod_idx=#{prod_idx}
+	</update>
 </mapper>
