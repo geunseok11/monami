@@ -10,179 +10,186 @@
 <title>header part</title>
 </head>
 <body>
-<c:set var="cp" value="${pageContext.request.contextPath}"/>
-	<div id="header">
-		<div class="head">
-			<div class="head_top">
-				<div class="conwrap">
-					<div class="links">
-						<div class="lang">
-							<div class="this_lang">
-								<a>KOR</a>
-							</div>
-							<ul>
-								<li><a href="#">ENG</a></li>
-							</ul>
-						</div>
-						<div class="sns">
-							<ul>
-								<li><a href="https://www.facebook.com/monami1960"
-									target="_blank"> <img src="${cp}/images/sns_facebook.gif"
-										alt="페이스북" />
-								</a></li>
-								<li><a href="https://www.instagram.com/monami_official/"
-									target="_blank"> <img src="${cp}/images/sns_insta.gif"
-										alt="인스타" />
-								</a></li>
-							</ul>
-						</div>
-					</div>
-					<div class="topmenu">
-						<ul>
-								<c:choose>
+<c:set var='cp' value="${pageContext.request.contextPath }"/>
+<c:if test="${not empty param.login}">
+		<script>alert("로그인 실패! 다시 시도해 주세요!");</script>
+	</c:if>
+<div class="popup_buttons">
+    <a class="popup_button" href="">
+      <div class="popup_button-txt">예약하기</div>
+    </a>
+    <a class="popup_button-close" onclick="jQuery(this).parent().hide(); return false" href="#">예약하기 버튼 닫기</a>
+  </div>
+  <div id="header">
+    <div class="head">
+      <div class="head_top">
+        <div class="conwrap">
+          <div class="links">
+            <div class="lang">
+              <div class="this_lang">
+                <a>KOR</a>
+              </div>
+              <ul>
+                <li><a href="http://www.monami.com/en/">ENG</a></li>
+              </ul>
+            </div>
+            <div class="sns">
+              <ul>
+                <li>
+                  <a href="#https://www.facebook.com/monami1960" target="_blank">
+                    <img src="${cp}/images/sns_facebook.gif" alt="페이스북" />
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.instagram.com/monami_official/" target="_blank">
+                    <img src="${cp}/images/sns_insta.gif" alt="인스타" />
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="topmenu">
+            <ul>
+            	<c:choose>
            			<c:when test="${loginUser.user_id!=null}" >
             	<li><span>${loginUser.user_id} 님 환영합니다.</span>&nbsp;&nbsp;
-            		<a href="${cp}/jungmin/usermodify.mo">MYPAGE</a>&nbsp;
+					<a href="${cp}/jungmin/usermodify.mo">MYPAGE</a>&nbsp;
 					<a href="${cp}/user/UserLogoutOk.us">LOGOUT</a></li>
 					</c:when>
 							<c:otherwise>
-									<li><a class="join_click"
-										onclick="document.getElementById('id02').style.display='block'">JOIN</a>
-										<!-- The Modal -->
-										<div class="modal1" id="id02">
-											<div class="join">
-												<span
-													onclick="document.getElementById('id02').style.display='none'"
-													class="close">&times;</span>
-												<h2>
-													<img src="${cp}/images/logo.jpeg">
-												</h2>
-												<div id="result">&nbsp;</div>
+							<li><a class="join_click"
+								onclick="document.getElementById('id02').style.display='block'">JOIN</a>
+								<!-- The Modal -->
+								<div class="modal1" id="id02">
+									<div class="join">
+										<span
+											onclick="document.getElementById('id02').style.display='none'"
+											class="close">&times;</span>
+										<h2>
+											<img src="${cp}/images/logo.jpeg">
+										</h2>
+										<div id="result">&nbsp;</div>
+										
+										<form method="post" id="joinForm" name="joinForm"
+											action="${cp}/user/UserJoinOk.us"   onsubmit="return sendit()">
+											<fieldset>
+												<legend class="screen_out">회원가입 정보 입력폼</legend>
+												<div class="box_join">
+													<div class="inp_text">
+														<input
+															type="text" id="user_id" name="user_id" placeholder="ID">
+													</div>
+													<input type="button" value="중복검사" class="btn_ck" onclick="checkId()">
+													<div class="inp_text">
+														<label for="user_pw" class="screen_out">비밀번호</label> <input
+															type="password" id="user_pw" name="user_pw"
+															placeholder="Password">
+													</div>
+													<div class="nbsp">&nbsp;</div>
+													<div class="inp_text">
+														<label for="user_name" class="screen_out">이름</label> <input
+															type="text" id="user_name" name="user_name"
+															placeholder="이름">
+													</div>
+													<div class="nbsp">&nbsp;</div>
+													<div class="inp_text">
+														<label for="user_dob" class="screen_out">생년월일</label> <input
+															type="txt" id="user_dob" name="user_dob"
+															placeholder="생년월일 (예:19950427)">
+													</div>
+													<div class="nbsp">&nbsp;</div>
+													<div class="inp_text" id="zipcode">
+														<label for="user_zipcode" class="screen_out">우편번호</label> <input
+															type="txt" id="sample6_postcode" name="user_zipcode"
+															placeholder="우편번호">
+													</div>
+													<input type="button"  class="btn_zip"onclick="sample6_execDaumPostcode()" value="우편번호 찾기">
+													<div class="nbsp">&nbsp;</div>
+													<div class="inp_text">
+														<label for="user_addr" class="screen_out">주소</label> <input
+															type="txt" id="sample6_address" name="user_addr"
+															placeholder="주소">
+													</div>
+													<div class="nbsp">&nbsp;</div>
+													<div class="inp_text">
+														<label for="user_addrdetail" class="screen_out">상세주소</label> <input
+															type="txt" id="sample6_detailAddress" name="user_addrdetail"
+															placeholder="상세주소">
+													</div>
+													<div class="nbsp">&nbsp;</div>
+													<div class="inp_text">
+														<label for="user_addretc" class="screen_out">참고항목</label> <input
+															type="txt" id="sample6_extraAddress" name="user_addretc"
+															placeholder="참고항목">
+													</div>
+													<div class="nbsp">&nbsp;</div>
+													<div class="inp_text">
+														<label for="user_phone" class="screen_out">핸드폰 번호</label>
+														<input type="tel" id="user_phone" name="user_phone"
+															placeholder="핸드폰 번호">
+													</div>
+												</div>
+												<button type="submit" class="btn_join">회원가입</button>
+												
+											</fieldset>
+										</form>
 
-												<form method="post" id="joinForm" name="joinForm"
-													action="${cp}/user/UserJoinOk.us"
-													onsubmit="return sendit()">
-													<fieldset>
-														<legend class="screen_out">회원가입 정보 입력폼</legend>
-														<div class="box_join">
-															<div class="inp_text">
-																<input type="text" id="user_id" name="user_id"
-																	placeholder="ID">
-															</div>
-															<input type="button" value="중복검사" class="btn_ck"
-																onclick="checkId()">
-															<div class="inp_text">
-																<label for="user_pw" class="screen_out">비밀번호</label> <input
-																	type="password" id="user_pw" name="user_pw"
-																	placeholder="Password">
-															</div>
-															<div class="nbsp">&nbsp;</div>
-															<div class="inp_text">
-																<label for="user_name" class="screen_out">이름</label> <input
-																	type="text" id="user_name" name="user_name"
-																	placeholder="이름">
-															</div>
-															<div class="nbsp">&nbsp;</div>
-															<div class="inp_text">
-																<label for="user_dob" class="screen_out">생년월일</label> <input
-																	type="txt" id="user_dob" name="user_dob"
-																	placeholder="생년월일 (예:19950427)">
-															</div>
-															<div class="nbsp">&nbsp;</div>
-															<div class="inp_text" id="zipcode">
-																<label for="user_zipcode" class="screen_out">우편번호</label>
-																<input type="txt" id="sample6_postcode"
-																	name="user_zipcode" placeholder="우편번호">
-															</div>
-															<input type="button" class="btn_zip"
-																onclick="sample6_execDaumPostcode()" value="우편번호 찾기">
-															<div class="nbsp">&nbsp;</div>
-															<div class="inp_text">
-																<label for="user_addr" class="screen_out">주소</label> <input
-																	type="txt" id="sample6_address" name="user_addr"
-																	placeholder="주소">
-															</div>
-															<div class="nbsp">&nbsp;</div>
-															<div class="inp_text">
-																<label for="user_addrdetail" class="screen_out">상세주소</label>
-																<input type="txt" id="sample6_detailAddress"
-																	name="user_addrdetail" placeholder="상세주소">
-															</div>
-															<div class="nbsp">&nbsp;</div>
-															<div class="inp_text">
-																<label for="user_addretc" class="screen_out">참고항목</label>
-																<input type="txt" id="sample6_extraAddress"
-																	name="user_addretc" placeholder="참고항목">
-															</div>
-															<div class="nbsp">&nbsp;</div>
-															<div class="inp_text">
-																<label for="user_phone" class="screen_out">핸드폰
-																	번호</label> <input type="tel" id="user_phone" name="user_phone"
-																	placeholder="핸드폰 번호">
-															</div>
-														</div>
-														<button type="submit" class="btn_join">회원가입</button>
+									</div>
+								</div></li>
+							<li><a
+								onclick="document.getElementById('id01').style.display='block'">LOGIN</a>
+							
+								<!-- The Modal -->
+								<div class="modal" id="id01">
+									<div class="login">
+										<span
+											onclick="document.getElementById('id01').style.display='none'"
+											class="close">&times;</span>
+										<h2>
+											<img src="${cp}/images/logo.jpeg">
+										</h2>
+											
+										<form method="post" id="loginForm"
+											action="${cp}/user/UserLoginOk.us">
+											
+											<fieldset>
+												<legend class="screen_out">로그인 정보 입력폼</legend>
+												<div class="box_login">
+													<div class="inp_text">
+													 <label for="user_id1" class="screen_out">아이디</label> <input
+															type="text" id="user_id1" name="user_id1" placeholder="ID"> 
+													</div> 
+													<div class="nbsp">&nbsp;</div>
+													<div class="inp_text">
+														<label for="user_pw1" class="screen_out">비밀번호</label> <input
+															type="password" id="user_pw1" name="user_pw1"
+															placeholder="Password">
+													</div>
+												</div>
+												<button type="submit" class="btn_login">로그인</button>
+												<div class="login_append">
+													<div class="inp_chk">
+														<!-- 체크시 checked 추가 -->
+														<input type="checkbox" id="keepLogin" class="inp_radio"
+															name="keepLogin">
+															<span class="txt_lab"
+															style="display: inline-block">로그인 상태 유지</span>
+														
+													</div>
+													<span class="txt_find"> <a
+														href="${cp}/jungmin/idsearch.mo" class="link_find">아이디</a> / <a
+														href="${cp}/jungmin/pwsearch.mo" class="link_find">비밀번호 찾기</a>
+													</span>
+												</div>
 
-													</fieldset>
-												</form>
+											</fieldset>
+										</form>
 
-											</div>
-										</div></li>
-									<li><a
-										onclick="document.getElementById('id01').style.display='block'">LOGIN</a>
-
-										<!-- The Modal -->
-										<div class="modal" id="id01">
-											<div class="login">
-												<span
-													onclick="document.getElementById('id01').style.display='none'"
-													class="close">&times;</span>
-												<h2>
-													<img src="${cp}/images/logo.jpeg">
-												</h2>
-
-												<form method="post" id="loginForm"
-													action="${cp}/user/UserLoginOk.us">
-
-													<fieldset>
-														<legend class="screen_out">로그인 정보 입력폼</legend>
-														<div class="box_login">
-															<div class="inp_text">
-																<label for="user_id1" class="screen_out">아이디</label> <input
-																	type="text" id="user_id1" name="user_id1"
-																	placeholder="ID">
-															</div>
-															<div class="nbsp">&nbsp;</div>
-															<div class="inp_text">
-																<label for="user_pw1" class="screen_out">비밀번호</label> <input
-																	type="password" id="user_pw1" name="user_pw1"
-																	placeholder="Password">
-															</div>
-														</div>
-														<button type="submit" class="btn_login">로그인</button>
-														<div class="login_append">
-															<div class="inp_chk">
-																<!-- 체크시 checked 추가 -->
-																<input type="checkbox" id="keepLogin" class="inp_radio"
-																	name="keepLogin"> <span class="txt_lab"
-																	style="display: inline-block">로그인 상태 유지</span>
-
-															</div>
-															<span class="txt_find"> <a
-																href="${cp}/jungmin/idsearch.mo" class="link_find">아이디</a>
-																/ <a href="/member/find/password" class="link_find">비밀번호
-																	찾기</a>
-															</span>
-														</div>
-
-													</fieldset>
-												</form>
-
-											</div>
-										</div></li>
+									</div>
+								</div></li>
 								</c:otherwise>
-
-							</c:choose>
+								
+								</c:choose>
 
 							<li><a href="${cp}/sanghoon/index.jsp">HOME</a></li>
 							<li><a href="${cp}/kyungchul/sitemap.jsp">SITE MAP</a></li>
@@ -222,10 +229,10 @@
 							<li><a href="${cp}/news/NewsBoardList.mo">NEWS & VIDEO</a>
 								<ul>
 									<li><a href="${cp}/news/NewsBoardList.mo">보도자료</a></li>
-									<li><a href="${cp}/board/Videolist.mo">동영상자료</a></li>
-									<c:if test="${loginUser.user_id == 'admin'}">
+									<li><a href="${cp}/taemin/monami_video1.jsp">동영상자료</a></li>
+									<c:if test="${loginUser.user_id == 'monami'}">
 									<li><a href="${cp}/jungmin/news_manegement.jsp">등록</a></li>
-									</c:if>
+								</c:if>	
 								</ul></li>
 							<li><a
 								href="https://www.monamimall.com/w/artcontest/info/artContestInfo.do?trackingCd=monami">모나미
@@ -296,10 +303,10 @@
 							<h2>NEWS &amp; VIDEO</h2>
 							<ul>
 								<li><a href="${cp}/news/NewsBoardList.mo">보도자료</a></li>
-									<li><a href="${cp}/board/Videolist.mo">동영상자료</a></li>
-									<c:if test="${loginUser.user_id == 'admin'}">
+									<li><a href="${cp}/taemin/monami_video1.jsp">동영상자료</a></li>
+									<c:if test="${loginUser.user_id == 'monami'}">
 									<li><a href="${cp}/jungmin/news_manegement.jsp">등록</a></li>
-									</c:if>
+								</c:if>	
 								
 							</ul>
 						</div>

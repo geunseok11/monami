@@ -7,14 +7,13 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>MONAMI</title>
+    <title>문의사항 게시판</title>
     <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="../css/prodiqr.css" />
     <script src="//code.jquery.com/jquery-3.3.1.min.js"></script>
     <script type="text/javascript" src="../js/common.js"></script>
     <link rel="stylesheet" href="../css/style.intro.css">
 </head>
-
 <style>
 	.list a{
 		background-color: transparent;
@@ -58,7 +57,6 @@
 	table{
 		border:0px;
 		width:900px;
-		margin: 0 auto;
 	}
 	.title h3{
 		font-size:1.5em;
@@ -69,7 +67,6 @@
 		border-collapse:collapse;
 		border-spacing:0;
 		width:900px;
-		margin: 0 auto;
 	}
 	.list td{
 		text-align: center;
@@ -103,7 +100,7 @@
 	#container{
 		margin-bottom: 100px;
 	}
-	/* The Modal (background) */
+/* The Modal (background) */
 .modal , .modal1{
 	display: none; /* Hidden by default */
 	position: fixed; /* Stay in place */
@@ -342,48 +339,54 @@ input.btn_zip{
 </style>
 
 <body>
-    <c:set var="cp" value="${pageContext.request.contextPath}"/>
-    <!-- wrap 시작 -->
-    <div id="wrap">
-        <div id="bgblack"></div> 
-        <div class="find_layer" style="display: none; top: 50px">
-          <iframe src="${cp}/shop/shop.jsp" frameborder="0" id="find_f">
-          </iframe>
-          <div class="btnx_">
-            <img src="${cp}/images/close.png" alt="" />
+<c:set var='cp' value="${pageContext.request.contextPath }"/>
+<c:if test="${not empty param.login}">
+		<script>alert("로그인 실패! 다시 시도해 주세요!");</script>
+	</c:if>
+<div class="popup_buttons">
+    <a class="popup_button" href="">
+      <div class="popup_button-txt">예약하기</div>
+    </a>
+    <a class="popup_button-close" onclick="jQuery(this).parent().hide(); return false" href="#">예약하기 버튼 닫기</a>
+  </div>
+  <div id="header">
+    <div class="head">
+      <div class="head_top">
+        <div class="conwrap">
+          <div class="links">
+            <div class="lang">
+              <div class="this_lang">
+                <a>KOR</a>
+              </div>
+              <ul>
+                <li><a href="http://www.monami.com/en/">ENG</a></li>
+              </ul>
+            </div>
+            <div class="sns">
+              <ul>
+                <li>
+                  <a href="#https://www.facebook.com/monami1960" target="_blank">
+                    <img src="${cp}/images/sns_facebook.gif" alt="페이스북" />
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.instagram.com/monami_official/" target="_blank">
+                    <img src="${cp}/images/sns_insta.gif" alt="인스타" />
+                  </a>
+                </li>
+              </ul>
+            </div>
           </div>
-        </div>
-      <div id="header">
-          <div class="head">
-              <div class="head_top">
-                  <div class="conwrap">
-                      <div class="links">
-                          <div class="lang">
-                              <div class="this_lang">
-                                  <a>KOR</a>
-                              </div>
-                              <ul>
-                                  <li><a href="#">ENG</a></li>
-                              </ul>
-                          </div>
-                          <div class="sns">
-                              <ul>
-                                  <li>
-                                      <a href="#" target="_blank">
-                                          <img src="${cp}/images/sns_facebook.gif" alt="페이스북" />
-                                      </a>
-                                  </li>
-                                  <li>
-                                      <a href="#" target="_blank">
-                                          <img src="${cp}/images/sns_insta.gif" alt="인스타" />
-                                      </a>
-                                  </li>
-                              </ul>
-                          </div>
-                      </div>
-                      <div class="topmenu">
-                          <ul>
-                          <li><a class="join_click"
+          <div class="topmenu">
+            <ul>
+            	<c:choose>
+           			<c:when test="${loginUser.user_id!=null}" >
+            	<li><span>${loginUser.user_id} 님 환영합니다.</span>&nbsp;&nbsp;
+					<a href="${cp}/jungmin/usermodify.mo">MYPAGE</a>&nbsp;
+					<a href="${cp}/user/UserLogoutOk.us">LOGOUT</a></li>
+					</c:when>
+							<c:otherwise>
+							<li><a class="join_click"
 								onclick="document.getElementById('id02').style.display='block'">JOIN</a>
 								<!-- The Modal -->
 								<div class="modal1" id="id02">
@@ -397,7 +400,7 @@ input.btn_zip{
 										<div id="result">&nbsp;</div>
 										
 										<form method="post" id="joinForm" name="joinForm"
-											action="${cp}/user/UserJoinOk.us" onsubmit="return sendit()">
+											action="${cp}/user/UserJoinOk.us"   onsubmit="return sendit()">
 											<fieldset>
 												<legend class="screen_out">회원가입 정보 입력폼</legend>
 												<div class="box_join">
@@ -405,7 +408,7 @@ input.btn_zip{
 														<input
 															type="text" id="user_id" name="user_id" placeholder="ID">
 													</div>
-													<input type="button" value="중복검사" class="btn_ck">
+													<input type="button" value="중복검사" class="btn_ck" onclick="checkId()">
 													<div class="inp_text">
 														<label for="user_pw" class="screen_out">비밀번호</label> <input
 															type="password" id="user_pw" name="user_pw"
@@ -464,6 +467,7 @@ input.btn_zip{
 								</div></li>
 							<li><a
 								onclick="document.getElementById('id01').style.display='block'">LOGIN</a>
+							
 								<!-- The Modal -->
 								<div class="modal" id="id01">
 									<div class="login">
@@ -473,20 +477,21 @@ input.btn_zip{
 										<h2>
 											<img src="${cp}/images/logo.jpeg">
 										</h2>
-
+											
 										<form method="post" id="loginForm"
-											action="${cp}/user/UserLoginOk.us"">
+											action="${cp}/user/UserLoginOk.us">
+											
 											<fieldset>
 												<legend class="screen_out">로그인 정보 입력폼</legend>
 												<div class="box_login">
 													<div class="inp_text">
-														<label for="user_id" class="screen_out">아이디</label> <input
-															type="text" id="user_id" name="user_id" placeholder="ID">
-													</div>
+													 <label for="user_id1" class="screen_out">아이디</label> <input
+															type="text" id="user_id1" name="user_id1" placeholder="ID"> 
+													</div> 
 													<div class="nbsp">&nbsp;</div>
 													<div class="inp_text">
-														<label for="user_pw" class="screen_out">비밀번호</label> <input
-															type="password" id="user_pw" name="user_pw"
+														<label for="user_pw1" class="screen_out">비밀번호</label> <input
+															type="password" id="user_pw1" name="user_pw1"
 															placeholder="Password">
 													</div>
 												</div>
@@ -501,8 +506,8 @@ input.btn_zip{
 														
 													</div>
 													<span class="txt_find"> <a
-														href="/member/find/loginId" class="link_find">아이디</a> / <a
-														href="/member/find/password" class="link_find">비밀번호 찾기</a>
+														href="${cp}/jungmin/idsearch.mo" class="link_find">아이디</a> / <a
+														href="${cp}/jungmin/pwsearch.mo" class="link_find">비밀번호 찾기</a>
 													</span>
 												</div>
 
@@ -511,6 +516,9 @@ input.btn_zip{
 
 									</div>
 								</div></li>
+								</c:otherwise>
+								
+								</c:choose>
                             <li>
                               <a href="${cp}/sanghoon/index.jsp">HOME</a>
                             </li>
@@ -609,17 +617,10 @@ input.btn_zip{
                             <a href="${cp}/doyoon/FAQ.jsp">자주묻는질문</a>
                           </li>
                           <li>
-
                             <a href="${cp}/inquiry/InquiryWrite.mo">문의하기</a>
                           </li>
                           <li>
                             <a href="${cp}/inquiry/InquiryList.mo">문의사항</a>
-
-                            <a href="${cp}/doyoon/Inquiry.jsp">문의하기</a>
-                          </li>
-                          <li>
-                            <a href="${cp}/teamin/Inquerylist.jsp">문의사항</a>
-
                           </li>
                           <li>
                             <a href="${cp}/geunseok/board_event.jsp">이벤트</a>
@@ -694,6 +695,7 @@ input.btn_zip{
                     <ul>
                         <li><a href="${cp}/doyoon/FAQ.jsp">자주묻는질문</a></li>
                               <li><a href="${cp}/inquiry/InquiryWrite.mo">문의하기</a></li>
+                              <li><a href="${cp}/inquiry/InquiryList.mo">문의사항</a></li>
                               <li><a href="${cp}/geunseok/board_event.jsp">이벤트</a></li>
                               <li><a class="find_f">모나미 패밀리샵 찾기</a></li>
                     </ul>
@@ -716,8 +718,8 @@ input.btn_zip{
         <div class="pagetabs">
             <ul class="m4">
                 <li><a href="${cp}/doyoon/FAQ.jsp">자주하는질문</a></li>
-                <li><a href="${cp}/inquiry/InquiryList.mo" class="on">문의하기</a></li>
-                <li><a href="${cp}/inquiry/InquiryWrite.mo">문의등록</a></li>
+                <li><a href="${cp}/doyoon/inquiry.jsp">문의하기</a></li>
+                <li><a href="${cp}/teamin/inquiryWrite.jsp" class="on">문의사항</a></li>
                 <li><a href="${cp}/geunseok/board_event.jsp">이벤트</a></li>
                 <li><a href="${cp}/shop/shop.jsp">모나미 패밀리샵 찾기</a></li>
             </ul>
@@ -727,13 +729,13 @@ input.btn_zip{
         </h3>
       <div id="wrap">
       	<table class="list">
-      		<tr align="center" valign="middle" style="background-color: #AFFFC5">
+      		<tr align="center" valign="middle" style="background-color: rgb(240,255,240);">
       			<th width="5%">번호</th>
       			<th width="10%">문의내용</th>
       			<th width="10%">이름</th>
       			<th width="15%">이메일</th>
       			<th width="15%">연락처</th>
-      			<th width="10%">제목</th>
+      			<th width="15%">제목</th>
       			<th width="30%">내용</th>
       		</tr>
       		<c:choose>
@@ -788,8 +790,7 @@ input.btn_zip{
 		</table>
       </div>
       </div>
-      <!-- 푸터 시작 -->
-
+        <!-- 푸터 시작 -->
    <div id="footer">
     <div class="foot">
       <div class="foot_pop" style="display: none;">
@@ -938,23 +939,17 @@ input.btn_zip{
         </div>
       </div>
     </div>
-
     </div>
     </div>
-  <!-- 푸터 끝 -->
-  </body>
-
+</body>
   <script>
 	function sendit(){
 		let q = document.getElementById('q');
 		//유효성 검사
-
 		location.href = cp+"InquiryList.mo?keyword="+q.value;
 	}
-
-		location.href = cp+"/board/BoardList.bo?keyword="+q.value;
-	}
-
-
 </script>
+<script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
+<script>const cp = "${pageContext.request.contextPath}"</script>
+<script src="${cp}/js/user.js"></script>
 </html>
