@@ -5,7 +5,7 @@
 <mapper namespace="Order">
 	<insert id="insertOrder" parameterType="userdto">
 		INSERT INTO orderd (prod_name, prod_price, user_id, user_name,
-		 user_addr,user_item, order_pay, order_status) VALUES (#{prod_name},
+		user_addr,user_item, order_pay, order_status) VALUES (#{prod_name},
 		#{prod_price}, #{user_id}, #{user_name}, #{user_addr},
 		#{user_item}, #{order_pay},#{order_status})
 	</insert>
