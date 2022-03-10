@@ -20,9 +20,6 @@
     <div id="wrap">
      <%@ include file="/doyoon/header.jsp"%>
     <!-- 헤더 끝 SECTION-->
-    <!-- 바디 상단 이미지 시작 SECTION-->
-    <div id="visaul">메인화면 상단에 이미지 들어갈 곳</div>
-    <!-- 바디 상단 이미지 끝  SECTION-->
     <!-- 본문 시작  SECTION-->
     <!-- <div id="container">본문 내용</div> -->
     <div id="container">
@@ -41,7 +38,7 @@
               <li><a href="/about/company.html">회사정보</a></li>
               <li><a href="/about/history.html">회사연혁</a></li>
               <li class="on"><a href="./investment.html">투자정보</a></li>
-              <li><a href="./ci.html">CI</a></li>
+              <li><a href="./ci.jsp">CI</a></li>
               <li><a href="http://recruit.monami.co.kr/" target="_blank">채용정보</a></li>
               <li><a href="./location.html">찾아오시는 길</a></li>
             </ul>
@@ -1118,9 +1115,9 @@
       
       
       
-        <div class="btn_top">
-          <a href="#"><img src="${cp}/images/btn_top.gif" alt="페이지 상단으로"></a>
-        </div>
+        <div class="topButton">
+					<a><img src="${cp}/images/btn_top.gif" alt="페이지 상단으로" /></a>
+				</div>
       </div><!--/contents-->
       </div>
     <!-- 본문 끝 SECTION-->

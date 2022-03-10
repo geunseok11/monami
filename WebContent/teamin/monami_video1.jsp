@@ -1,9 +1,10 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-    <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
+	<c:set var="cp" value="${pageContext.request.contextPath}"/>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -34,7 +35,6 @@
                 window.open(url,"","fullscreen,scrollbars")
         }
         </script>
-</head>
         <style>
         .black_overlay{ 
             display: none; 
@@ -59,284 +59,45 @@
             z-index:1002; 
             overflow: auto; 
         } 
-  
-/* The Modal (background) */
-.modal , .modal1{
-	display: none; /* Hidden by default */
-	position: fixed; /* Stay in place */
-	z-index: 1; /* Sit on top */
-	left: 0;
-	top: 0;
-	width: 100%; /* Full width */
-	height: 100%; /* Full height */
-	overflow: auto; /* Enable scroll if needed */
-	background-color: rgb(0, 0, 0); /* Fallback color */
-	background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
-	padding-top: 60px;
-}
-
-/* Modal Content/Box */
-.login , .join{
-	background-color: #fefefe;
-	margin: 5px auto; /* 15% from the top and centered */
-	border: 1px solid #888;
-	width: 30%; /* Could be more or less, depending on screen size */
-	height: 500px;
-	position: relative;
-	margin: 0 auto;
-	position: relative;
-}
-.join{
-	height:700px;
-	margin: -30px auto;
-	overflow:scroll;
-}
-
-a {
-	color: #333;
-	text-decoration: none;
-}
-
-input {
-	-webkit-writing-mode: horizontal-tb !important;
-	text-rendering: auto;
-	color: initial;
-	letter-spacing: normal;
-	word-spacing: normal;
-	text-transform: none;
-	text-indent: 0px;
-	text-shadow: none;
-	display: inline-block;
-	text-align: start;
-	-webkit-appearance: textfield;
-	background-color: white;
-	-webkit-rtl-ordering: logical;
-	cursor: text;
-	margin: 0em;
-	font: 400 13.3333px Arial;
-	padding: 1px 0px;
-	border-width: 2px;
-	border-style: inset;
-	border-color: initial;
-	border-image: initial;
-}
-
-.modal h2 , .modal1 h2{
-	font-size: 30px;
-	text-align: center;
-	padding: 30px;
-	padding-bottom: 10px;
-}
-
-.inner_login {
-	position: absolute;
-	left: 50%;
-	top: 50%;
-	margin: -145px 0 0 -160px;
-}
-
-.screen_out {
-	position: absolute;
-	width: 0;
-	height: 0;
-	overflow: hidden;
-	line-height: 0;
-	text-indent: -9999px;
-}
-
-body, button, input, select, td, textarea, th {
-	font-size: 13px;
-	line-height: 1.5;
-	-webkit-font-smoothing: antialiased;
-}
-
-
-fieldset{
-	padding-left: 10px;
-	padding-right: 10px;
-	border:0;
-}
-img{
-	border: 0;
-}
-.close {
-	position: absolute;
-	right: 5px;
-	top: 0;
-	color: #000;
-	font-size: 20px;
-}
-
-.close:hover, .close:focus {
-	color: red;
-	cursor: pointer;
-}
-
-.login .box_login , .join .box_join{
-	margin: 35px 0 0;
-	border-radius: 3px;
-	background-color: #fff;
-	box-sizing: border-box;
-	border-radius: 3px
-}
-
-.login .inp_text ,.join .inp_text{
-	position: relative;
-	width: 100%;
-	margin: 0;
-	padding: 18px 19px 19px;
-	box-sizing: border-box;
-	border:1px solid #ddd;
-}
-div#zipcode{
-	width:60%;
-	float:left;
-}
-.login .inp_text+.inp_text , .join .inp_text+.inp_text{
-	border-top: 1px solid #ddd;
-}
-
-#loginForm #joinForm{
-	width: 100%;
-}
-
-.inp_text input {
-	display: block;
-	width: 100%;
-	height: 100%;
-	font-size: 13px;
-	color: #000;
-	border: none;
-	outline: 0;
-	-webkit-appearance: none;
-	background-color: transparent;
-}
-.btn_ck, .btn_zip{
-	color:#fff;
-	background-color:#000;
-	padding: 10px 30px;
-    margin: 5px;
-    border: none;
-    border-radius: 3px;
-    cursor:pointer;
-}
-input.btn_zip{
-	margin-left:20px;
-	margin-top:2px;
-	padding:15px 30px;
-}
-.btn_login, .btn_join{
-	margin: 20px 0 0;
-	width: 100%;
-	height: 48px;
-	border-radius: 3px;
-	border:none;
-	font-size: 16px;
-	color: #fff;
-    background: #c40f39;
-    cursor:pointer;
-}
-
-.login_append {
-	overflow: hidden;
-	padding: 15px 0 0;
-}
-
-.inp_chk {
-	display: inline-block;
-	position: relative;
-	margin-bottom: -1px;
-}
-
-.login_append .inp_chk {
-	float: left;
-}
-
-.inp_chk .inp_radio {
-	position: absolute;
-	z-index: 1;
-	top: 0;
-	left: 0;
-	width: 18px;
-	height: 18px;
-	border: none;
-}
-
-.inp_chk .lab_g {
-	display: inline-block;
-	margin-right: 19px;
-	color: #909090;
-	font-size: 13px;
-	line-height: 19px;
-	vertical-align: top;
-	font-family: "Montserrat", sans-serif;
-}
-
-.inp_chk .ico_check {
-	display: inline-block;
-	width: 18px;
-	height: 18px;
-	margin: 1px 4px 0 0;
-	background-position: -60px 0;
-	color: #333;
-}
-
-.inp_chk .txt_lab {
-	vertical-align: top;
-	padding-left:20px;
-	font-family: "Montserrat", sans-serif;
-	color: #909090;
-	font-size: 13px;
-}
-
-.login_append .txt_find {
-	float: right;
-	color: #777;
-}
-.login_append .txt_find .link_find {
-	font-size: 13px;
-}
-</style>
+        </style>
+</head>
 <body>
-<c:set var='cp' value="${pageContext.request.contextPath }"/>
-<c:if test="${not empty param.login}">
-		<script>alert("로그인 실패! 다시 시도해 주세요!");</script>
-	</c:if>
-<div class="popup_buttons">
+	<c:set var="cp" value="${pageContext.request.contextPath}"/>
+    <div class="popup_buttons">
     <a class="popup_button" href="">
-      <div class="popup_button-txt">예약하기</div>
+        <div class="popup_button-txt">예약하기</div>
     </a>
     <a class="popup_button-close" onclick="jQuery(this).parent().hide(); return false" href="#">예약하기 버튼 닫기</a>
-  </div>
-  <div id="header">
-    <div class="head">
-      <div class="head_top">
-        <div class="conwrap">
-          <div class="links">
-            <div class="lang">
-              <div class="this_lang">
-                <a>KOR</a>
-              </div>
-              <ul>
-                <li><a href="http://www.monami.com/en/">ENG</a></li>
-              </ul>
+    </div>
+    <div id="header">
+        <div class="head">
+        <div class="head_top">
+            <div class="conwrap">
+            <div class="links">
+                <div class="lang">
+                <div class="this_lang">
+                    <a>KOR</a>
+                </div>
+                <ul>
+                    <li><a href="#">ENG</a></li>
+                </ul>
+                </div>
+                <div class="sns">
+                <ul>
+                    <li>
+                        <a href="https://www.facebook.com/monami1960" target="_blank">
+                            <img src="${cp}/images/sns_facebook.gif" alt="페이스북" />
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.instagram.com/monami_official/" target="_blank">
+                            <img src="${cp}/images/sns_insta.gif" alt="인스타" />
+                        </a>
+                    </li>
+                </ul>
+                </div>
             </div>
-            <div class="sns">
-              <ul>
-                <li>
-                  <a href="#https://www.facebook.com/monami1960" target="_blank">
-                    <img src="${cp}/images/sns_facebook.gif" alt="페이스북" />
-                  </a>
-                </li>
-                <li>
-                  <a href="https://www.instagram.com/monami_official/" target="_blank">
-                    <img src="${cp}/images/sns_insta.gif" alt="인스타" />
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div class="topmenu">
+            <div class="topmenu">
             <ul>
             	<c:choose>
            			<c:when test="${loginUser.user_id!=null}" >
@@ -479,14 +240,14 @@ input.btn_zip{
 								
 								</c:choose>
                     <li>
-                        <a href="${cp}/sanghoon/index.jsp">HOME</a>
-                      </li>
-                      <li>
-                        <a href="${cp}/kyungchul/sitemap.jsp">SITE MAP</a>
-                      </li>
-                      <li>
-                        <a href="${cp}/doyoon/Inquiry.jsp">CONTACT US</a>
-                      </li>
+                        <a href="${cp}/index.jsp">HOME</a>
+                    </li>
+                    <li>
+                        <a href="${cp}/sitemap.html">SITE MAP</a>
+                    </li>
+                    <li>
+                        <a href="http://www.monami.com/customer/inquiry.php">CONTACT US</a>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -494,108 +255,104 @@ input.btn_zip{
         <div class="gnb">
             <div class="conwrap">
             <h1>
-                <a href="${cp}/sanghoon/index.jsp"><img src="${cp}/images/logo.jpeg" alt="" /></a>
+                <a href="${cp}/index.jsp"><img src="${cp}/images/logo.jpeg" alt="" /></a>
             </h1>
             <div class="nav">
                 <ul>
                     <li>
-                        <a href="${cp}/kyungchul/ceo.jsp">모나미소개</a>
-                        <ul>
-                          <li>
-                            <a href="${cp}/kyungchul/ceo.jsp">CEO 메시지</a>
-                          </li>
-                          <li>
-                            <a href="${cp}/kyungchul/company.jsp">회사정보</a>
-                          </li>
-                          <li>
-                            <a href="${cp}/kyungchul/history.jsp">회사연혁</a>
-                          </li>
-                          <li>
-                            <a href="${cp}/geunseok/investment.jsp">투자정보</a>
-                          </li>
-                          <li>
-                            <a href="${cp}/geunseok/ci.jsp">CI</a>
-                          </li>
-                          <li>
-                            <a href="http://recruit.monami.co.kr/" target="_blank">채용정보</a>
-                          </li>
-                          <li>
-                            <a href="${cp}/geunseok/location.jsp">찾아오시는 길</a>
-                          </li>
-                        </ul>
-                      </li>
-                      <li>
-                        <a href="${cp}/jungmin/pen/penpage.jsp">모나미제품</a>
-                        <ul>
-                          <li>
-                            <a href="${cp}/jungmin/pen/penpage.jsp">펜</a>
-                          </li>
-                          <li>
-                            <a href="${cp}/jungmin/marker/markerpage.jsp">마카</a>
-                          </li>
-                          <li>
-                            <a href="${cp}/sanghoon/lightpen.jsp">형광펜</a>
-                          </li>
-                          <li>
-                            <a href="${cp}/doyoon/A_main1.jsp">미술용품</a>
-                          </li>
-                          <li>
-                            <a href="${cp}/doyoon/E_main1.jsp">기타</a>
-                          </li>
-                          <li>
-                            <a href="${cp}/jungmin/cataloguepage.jsp">카탈로그</a>
-                          </li>
-                        </ul>
-                      </li>
-                      <li>
-                        <a href="${cp}/teamin/monami_news1.jsp">NEWS & VIDEO</a>
-                        <ul >
-                          <li>
-                            <a href="${cp}/teamin/monami_news1.jsp">보도자료</a>
-                          </li>
-                          <li>
-                            <a href="${cp}/teamin/monami_video1.jsp">동영상자료</a>
-                          </li>
-                        </ul>
-                      </li>
-                      <li>
-                        <a href="https://www.monamimall.com/w/artcontest/info/artContestInfo.do?trackingCd=monami">모나미 미술대회</a>
-                        <ul>
-                          <li>
-                            <a href="https://www.monamimall.com/w/artcontest/info/artContestInfo.do?trackingCd=monami">미술대회 소개</a>
-                          </li>
-                          <li>
-                            <a href="https://www.monamimall.com/w/artcontest/award/award.do?trackingCd=monami">수상작 발표</a>
-                          </li>
-                        </ul>
-                      </li>
-                      <li>
-                        <a href="${cp}/doyoon/FAQ.jsp">고객지원</a>
-                        <ul>
-                          <li>
-                            <a href="${cp}/doyoon/FAQ.jsp">자주묻는질문</a>
-                          </li>
-                          <li>
-                            <a href="${cp}/doyoon/Inquiry.jsp">문의하기</a>
-                          </li>
-                          <li>
-                            <a href="${cp}/teamin/Inquerylist.jsp">문의사항</a>
-                          </li>
-                          <li>
-                            <a href="${cp}/geunseok/board_event.jsp">이벤트</a>
-                          </li>
-                          <li>
+                        <a href="./about/ceo.html">모나미소개</a>
+                    <ul>
+                        <li>
+                            <a href="./about/ceo.html">CEO 메시지</a>
+                        </li>
+                        <li>
+                            <a href="./about/company.html">회사정보</a>
+                        </li>
+                        <li>
+                            <a href="./about/history.html">회사연혁</a>
+                        </li>
+                        <li>
+                            <a href="#">투자정보</a>
+                        </li>
+                        <li>
+                            <a href="#">CI</a>
+                        </li>
+                        <li>
+                            <a href="#">채용정보</a>
+                        </li>
+                        <li>
+                            <a href="#">찾아오시는 길</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">모나미제품</a>
+                    <ul>
+                        <li>
+                            <a href="#">펜</a>
+                        </li>
+                        <li>
+                            <a href="#">마카</a>
+                        </li>
+                        <li>
+                            <a href="#">형광펜</a>
+                        </li>
+                        <li>
+                            <a href="#">미술용품</a>
+                        </li>
+                        <li>
+                            <a href="#">기타</a>
+                        </li>
+                        <li>
+                            <a href="#">카탈로그</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="monami_news1.jsp">NEWS & VIDEO</a>
+                    <ul >
+						<li><a href="${cp}/news/NewsBoardList.bo">보도자료</a></li>
+                        <li><a href="${cp}/board/Videolist.bo">동영상자료</a></li>
+                    <c:if test="${loginUser.user_id == 'tjtkdgns9369'}">
+                        <li><a href="${cp}/jungmin/news_manegement.jsp">등록</a></li>
+                    </c:if>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">모나미 미술대회</a>
+                    <ul>
+                        <li>
+                            <a href="#">미술대회 소개</a>
+                        </li>
+                        <li>
+                            <a href="#">수상작 발표</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">고객지원</a>
+                    <ul>
+                        <li>
+                            <a href="#">자주묻는질문</a>
+                        </li>
+                        <li>
+                            <a href="#">문의하기</a>
+                        </li>
+                        <li>
+                            <a href="${cp}/event/EventList.bo">이벤트</a>
+                        </li>
+                        <li>
                             <a class="find_f">모나미 패밀리샵 찾기</a>
-                          </li>
-                        </ul>
-                      </li>
-                      <li>
-                        <a href="http://mpms.monami.com/promotion/">기업 구매 / 개발</a>
-                        <ul class="hovermenu">
-                          <li><a href="http://mpms.monami.com/promotion/">기업 및 단체 구매</a></li>
-                          <li><a href="${cp}/geunseok/industry.jsp">산업용 맞춤 제품개발</a></li>
-                        </ul>
-                      </li>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">기업 구매 / 개발</a>
+                    <ul class="hovermenu">
+                        <li><a href="#">기업 및 단체 구매</a></li>
+                        <li><a href="#">산업용 맞춤 제품개발</a></li>
+                    </ul>
+                </li>
                 </ul>
             </div>
             <div class="search">
@@ -606,7 +363,7 @@ input.btn_zip{
                 </div>
                 <div class="nav_search">
                 <input type="text" name="" id="" />
-                <a href="${cp}/kyungchul/search.jsp">
+                <a href="${cp}/search.html">
                     <img src="${cp}/images/btn_search.gif" alt="" />
                 </a>
                 </div>
@@ -615,53 +372,55 @@ input.btn_zip{
                 <div class="menubox">
                     <h2>모나미소개</h2>
                     <ul>
-                        <li><a href="${cp}/kyungchul/ceo.jsp">CEO 메시지</a></li>
-                              <li><a href="${cp}/kyungchul/company.jsp">회사정보</a></li>
-                              <li><a href="${cp}/kyungchul/history.jsp">회사연혁</a></li>
-                              <li><a href="${cp}/geunseok/investment.jsp">투자정보</a></li>
-                              <li><a href="${cp}/geunseok/ci.jsp">CI</a></li>
-                              <li><a href="http://recruit.monami.co.kr/" target="_blank">채용정보</a></li>
-                              <li><a href="${cp}/geunseok/location.jsp">찾아오시는 길</a></li>
+                        <li><a href="./about/ceo.html">CEO 메시지</a></li>
+                        <li><a href="./about/company.html">회사정보</a></li>
+                        <li><a href="./about/history.html">회사연혁</a></li>
+                        <li><a href="#">투자정보</a></li>
+                        <li><a href="#">CI</a></li>
+                        <li><a href="#" target="_blank">채용정보</a></li>
+                        <li><a href="#">찾아오시는 길</a></li>
                     </ul>
                 </div>
                 <div class="menubox">
                     <h2>모나미제품</h2>
                     <ul>
-                        <li><a href="${cp}/jungmin/pen/penpage.jsp">펜</a></li>
-                              <li><a href="${cp}/jungmin/marker/markerpage.jsp">마카</a></li>
-                              <li><a href="${cp}/sanghoon/lightpen.jsp">형광펜</a></li>
-                              <li><a href="${cp}/doyoon/A_main1.jsp">미술용품</a></li>
-                              <li><a href="${cp}/doyoon/E_main1.jsp">기타</a></li>
-                              <li><a href="${cp}/jungmin/cataloguepage.jsp">카탈로그</a></li>
+                        <li><a href="#">펜</a></li>
+                        <li><a href="#">마카</a></li>
+                        <li><a href="#">형광펜</a></li>
+                        <li><a href="#">미술용품</a></li>
+                        <li><a href="#">기타</a></li>
+                        <li><a href="#">카탈로그</a></li>
                     </ul>
                 </div>
                 <div class="menubox">
                     <h2>NEWS &amp; VIDEO</h2>
                     <ul>
-                        <li><a href="${cp}/teamin/monami_news1.jsp">보도자료</a></li>
-                              <li><a href="${cp}/teamin/monami_video1.jsp">동영상자료</a></li>
+                        <li><a href="#">보도자료</a></li>
+                        <li><a href="${cp}/board/Videolist.bo">동영상자료</a></li>
+                        <c:if test="${loginUser.user_id=='tjtkdgns9369'}">
+                        <li><a href="">등록</a>
+                        </c:if>
                     </ul>
                 </div>
                 <div class="menubox">
                     <h2>모나미 미술대회</h2>
                     <ul>
-                        <li><a href="https://www.monamimall.com/w/artcontest/info/artContestInfo.do?trackingCd=monami" target="_blank">미술대회 소개</a></li>
-                              <li><a href="https://www.monamimall.com/w/artcontest/award/award.do?trackingCd=monami" target="_blank">수상작 발표</a></li>
+                        <li><a href="#" target="_blank">미술대회 소개</a></li>
+                        <li><a href="#" target="_blank">수상작 발표</a></li>
                     </ul>
                 </div>
                 <div class="menubox">
                     <h2>고객지원</h2>
                     <ul>
-                        <li><a href="${cp}/doyoon/FAQ.jsp">자주묻는질문</a></li>
-                              <li><a href="${cp}/doyoon/Inquiry.jsp">문의하기</a></li>
-                              <li><a href="${cp}/teamin/Inquerylist.jsp">문의사항</a></li>
-                              <li><a href="${cp}/geunseok/board_event.jsp">이벤트</a></li>
-                              <li><a class="find_f">모나미 패밀리샵 찾기</a></li>
+                        <li><a href="#">자주묻는질문</a></li>
+                        <li><a href="#">문의하기</a></li>
+                        <li><a href="${cp}/event/EventList.bo">이벤트</a></li>
+                        <li><a class="find_f">모나미 패밀리샵 찾기</a></li>
                     </ul>
                 </div>
                 <div class="menubox">
-                    <h2><a href="http://mpms.monami.com/promotion/" target="_blank">기업 구매 / 개발</a></h2>
-                  </div>
+                <h2><a href="#" target="_blank">기업 구매 / 개발</a></h2>
+                </div>
             </div>
         </div>
         </div>
@@ -673,17 +432,17 @@ input.btn_zip{
         <div class="contents">
             <div class="pagetitle pn5">
                 <h2>
-                    " NEWS & VIDEO "
+                    " NEWS &amp; VIDEO "
                 </h2>
                 <p> 모나미는 늘 밝고 새로운 미래를 그려나갑니다.</p>
             </div>
             <div class="pagetabs">
                 <ul class="m5">
                     <li>
-                        <a href="${cp}/teamin/monami_news1.jsp">보도자료</a>
+                        <a href="monami_news1.html">보도자료</a>
                     </li>
                     <li class="on">
-                        <a href="${cp}/teamin/monami_video1.jsp">동영상자료</a>
+                        <a href="#">동영상자료</a>
                     </li>
                 </ul>
             </div>
@@ -691,182 +450,125 @@ input.btn_zip{
                 MONAMI
                 <span>VIDEO</span>
             </h3>
-         	<form action="">
-         	<div class="bbs_gall">
+            <div class="bbs_gall">
                 <ul>
-                    <li data-idx="125">
-                        <p>
+                <c:choose>
+                	<c:when test="${boardList.size()>0 and boardList != null}">
+		            <c:forEach var="board" items="${boardList}">
+		            	<c:choose>
+                		<c:when test="${board.video_idx==last_idx}"><!-- 첫번째 동영상 -->
+                			<li data-idx="${totalCnt}">
+                			<p>
                             <a href = "javascript:void(0)" onclick = "document.getElementById('light').style.display='block';document.getElementById('fade').style.display='block'">
                                 <div class="thumarea">
-                                    <img src="${cp}/monami_images/b_file_1.png" alt="" width="335" height="188">
+                                    <img src="${cp}/images/${board.video_img}" alt="" width="335" height="188">
                                     <div class="btn_play"></div>
                                 </div>
                                 <div class="txtarea">
-                                    <div class="sbj">[zenith7 & ZEQUENZ] 일상 속 내 기록 하나하나가 소중한 작품이 된다!</div>
-                                    <div class="date">2021.10.19</div>
+                                    <div class="sbj">${board.video_title}</div>
+                                    <div class="date">${board.created_at}</div>
                                 </div>
                             </a>
                         </p>
                         <div id="light" class="white_content">
                             <!--유투브소스 -->
                                 <object width="560" height="315">
-                                    <param name="movie" value="https://www.youtube.com/embed/K1fwUEOOIQo?amp;autoplay=1">
-                                </param>
+                                    <param name="movie" value="${board.video_content}">
                                     <param name="allowFullScreen" value="true">
-                                </param>
                                     <param name="allowscriptaccess" value="always">
-                                </param>
-                                <embed src="https://www.youtube.com/embed/K1fwUEOOIQo?amp;autoplay=1" type="application/x-shockwave-flash" width="560" height="315" allowscriptaccess="always" allowfullscreen="true">
+                                <embed id="video" src="${board.video_content}" type="" width="560" height="315" allowscriptaccess="always" allowfullscreen="true">
                                 </embed>
                             </object>
                             
                             <a href = "javascript:void(0)" onclick = "document.getElementById('light').style.display='none';document.getElementById('fade').style.display='none'">닫기
                             </a>
                         </div>
-                        <div id="fade" class="black_overlay">
+		                    	<div id="fade" class="black_overlay">
+		
+		                    	</div>
+                    		</li>
+                		</c:when>
+                		<c:otherwise><!-- 첫번째가 아닌 동영상 -->
+                			<li data-idx="${board.video_idx}">
+                			<p>
+                        		<a href = "javascript:void(0)" onclick = "document.getElementById('light').style.display='block';document.getElementById('fade').style.display='block'">
+	                            	<div class="thumarea">		
+	                                	<img src="${cp}/images/${board.video_img}" alt="" width="335" height="188"/>				<div class="btn_play"></div>
+	                            	</div>
+	                            	<div class="txtarea">
+	                                	<div class="sbj">${board.video_title}</div>
+	                                	<div class="date">${board.created_at}</div>
+	                            	</div>
+                        		</a>
+                        	</p>
+                        	<div id="light" class="white_content">
+                            <!--유투브소스 -->
+                                <object width="560" height="315">
+                                    <param name="movie" value="${board.video_content}">
+                                
+                                    <param name="allowFullScreen" value="true">
 
+                                    <param name="allowscriptaccess" value="always">
+                               
+                                <embed src="${board.video_content}" type="" width="560" height="315" allowscriptaccess="always" allowfullscreen="true">
+                                </embed>
+                            </object>
+                            
+                            <a href = "javascript:void(0)" onclick = "document.getElementById('light').style.display='none';document.getElementById('fade').style.display='none'">닫기
+                            </a>
                         </div>
-                    </li>
-                    <li data-idx="124">
-                        <a href="https://www.youtube.com/embed/Nc3GVzXTS_g?amp;autoplay=1">
-                            <div class="thumarea">		
-                                <img src="${cp}/monami_images/b_file_2.png" alt="" width="335" height="188"/>				<div class="btn_play"></div>
-                            </div>
-                            <div class="txtarea">
-                                <div class="sbj">[zenith7 & ZEQUENZ] 언제 어디서 무엇이든, 내 기록이 작품이 된다! (15s Ver.)</div>
-                                <div class="date">2021.10.19</div>
-                            </div>
-                        </a>
-                    </li>
-                    <li data-idx="123">
-                        <a href="https://www.youtube.com/embed/eftFBM7B-yI?amp;autoplay=1">
-                            <div class="thumarea">		
-                                <img src="${cp}/monami_images/b_file_3.png" alt="" width="335" height="188"/>				<div class="btn_play"></div>
-                            </div>
-                            <div class="txtarea">
-                                <div class="sbj">바람이 쌀쌀해지고 낙엽이 떨어질 땐... 153 AUTUMN...☆</div>
-                                <div class="date">2021.10.19</div>
-                            </div>
-                        </a>
-                    </li>
-                    <li data-idx="122">
-                        <a href="https://www.youtube.com/embed/fRp1PTsEGa0?amp;autoplay=1">
-                            <div class="thumarea">		
-                                <img src="${cp}/monami_images/b_file_4.jpg" alt="" width="335" height="188"/>				<div class="btn_play"></div>
-                            </div>
-                            <div class="txtarea">
-                                <div class="sbj">[DIY] 유캔두잇! 무지 파우치 꾸미는 가장 EASY☆한 방법!</div>
-                                <div class="date">2021.10.19</div>
-                            </div>
-                        </a>
-                    </li>
-                    <li data-idx="121">
-                        <a href="https://www.youtube.com/embed/GRazcDay7PI?amp;autoplay=1">
-                            <div class="thumarea">		
-                                <img src="${cp}/monami_images/b_file_5.jpg" alt="" width="335" height="188"/>				<div class="btn_play"></div>
-                            </div>
-                            <div class="txtarea">
-                                <div class="sbj">자꾸 눌러보고 싶은 사이드 노크 샤프! CLICKIY!</div>
-                                <div class="date">2021.10.19</div>
-                            </div>
-                        </a>
-                    </li>
-                    <li data-idx="120">
-                        <a href="https://www.youtube.com/embed/HYJKN9LY7eE?amp;autoplay=1">
-                            <div class="thumarea">		
-                                <img src="${cp}/monami_images/b_file_6.jpg" alt="" width="335" height="188"/>				<div class="btn_play"></div>
-                            </div>
-                            <div class="txtarea">
-                                <div class="sbj">Study with Me (Monami) FX 153 | 스터디윗미 | LOFI | CHILL STUDY MUSIC | 1 HOUR POMODORO S..</div>
-                                <div class="date">2021.10.19</div>
-                            </div>
-                        </a>
-                    </li>
-                    <li data-idx="119">
-                        <a href="https://www.youtube.com/embed/NcUYOIeJyd4?amp;autoplay=1">
-                            <div class="thumarea">		
-                                <img src="${cp}/monami_images/b_file_7.jpg" alt="" width="335" height="188"/>				<div class="btn_play"></div>
-                            </div>
-                            <div class="txtarea">
-                                <div class="sbj">1분만에 나만의 노트를 DIY하다!? 모나미 컨셉 스토어 DIY ZONE!</div>
-                                <div class="date">2021.10.19</div>
-                            </div>
-                        </a>
-                    </li>
-                    <li data-idx="118">
-                        <a href="https://www.youtube.com/embed/YkUCJTmtow4?amp;autoplay=1">
-                            <div class="thumarea">		
-                                <img src="${cp}/monami_images/b_file_8.jpg" alt="" width="335" height="188"/>				<div class="btn_play"></div>
-                            </div>
-                            <div class="txtarea">
-                                <div class="sbj">차곡차곡 쌓아가는 사랑의 화음♥ [캐리커쳐 소개팅] EP4. 싱송라와 뮤..</div>
-                                <div class="date">2021.07.09</div>
-                            </div>
-                        </a>
-                    </li>
-                    <li data-idx="117">
-                        <a href="https://www.youtube.com/embed/Vy37GPBXvOQ?amp;autoplay=1">
-                            <div class="thumarea">		
-                                <img src="${cp}/monami_images/b_file_9.jpg" alt="" width="335" height="188"/>				<div class="btn_play"></div>
-                            </div>
-                            <div class="txtarea">
-                                <div class="sbj">전여친 드립에 흔들리는 동공 [캐리커쳐 소개팅] EP3. 글로벌 소개팅 편</div>
-                                <div class="date">2021.07.09</div>
-                            </div>
-                        </a>
-                    </li>
-                    <li data-idx="116">
-                        <a href="https://www.youtube.com/embed/hVBO9Y03XlE?amp;autoplay=1">
-                            <div class="thumarea">		
-                                <img src="${cp}/monami_images/b_file_10.jpg" alt="" width="335" height="188"/>				<div class="btn_play"></div>
-                            </div>
-                            <div class="txtarea">
-                                <div class="sbj">성향이 얼마나 중요한지 알려주는 영상 [캐리커쳐 소개팅] EP02. MBTI 궁..</div>
-                                <div class="date">2021.07.09</div>
-                            </div>
-                        </a>
-                    </li>
-                    <li data-idx="115">
-                        <a href="https://www.youtube.com/embed/2b7smEnRtmU?amp;autoplay=1">
-                            <div class="thumarea">		
-                                <img src="${cp}/monami_images/b_file_11.jpg" alt="" width="335" height="188"/>				<div class="btn_play"></div>
-                            </div>
-                            <div class="txtarea">
-                                <div class="sbj">정말 그림만 보고 소개팅을 해요..? [캐리커쳐 소개팅] EP01. 선남선녀 편</div>
-                                <div class="date">2021.07.09</div>
-                            </div>
-                        </a>
-                    </li>
-                    <li data-idx="114">
-                        <a href="https://www.youtube.com/embed/lT2a10SWp5U?amp;autoplay=1">
-                            <div class="thumarea">		
-                                <img src="${cp}/monami_images/b_file_12.jpg" alt="" width="335" height="188"/>				<div class="btn_play"></div>
-                            </div>
-                            <div class="txtarea">
-                                <div class="sbj">물에 번지지 않는 Plus Pen 3000 Pigment 6색 세트!</div>
-                                <div class="date">2021.07.09</div>
-                            </div>
-                        </a>
-                    </li>
+		                    	<div id="fade" class="black_overlay">
+		
+		                    	</div>
+                    		</li>
+                		</c:otherwise>
+                		</c:choose>
+                	</c:forEach>
+                	</c:when>
+                </c:choose>
                 </ul>
             </div>
-         	</form>
             <div class="vod_pop">
                 <div class="vod_area">
                 </div>
+                <div>
+                	<input type="button" action="">
+                </div>
             </div>
             <div class="paging">
-                <a class="page_prev">
-                    <img src="${cp}/images/page_prev.gif" alt="">
-                </a>
-                <strong>1</strong>
-                <a href="${cp}/teamin/monami_video2.jsp">2</a>
-                <a href="${cp}/teamin/monami_video3.jsp">3</a>
-                <a href="${cp}/teamin/monami_video4.jsp">4</a>
-                <a href="${cp}/teamin/monami_video5.jsp">5</a>
-                <a href="${cp}/teamin/monami_video2.jsp" class="page_next">
-                    <img src="${cp}/images/page_next.gif" alt="">
-                </a>
+            	<c:if test="${page>1}">
+	                <a href="${cp}/board/Videolist.mo?page=${page-1}" class="page_prev">
+                    	<img src="${cp}/images/page_prev.gif" alt="">
+                	</a>
+				</c:if>
+                
+                <c:if test="${page>1}">
+                	<a href="monami_video${page-1}">&lt;</a>
+                </c:if>
+                <c:forEach begin="${startPage}" end="${endPage}" step="1" var="i">
+                	<c:choose>
+                		<c:when test="${i==page}">
+                			<strong>${i}</strong>
+                		</c:when>
+                		<c:otherwise>
+                			
+                		</c:otherwise>
+                	</c:choose>
+                </c:forEach>
+                
+                
+<!--                 <strong>1</strong> -->
+<!--                 <a href="monami_video2.html">2</a> -->
+<!--                 <a href="monami_video3.html">3</a> -->
+<!--                 <a href="monami_video4.html">4</a> -->
+<!--                 <a href="monami_video5.html">5</a> -->
+                
+                
+                <c:if test="${page<totalPage}">
+	                <a href="${cp}/board/Videolist.mo?page=${page+1}" class="page_next">
+        	            <img src="${cp}/images/page_next.gif" alt="">
+    	            </a>
+				</c:if>
             </div>
             <div class="btn_top" style="cursor:pointer;" onclick="window.scrollTo(0,0);">
                 <a>
@@ -968,7 +670,7 @@ input.btn_zip{
             <h1><img src="${cp}/images/foot_logo.jpeg" alt="로고"></img></h1>
             <ul class="fm">
               <li>
-                <a href="${cp}/kyungchul/ceo.jsp">회사소개</a>
+                <a href="/about/ceo.html">회사소개</a>
               </li>
               <li>
                 <a class="privacy_pop">개인정보처리방식</a>
@@ -998,35 +700,45 @@ input.btn_zip{
               <a>FAMILY SITE</a>
               <ul>
                 <li>
-                    <a href="https://www.monamimall.com/w/main.do" target="_blank">모나미몰</a>
-                  </li>
-                  <li>
-                    <a href="https://www.mon-arte.com/" target="_blank">모나르떼</a>
-                  </li>
-                  <li>
-                    <a href="https://www.monamimall.com/w/cscenter/store/storeInfo.do" target="_blank">모나미 컨셉스토어</a>
-                  </li>
-                  <li>
-                    <a href="http://www.hangso.co.kr/" target="_blank">주식회사 항소</a>
-                  </li>
-                  <li>
-                    <a href="http://www.monamistation.com/main.do" target="_blank">모나미 스테이션</a>
-                  </li>
-                  <li>
-                    <a href="https://www.monamimall.com/w/artcontest/info/artContestInfo.do" target="_blank">모나미 미술대회</a>
-                  </li>
-                  <li>
-                    <a href="http://mpms.monami.com/promotion/" target="_blank">모나미 기업서비스</a>
-                  </li>
-                  <li>
-                    <a href="http://www.monamicosmetics.com/" target="_blank">모나미코스메틱</a>
-                  </li>
+                  <a href="#" target="_blank">모나미몰</a>
+                </li>
+                <li>
+                  <a href="#" target="_blank">모나르떼</a>
+                </li>
+                <li>
+                  <a href="#" target="_blank">모나미 컨셉스토어</a>
+                </li>
+                <li>
+                  <a href="#" target="_blank">주식회사 항소</a>
+                </li>
+                <li>
+                  <a href="#" target="_blank">모나미 스테이션</a>
+                </li>
+                <li>
+                  <a href="#" target="_blank">모나미 미술대회</a>
+                </li>
+                <li>
+                  <a href="#" target="_blank">모나미 기업서비스</a>
+                </li>
+                <li>
+                  <a href="#" target="_blank">모나미코스메틱</a>
+                </li>
               </ul>
             </div>
           </div>
         </div>
       </div>
-</div>
     <!-- 푸터 끝 -->
 </body>
+<script>
+var embed_lyaer;
+
+function close(){
+
+	embed_lyaer=$('#video').html(); // popup id에 잇는 html을 embed_lyaer 글로벌 변수에 담아 놓음.
+	document.getElementById('light').style.display='none';document.getElementById('fade').style.display='none'
+	$('video).html(''); //popup id에 html 을 제거 
+
+}
+</script>
 </html>

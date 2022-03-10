@@ -808,10 +808,11 @@ input.btn_zip{
                         <!-- <div class="buy">
                           <a href="https://www.monamimall.com/w/product/productDetail.do?goodsNo=MG000020924&banner_check=main"><img src="/images/buynow.gif" alt=""></a>
                         </div> -->
-                    	 <div class="view_basket"><a href="javascript:document.toBasketForm.submit()">장바구니 담기</a></div>
-                    	 <div class="view_basket"><a href="${cp}/product/BasketList.pd">장바구니 보기</a></div>
-                </div>
+                    	</div>
             </form>
+             <div class="view_list"><a href="javascript:document.toBasketForm.submit()">장바구니 담기</a></div>
+               <div class="view_list"><a href="${cp}/product/BasketList.pd">장바구니 보기</a></div>
+                
             <div class="view_list"><a href="../pen/penpage.jsp">LIST</a></div>                       
                
          </div>

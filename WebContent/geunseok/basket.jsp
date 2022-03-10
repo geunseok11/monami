@@ -18,14 +18,12 @@ prefix="c"%>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.js"></script>
     <script type="text/javascript" src="${cp}/js/common.js"></script>
     <script type="text/javascript" src="${cp}/js/prodiqr.js"></script>
+
   </head>
   <body>
     <div id="wrap">
       <%@ include file="/doyoon/header.jsp"%>
       <!-- 헤더 끝 SECTION-->
-      <!-- 바디 상단 이미지 시작 SECTION-->
-      <div id="visaul">메인화면 상단에 이미지 들어갈 곳</div>
-      <!-- 바디 상단 이미지 끝  SECTION-->
       <!-- 본문 시작  SECTION-->
       <div id="container">
         <main id="contents" class="order cart" style="padding-top: 162px">
@@ -114,10 +112,8 @@ prefix="c"%>
 
                     <tbody>
                       <c:choose>
-                        <c:when
-                          test="${basketlist.size() >0 and basketlist != null}"
-                        >
-                          <c:forEach var="basket" items="${basketlist}">
+                        <c:when test="${basketlist.size()>0 and basketlist != null}" >
+                          <c:forEach var="basket" items="${basketlist}" begin="0" end="${basketlist.size()}" step="1">
                             <tr>
                               <td>
                                 <label>
@@ -190,7 +186,7 @@ prefix="c"%>
                                     name="goodsCnt"
                                     id="goodsCnt_561062"
                                     title="수량 입력"
-                                    value="${basket.prod_count}"
+                                    value="1"
                                     onblur="exitCnt(this);"
                                     maxlength="4"
                                     data-stockcnt="7"
@@ -222,7 +218,7 @@ prefix="c"%>
                               </td>
                               <td class="txt-right">
                                 <em id="payPrice_561062"
-                                  >${basket.price * basket.count}</em
+                                  >${basket.prod_price * basket.prod_count}</em
                                 >원
                               </td>
 
@@ -266,7 +262,7 @@ prefix="c"%>
                                 <button
                                   type="button"
                                   class="btn-gray small"
-                                  onclick="orderCheck('561062');"
+                                  onclick="orderCheck();"
                                 >
                                   바로주문
                                 </button>
@@ -274,7 +270,7 @@ prefix="c"%>
                                 <button
                                   type="button"
                                   class="btn-whitegray small"
-                                  onclick="removeCart('561062');"
+                                  onclick="removeCart(${basket.prod_idx},${basket.prod_count});"
                                 >
                                   삭제
                                 </button>
@@ -480,9 +476,16 @@ prefix="c"%>
     </div>
   </body>
   <script>
+ 	 const basketForm = document.basketForm;
     function orderTotal() {
-      const basketForm = document.basketForm;
       basketForm.submit();
+    }
+    function removeCart(prod_idx,prod_count){
+		basketForm.setAttribute("action","${cp}/product/BasketCancelOk.pd?prod_idx="+prod_idx+"&prod_count="+prod_count)
+		basketForm.submit();
+    }	
+    function orderCheck(){
+    	basketForm.submit();
     }
   </script>
 </html>

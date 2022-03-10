@@ -3230,7 +3230,7 @@ table tbody td.txt-right {
 #contents {
   position: relative;
   margin: 0;
-  padding: 162px 0 100px 0;
+  padding:0 0 100px 0;
   width: 100%;
   min-width: 1260px;
   min-height: 560px;
@@ -4991,4 +4991,15 @@ fieldset {
 }
 .order.ordersheet .bottom-area .autopay-info .infotxt li {
   color: #666;
+}
+.view_basket {
+  display: inline-block;
+  width: 143px;
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+  font-family: Monteserrat;
+  font-size: 15px;
+  color: rgb(255, 255, 255);
+  background: rgb(196, 15, 57);
 }

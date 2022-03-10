@@ -4,12 +4,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<c:set var="cp" value="${pageContext.request.contextPath}"/>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MONAMI</title>
  <link rel="shortcut icon" href="${cp}/images/favicon.ico" type="image/x-icon" />
-<link rel="stylesheet" href="${cp}/css/pen.css"/>
+<link rel="stylesheet" href="${cp}/css/pen2.css"/>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.js"></script>
 
 <script type="text/javascript" src="${cp}/js/common.js"></script>
@@ -66,7 +67,7 @@
 			<div class="submenu_list2">
 				<ul id="sublist2">
 					<li><a href="${cp}/jungmin/news_manegement.jsp">뉴스등록</a></li>
-					<li><a href="${cp}/jungmin/video_manegement.jsp">동영상등록</a></li>
+					<li><a href="${cp}/videomodify.jsp">동영상등록</a></li>
 					<li class="on"><a href="${cp}/jungmin/event_manegement.jsp">이벤트등록</a>
 					</li>
 				</ul>
@@ -101,11 +102,11 @@
 							<td><textarea class="form-control" id="p_content"
 									name="event_content" placeholder="내용을 입력해주세요"></textarea></td>
 						</tr>
-						<script type="text/javascript">
+						<!-- <script type="text/javascript">
 							CKEDITOR.replace('p_content', {
 								height : 657
 							});
-						</script>
+						</script> -->
 
 
 						<tr class="f1">
@@ -137,22 +138,56 @@
 	</div>
 </body>
 <script>
-  var fileTarget = $('.filebox .upload-hidden');
+function sendevent() {
+	const eventForm = document.eventForm;
+	const event_title = eventForm.event_title;
+	const event_content = eventForm.event_content;
+	if (event_title.value == "") {
+		alert("제목을 입력하세요!");
+		event_title.focus();
+		return false;
+	}
+	const event_startdate = eventForm.event_startdate;
+	const event_enddate = eventForm.event_enddate;
+	if(event_startdate.value ==""){
+		alert("시작날짜를 입력하세요!");
+		event_startdate.focus();
+		return false;
+	}
+	if(event_enddate.value ==""){
+		alert("종료날짜를 입력하세요!");
+		event_enddate.focus();
+		return false;
+	}
+	if(event_startdate.value > event_enddate.value){
+		alert("시작날짜는 종료날짜 이전이어야 합니다!");
+		event_startdate.focus();
+		return false;
+	}
+	if(event_content==""){
+		alert("내용을 입력해 주세요.");
+		CKEDITOR.instances.p_content.focus();
+		return false;
+	}
+	
+	eventForm.submit();
+}
 
-fileTarget.on('change', function () {
-    // 값이 변경되면
+var fileTarget = $('.f1 #file1');
+fileTarget.on('change', function() {
+	// 값이 변경되면
 
-    if (window.FileReader) {
-        // modern browser 
-        var filename = $(this)[0].files[0].name;
-    } else {
-        // old IE 
-        var filename = $(this).val().split('/').pop().split('\\').pop();  // 파일명만 추출
-    }
+	if (window.FileReader) {
+		// modern browser 
+		var filename = $(this)[0].files[0].name;
+	} else {
+		// old IE 
+		var filename = $(this).val().split('/').pop().split('\\').pop(); // 파일명만 추출
+	}
 
-    // 추출한 파일명 삽입 
-    $(this).siblings('.ex_filename').jsp(filename);
-
+	// 추출한 파일명 삽입 
+	$(this).siblings('.filelabel1').html(filename);
 });
 </script>
+
 </html>

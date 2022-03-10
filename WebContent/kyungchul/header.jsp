@@ -410,7 +410,7 @@ input.btn_zip{
 
 									</div>
 								</div></li>
-							<li><a href="${cp}/sanghoon/index.jsp">HOME</a></li>
+							<li><a href="${cp}/index.jsp">HOME</a></li>
 							<li><a href="${cp}/kyungchul/sitemap.jsp">SITE MAP</a></li>
 							<li><a href="${cp}/doyoon/Inquiry.jsp">CONTACT US</a></li>
 						</ul>
@@ -420,7 +420,7 @@ input.btn_zip{
 			<div class="gnb">
 				<div class="conwrap">
 					<h1>
-						<a href="${cp}/sanghoon/index.jsp"><img src="${cp}/images/logo.jpeg"
+						<a href="${cp}/index.jsp"><img src="${cp}/images/logo.jpeg"
 							alt="" /></a>
 					</h1>
 					<div class="nav">
@@ -519,8 +519,8 @@ input.btn_zip{
 						<div class="menubox">
 							<h2>NEWS &amp; VIDEO</h2>
 							<ul>
-								<li><a href="${cp}/taemin/monami_news1.jsp">보도자료</a></li>
-								<li><a href="${cp}/taemin/monami_video1.jsp">동영상자료</a></li>
+								<li><a href="${cp}/news/NewsBoardList.bo">보도자료</a></li>
+								<li><a href="${cp}/board/Videolist.bo">동영상자료</a></li>
 							</ul>
 						</div>
 						<div class="menubox">
@@ -540,7 +540,7 @@ input.btn_zip{
 								<li><a href="${cp}/doyoon/FAQ.jsp">자주묻는질문</a></li>
 								<li><a href="${cp}/doyoon/Inquiry.jsp">문의하기</a></li>
 								<li><a href="${cp}/inquiry/InquiryList.mo">문의사항</a></li>
-								<li><a href="${cp}/geunseok/board_event.jsp">이벤트</a></li>
+								<li><a href="${cp}/event/EventList.bo">이벤트</a></li>
 								<li><a class="find_f">모나미 패밀리샵
 										찾기</a></li>
 							</ul>

@@ -4,10 +4,11 @@
 <!DOCTYPE html>
 <html>
 <head>
+<c:set var="cp" value="${pageContext.request.contextPath}"/>
 <meta charset="UTF-8">
 <title>MONAMI</title>
 <link rel="shortcut icon" href="${cp}/images/favicon.ico" type="image/x-icon" />
-<link rel="stylesheet" href="${cp}/css/pen.css"/>
+<link rel="stylesheet" href="${cp}/css/pen2.css"/>
 
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.js"></script>
 
@@ -520,13 +521,13 @@ input.btn_zip{
                 </ul>
               </li>
               <li>
-                <a href="${cp}/teamin/monami_news1.jsp">NEWS & VIDEO</a>
+                <a href="${cp}">NEWS & VIDEO</a>
                 <ul >
                   <li>
                     <a href="${cp}/teamin/monami_news1.jsp">보도자료</a>
                   </li>
                   <li>
-                    <a href="${cp}/teamin/monami_video1.jsp">동영상자료</a>
+                    <a href="${cp}/board/Videolist.bo">동영상자료</a>
                   </li>
                 </ul>
               </li>
@@ -609,6 +610,9 @@ input.btn_zip{
               <ul>
                 <li><a href="${cp}/teamin/monami_news1.jsp">보도자료</a></li>
                 <li><a href="${cp}/teamin/monami_video1.jsp">동영상자료</a></li>
+                <c:if test="${loginUser.user_id=='tjtkdgns9369'}">
+                <li><a href="${cp}/videomodify.jsp">등록</a>
+                </c:if>
               </ul>
             </div>
                                     <div class="menubox">
@@ -695,7 +699,7 @@ input.btn_zip{
                     <div class="pen_name">유성볼펜</div>
                     <div class="product_name">153 어흥이</div>
                 </div>                   
-                <li><a href="${cp}/peninfo/peninfo.jsp">
+                <li><a href="${cp}/geunseok/peninfo.jsp">
                     <div class="thum">
                         <img src="${cp}/images/p1.jpg" >
                         <div class="ondiv">

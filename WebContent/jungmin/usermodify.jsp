@@ -4,14 +4,15 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
-<title>Insert title here</title>
-  <link rel="shortcut icon" href="${cp}/images/favicon.ico" type="image/x-icon" />
-<link rel="stylesheet" href="${cp}/css/pen.css"/>
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.js"></script>
+	<c:set var="cp" value="${pageContext.request.contextPath}"/>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<link rel="shortcut icon" href="${cp}/images/favicon.ico" type="image/x-icon" />
+	<link rel="stylesheet" href="${cp}/css/pen2.css"/>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.js"></script>
 
-<script type="text/javascript" src="${cp}/js/common.js"></script>
-<script type="text/javascript">
+	<script type="text/javascript" src="${cp}/js/common.js"></script>
+	<script type="text/javascript">
   $(function () {
     $(document).on("click", ".find_f", function () {
       dh = $(document).height();
@@ -577,6 +578,9 @@ border:0 solid black;
                   <li>
                     <a href="${cp}/teamin/monami_video1.jsp">동영상자료</a>
                   </li>
+                  <c:if test="${loginUser.user_id == 'tjtkdgns9369'}">
+                  <li><a href="${cp}/jungmin/news_manegement.jsp">등록</a></li>
+                  </c:if>
                 </ul>
               </li>
               <li>
@@ -730,7 +734,7 @@ border:0 solid black;
               <div id="contents1">
               <div class="side_wrap">
               <c:choose>
-                	<c:when test="${loginUser.user_id=='admin' }">
+                	<c:when test="${loginUser.user_id=='tjtkdgns9369' }">
                 	<ol class="lnb">
                       <li><span class="lnb_title">마이 페이지</span>
                           <ol>
@@ -742,7 +746,7 @@ border:0 solid black;
                       <li class="shopping"><span class="lnb_title">쇼핑</span>
                           <ol>
                               <li class="lnb_item">
-                                  <a href="${cp }/geunseok/basket.jsp" class="active">장바구니</a>
+                                  <a href="${cp}/product/BasketList.pd" class="active">장바구니</a>
                               </li>
                               <li class="lnb_item">
                                   <a href="${cp }/geunseok/order.jsp" class="active">주문확인</a>
@@ -759,7 +763,7 @@ border:0 solid black;
               		 <li class="shopping"><span class="lnb_title">관리자</span>
                           <ol>
                               <li class="lnb_item">
-                                  <a href="#" class="active">이벤트등록</a>
+                                  <a href="${cp}/jungmin/news_manegement.jsp" class="active">이벤트등록</a>
                               </li>
                               <li class="lnb_item">
                                   <a href="#" class="active">상품등록</a>
@@ -834,7 +838,7 @@ border:0 solid black;
 						생년월일
 					</th>
 					<td>
-						<input name="user_dob" size="50" maxlength="100"  value="${loginUser.user_dob}">
+						<input name="user_dob" size="50" maxlength="100"  readonly value="${loginUser.user_dob}">
 					</td>
 				</tr>
 				<tr height="30px">
@@ -842,7 +846,7 @@ border:0 solid black;
 						우편번호
 					</th>
 					<td>
-						<input name="user_zipcode" size="50" maxlength="100"  value="${loginUser.user_zipcode}">
+						<input name="user_zipcode" size="50" maxlength="100" readonly value="${loginUser.user_zipcode}">
 						<input type="button" id="sample6_postcode"  class="btn_zip"onclick="sample6_execDaumPostcode()" value="우편번호 찾기">
 					</td>
 				</tr>
@@ -852,7 +856,7 @@ border:0 solid black;
 						주소
 					</th>
 					<td>
-						<input name="user_addr"  id="sample6_address" size="50" maxlength="200"  value="${loginUser.user_addr}">
+						<input name="user_addr"  id="sample6_address" size="50" readonly maxlength="200"  value="${loginUser.user_addr}">
 					</td>
 				</tr>
 				
@@ -861,7 +865,7 @@ border:0 solid black;
 						상세주소
 					</th>
 					<td>
-						<input name="user_addrdetail" id="sample6_detailAddress" size="50" maxlength="200" value="${loginUser.user_addrdetail}">
+						<input name="user_addrdetail" id="sample6_detailAddress"size="50" maxlength="200" value="${loginUser.user_addrdetail}">
 					</td>
 				</tr>
 				<tr height="30px">

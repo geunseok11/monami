@@ -9,7 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MONAMI</title>
     <link rel="shortcut icon" href="${cp}/images/favicon.ico" type="image/x-icon" />
-<link rel="stylesheet" href="${cp}/css/pen.css"/>
+<link rel="stylesheet" href="${cp}/css/pen2.css"/>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.js"></script>
 
 <script type="text/javascript" src="${cp}/js/common.js"></script>

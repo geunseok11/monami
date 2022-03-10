@@ -107,7 +107,7 @@ form table tr td a{
           <div class="pagetabs">
             <ul class="m4">
                 <li><a href="${cp}/doyoon/FAQ.jsp">자주하는질문</a></li>
-                <li><a href="${cp}/inquiry/InquiryList.mo" class="on">문의하기</a></li>
+                <li><a href="${cp}/inquiry/InquiryList.mo" class="on">문의사항</a></li>
                 <li><a href="${cp}/inquiry/InquiryWrite.mo">문의등록</a></li>
                 <li><a href="${cp}/geunseok/board_event.jsp">이벤트</a></li>
                 <li><a href="${cp}/shop/shop.jsp">모나미 패밀리샵 찾기</a></li>
@@ -384,4 +384,13 @@ form table tr td a{
       </div>
   <!-- 푸터 끝 -->
 </body>
+<script>
+    let updateForm = document.updateForm;
+    let iqr_idx = null;
+
+    function deleteReply(iqr_idx){
+        updateForm.setAttribute("action","${cp}/inquiry/ReplyDeleteOk.mo?iqr_idx="+iqr_idx)
+        updateForm.submit();
+    }
+</script>
 </html>

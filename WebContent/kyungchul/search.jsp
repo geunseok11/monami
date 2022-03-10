@@ -86,7 +86,7 @@
             			<ul>
             				<c:forEach var="product" items="${productList}">
             					<li>
-            						<a href="#">
+            						<a href="${cp}/product/ProductDetailView.pd">
             							<div class="thum">
             								<img 
             								  src="${cp}/images/product/${product.prod_pic}"

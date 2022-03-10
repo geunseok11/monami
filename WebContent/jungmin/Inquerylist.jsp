@@ -160,7 +160,7 @@
                             <a href="${cp}/teamin/Inquerylist.jsp">문의사항</a>
                           </li>
                           <li>
-                            <a href="${cp}/geunseok/board_event.jsp">이벤트</a>
+                            <a href="${cp}/event/EventList.bo">이벤트</a>
                           </li>
                           <li>
                             <a class="find_f">모나미 패밀리샵 찾기</a>
@@ -233,7 +233,7 @@
                         <li><a href="${cp}/doyoon/FAQ.jsp">자주묻는질문</a></li>
                               <li><a href="${cp}/doyoon/Inquiry.jsp">문의하기</a></li>
                               <li><a href="${cp}/teamin/Inquerylist.jsp">문의사항</a></li>
-                              <li><a href="${cp}/geunseok/board_event.jsp">이벤트</a></li>
+                              <li><a href="${cp}/event/EventList.bo">이벤트</a></li>
                               <li><a class="find_f">모나미 패밀리샵 찾기</a></li>
                     </ul>
                 </div>
@@ -257,7 +257,7 @@
                 <li><a href="${cp}/doyoon/FAQ.jsp">자주하는질문</a></li>
                 <li><a href="${cp}/doyoon/Inquiry.jsp">문의하기</a></li>
                 <li><a href="${cp}/teamin/Inquerylist.jsp" class="on">문의사항</a></li>
-                <li><a href="${cp}/geunseok/board_event.jsp">이벤트</a></li>
+                <li><a href="${cp}/event/EventList.bo">이벤트</a></li>
                 <li><a href="${cp}/shop/shop.jsp">모나미 패밀리샵 찾기</a></li>
             </ul>
         </div>
