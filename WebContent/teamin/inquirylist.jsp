@@ -30,31 +30,37 @@
 		font-weight:bold;
 	}
 	.pagination a{
-		padding:5px;
-		width:20px;
-		height:20px;
-	}
-	.pagination a:hover{
-		background-color: #55FF9A;
+		display: inline-block;
+    vertical-align: top;
+    width: 38px;
+    height: 38px;
+    text-align: center;
+    line-height: 38px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    color: #a8a8a8;
+    border: 1px solid #ddd;
 	}
 	.nowPage{
-		padding:5px;
-		display:inline-block;
-		border-radius:3px;
-		background-color: #55FF9A;
-		font-weight: bold;
-		width:20px;
-		height:20px;
+		display: inline-block;
+    vertical-align: top;
+    width: 38px;
+    height: 38px;
+    text-align: center;
+    line-height: 38px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    color: #a8a8a8;
+    border: 1px solid #ddd;
 	}
 	a.write{
 		width:70px;
-		height:25px;
+		height:27px;
 		text-align: center;
-		border-radius: 10px;
+		border-bottom: 2px solid #dcdcdc;
+		font-size: 17px;
 	}
-	a.write:hover{
-		background-color: #55FF9A;
-	}
+
 	table{
 		border:0px;
 		width:900px;
@@ -68,7 +74,7 @@
 	.list{
 		border-collapse:collapse;
 		border-spacing:0;
-		width:900px;
+		width: 90%;
 		margin: 0 auto;
 	}
 	.list td{
@@ -81,18 +87,26 @@
 		background-color:#CECECE;
 	}
 	.list>tbody>tr>th{
-		border-top:1px solid #384d75;
+		border-top:2px solid #384d75;
 		border-bottom:1px solid #ccc;
 		padding:5px;
 		font-weight: bold;
-		font-size: 15px;
+		font-size: 20px;
+		color: #c40f39;
+		font-family: "Montserrat", sans-serif;
 	}
 	.list>tbody>tr{
-	text-overflow:ellipsis;
-			}
+		text-overflow:ellipsis;
+		width: 50px;
+		height: 50px;
+		font-family: "Montserrat", sans-serif;
+	}
 	.list>tbody>tr>td{
-		border-bottom:1px solid #ccc;
+		border-bottom: 1px solid #ccc;
 		padding:5px;
+		font-size: 15px;
+		border-right: 1px solid #ccc;
+		border-left: 1px solid #ccc;
 	}
 	a{
 		display:inline-block;
@@ -357,7 +371,6 @@ input.btn_zip{
             <ul class="m4">
                 <li><a href="${cp}/doyoon/FAQ.jsp">자주하는질문</a></li>
                 <li><a href="${cp}/inquiry/InquiryList.mo" class="on">문의하기</a></li>
-                <li><a href="${cp}/inquiry/InquiryWrite.mo">문의등록</a></li>
                 <li><a href="${cp}/geunseok/board_event.jsp">이벤트</a></li>
                 <li><a href="${cp}/shop/shop.jsp">모나미 패밀리샵 찾기</a></li>
             </ul>
@@ -367,14 +380,14 @@ input.btn_zip{
         </h3>
       <div id="wrap">
       	<table class="list">
-      		<tr align="center" valign="middle" style="background-color: #AFFFC5">
-      			<th width="5%">번호</th>
+      		<tr align="center" valign="middle">
+      			<th width="5%" style="border-left: 1px solid #ccc">번호</th>
       			<th width="10%">문의내용</th>
       			<th width="10%">이름</th>
       			<th width="15%">이메일</th>
       			<th width="15%">연락처</th>
       			<th width="10%">제목</th>
-      			<th width="30%">내용</th>
+      			<th width="30%" style="border-right: 1px solid #ccc">내용</th>
       		</tr>
       		<c:choose>
       			<c:when test="${inquiryList.size()>0 and inquiryList != null}">
@@ -421,9 +434,9 @@ input.btn_zip{
 				</td>
 			</tr>
 		</table>
-		<table style="border:0px; width:900px;">
+		<table style="border:0px; width:90%;">
 			<tr align="right" valign="middle">
-				<td><a class="write" href="${cp}/inquiry/InquiryWrite.mo?page=${page}">글쓰기</a></td>
+				<td><a class="write" href="${cp}/inquiry/InquiryWrite.mo?page=${page}">등록</a></td>
 			</tr>
 		</table>
       </div>
@@ -590,9 +603,6 @@ input.btn_zip{
 		//유효성 검사
 
 		location.href = cp+"InquiryList.mo?keyword="+q.value;
-	}
-
-		location.href = cp+"/board/BoardList.bo?keyword="+q.value;
 	}
 
 

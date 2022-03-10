@@ -50,11 +50,8 @@
     <!-- 헤더 시작 -->
  	<%@ include file="/jungmin/header.jsp" %>
     <!-- 헤더 끝 -->
-    <!-- 바디 상단 이미지 시작-->
-    <div id="visaul">메인화면 상단에 이미지 들어갈 곳</div>
-    <!-- 바디 상단 이미지 끝  -->
     <!-- 본문 시작  -->
-    <div id="container">
+    <div id="container" style="margin-top:-90px;">
       <div id="contents">
       
           <div class="pagetitle pn4">
@@ -117,7 +114,7 @@
 						<input type="hidden" name="event_idx" value="${board.event_idx}">
 					</form>
       <div class="view_btns">
-      	<c:if test="${loginUser.user_id == 'monami'}">
+      	<c:if test="${loginUser.user_id == 'tjtkdgns9369'}">
      	 <a href="${cp}/event/EventModify.bo?event_idx=${board.event_idx}">수정</a>&nbsp;&nbsp;
 			<a href="javascript:document.removeForm.submit()">삭제</a>&nbsp;&nbsp;
 		</c:if>

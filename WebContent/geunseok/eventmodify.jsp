@@ -11,7 +11,7 @@
 <c:set var='cp' value="${pageContext.request.contextPath }" />
 <link rel="shortcut icon" href="${cp}/images/favicon.ico"
 	type="image/x-icon" />
-<link rel="stylesheet" href="${cp}/css/pen.css" />
+<link rel="stylesheet" href="${cp}/css/pen2.css" />
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.js"></script>
 
 <script type="text/javascript" src="${cp}/js/common.js"></script>
@@ -68,7 +68,7 @@
 			<div class="submenu_list2">
 				<ul id="sublist2">
 					<li><a href="${cp}/jungmin/news_manegement.jsp">뉴스등록</a></li>
-					<li><a href="${cp}/jungmin/video_manegement.jsp">동영상등록</a></li>
+					<li><a href="${cp}/videomodify.jsp">동영상등록</a></li>
 					<li class="on"><a href="${cp}/jungmin/event_manegement.jsp">이벤트등록</a>
 					</li>
 				</ul>

@@ -17,7 +17,7 @@
 	Configure the location of uploaded files. See the following article for more details:
 	http://docs.cksource.com/CKFinder_2.x/Developers_Guide/Java/Configuration/baseURL_and_baseDir
 	-->
-	<baseDir>C:\GB_KDW\JSP\workspace\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\monami\ckstorage</baseDir>
+	<baseDir>D:\0900_GB_SSH\JSP\workspace\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\monami\ckstorage</baseDir>
 	<baseURL>/monami/ckstorage/</baseURL>
 	<licenseKey></licenseKey>
 	<licenseName></licenseName>
@@ -147,7 +147,7 @@
 	Perform additional checks for image files
 	if set to true, validate image size
 	-->
-	<secureImageUploads>true</secureImageUploads>
+	<secureImageUploads>false</secureImageUploads>
 	<!--
 	For security, HTML is allowed in the first Kb of data for files having the
 	following extensions only.

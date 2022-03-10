@@ -161,16 +161,3 @@ function sendit(){
 	}
 	return true;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-

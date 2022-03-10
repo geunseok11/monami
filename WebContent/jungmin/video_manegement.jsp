@@ -609,6 +609,9 @@ input.btn_zip{
               <ul>
                 <li><a href="${cp}/teamin/monami_news1.jsp">보도자료</a></li>
                 <li><a href="${cp}/teamin/monami_video1.jsp">동영상자료</a></li>
+                <c:if test="${loginUser.user_id == 'tjtkdgns9369'}">
+                <li><a href="${cp}/jungmin/news_manegement.jsp">등록</a></li>
+                </c:if>
               </ul>
             </div>
                                     <div class="menubox">

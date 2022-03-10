@@ -230,7 +230,7 @@
 								<ul>
 									<li><a href="${cp}/news/NewsBoardList.mo">보도자료</a></li>
 									<li><a href="${cp}/taemin/monami_video1.jsp">동영상자료</a></li>
-									<c:if test="${loginUser.user_id == 'monami'}">
+									<c:if test="${loginUser.user_id == 'tjtkdgns9369'}">
 									<li><a href="${cp}/jungmin/news_manegement.jsp">등록</a></li>
 								</c:if>	
 								</ul></li>
@@ -249,6 +249,11 @@
 								<ul>
 									<li><a href="${cp}/doyoon/FAQ.jsp">자주묻는질문</a></li>
 									<li><a href="${cp}/doyoon/Inquiry.jsp">문의하기</a></li>
+									<c:if test="${loginUser.user_id=='tjtkdgns9369'}">
+									<li>
+										<a href="${cp}/inquiry/InquiryList.mo">문의사항</a>
+									</li>
+									</c:if>
 									<li><a href="${cp}/event/EventList.mo">이벤트</a></li>
 									<li><a class="find_f" href="${cp}/shop/shop.html"
 										style="padding-left: -10px;">모나미 패밀리샵 찾기</a></li>

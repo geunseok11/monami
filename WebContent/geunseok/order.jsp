@@ -51,6 +51,14 @@
                     <h3 class="title1">MONAMI <span>주문결제</span></h3>
                     <div class="inner">
                         <!-- 주문자 정보// -->
+                        <c:choose>
+                        	<c:when test="${loginUser.user_id!=null}">
+                        		
+                        	</c:when>
+                        	<c:otherwise>
+                        	
+                        	</c:otherwise>
+                        </c:choose>
                         <fieldset class="orderer-field">
                             <legend class="tit">주문자 정보</legend>
             
@@ -69,9 +77,9 @@
                                 <tbody>
                                     <tr>
                                         <th>주문자</th>
-                                        <td><input type="text" name="senderNm" id="senderNm" value="" maxlength="50" placeholder="주문자명 입력" title="주문자명 입력"></td>
+                                        <td><input type="text" name="senderNm" id="senderNm" value="${user.user_name}" maxlength="50" placeholder="주문자명 입력" title="주문자명 입력"></td>
                                         <th>휴대폰 번호</th>
-                                        <td><input type="text" name="senderHp" id="senderHp" value="" maxlength="11" onblur="exitInput(this);" placeholder="숫자만 입력(11자리)" title="휴대폰번호 입력"></td>
+                                        <td><input type="text" name="senderHp" id="senderHp" value="${user.user_phone}" maxlength="11" onblur="exitInput(this);" placeholder="숫자만 입력(11자리)" title="휴대폰번호 입력"></td>
                                         <th>이메일</th>
                                         <td><input type="text" name="senderEmail" id="senderEmail" value="" maxlength="100" placeholder="이메일 입력" title="이메일 입력"></td>
                                     </tr>
@@ -81,7 +89,7 @@
                         <!-- //주문자 정보 -->
             
                         <!-- 배송지 정보// -->
-                        <form name="orderForm" method="post" action="${cp}/product/OrderOk.pd">
+                        <form name="orderForm" method="post" action="${cp}/user/OrderOk.pd">
                         <fieldset class="delivery-field">
                             <legend class="tit">배송지 정보</legend>
                             
@@ -109,9 +117,9 @@
                                             <td>
                                                 <div class="form-addr">
                                                     <button type="button" class="btn-white" onclick="addrPopup();">주소찾기</button>
-                                                    <input type="text" name="receiverZipcode" id="receiverZipcode" value="" maxlength="5" onblur="exitInput(this);" readonly="readonly" title="우편번호 입력"> 
+                                                    <input type="text" name="user_zipcode" id="user_zipcode" value="" maxlength="5" onblur="exitInput(this);" readonly="readonly" title="우편번호 입력"> 
                                                     <input type="text" name="user_addr" id="user_addr" value="${user.user_addr}" maxlength="100" readonly="readonly" title="주소 입력"> 
-                                                    <input type="text" name="receiverAddrDetail" id="receiverAddrDetail" value="" maxlength="100" placeholder="상세 주소 입력" title="상세 주소 입력">
+                                                    <input type="text" name="user_addrdetail" id="user_addrdetail" value="" maxlength="100" placeholder="상세 주소 입력" title="상세 주소 입력">
                                                 </div>
                                             </td>
                                         </tr>

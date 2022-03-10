@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>MONAMI</title>
     <link rel="shortcut icon" href="${cp}/images/favicon.ico" type="image/x-icon" />
-    <link rel="stylesheet" href="${cp}/css/style_another.css" />
+    <link rel="stylesheet" href="${cp}/css/stylebasket.css" />
     <script src="//code.jquery.com/jquery-3.3.1.min.js"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.js"></script>
     <script type="text/javascript" src="${cp}/js/common.js"></script>
@@ -50,11 +50,8 @@
     <!-- 헤더 시작  -->
      <%@ include file="/jungmin/header.jsp" %>
     <!-- 헤더 끝 -->
-    <!-- 바디 상단 이미지 시작-->
-    <div id="visaul">메인화면 상단에 이미지 들어갈 곳</div>
-    <!-- 바디 상단 이미지 끝  -->
     <!-- 본문 시작  -->
-    <div id="container">
+    <div id="container" style="margin-top:-90px;">
       <div id="contents">
       
           <div class="pagetitle pn4">
@@ -111,9 +108,9 @@
             [종료]
             </c:otherwise>
             </c:choose>
-            ${board.event_title}</div>
+            <a href="${cp}/event/EventView.bo?event_idx=${board.event_idx}">${board.event_title}</a></div>
             <div class="evt_type" id="evt_type">
-            <p>${board.event_content}</p>
+            <a href="${cp}/event/EventView.bo?event_idx=${board.event_idx}"><p>${board.event_content}</p></a>
             </div>
             <p class="date">${board.event_startdate}~${board.event_enddate}</p>
             <a href="${cp}/event/EventView.bo?event_idx=${board.event_idx}" class="btn"><span>자세히보기</span><div></div></a>
@@ -184,6 +181,11 @@
 					</a>
 					</c:otherwise>
 					</c:choose>
+					<c:if test="${loginUser.user_id == 'tjtkdgns9369'}">
+					<div class="write_btn">
+					<a href="${cp}/jungmin/event_manegement.jsp">등록</a>
+					</div>
+					</c:if>
       				</div>
       
         <div class="btn_top">

@@ -95,7 +95,7 @@
 						<input type="hidden" name="news_idx" value="${board.news_idx}">
 					</form>
 				<div class="view_btns">
-					<c:if test="${loginUser.user_id == 'admin'}">
+					<c:if test="${loginUser.user_id == 'tjtkdgns9369'}">
 					<a href="${cp}/news/NewsModify.bo?news_idx=${board.news_idx}">수정</a>&nbsp;&nbsp;
 					<a href="javascript:document.removeForm.submit()">삭제</a>&nbsp;&nbsp;
 					<!--get방식으로 form 제출시 안의 input-->

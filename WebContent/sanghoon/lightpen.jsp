@@ -15,6 +15,7 @@
     <link rel="shortcut icon" href="${cp}/images/favicon.ico" type="image/x-icon" />
 </head>
 <body>
+<c:set var="cp" value="${pageContext.request.contextPath}"/>
 <div id="header">
 		<div class="head">
 			<div class="head_top">
@@ -54,7 +55,7 @@
 								<a href="">LOGIN</a>
 							</li>
 							<li>
-								<a href="index.jsp">HOME</a>
+								<a href="${cp}index.jsp">HOME</a>
 							</li>
 							<li>
 								<a href="http://www.monami.com/sitemap.php">SITE MAP</a>

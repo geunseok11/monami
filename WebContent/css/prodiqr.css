@@ -61,7 +61,6 @@ a:hover {
 }
 #wrap {
   width: 100%;
-  margin: 0 auto;
 }
 #container {
   width: 100%;
@@ -132,7 +131,7 @@ a:hover {
 }
 .head_top .links .lang .this_lang {
   padding-left: 15px;
-  background: url(../images/lang_kor.gif) no-repeat 10px center;
+  background: url(/images/lang_kor.gif) no-repeat 10px center;
 }
 .head_top .links .lang .this_lang a {
   display: block;
@@ -141,10 +140,10 @@ a:hover {
   font-family: "Montserrat", sans-serif;
   font-size: 11px;
   color: #000;
-  background: url(../images/lang_arr.gif) no-repeat right center;
+  background: url(/images/lang_arr.gif) no-repeat right center;
 }
 .head_top .links .lang.on .this_lang a {
-  background: url(../images/lang_arr2.gif) no-repeat right center;
+  background: url(/images/lang_arr2.gif) no-repeat right center;
 }
 .head_top .links .lang ul {
   width: 86px;
@@ -157,7 +156,7 @@ a:hover {
   margin-left: -2px;
   text-align: center;
   color: #000;
-  background: url(../images/lang_eng.gif) no-repeat 12px center;
+  background: url(/images/lang_eng.gif) no-repeat 12px center;
 }
 
 .head_top .links .sns {
@@ -182,7 +181,7 @@ a:hover {
   float: left;
   margin-left: 10px;
   padding-left: 12px;
-  background: url(../images/tm_bar.gif) no-repeat left center;
+  background: url(/images/tm_bar.gif) no-repeat left center;
 }
 .head_top .topmenu ul li:first-child {
   background: 0;
@@ -501,7 +500,7 @@ a:hover {
   float: left;
   padding-right: 11px;
   margin-right: 10px;
-  background: url(../images/common/fm_bar.gif) no-repeat right center;
+  background: url(/images/common/fm_bar.gif) no-repeat right center;
 }
 .foot_top .fm li:last-child {
   margin: 0;
@@ -569,7 +568,7 @@ a:hover {
   line-height: 34px;
   font-size: 13px;
   color: rgba(255, 255, 255, 0.4);
-  background: url(../images/family_arr.png) no-repeat 95% center;
+  background: url(/images/family_arr.png) no-repeat 95% center;
 }
 .foot_btm .fam_site ul {
   display: none;
@@ -673,6 +672,7 @@ a:hover {
   overflow: hidden;
   width: 100%;
   margin-top: 148px;
+  padding-bottom: 150px;
 }
 .pn2 {
   background: url(../images/title.jpg) no-repeat center;
@@ -1309,7 +1309,7 @@ a:hover {
 .inquiry .contactus .formarea .fl textarea {
   width: 92%;
   padding: 20px 4%;
-  height: 120px;
+  height: 76px;
   outline: 0;
   background: rgba(255, 255, 255, 0.8);
   border: 1px solid #b7b6b5;
@@ -1379,14 +1379,6 @@ a:hover {
 .btn_send {
   margin: 50px 0 0;
   text-align: center;
-}
-.btn_send a{
-	font-size: 15px;
-	font-weight: bold;
-	color: #E4E4E4;
-}
-btn_send a:hover{
-	text-decoration: underline;
 }
 .btn_send input[type="submit"] {
   display: inline-block;
